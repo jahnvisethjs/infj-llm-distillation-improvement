@@ -1,0 +1,14 @@
+{
+  "seed": "1729",
+  "n_dev": 500,
+  "revisions": {
+    "openai/gsm8k": "740312add88f781978c0658806c59bc2815b9866",
+    "EleutherAI/hendrycks_math": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+    "HuggingFaceH4/MATH-500": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be"
+  },
+  "gsm8k_train_size": 7473,
+  "math_train_size": 7500,
+  "math_rule": "skip solutions with 2+ different boxed answers; next problem in same subject+level replaces it",
+  "math_train_skipped_count": 25,
+  "dev_test_exact_overlaps": []
+}

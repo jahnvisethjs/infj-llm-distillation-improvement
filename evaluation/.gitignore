@@ -1,0 +1,7 @@
+data/*.jsonl
+results/
+__pycache__/
+.pytest_cache/
+.venv/
+*.zip
+*.bak

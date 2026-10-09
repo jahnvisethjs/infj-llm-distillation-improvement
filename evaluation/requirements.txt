@@ -1,0 +1,9 @@
+# versions used for all evaluations (same as Person 2's training stack)
+torch
+transformers==4.57.1
+peft==0.17.1
+accelerate==1.10.1
+datasets
+huggingface_hub
+math-verify
+pytest
