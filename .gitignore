@@ -1,0 +1,25 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local dependencies, downloaded sources and generated pipeline artifacts
+capstone_person1/cache/
+capstone_person1/vendor/
+capstone_person1/runtime_deps/
+capstone_person1/sources/
+capstone_person1/runs/
+capstone_person1/releases/
+capstone_person1/outputs/
+capstone_person1/logs/
+capstone_person1/preserved_inputs/
+capstone_person1/diagnostics/person3_manifest_import/
+
+# Local credentials
+.env
+.env.*
+!.env.example
+.aws/

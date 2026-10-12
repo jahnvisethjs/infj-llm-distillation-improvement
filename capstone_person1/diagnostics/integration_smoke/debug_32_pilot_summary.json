@@ -1,0 +1,51 @@
+{
+  "name": "debug_32",
+  "run_tag": "pilot",
+  "rows": 32,
+  "artifact_status": "draft_pending_review_and_integration",
+  "run_fingerprint": "5910d07289396d3c9b26e776a9072dbcc367b6e6d754c6f0b6860de7b0d04dea",
+  "development_protected": false,
+  "token_budget_finalized": false,
+  "prompt_spec_version": "math-worked-solution-v2",
+  "control_version": "person1-v3.0",
+  "source_counts": {
+    "numina": 20,
+    "orca": 12
+  },
+  "source_supervised_tokens": {
+    "numina": 7655,
+    "orca": 2821
+  },
+  "total_prompt_tokens": 2477,
+  "total_completion_tokens": 10444,
+  "total_supervised_tokens": 10476,
+  "total_sequence_tokens": 12953,
+  "length_bin_counts": {
+    "numina|0": 2,
+    "numina|1": 2,
+    "numina|2": 2,
+    "numina|3": 2,
+    "numina|4": 2,
+    "numina|5": 2,
+    "numina|6": 2,
+    "numina|7": 2,
+    "numina|8": 2,
+    "numina|9": 2,
+    "orca|0": 2,
+    "orca|1": 2,
+    "orca|2": 1,
+    "orca|3": 1,
+    "orca|4": 1,
+    "orca|5": 1,
+    "orca|6": 1,
+    "orca|7": 1,
+    "orca|8": 1,
+    "orca|9": 1
+  },
+  "sha256": "a5438725686bfc914cc375dcacdcb2590bbbfe535980313b0cc97e5b139a37e0",
+  "ordered_ids_sha256": "f4496b4f96fa8cfdb09e167d431eaba2814d1096a043a30089d26daaf012b838",
+  "ids_file_sha256": "426836d5dd483a7ff4913a7da16a70de534392cc124381ebb5a97e9878a80f39",
+  "selection_seed": 42,
+  "tokenizer_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "template_hash": "22e10ad6ce4d2f2a959577326b6eca275528821da148bae57a9a4ad2bf6e64db"
+}

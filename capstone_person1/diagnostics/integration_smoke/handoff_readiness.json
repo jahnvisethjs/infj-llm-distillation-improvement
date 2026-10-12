@@ -1,0 +1,36 @@
+{
+  "run_fingerprint": "5910d07289396d3c9b26e776a9072dbcc367b6e6d754c6f0b6860de7b0d04dea",
+  "research_ready": false,
+  "blockers": [
+    "Actual R1000 labels have not been reconciled",
+    "Fresh pool requires confirmed corrected parent evidence",
+    "Frozen development questions have not been protected",
+    "Instance-level duplicate/decontamination policy alignment pending",
+    "Offline snapshot reconstruction requires final reload of pinned upstream fields",
+    "Person 2 actual R1000 training-label counts/metadata missing",
+    "Person 2 actual parent checkpoint, manifest and seen groups missing",
+    "Person 3 frozen development coverage pending",
+    "Saved review/export evidence incomplete: [Errno 2] No such file or directory: 'C:\\\\Users\\\\jahnv\\\\OneDrive\\\\Desktop\\\\Jahnvi\\\\ASU\\\\fse capstone\\\\capstone_person1\\\\runs\\\\full_run_v2_20261012T181641Z_cfe8ce44\\\\outputs\\\\reports\\\\review_approval.json'",
+    "Shared evaluator equivalence checker missing",
+    "Smoke-size run is not a final research handoff"
+  ],
+  "development_protected": false,
+  "actual_labels_verified": false,
+  "parent_confirmed": false,
+  "verified_R1000_budget": null,
+  "approved_review_hashes": null,
+  "artifact_sha256": {
+    "train_n32_pilot.jsonl": "a5438725686bfc914cc375dcacdcb2590bbbfe535980313b0cc97e5b139a37e0",
+    "train_n64_pilot.jsonl": "00f57a02b6ea064c66a760694f17f8cc23cd73fbe2dbd2fc734ff0c978e8d352",
+    "train_n100_pilot.jsonl": "a4055bd1f80b86231b17d83ccf13fc78766811f8fba240beed422fdc27206420",
+    "debug_32_pilot.jsonl": "a5438725686bfc914cc375dcacdcb2590bbbfe535980313b0cc97e5b139a37e0",
+    "prompt_specification.json": "e1b546bbf590138facde7c2e2a7e8744e8fcc58f143d5886883fb185700148e6"
+  },
+  "manifest_sha256": {
+    "32": "a5438725686bfc914cc375dcacdcb2590bbbfe535980313b0cc97e5b139a37e0",
+    "64": "00f57a02b6ea064c66a760694f17f8cc23cd73fbe2dbd2fc734ff0c978e8d352",
+    "100": "a4055bd1f80b86231b17d83ccf13fc78766811f8fba240beed422fdc27206420"
+  },
+  "fresh_manifest_sha256": null,
+  "prompt_specification_sha256": "e1b546bbf590138facde7c2e2a7e8744e8fcc58f143d5886883fb185700148e6"
+}

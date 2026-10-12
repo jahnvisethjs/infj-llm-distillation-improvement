@@ -1,0 +1,34 @@
+{
+  "template_only": true,
+  "schema_version": "person3-question-manifest-v1",
+  "manifest_sha256": "REPLACE_WITH_ACTUAL_CSV_SHA256",
+  "confirmed_by": "",
+  "confirmed_utc": "",
+  "set_counts": {"gsm_dev": 500, "math_dev": 500, "gsm_fast": 100, "math_fast": 100},
+  "sets": {
+    "gsm_dev": {
+      "benchmark_family": "gsm8k", "role": "development",
+      "dataset_id": "openai/gsm8k", "configuration": "main", "split": "train",
+      "revision": "REPLACE_WITH_IMMUTABLE_REVISION", "origin": "person3_frozen",
+      "selection_policy": {"method": "fixed_seed_sample", "seed": 1729}
+    },
+    "math_dev": {
+      "benchmark_family": "math", "role": "development",
+      "dataset_id": "PERSON3_CHOSEN_MATH_SOURCE", "configuration": "PERSON3_CHOSEN_CONFIGURATION", "split": "train",
+      "revision": "REPLACE_WITH_IMMUTABLE_REVISION", "origin": "person3_frozen",
+      "selection_policy": {"method": "PERSON3_CHOSEN_SAMPLE_POLICY", "seed": 1729}
+    },
+    "gsm_fast": {
+      "benchmark_family": "gsm8k", "role": "fast_development", "parent_set_id": "gsm_dev",
+      "dataset_id": "openai/gsm8k", "configuration": "main", "split": "train",
+      "revision": "REPLACE_WITH_IMMUTABLE_REVISION", "origin": "person3_frozen",
+      "selection_policy": {"method": "nested_fixed_seed_sample", "seed": 1729}
+    },
+    "math_fast": {
+      "benchmark_family": "math", "role": "fast_development", "parent_set_id": "math_dev",
+      "dataset_id": "PERSON3_CHOSEN_MATH_SOURCE", "configuration": "PERSON3_CHOSEN_CONFIGURATION", "split": "train",
+      "revision": "REPLACE_WITH_IMMUTABLE_REVISION", "origin": "person3_frozen",
+      "selection_policy": {"method": "nested_fixed_seed_sample", "seed": 1729}
+    }
+  }
+}

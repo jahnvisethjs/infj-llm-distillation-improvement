@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "model_weights_loaded": false,
+  "network_used": false,
+  "tokenizer_class": "Qwen2TokenizerFast",
+  "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "versions": {
+    "transformers": "4.57.6",
+    "huggingface-hub": "0.36.0",
+    "tokenizers": "0.22.2"
+  },
+  "checks": [
+    {
+      "problem": "What is 2 + 3?",
+      "prompt_tokens": 29,
+      "completion_tokens": 12,
+      "supervised_tokens": 13
+    },
+    {
+      "problem": "Find the value of x.",
+      "prompt_tokens": 27,
+      "completion_tokens": 16,
+      "supervised_tokens": 17
+    },
+    {
+      "problem": "A caf\u00e9 sold 25% of its stock. What fraction?",
+      "prompt_tokens": 35,
+      "completion_tokens": 16,
+      "supervised_tokens": 17
+    },
+    {
+      "problem": "Compute the negative quantity.",
+      "prompt_tokens": 26,
+      "completion_tokens": 22,
+      "supervised_tokens": 23
+    }
+  ],
+  "corrected_corpus_ready": false,
+  "actual_saved_manifest_validation": {
+    "train_n100_pilot.jsonl": {
+      "rows": 100,
+      "supervised_tokens": 31973,
+      "status": "passed"
+    },
+    "train_n32_pilot.jsonl": {
+      "rows": 32,
+      "supervised_tokens": 10476,
+      "status": "passed"
+    },
+    "train_n64_pilot.jsonl": {
+      "rows": 64,
+      "supervised_tokens": 20072,
+      "status": "passed"
+    }
+  }
+}

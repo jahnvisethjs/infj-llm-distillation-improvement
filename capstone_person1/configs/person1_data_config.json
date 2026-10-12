@@ -1,0 +1,42 @@
+{
+  "configuration_version": "person1-config-v3",
+  "notebook": "Person1_Full_Run_v2.ipynb",
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "tokenizer_id": "Qwen/Qwen2.5-0.5B",
+  "tokenizer_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "sources": {
+    "orca": {"dataset_id": "microsoft/orca-math-word-problems-200k", "revision": "29255d1770cc4eac66e5e7fa378cba542c026350", "split": "train"},
+    "numina": {"dataset_id": "AI-MO/NuminaMath-1.5", "revision": "1b05109f9e5c1ad06c0663519502416c30b300f8", "split": "train"}
+  },
+  "reserved_tests": {
+    "gsm8k": {"dataset_id": "openai/gsm8k", "revision": "740312add88f781978c0658806c59bc2815b9866", "configuration": "main", "split": "test"},
+    "math500": {"dataset_id": "HuggingFaceH4/MATH-500", "revision": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be", "split": "test"}
+  },
+  "split_seed": 1729,
+  "selection_seed": 42,
+  "max_total_tokens": 2048,
+  "train_bank_per_source": 20000,
+  "selection_bank_per_source": 5000,
+  "loss_dev_per_source": 500,
+  "required_training_prefixes": [500, 1000, 2000, 4000],
+  "optional_training_prefixes": [8000, 16000, 40000],
+  "candidate_universe_per_source": 45000,
+  "intended_overlap_policy": "instance_or_near_instance",
+  "legacy_matching_engine_status": "archived_diagnostic_only; release_uses_instance_decisions_v1",
+  "lsh_candidate_threshold": 0.65,
+  "near_duplicate_threshold": 0.9,
+  "decontamination_threshold": 0.75,
+  "minhash_permutations": 128,
+  "exclude_synthetic_numina": false,
+  "project_root_override_environment": "CAPSTONE_PROJECT_ROOT",
+  "mount_drive_environment": "CAPSTONE_MOUNT_DRIVE",
+  "default_mount_drive": false,
+  "person3_development_coverage": "pending",
+  "completion_policy": "preserve_correct_terminal_block; quarantine_contradictions",
+  "prompt_policy": "exact_plain_text_no_chat_template",
+  "expected_eos_token": "<|endoftext|>",
+  "expected_eos_token_id": 151643,
+  "expected_pad_token": "<|endoftext|>",
+  "expected_pad_token_id": 151643,
+  "supervision_policy": "completion_and_one_appended_eos; prompt_and_padding_labels=-100"
+}

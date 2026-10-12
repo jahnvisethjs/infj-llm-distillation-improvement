@@ -1,0 +1,20 @@
+{
+  "schema_version": "math-worked-solution-v2",
+  "template": "Question: {problem}\nSolve the problem step by step. End with: Final answer: <answer>.\nSolution:\n",
+  "template_sha256": "22e10ad6ce4d2f2a959577326b6eca275528821da148bae57a9a4ad2bf6e64db",
+  "control_version": "person1-v3.0",
+  "tokenizer_id": "Qwen/Qwen2.5-0.5B",
+  "tokenizer_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "add_special_tokens": false,
+  "append_eos": true,
+  "eos_token_id": 151643,
+  "supervise_prompt": false,
+  "supervise_completion_and_eos": true,
+  "max_total_tokens": 2048,
+  "manifest_field_mapping": {
+    "id": "row_id",
+    "group_id": "problem_group_id",
+    "prompt": "prompt_text",
+    "target": "completion"
+  }
+}

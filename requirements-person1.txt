@@ -1,0 +1,15 @@
+# Shared contracts, tokenizer setup, and all included tests.
+# Hugging Face versions match the saved actual-tokenizer verification.
+numpy==2.3.5
+pandas==2.3.3
+pyarrow==21.0.0
+transformers==4.57.6
+huggingface-hub==0.36.0
+tokenizers==0.22.2
+
+# Notebook/source preparation helpers; the complete corpus is not included.
+datasets==4.8.2
+datasketch==2.0.0
+psutil==7.0.0
+requests==2.32.5
+tqdm==4.67.1

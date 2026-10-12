@@ -1,0 +1,42 @@
+{
+  "schema_version": "person3-question-manifest-v1",
+  "question_manifests_validated": true,
+  "inputs": {
+    "reserved_test_sha256": "c78f02fd1a9c87058318ee6b1c92f5ce5aeff8751fc696fa098b3fb0e477fbe4",
+    "reserved_metadata_sha256": "71cd7bda7384aac14bb1510f966c33281ca07a702f36ca88d7e327c45e1445b4"
+  },
+  "set_counts": {
+    "gsm8k_test": 1319,
+    "math500_test": 500
+  },
+  "role_counts": {
+    "final_test": 1819
+  },
+  "protected_question_entries": 1819,
+  "unique_protected_question_texts": 1819,
+  "person3_development_coverage": "pending",
+  "person3_fast_development_coverage": "pending",
+  "person3_final_test_role_confirmation": "pending",
+  "development_protected": false,
+  "fast_subsets_validated": false,
+  "overlap_checks_status": "bounded_exact_and_approximate_near_candidate_checks_completed",
+  "person1_data_work_may_continue": true,
+  "evaluation_data_created_by_person1": false,
+  "limitations": [
+    "This validates frozen question inputs; it does not run generation/scoring or certify near-match recall.",
+    "Fast development entries are nested duplicates of full development; do not add their counts as unique questions."
+  ],
+  "protected_questions_sha256": "d9359a7d8762c209b57975a08b81c996e73fccc2d42b31572a62884661b6b2ec",
+  "exact_candidate_checks": {
+    "checked_rows": 278,
+    "overlapping_rows_removed": 0
+  },
+  "near_candidate_checks": {
+    "matching_policy": "conservative_lexical_variants",
+    "checked_candidate_scope_per_source": 139,
+    "protected_question_entries": 1819,
+    "candidate_pairs": 0,
+    "removed_groups": 0,
+    "recall_guaranteed": false
+  }
+}

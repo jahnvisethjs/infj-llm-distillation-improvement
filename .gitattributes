@@ -1,0 +1,2 @@
+# Preserve exact bytes: tokenizer/contracts/manifests and package evidence use SHA-256.
+* -text whitespace=cr-at-eol

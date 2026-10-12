@@ -1,0 +1,7 @@
+{
+  "manifest_sha256": "",
+  "set_counts": {},
+  "benchmark_families": ["gsm8k", "math"],
+  "confirmed_by": "",
+  "confirmed_utc": ""
+}

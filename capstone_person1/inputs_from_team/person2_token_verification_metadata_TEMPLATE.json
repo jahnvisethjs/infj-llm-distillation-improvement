@@ -1,0 +1,7 @@
+{
+  "manifest_sha256": "",
+  "verification_sha256": "",
+  "confirmed_by": "",
+  "confirmed_utc": "",
+  "count_definition": "labels != -100 including supervised EOS"
+}
