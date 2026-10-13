@@ -2,7 +2,7 @@
 
 Implemented for Qwen2.5-0.5B base at tokenizer revision `060db6499f32faf8b98477b0a26969ef7d8b9987`. The actual cached `Qwen2TokenizerFast` is verified in [REFERENCE_CONTRACT_VERIFICATION.json](../../evidence/REFERENCE_CONTRACT_VERIFICATION.json); verified EOS/PAD values and asset hashes are in [configs/formatting_contract.json](../../configs/formatting_contract.json).
 
-This helper loads tokenizer assets only. It does not load model weights or establish that the worked reasoning is mathematically correct. The corrected full data release remains pending.
+This helper loads tokenizer assets only. It does not load model weights or establish that the worked reasoning is mathematically correct. Contract version is person1-plain-text-labels-v3: canonical numeric comparison keys may normalize percentages, while the training completion preserves verified terminal percentage notation. The current release and authoritative readiness evidence are at releases/person1_v3_20261012_ready/metadata/release_manifest.json.
 
 ## Person 2: reference encoding
 
@@ -46,4 +46,4 @@ This returns the exact agreed prompt ending with `Solution:\n`. Evaluation recei
 
 `validate_manifest_record(record, tokenizer)` re-encodes a row and checks saved prompt/completion text and reference count fields. `validate_manifest(path, release_metadata, tokenizer)` additionally verifies the JSONL content hash, nonempty row count, unique row/group IDs and aggregate supervised-token budget. Metadata requires `tokenizer_id`, `tokenizer_revision`, `manifest_sha256`, `rows` and `supervised_tokens`.
 
-Verification of diagnostic exports is not release approval. Person 1 still needs final source reload, policy/review evidence, three disjoint banks and release packaging. Load and verify the corresponding pinned tokenizer before reusing counts in any 1.5B experiment.
+Verification of diagnostic exports is not release approval. Read the release manifest and independent validation evidence for final processing, review and handoff status. Load and verify the corresponding pinned tokenizer before reusing counts in any 1.5B experiment.

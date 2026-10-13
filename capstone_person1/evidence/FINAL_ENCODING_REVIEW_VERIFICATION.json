@@ -1,0 +1,58 @@
+{
+  "sampled_actual_autotokenizer_counts_verified": 200,
+  "explicit_percentage_completions": 3408,
+  "remaining_matching_percentage_display_candidates": [
+    {
+      "row_id": "2656218fce21d0bf7f7eba6acba27cdc18ef849fb63b83658bd75dedcacd2aa0",
+      "evidence": "So the fraction of employees who are managers is 2/5, or 40%. This means that 40% of all employees, regardless of gender, are managers.",
+      "final": "2/5",
+      "completion_end": " / 5\n\nSo the fraction of employees who are managers is 2/5, or 40%. This means that 40% of all employees, regardless of gender, are managers.\n\nFinal answer: 2/5"
+    },
+    {
+      "row_id": "379754c35f976dc420c6669d93f4a124743e8075d5d7e9279df7c808a3322b5a",
+      "evidence": "So, W as a percentage is 80%. Therefore, 80% of the study group are women.",
+      "final": "4/5",
+      "completion_end": "vide both sides of the equation by 0.40:\n\nW = 0.32 / 0.40\nW = 0.8\n\nSo, W as a percentage is 80%. Therefore, 80% of the study group are women.\n\nFinal answer: 4/5"
+    },
+    {
+      "row_id": "7501924be7896e2b0b82cbeed5672adca19452c4152f4efa9016563a93e0dad1",
+      "evidence": "This confirms that the first number is indeed 8% of the third number, as stated in the problem. Therefore, the first number is 8% of the third number.",
+      "final": "2/25",
+      "completion_end": "rms that the first number is indeed 8% of the third number, as stated in the problem. Therefore, the first number is 8% of the third number.\n\nFinal answer: 2/25"
+    },
+    {
+      "row_id": "b6c0884471d183ce4b919c718093c0177bae3306df8503dfdffe0890a07ebbc8",
+      "evidence": "This means the new radius is 50% of the original radius. Therefore, the radius has decreased by 50%.",
+      "final": "1/2",
+      "completion_end": " r' = \\sqrt{0.25} r \\]\n\\[ r' = 0.5 r \\]\n\nThis means the new radius is 50% of the original radius. Therefore, the radius has decreased by 50%.\n\nFinal answer: 1/2"
+    },
+    {
+      "row_id": "c5245cee7b7e8a10a9c0a1eee6319d6e694f99a1386c27c9228680a497b1af22",
+      "evidence": "So, the value of x is 42%. Geoff needed more than 42% of the vote to win the election.",
+      "final": "21/50",
+      "completion_end": "7% (rounded down to the nearest whole number) = 42%\n\nSo, the value of x is 42%. Geoff needed more than 42% of the vote to win the election.\n\nFinal answer: 21/50"
+    },
+    {
+      "row_id": "de987b27d95ba90e5be7e15e3dbebb5fbdf5fb905415cc53ff8cad1e93b77a16",
+      "evidence": "Since each bottle is considered 100%, and he has 180% left, this means Danny has the equivalent of 1.8 bottles of soda left. To express this as a percentage of a bottle, we can say he has 180% of a bottle left.",
+      "final": "9/5",
+      "completion_end": "s Danny has the equivalent of 1.8 bottles of soda left. To express this as a percentage of a bottle, we can say he has 180% of a bottle left.\n\nFinal answer: 9/5"
+    },
+    {
+      "row_id": "e0da7f69d61a4c6ac13cf2489e9d4f0d40b2469a847e52045384b3978853fbba",
+      "evidence": "Therefore, the value of x is 50.5%. Geoff needed to receive more than 50.5% of the votes to win the election.",
+      "final": "101/200",
+      "completion_end": "3030 / 6000) * 100 = 50.5%\n\nTherefore, the value of x is 50.5%. Geoff needed to receive more than 50.5% of the votes to win the election.\n\nFinal answer: 101/200"
+    },
+    {
+      "row_id": "e2cc5045314e574b75dc8953f15ae681e6f399301485577706d35432657dcf21",
+      "evidence": "So, if the 18% yield is based on the current quoted price of 150, then the current yield remains 18%. However, if the 18% yield was based on a different original quoted price, we would need that information to accurately calculate the current yield.",
+      "final": "9/50",
+      "completion_end": ", if the 18% yield was based on a different original quoted price, we would need that information to accurately calculate the current yield.\n\nFinal answer: 9/50"
+    }
+  ],
+  "extra_cases_reviewed": 8,
+  "extra_cases_accepted": 1,
+  "extra_cases_quarantined": 7,
+  "all_remaining_percentage_candidates_resolved": true
+}

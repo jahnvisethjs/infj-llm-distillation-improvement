@@ -1,0 +1,40 @@
+{
+  "source": {
+    "olympiads": 197084,
+    "olympiads_ref": 3638,
+    "amc_aime": 5872,
+    "aops_forum": 67841,
+    "metamath": 11014,
+    "cn_k12": 268819,
+    "orca_math": 151934,
+    "cn_contest": 29944,
+    "inequalities": 7314,
+    "number_theory": 4043,
+    "synthetic_math": 148712
+  },
+  "question_type": {
+    "math-word-problem": 631522,
+    "proof": 110998,
+    "MCQ": 146449,
+    "other": 2030,
+    "NaN": 5216
+  },
+  "problem_is_valid": {
+    "Yes": 859356,
+    "Incomplete": 30377,
+    "More than one problem": 1105,
+    "Not a problem": 158,
+    "NaN": 5219
+  },
+  "solution_is_valid": {
+    "Yes": 844988,
+    "Incomplete": 32522,
+    "NaN": 5227,
+    "Problem not solved": 13446,
+    "Not matched with problem": 32
+  },
+  "synthetic": {
+    "False": 584555,
+    "True": 311660
+  }
+}

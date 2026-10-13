@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "moved_files": 38,
+  "stable_code_and_notebook_hashes_checked": 12,
+  "saved_artifact_paths_sizes_and_timestamps_checked": 643,
+  "python_files_syntax_checked": 35,
+  "local_markdown_links_checked": 42,
+  "reference_plan_sha256": "9bce7a1b5a8f1fd61d6b4cdd46c32465b2f5ecc42d06a5689f6a17aa459e5001",
+  "implementation_readiness": "DIAGNOSTIC_ONLY",
+  "note": "Organization does not add completed data-release phases. The scientific pipeline/notebooks and saved run artifacts remain unchanged."
+}

@@ -59,6 +59,14 @@ class DataContractTests(unittest.TestCase):
             contract.encode_example(self.tokenizer, 'Find the length and width of the rectangle.',
                 'Calculating the first dimension gives the required length.\nFinal answer: 5', '5')
 
+    def test_symbolic_variable_case_and_assignment_context(self):
+        with self.assertRaises(ValueError):
+            contract.encode_example(self.tokenizer,'Find X.','The result is the specified variable.\nFinal answer: X','x')
+        with self.assertRaises(ValueError):
+            contract.encode_example(self.tokenizer,'How many items?','The calculation provides this result.\nFinal answer: b=2','2')
+        result=contract.encode_example(self.tokenizer,'Find b.','The calculation provides this result.\nFinal answer: b=2','2')
+        self.assertIn('Final answer: b=2',result['completion'])
+
     def test_context_length_never_truncates(self):
         with self.assertRaises(contract.ContextLengthError): self.example(max_total_tokens=3)
 

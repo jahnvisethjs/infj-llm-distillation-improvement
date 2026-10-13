@@ -1,2 +1,4 @@
 # Preserve exact bytes: tokenizer/contracts/manifests and package evidence use SHA-256.
 * -text whitespace=cr-at-eol
+capstone_person1/canonical_data.py whitespace=-blank-at-eof,-trailing-space
+capstone_person1/release_records/** whitespace=-blank-at-eof,-trailing-space

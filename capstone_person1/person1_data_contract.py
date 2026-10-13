@@ -5,14 +5,16 @@ The notebook embeds this same source after the controls source.
 """
 import hashlib
 import json
+import re
 from pathlib import Path
+from capstone_person1.instance_matching import context_equivalent
 
 if 'build_completion' not in globals():
     from capstone_person1.pipeline_controls import (
-        PROMPT_TEMPLATE, build_completion, extract_answer_metadata, answers_equivalent,
+        PROMPT_TEMPLATE, build_completion, extract_answer_metadata, answers_equivalent, NUMBER_PATTERN,
     )
 
-CONTRACT_VERSION = 'person1-plain-text-labels-v1'
+CONTRACT_VERSION = 'person1-plain-text-labels-v3'
 TOKENIZER_ID = 'Qwen/Qwen2.5-0.5B'
 PINNED_TOKENIZER_REVISION = '060db6499f32faf8b98477b0a26969ef7d8b9987'
 EXPECTED_END_TOKEN = '<|endoftext|>'
@@ -33,17 +35,23 @@ def render_prompt(problem):
     return PROMPT_TEMPLATE.format(problem=problem)
 
 
-def render_completion(solution, verified_final_answer):
+def render_completion(solution, verified_final_answer, *, problem=''):
     evidence = extract_answer_metadata('', solution)
     if evidence.mode.startswith('ambiguous'):
         raise ValueError('Ambiguous solution conclusion requires review: ' + evidence.mode)
     if not evidence.candidate:
         raise ValueError('No supported terminal answer evidence; quarantine for review')
-    if answers_equivalent(evidence.candidate, verified_final_answer) is not True:
+    if context_equivalent(problem, evidence.candidate, verified_final_answer) is not True:
         raise ValueError('Target does not demonstrably agree with the terminal solution answer')
     if evidence.confidence == 'heuristic':
         raise ValueError('Heuristic answer requires an individual corrected/reviewed terminal block')
-    return build_completion(solution, verified_final_answer)
+    # Numeric comparison keys normalize 90% to 9/10. Preserve the percentage
+    # notation in the generated answer so a percentage question remains clear.
+    percentages = re.findall(NUMBER_PATTERN.removesuffix('%?') + r'\s*\\?%', evidence.evidence_text)
+    matching = [value.replace('\\%', '%').replace(' ', '') for value in percentages
+                if answers_equivalent(value.replace('\\%', '%').replace(' ', ''), verified_final_answer) is True]
+    display_answer = matching[0] if len(matching) == 1 else verified_final_answer
+    return build_completion(solution, display_answer)
 
 
 def verify_tokenizer(tokenizer):
@@ -119,7 +127,7 @@ def encode_example(tokenizer, problem, solution, verified_final_answer, *, max_t
     if evidence.mode.startswith('ambiguous'):
         raise ValueError('Problem/solution requires review: ' + evidence.mode)
     return encode_text_pair(tokenizer, render_prompt(problem),
-                            render_completion(solution, verified_final_answer),
+                            render_completion(solution, verified_final_answer, problem=problem),
                             max_total_tokens=max_total_tokens)
 
 

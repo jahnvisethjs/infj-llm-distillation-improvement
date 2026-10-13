@@ -1,0 +1,3427 @@
+{
+  "workspace": "C:\\Users\\jahnv\\OneDrive\\Desktop\\Jahnvi\\ASU\\fse capstone",
+  "moves": [
+    {
+      "old": "capstone_person1/test_benchmark_manifests.py",
+      "new": "capstone_person1/tests/test_benchmark_manifests.py",
+      "sha256": "5213ec3279cfd4502149d21d85628d1b0ee07ddbc2232515c3c38ca9d3beb52a"
+    },
+    {
+      "old": "capstone_person1/test_data_contract.py",
+      "new": "capstone_person1/tests/test_data_contract.py",
+      "sha256": "46377e6ad9df639e7ae054b534ff57e5461aea2a29b6720ce3c5b5b184f047b0"
+    },
+    {
+      "old": "capstone_person1/test_handoff_gate.py",
+      "new": "capstone_person1/tests/test_handoff_gate.py",
+      "sha256": "d985acc9fcb6dd9e1786b162ab52e3ab3364aad41627af5750b88d4ce39b0254"
+    },
+    {
+      "old": "capstone_person1/test_pipeline_controls.py",
+      "new": "capstone_person1/tests/test_pipeline_controls.py",
+      "sha256": "1389f48f05832eae79e4088856dbfc5637ba2af20862d47cb3698e6c37409715"
+    },
+    {
+      "old": "capstone_person1/test_snapshot_catalog.py",
+      "new": "capstone_person1/tests/test_snapshot_catalog.py",
+      "sha256": "9052e74482693f19d5104f73f073f6436c8c3660a700bfcb4425583d25e7f6cf"
+    },
+    {
+      "old": "capstone_person1/test_snapshot_stream.py",
+      "new": "capstone_person1/tests/test_snapshot_stream.py",
+      "sha256": "ba3f97031bb2ccc4ea647221843a7290786a615b0d34f32f1e86589577a5c3f3"
+    },
+    {
+      "old": "capstone_person1/test_target_regressions.py",
+      "new": "capstone_person1/tests/test_target_regressions.py",
+      "sha256": "7d0042be7b4db49b63006f7ebaa4c5389994dca6247b1c3234e0830f063f224a"
+    },
+    {
+      "old": "capstone_person1/prepare_tokenizer.py",
+      "new": "capstone_person1/scripts/prepare_tokenizer.py",
+      "sha256": "1009140fbe58108a2f842bc1f55fe0f97239955b446c9413fdbb1253d42ad314"
+    },
+    {
+      "old": "capstone_person1/sync_notebook_controls.py",
+      "new": "capstone_person1/scripts/sync_notebook_controls.py",
+      "sha256": "3c8dc28a583e79209c6cef7c4ebcc8135768139440b62b57f01a742bd53e1ce9"
+    },
+    {
+      "old": "capstone_person1/validate_notebook.py",
+      "new": "capstone_person1/scripts/validate_notebook.py",
+      "sha256": "828161da53953af7ad29a5c8ea47e8956bc5adafcbe52315d17d70c9463ea04a"
+    },
+    {
+      "old": "capstone_person1/validate_tokenizer_adapter.py",
+      "new": "capstone_person1/scripts/validate_tokenizer_adapter.py",
+      "sha256": "2e23f5fce45770164cb45c829fc1e1aa03dcacaab8b3c649aa26b798bce87447"
+    },
+    {
+      "old": "capstone_person1/verify_reference_contract.py",
+      "new": "capstone_person1/scripts/verify_reference_contract.py",
+      "sha256": "dd296c8ef30607799d9b01e8a475a805f8b0b47281f7ae924b0f986421ab697c"
+    },
+    {
+      "old": "capstone_person1/verify_smoke_run.py",
+      "new": "capstone_person1/scripts/verify_smoke_run.py",
+      "sha256": "5fea07e45ff98f08e7e187a2f9d32aefaf0aebd557a81339d71d1e883e47d536"
+    },
+    {
+      "old": "capstone_person1/initialize_v2.py",
+      "new": "capstone_person1/scripts/history/initialize_v2.py",
+      "sha256": "c25de2bd6eaee4f5fb065ec13460c48f921436a7ec21ad5d5315a03b61e32aad"
+    },
+    {
+      "old": "capstone_person1/align_v2_notebook.py",
+      "new": "capstone_person1/scripts/history/align_v2_notebook.py",
+      "sha256": "d8ea734fe08320b81a53cb57b239990dd80ac1b5b3809f5bba5f729b0f69bcd1"
+    },
+    {
+      "old": "capstone_person1/align_benchmark_stage.py",
+      "new": "capstone_person1/scripts/history/align_benchmark_stage.py",
+      "sha256": "5c4847c164ae6ed637c4dc36f87e1284e0f73e270c38b700c83246541ad357b1"
+    },
+    {
+      "old": "capstone_person1/record_alignment_batch.py",
+      "new": "capstone_person1/scripts/history/record_alignment_batch.py",
+      "sha256": "3d46ae4500b4b3fe603fc13f067e879477e9b5ca10bd9b6d7f228983b43f6a9d"
+    },
+    {
+      "old": "capstone_person1/record_benchmark_batch.py",
+      "new": "capstone_person1/scripts/history/record_benchmark_batch.py",
+      "sha256": "ed819dac006effa38d804b9200a3ab6b2a3de6a894566132d65b2969e5dbcb6e"
+    },
+    {
+      "old": "capstone_person1/record_milestone.py",
+      "new": "capstone_person1/scripts/history/record_milestone.py",
+      "sha256": "f062e7453ceaa25d0c46366323aac8a1d2dbdff6f51181b80ff89fb9ce793d0a"
+    },
+    {
+      "old": "capstone_person1/REFERENCE_ENCODER.md",
+      "new": "capstone_person1/docs/contracts/REFERENCE_ENCODER.md",
+      "sha256": "ddb134b92765feb0025373a408caa4a6429e97ddf3bb83220326547a6a0c33fa"
+    },
+    {
+      "old": "capstone_person1/BENCHMARK_INPUT_CONTRACT.md",
+      "new": "capstone_person1/docs/contracts/BENCHMARK_INPUT_CONTRACT.md",
+      "sha256": "d4abda6637e4e6ef965da2d828f381c8d08f9c0d893b0189c75d7bab24d70879"
+    },
+    {
+      "old": "capstone_person1/FIRST_ALIGNMENT_BATCH.md",
+      "new": "capstone_person1/docs/milestones/FIRST_ALIGNMENT_BATCH.md",
+      "sha256": "0f5f9dca889d159189641e36516771812114969dd63cf5f9fea1303a868926f0"
+    },
+    {
+      "old": "capstone_person1/BENCHMARK_INTERFACE_BATCH.md",
+      "new": "capstone_person1/docs/milestones/BENCHMARK_INTERFACE_BATCH.md",
+      "sha256": "6a5250bce3fa1b6868f6ac2e8230473bf01f181fee3d1d847c8a58dde3764283"
+    },
+    {
+      "old": "capstone_person1/FIXES_AND_HANDOFF.md",
+      "new": "capstone_person1/docs/milestones/FIXES_AND_HANDOFF.md",
+      "sha256": "504bd0ac05369ba30d00f38e1d59774d1a26d9bf4101ffa8f1c797892c03a675"
+    },
+    {
+      "old": "capstone_person1/FIRST_BATCH_VERIFICATION.json",
+      "new": "capstone_person1/evidence/FIRST_BATCH_VERIFICATION.json",
+      "sha256": "916a14197063d4a69baf49f29809f3c9e8cbf447a54da659ee3fa72624d2f94f"
+    },
+    {
+      "old": "capstone_person1/IMPLEMENTATION_STATUS.json",
+      "new": "capstone_person1/evidence/IMPLEMENTATION_STATUS.json",
+      "sha256": "90ff6c3b5bd902673abe9c1792c869fdbfb06b1974b2d4f67f1da440587bc843"
+    },
+    {
+      "old": "capstone_person1/NEXT_STEP_VERIFICATION.json",
+      "new": "capstone_person1/evidence/NEXT_STEP_VERIFICATION.json",
+      "sha256": "9cd38c92eeee57ac9a0a8387b75f61fe88b03b299bdb1d95f764e6dc1405c2b7"
+    },
+    {
+      "old": "capstone_person1/REFERENCE_CONTRACT_VERIFICATION.json",
+      "new": "capstone_person1/evidence/REFERENCE_CONTRACT_VERIFICATION.json",
+      "sha256": "6b99dfe4958beffe813e4fa60667b9ff6ab89e50e6a537716dbabd9d6b297ca4"
+    },
+    {
+      "old": "capstone_person1/SNAPSHOT_CONTRACT_SAMPLE.json",
+      "new": "capstone_person1/evidence/SNAPSHOT_CONTRACT_SAMPLE.json",
+      "sha256": "306b4ca5ab094dd57c8953f5d8beb2b9b58de7d00b939df9471aecf404190cb2"
+    },
+    {
+      "old": "capstone_person1/rebuild_v2.log",
+      "new": "capstone_person1/logs/rebuild_v2.log",
+      "sha256": "8d36b9c3527622dde3fd823db6e7f9ad1996d927402ee8f350a1e9b4c8ad043e"
+    },
+    {
+      "old": "data_audit_full.md",
+      "new": "project_documents/data_audit_full.md",
+      "sha256": "fa846d5e7950a8922ce5520a479471477eee3a63b53fc7edbf6fe96c8dd7ddad"
+    },
+    {
+      "old": "FSE 570 Capstone Project Proposal Rubric.pdf",
+      "new": "project_documents/FSE 570 Capstone Project Proposal Rubric.pdf",
+      "sha256": "d9ce9be91d3d883a8e0394d801c81fb351aef5f38b13ca5a929e8769b384bfea"
+    },
+    {
+      "old": "FSE_570_Proposal_Evidence_Grounded_QA.docx",
+      "new": "project_documents/FSE_570_Proposal_Evidence_Grounded_QA.docx",
+      "sha256": "5561cfed12fe18d53c7d6fcd9612f6b84b8cc9d5eac03680dec7af2841c10a81"
+    },
+    {
+      "old": "FSE_570_Proposal_Mathematical_Reasoning.docx",
+      "new": "project_documents/FSE_570_Proposal_Mathematical_Reasoning.docx",
+      "sha256": "577397272d69f3d7b119043ba2b41555dcc49d86f7d0ff1886f444314046ebf5"
+    },
+    {
+      "old": "FSE_570_Proposal_Python_Code_Generation.docx",
+      "new": "project_documents/FSE_570_Proposal_Python_Code_Generation.docx",
+      "sha256": "e0a9eccb1ec1d92d12e07d150fd36ad6d1ed73934788f5565a0481172c26d47b"
+    },
+    {
+      "old": "INFJ team charter.pdf",
+      "new": "project_documents/INFJ team charter.pdf",
+      "sha256": "2c40942ec38b46f79f824a9bc505434299740f536801c8c51a64601a928d8e21"
+    },
+    {
+      "old": "INFJ_capstone_proposal.pdf",
+      "new": "project_documents/INFJ_capstone_proposal.pdf",
+      "sha256": "7f8fe9b13efc1a539477f39ba08ad62d62fedbf6687babf3f1525cc9d49e66a1"
+    },
+    {
+      "old": "Project_Proposal.pdf",
+      "new": "project_documents/Project_Proposal.pdf",
+      "sha256": "da7de2b12baf0c298d1f0885d873ca83bb836d1816ceef0b3e8a540d5044e640"
+    }
+  ],
+  "stable_code_sha256": {
+    "Person1_Full_Run.ipynb": "dce3ef73487547183993eb359c65b23b62e0f71deb4d76c331c076fc7c22a869",
+    "capstone_person1/person1_data_contract.py": "eea80909f46e0dad54e4a517136433041ede0890a44a1a7f1703ae41adbfc722",
+    "Person1_Full_Run_v2.ipynb": "b770433f41b4e0cf50cb56cbf5829aaa2875a662d1f3b2dac0138af8cf889056",
+    "capstone_person1/snapshot_catalog.py": "3ea871f8b38962ed1f80d80cf827223e972328bf9c1d3511fa8415a596530dfd",
+    "capstone_person1/streaming_rebuild.py": "f6fd389e8ec76180ae6054ec6e8ff2d54fcadaab70acf0b377349328dd831728",
+    "capstone_person1/import_person3_manifests.py": "413233f26e0968afa8c1fbc1e0098ac049d2fb658766054ccf793545e9abf9ce",
+    "capstone_person1/benchmark_manifests.py": "4c9a1af5573af6990abd155d2ec546509c24bf7b272550a436ae5acfd9c3fc83",
+    "capstone_person1/rebuild_from_snapshot.py": "1cbfdef4f84dd33d1a18f9323c920583e0bd98fec44ef207adbbac2db42bf044",
+    "capstone_person1/snapshot_stream.py": "3d6a9e303e207119f6fc84a7862cdd459c31d43b3d7c7157e7f3403a807ab517",
+    "capstone_person1/tokenizer_adapter.py": "524b8189f14d4a484c9555c2874efe74a9ad9ff9c608826fd005c08da04b49de",
+    "capstone_person1/pipeline_controls.py": "d44b41664f7564a7226f0331c389c66397da637a62769513b3230fa0fe6100dc",
+    "capstone_person1/configuration.py": "dfd02166f7f0270c523311d6949c9a417daf232fb722658a7debd393ce300c7d"
+  },
+  "artifact_inventory": [
+    {
+      "path": "capstone_person1/runs/full_run_v1/NOT_FOR_MAIN_RUNS.md",
+      "bytes": 581,
+      "modified_ticks": 639271628869531841
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/debug_32_full.jsonl",
+      "bytes": 49330,
+      "modified_ticks": 639271596274101460
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/debug_32_full_ids.txt",
+      "bytes": 2080,
+      "modified_ticks": 639271596274986468
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/debug_32_full_summary.json",
+      "bytes": 1158,
+      "modified_ticks": 639271596273557959
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n1000_full.jsonl",
+      "bytes": 1601675,
+      "modified_ticks": 639271596273927412
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n1000_full_ids.txt",
+      "bytes": 65000,
+      "modified_ticks": 639271596273670707
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n1000_full_summary.json",
+      "bytes": 1193,
+      "modified_ticks": 639271596273730688
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n16000_full.jsonl",
+      "bytes": 25836954,
+      "modified_ticks": 639271596278681796
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n16000_full_ids.txt",
+      "bytes": 1040000,
+      "modified_ticks": 639271596274451765
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n16000_full_summary.json",
+      "bytes": 1224,
+      "modified_ticks": 639271596274038846
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n2000_full.jsonl",
+      "bytes": 3214223,
+      "modified_ticks": 639271596275897566
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n2000_full_ids.txt",
+      "bytes": 130000,
+      "modified_ticks": 639271596274649436
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n2000_full_summary.json",
+      "bytes": 1216,
+      "modified_ticks": 639271596274886585
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n40000_full.jsonl",
+      "bytes": 64573591,
+      "modified_ticks": 639271596283015517
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n40000_full_ids.txt",
+      "bytes": 2600000,
+      "modified_ticks": 639271596276224770
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n40000_full_summary.json",
+      "bytes": 1249,
+      "modified_ticks": 639271596273781484
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n4000_full.jsonl",
+      "bytes": 6441652,
+      "modified_ticks": 639271596275637198
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n4000_full_ids.txt",
+      "bytes": 260000,
+      "modified_ticks": 639271596274197917
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n4000_full_summary.json",
+      "bytes": 1219,
+      "modified_ticks": 639271596274705506
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n500_full.jsonl",
+      "bytes": 797776,
+      "modified_ticks": 639271596274830607
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n500_full_ids.txt",
+      "bytes": 32500,
+      "modified_ticks": 639271596274533388
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n500_full_summary.json",
+      "bytes": 1189,
+      "modified_ticks": 639271596273981005
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n8000_full.jsonl",
+      "bytes": 12918888,
+      "modified_ticks": 639271596277130329
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n8000_full_ids.txt",
+      "bytes": 520000,
+      "modified_ticks": 639271596275140034
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/manifests/train_n8000_full_summary.json",
+      "bytes": 1221,
+      "modified_ticks": 639271596274273180
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/processed/numina_canonical_full.parquet",
+      "bytes": 1192075647,
+      "modified_ticks": 639271596237014648
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/processed/orca_canonical_full.parquet",
+      "bytes": 200354117,
+      "modified_ticks": 639271596273393349
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/processed/row_status_audit_full.parquet",
+      "bytes": 151174060,
+      "modified_ticks": 639271596254206032
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/processed/train_pool_full.parquet",
+      "bytes": 27580052,
+      "modified_ticks": 639271596239676277
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/audit_summary_full.json",
+      "bytes": 11141,
+      "modified_ticks": 639271596283202697
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/conflicting_exact_answers.csv",
+      "bytes": 178297,
+      "modified_ticks": 639271596283598193
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/dataset_inventory.json",
+      "bytes": 878,
+      "modified_ticks": 639271596284111870
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/data_audit_full.md",
+      "bytes": 2146,
+      "modified_ticks": 639271596283697178
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/decisions_log.md",
+      "bytes": 254,
+      "modified_ticks": 639271596284051844
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/environment.json",
+      "bytes": 273,
+      "modified_ticks": 639271596283352907
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/evaluation_exact_overlap.csv",
+      "bytes": 341,
+      "modified_ticks": 639271596283783746
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/evaluation_near_candidates.csv",
+      "bytes": 3583,
+      "modified_ticks": 639271596283861492
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/evaluation_near_overlap.csv",
+      "bytes": 1827,
+      "modified_ticks": 639271596284689325
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/evaluation_near_review_sample.csv",
+      "bytes": 3641,
+      "modified_ticks": 639271596284190162
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/exact_duplicates.csv",
+      "bytes": 1340294,
+      "modified_ticks": 639271596284856625
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/formatted_examples_review_20.csv",
+      "bytes": 26042,
+      "modified_ticks": 639271596284328887
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/near_duplicate_candidates.csv",
+      "bytes": 1358932,
+      "modified_ticks": 639271596284520031
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/near_duplicate_review_sample.csv",
+      "bytes": 59849,
+      "modified_ticks": 639271596283498680
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/numina_inspection_25.csv",
+      "bytes": 30823,
+      "modified_ticks": 639271596283295737
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/orca_answer_extraction_review_25.csv",
+      "bytes": 20273,
+      "modified_ticks": 639271596285049981
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/orca_inspection_25.csv",
+      "bytes": 25972,
+      "modified_ticks": 639271596283426425
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/overlength_quarantine.csv",
+      "bytes": 875766,
+      "modified_ticks": 639271596284976568
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/quality_audit.csv",
+      "bytes": 566,
+      "modified_ticks": 639271596284592772
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/repository_revisions.json",
+      "bytes": 347,
+      "modified_ticks": 639271596284252231
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/review_flags_audit.csv",
+      "bytes": 195,
+      "modified_ticks": 639271596283964581
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v1/outputs/reports/token_length_statistics.csv",
+      "bytes": 259,
+      "modified_ticks": 639271596283150794
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T165951Z_38717bdb/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695610920
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170300Z_fc38eb6b/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271621833404249
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170300Z_fc38eb6b/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695643574
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170300Z_fc38eb6b/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271622004986841
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170300Z_fc38eb6b/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271621833778670
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170300Z_fc38eb6b/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271621833763504
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170300Z_fc38eb6b/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271622004986841
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170300Z_fc38eb6b/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271622004971393
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_1689bb57/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271622029712188
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_1689bb57/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695657985
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_1689bb57/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271622171701552
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_1689bb57/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271622029792515
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_1689bb57/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271622029792515
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_1689bb57/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271622171701552
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_1689bb57/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271622171691541
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_a51293a2/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271622029359548
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_a51293a2/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695675515
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_a51293a2/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271622173425546
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_a51293a2/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271622029450435
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_a51293a2/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271622029440244
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_a51293a2/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271622173425546
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170322Z_a51293a2/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271622173425546
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170339Z_d108d925/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271622197159739
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170339Z_d108d925/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695688354
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170339Z_d108d925/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271622321590540
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170339Z_d108d925/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271622197256888
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170339Z_d108d925/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271622197251376
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170339Z_d108d925/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271622321580360
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170339Z_d108d925/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271622321575059
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170355Z_03437e99/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271622353765675
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170355Z_03437e99/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695699660
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170355Z_03437e99/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271622479140107
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170355Z_03437e99/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271622353868081
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170355Z_03437e99/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271622353858117
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170355Z_03437e99/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271622479140107
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170355Z_03437e99/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271622479134741
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170409Z_a35cd0ed/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271622501345664
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170409Z_a35cd0ed/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695715147
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170409Z_a35cd0ed/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271622501428286
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170409Z_a35cd0ed/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271622501428286
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170950Z_af956a20/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271625911721902
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170950Z_af956a20/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695728628
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170950Z_af956a20/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271625959270505
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170950Z_af956a20/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271625911798653
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170950Z_af956a20/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271625911787657
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170950Z_af956a20/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271625959260294
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170950Z_af956a20/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271625959250333
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_2b03b5a3/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271625982610009
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_2b03b5a3/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695738356
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_2b03b5a3/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271626000134342
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_2b03b5a3/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271625982693829
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_2b03b5a3/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271625982693829
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_2b03b5a3/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271626000121702
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_2b03b5a3/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271626000121702
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_f4135e09/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271625982840333
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_f4135e09/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695750405
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_f4135e09/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271626000469356
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_f4135e09/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271625982932856
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_f4135e09/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271625982932856
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_f4135e09/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271626000456775
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T170957Z_f4135e09/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271626000442871
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171002Z_a5b6ed9e/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271626027852237
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171002Z_a5b6ed9e/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695761373
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171002Z_a5b6ed9e/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271626045558303
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171002Z_a5b6ed9e/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271626027940691
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171002Z_a5b6ed9e/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271626027925435
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171002Z_a5b6ed9e/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271626045543210
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171002Z_a5b6ed9e/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271626045543210
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171006Z_d8452084/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271626069914740
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171006Z_d8452084/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695766745
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171006Z_d8452084/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271626085822942
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171006Z_d8452084/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271626070013901
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171006Z_d8452084/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271626070003925
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171006Z_d8452084/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271626085822942
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171006Z_d8452084/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271626085813804
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171010Z_dfb0f060/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271626109030773
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171010Z_dfb0f060/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695775572
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171010Z_dfb0f060/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271626124782075
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171010Z_dfb0f060/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271626109101587
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171010Z_dfb0f060/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271626109101587
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171010Z_dfb0f060/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271626124772053
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171010Z_dfb0f060/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271626124761908
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171014Z_af2cfd59/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271626150043075
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171014Z_af2cfd59/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695775572
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171014Z_af2cfd59/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271626166425433
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171014Z_af2cfd59/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271626150112723
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171014Z_af2cfd59/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271626150112723
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171014Z_af2cfd59/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271626166415394
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171014Z_af2cfd59/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271626166415394
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171018Z_2e01e113/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271626188339392
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171018Z_2e01e113/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695785604
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171018Z_2e01e113/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271626204653128
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171018Z_2e01e113/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271626188428710
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171018Z_2e01e113/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271626188428710
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171018Z_2e01e113/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271626204643036
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171018Z_2e01e113/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271626204625401
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171109Z_bb006f1b/run_configuration.json",
+      "bytes": 1857,
+      "modified_ticks": 639271626696424600
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171109Z_bb006f1b/RUN_STATUS.json",
+      "bytes": 159,
+      "modified_ticks": 639273633695795604
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171109Z_bb006f1b/outputs/reports/dataset_inventory.json",
+      "bytes": 1172,
+      "modified_ticks": 639271626714570475
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171109Z_bb006f1b/outputs/reports/decisions_log.md",
+      "bytes": 137,
+      "modified_ticks": 639271626696538851
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171109Z_bb006f1b/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639271626696528906
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171109Z_bb006f1b/outputs/reports/repository_revisions.json",
+      "bytes": 354,
+      "modified_ticks": 639271626714557139
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261009T171109Z_bb006f1b/outputs/reports/snapshot_provenance.json",
+      "bytes": 447,
+      "modified_ticks": 639271626714557139
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/run_configuration.json",
+      "bytes": 2608,
+      "modified_ticks": 639273627000279765
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/snapshot_run_options.json",
+      "bytes": 70,
+      "modified_ticks": 639273626929085397
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/checkpoints/catalog.checkpoint.json",
+      "bytes": 170,
+      "modified_ticks": 639273627044818331
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/checkpoints/catalog.sqlite",
+      "bytes": 499712,
+      "modified_ticks": 639273627044761584
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/checkpoints/numina/batch_000000000.parquet",
+      "bytes": 320790,
+      "modified_ticks": 639273627036832045
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/checkpoints/numina/batch_000000256.parquet",
+      "bytes": 323047,
+      "modified_ticks": 639273627041351153
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/checkpoints/numina/checkpoint.json",
+      "bytes": 1186,
+      "modified_ticks": 639273627041594370
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/checkpoints/orca/batch_000000000.parquet",
+      "bytes": 168022,
+      "modified_ticks": 639273627009510355
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/checkpoints/orca/batch_000000256.parquet",
+      "bytes": 161466,
+      "modified_ticks": 639273627013767821
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/checkpoints/orca/changes_000000000.jsonl",
+      "bytes": 71056,
+      "modified_ticks": 639273627010230087
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/checkpoints/orca/changes_000000256.jsonl",
+      "bytes": 66418,
+      "modified_ticks": 639273627013961586
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/checkpoints/orca/checkpoint.json",
+      "bytes": 1368,
+      "modified_ticks": 639273627014170488
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/debug_32_pilot.jsonl",
+      "bytes": 103551,
+      "modified_ticks": 639273627101095813
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/debug_32_pilot_ids.txt",
+      "bytes": 2112,
+      "modified_ticks": 639273627101105977
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/debug_32_pilot_summary.json",
+      "bytes": 1518,
+      "modified_ticks": 639273627105722450
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/train_n100_pilot.jsonl",
+      "bytes": 310106,
+      "modified_ticks": 639273627111416966
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/train_n100_pilot_ids.txt",
+      "bytes": 6600,
+      "modified_ticks": 639273627111437013
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/train_n100_pilot_summary.json",
+      "bytes": 1521,
+      "modified_ticks": 639273627114702229
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/train_n32_pilot.jsonl",
+      "bytes": 103551,
+      "modified_ticks": 639273627105757908
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/train_n32_pilot_ids.txt",
+      "bytes": 2112,
+      "modified_ticks": 639273627105767744
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/train_n32_pilot_summary.json",
+      "bytes": 1519,
+      "modified_ticks": 639273627108086819
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/train_n64_pilot.jsonl",
+      "bytes": 197981,
+      "modified_ticks": 639273627108122522
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/train_n64_pilot_ids.txt",
+      "bytes": 4224,
+      "modified_ticks": 639273627108143128
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/manifests/train_n64_pilot_summary.json",
+      "bytes": 1519,
+      "modified_ticks": 639273627111336918
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/processed/row_status_audit_pilot.parquet",
+      "bytes": 87096,
+      "modified_ticks": 639273627116373042
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/processed/train_pool_pilot.parquet",
+      "bytes": 152540,
+      "modified_ticks": 639273627101045756
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/audit_summary_pilot.json",
+      "bytes": 6999,
+      "modified_ticks": 639273627116475942
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/conflicting_exact_answers.csv",
+      "bytes": 272,
+      "modified_ticks": 639273627045681594
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/dataset_inventory.json",
+      "bytes": 1128,
+      "modified_ticks": 639273627041867291
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/data_audit_pilot.md",
+      "bytes": 1823,
+      "modified_ticks": 639273627116481084
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/decisions_log.md",
+      "bytes": 257,
+      "modified_ticks": 639273627093708236
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639273627002157109
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/evaluation_exact_overlap.csv",
+      "bytes": 317,
+      "modified_ticks": 639273627047385425
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/evaluation_near_candidates.csv",
+      "bytes": 89,
+      "modified_ticks": 639273627090583328
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/evaluation_near_overlap.csv",
+      "bytes": 89,
+      "modified_ticks": 639273627093748011
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/evaluation_near_review_sample.csv",
+      "bytes": 218,
+      "modified_ticks": 639273627091328977
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/exact_answer_equivalence_audit.csv",
+      "bytes": 41,
+      "modified_ticks": 639273627045712381
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/exact_duplicates.csv",
+      "bytes": 272,
+      "modified_ticks": 639273627045662794
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/formatted_examples_review_20.csv",
+      "bytes": 27836,
+      "modified_ticks": 639273627100522603
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/handoff_readiness.json",
+      "bytes": 2100,
+      "modified_ticks": 639273627116650511
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/missed_match_review.csv",
+      "bytes": 196,
+      "modified_ticks": 639273627093678134
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/near_duplicate_candidates.csv",
+      "bytes": 476,
+      "modified_ticks": 639273627050017338
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/near_duplicate_review_sample.csv",
+      "bytes": 613,
+      "modified_ticks": 639273627050094077
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/numina_inspection_25.csv",
+      "bytes": 41066,
+      "modified_ticks": 639273627045263156
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/orca_answer_extraction_review_25.csv",
+      "bytes": 31988,
+      "modified_ticks": 639273627045459935
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/orca_extraction_changes.csv",
+      "bytes": 63142,
+      "modified_ticks": 639273627045610809
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/orca_inspection_25.csv",
+      "bytes": 20748,
+      "modified_ticks": 639273627045072541
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/overlength_quarantine.csv",
+      "bytes": 472,
+      "modified_ticks": 639273627100441016
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/prompt_specification.json",
+      "bytes": 741,
+      "modified_ticks": 639273627099256766
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/quality_audit.csv",
+      "bytes": 618,
+      "modified_ticks": 639273627045507185
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/rebuild_metrics.json",
+      "bytes": 471,
+      "modified_ticks": 639273627116670648
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/repository_revisions.json",
+      "bytes": 202,
+      "modified_ticks": 639273627041680705
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/review_flags_audit.csv",
+      "bytes": 188,
+      "modified_ticks": 639273627045544219
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/snapshot_provenance.json",
+      "bytes": 648,
+      "modified_ticks": 639273627041645357
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004452Z_ffd466bf/outputs/reports/token_length_statistics.csv",
+      "bytes": 265,
+      "modified_ticks": 639273627100420815
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/run_configuration.json",
+      "bytes": 2609,
+      "modified_ticks": 639273630576085405
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/snapshot_run_options.json",
+      "bytes": 71,
+      "modified_ticks": 639273630551880381
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/catalog.checkpoint.json",
+      "bytes": 170,
+      "modified_ticks": 639273629287201396
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/catalog.sqlite",
+      "bytes": 2441216,
+      "modified_ticks": 639273629287068090
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/numina/batch_000000000.parquet",
+      "bytes": 320790,
+      "modified_ticks": 639273629224124584
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/numina/batch_000000256.parquet",
+      "bytes": 343206,
+      "modified_ticks": 639273629229211291
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/numina/batch_000000512.parquet",
+      "bytes": 382171,
+      "modified_ticks": 639273629236719745
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/numina/batch_000000768.parquet",
+      "bytes": 390734,
+      "modified_ticks": 639273629245122622
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/numina/batch_000001024.parquet",
+      "bytes": 396370,
+      "modified_ticks": 639273629253073949
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/numina/batch_000001280.parquet",
+      "bytes": 391180,
+      "modified_ticks": 639273629261283408
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/numina/batch_000001536.parquet",
+      "bytes": 377957,
+      "modified_ticks": 639273629269951466
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/numina/batch_000001792.parquet",
+      "bytes": 250863,
+      "modified_ticks": 639273629274417699
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/numina/batch_000002048.parquet",
+      "bytes": 182104,
+      "modified_ticks": 639273629279070267
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/numina/batch_000002304.parquet",
+      "bytes": 163742,
+      "modified_ticks": 639273629282199675
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/numina/checkpoint.json",
+      "bytes": 2555,
+      "modified_ticks": 639273629282525311
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/batch_000000000.parquet",
+      "bytes": 168022,
+      "modified_ticks": 639273629171006117
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/batch_000000256.parquet",
+      "bytes": 168739,
+      "modified_ticks": 639273629174208032
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/batch_000000512.parquet",
+      "bytes": 170303,
+      "modified_ticks": 639273629176372303
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/batch_000000768.parquet",
+      "bytes": 164493,
+      "modified_ticks": 639273629178654523
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/batch_000001024.parquet",
+      "bytes": 170995,
+      "modified_ticks": 639273629181295009
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/batch_000001280.parquet",
+      "bytes": 170992,
+      "modified_ticks": 639273629183920721
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/batch_000001536.parquet",
+      "bytes": 169042,
+      "modified_ticks": 639273629186600264
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/batch_000001792.parquet",
+      "bytes": 164867,
+      "modified_ticks": 639273629188831644
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/batch_000002048.parquet",
+      "bytes": 167478,
+      "modified_ticks": 639273629191355567
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/batch_000002304.parquet",
+      "bytes": 126970,
+      "modified_ticks": 639273629196113664
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/changes_000000000.jsonl",
+      "bytes": 71056,
+      "modified_ticks": 639273629171699718
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/changes_000000256.jsonl",
+      "bytes": 69554,
+      "modified_ticks": 639273629174415671
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/changes_000000512.jsonl",
+      "bytes": 69696,
+      "modified_ticks": 639273629176584858
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/changes_000000768.jsonl",
+      "bytes": 69728,
+      "modified_ticks": 639273629178848665
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/changes_000001024.jsonl",
+      "bytes": 70579,
+      "modified_ticks": 639273629181489217
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/changes_000001280.jsonl",
+      "bytes": 69972,
+      "modified_ticks": 639273629184089318
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/changes_000001536.jsonl",
+      "bytes": 69987,
+      "modified_ticks": 639273629186776919
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/changes_000001792.jsonl",
+      "bytes": 69734,
+      "modified_ticks": 639273629189022039
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/changes_000002048.jsonl",
+      "bytes": 70133,
+      "modified_ticks": 639273629191614768
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/changes_000002304.jsonl",
+      "bytes": 53089,
+      "modified_ticks": 639273629196306527
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/checkpoints/orca/checkpoint.json",
+      "bytes": 3849,
+      "modified_ticks": 639273629196535142
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/debug_32_pilot.jsonl",
+      "bytes": 95105,
+      "modified_ticks": 639273630615791852
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/debug_32_pilot_ids.txt",
+      "bytes": 2112,
+      "modified_ticks": 639273630615791852
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/debug_32_pilot_summary.json",
+      "bytes": 1516,
+      "modified_ticks": 639273630619973984
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/train_n100_pilot.jsonl",
+      "bytes": 290203,
+      "modified_ticks": 639273630625195115
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/train_n100_pilot_ids.txt",
+      "bytes": 6600,
+      "modified_ticks": 639273630625205064
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/train_n100_pilot_summary.json",
+      "bytes": 1521,
+      "modified_ticks": 639273630628529040
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/train_n32_pilot.jsonl",
+      "bytes": 95105,
+      "modified_ticks": 639273630619983980
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/train_n32_pilot_ids.txt",
+      "bytes": 2112,
+      "modified_ticks": 639273630619999049
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/train_n32_pilot_summary.json",
+      "bytes": 1517,
+      "modified_ticks": 639273630622093886
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/train_n64_pilot.jsonl",
+      "bytes": 179087,
+      "modified_ticks": 639273630622123958
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/train_n64_pilot_ids.txt",
+      "bytes": 4224,
+      "modified_ticks": 639273630622123958
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/manifests/train_n64_pilot_summary.json",
+      "bytes": 1519,
+      "modified_ticks": 639273630625145003
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/processed/row_status_audit_pilot.parquet",
+      "bytes": 432715,
+      "modified_ticks": 639273630629687291
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/processed/train_pool_pilot.parquet",
+      "bytes": 137409,
+      "modified_ticks": 639273630615760317
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/audit_summary_pilot.json",
+      "bytes": 7003,
+      "modified_ticks": 639273630629720108
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/conflicting_exact_answers.csv",
+      "bytes": 272,
+      "modified_ticks": 639273630594962240
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/dataset_inventory.json",
+      "bytes": 1128,
+      "modified_ticks": 639273630589772515
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/data_audit_pilot.md",
+      "bytes": 1828,
+      "modified_ticks": 639273630629720108
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/decisions_log.md",
+      "bytes": 514,
+      "modified_ticks": 639273630611558668
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639273630576161688
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/evaluation_exact_overlap.csv",
+      "bytes": 317,
+      "modified_ticks": 639273630596473408
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/evaluation_near_candidates.csv",
+      "bytes": 89,
+      "modified_ticks": 639273630610351101
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/evaluation_near_overlap.csv",
+      "bytes": 89,
+      "modified_ticks": 639273630611585076
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/evaluation_near_review_sample.csv",
+      "bytes": 218,
+      "modified_ticks": 639273629344687196
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/exact_answer_equivalence_audit.csv",
+      "bytes": 41,
+      "modified_ticks": 639273630594981656
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/exact_duplicates.csv",
+      "bytes": 272,
+      "modified_ticks": 639273630594951467
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/formatted_examples_review_20.csv",
+      "bytes": 25137,
+      "modified_ticks": 639273629349420442
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/handoff_readiness.json",
+      "bytes": 2100,
+      "modified_ticks": 639273630629790806
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/missed_match_review.csv",
+      "bytes": 1980,
+      "modified_ticks": 639273629345509372
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/near_duplicate_candidates.csv",
+      "bytes": 3232,
+      "modified_ticks": 639273630598812601
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/near_duplicate_review_sample.csv",
+      "bytes": 3393,
+      "modified_ticks": 639273629305850952
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/numina_inspection_25.csv",
+      "bytes": 44917,
+      "modified_ticks": 639273629289163836
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/orca_answer_extraction_review_25.csv",
+      "bytes": 37152,
+      "modified_ticks": 639273629291207046
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/orca_extraction_changes.csv",
+      "bytes": 314746,
+      "modified_ticks": 639273630594890216
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/orca_inspection_25.csv",
+      "bytes": 20157,
+      "modified_ticks": 639273629288354822
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/overlength_quarantine.csv",
+      "bytes": 472,
+      "modified_ticks": 639273630614874183
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/prompt_specification.json",
+      "bytes": 741,
+      "modified_ticks": 639273630613870167
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/quality_audit.csv",
+      "bytes": 735,
+      "modified_ticks": 639273630594707125
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/rebuild_metrics.json",
+      "bytes": 447,
+      "modified_ticks": 639273630629820665
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/repository_revisions.json",
+      "bytes": 202,
+      "modified_ticks": 639273630589757386
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/review_flags_audit.csv",
+      "bytes": 192,
+      "modified_ticks": 639273630594718804
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/snapshot_provenance.json",
+      "bytes": 649,
+      "modified_ticks": 639273630589747247
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T004834Z_c75c286d/outputs/reports/token_length_statistics.csv",
+      "bytes": 241,
+      "modified_ticks": 639273630614864401
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/run_configuration.json",
+      "bytes": 5332,
+      "modified_ticks": 639273873717773861
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/snapshot_run_options.json",
+      "bytes": 71,
+      "modified_ticks": 639273873691714061
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/catalog.checkpoint.json",
+      "bytes": 170,
+      "modified_ticks": 639273873795299343
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/catalog.sqlite",
+      "bytes": 2514944,
+      "modified_ticks": 639273873795218240
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/numina/batch_000000000.parquet",
+      "bytes": 372940,
+      "modified_ticks": 639273873759841165
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/numina/batch_000000256.parquet",
+      "bytes": 437479,
+      "modified_ticks": 639273873763305691
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/numina/batch_000000512.parquet",
+      "bytes": 509164,
+      "modified_ticks": 639273873767901624
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/numina/batch_000000768.parquet",
+      "bytes": 512595,
+      "modified_ticks": 639273873771786228
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/numina/batch_000001024.parquet",
+      "bytes": 542286,
+      "modified_ticks": 639273873776661309
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/numina/batch_000001280.parquet",
+      "bytes": 516294,
+      "modified_ticks": 639273873781067173
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/numina/batch_000001536.parquet",
+      "bytes": 497653,
+      "modified_ticks": 639273873785354689
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/numina/batch_000001792.parquet",
+      "bytes": 320592,
+      "modified_ticks": 639273873788736306
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/numina/batch_000002048.parquet",
+      "bytes": 214215,
+      "modified_ticks": 639273873790947849
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/numina/batch_000002304.parquet",
+      "bytes": 192545,
+      "modified_ticks": 639273873792988864
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/numina/checkpoint.json",
+      "bytes": 2603,
+      "modified_ticks": 639273873793409809
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/batch_000000000.parquet",
+      "bytes": 195525,
+      "modified_ticks": 639273873722076561
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/batch_000000256.parquet",
+      "bytes": 197399,
+      "modified_ticks": 639273873725101460
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/batch_000000512.parquet",
+      "bytes": 199117,
+      "modified_ticks": 639273873728116240
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/batch_000000768.parquet",
+      "bytes": 192122,
+      "modified_ticks": 639273873730181981
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/batch_000001024.parquet",
+      "bytes": 199531,
+      "modified_ticks": 639273873732528266
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/batch_000001280.parquet",
+      "bytes": 198697,
+      "modified_ticks": 639273873734700349
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/batch_000001536.parquet",
+      "bytes": 197024,
+      "modified_ticks": 639273873736870995
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/batch_000001792.parquet",
+      "bytes": 192670,
+      "modified_ticks": 639273873739747537
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/batch_000002048.parquet",
+      "bytes": 194881,
+      "modified_ticks": 639273873741975577
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/batch_000002304.parquet",
+      "bytes": 151074,
+      "modified_ticks": 639273873743679954
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/changes_000000000.jsonl",
+      "bytes": 71056,
+      "modified_ticks": 639273873722910068
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/changes_000000256.jsonl",
+      "bytes": 69554,
+      "modified_ticks": 639273873725344563
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/changes_000000512.jsonl",
+      "bytes": 69696,
+      "modified_ticks": 639273873728333342
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/changes_000000768.jsonl",
+      "bytes": 69728,
+      "modified_ticks": 639273873730399411
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/changes_000001024.jsonl",
+      "bytes": 70579,
+      "modified_ticks": 639273873732740576
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/changes_000001280.jsonl",
+      "bytes": 69972,
+      "modified_ticks": 639273873734931808
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/changes_000001536.jsonl",
+      "bytes": 69987,
+      "modified_ticks": 639273873737114595
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/changes_000001792.jsonl",
+      "bytes": 69734,
+      "modified_ticks": 639273873740015467
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/changes_000002048.jsonl",
+      "bytes": 70145,
+      "modified_ticks": 639273873742211168
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/changes_000002304.jsonl",
+      "bytes": 53089,
+      "modified_ticks": 639273873743890765
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/checkpoints/orca/checkpoint.json",
+      "bytes": 3896,
+      "modified_ticks": 639273873744127377
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/configs/formatting_contract.json",
+      "bytes": 1589,
+      "modified_ticks": 639273873818508995
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/conflicting_exact_answers.csv",
+      "bytes": 272,
+      "modified_ticks": 639273873797020548
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/dataset_inventory.json",
+      "bytes": 1128,
+      "modified_ticks": 639273873793505481
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/decisions_log.md",
+      "bytes": 257,
+      "modified_ticks": 639273873815393890
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639273873717860707
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/evaluation_exact_overlap.csv",
+      "bytes": 499,
+      "modified_ticks": 639273873798682943
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/evaluation_near_candidates.csv",
+      "bytes": 89,
+      "modified_ticks": 639273873814221980
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/evaluation_near_overlap.csv",
+      "bytes": 89,
+      "modified_ticks": 639273873815453456
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/evaluation_near_review_sample.csv",
+      "bytes": 218,
+      "modified_ticks": 639273873814251901
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/exact_answer_equivalence_audit.csv",
+      "bytes": 41,
+      "modified_ticks": 639273873797050657
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/exact_duplicates.csv",
+      "bytes": 272,
+      "modified_ticks": 639273873797000624
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/formatted_examples_review_20.csv",
+      "bytes": 9348,
+      "modified_ticks": 639273873821420571
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/missed_match_review.csv",
+      "bytes": 3044,
+      "modified_ticks": 639273873815383710
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/near_duplicate_candidates.csv",
+      "bytes": 4917,
+      "modified_ticks": 639273873802005301
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/near_duplicate_review_sample.csv",
+      "bytes": 5078,
+      "modified_ticks": 639273873802058400
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/numina_inspection_25.csv",
+      "bytes": 44917,
+      "modified_ticks": 639273873796270388
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/orca_answer_extraction_review_25.csv",
+      "bytes": 34069,
+      "modified_ticks": 639273873796617560
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/orca_extraction_changes.csv",
+      "bytes": 314758,
+      "modified_ticks": 639273873796945969
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/orca_inspection_25.csv",
+      "bytes": 20157,
+      "modified_ticks": 639273873795673378
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/overlength_quarantine.csv",
+      "bytes": 733,
+      "modified_ticks": 639273873821356455
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/prompt_specification.json",
+      "bytes": 741,
+      "modified_ticks": 639273873818533587
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/quality_audit.csv",
+      "bytes": 826,
+      "modified_ticks": 639273873796672614
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/rebuild_metrics.json",
+      "bytes": 544,
+      "modified_ticks": 639273873821564946
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/repository_revisions.json",
+      "bytes": 202,
+      "modified_ticks": 639273873793495498
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/review_flags_audit.csv",
+      "bytes": 192,
+      "modified_ticks": 639273873796682677
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/snapshot_provenance.json",
+      "bytes": 838,
+      "modified_ticks": 639273873793475508
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/target_encoding_quarantine.csv",
+      "bytes": 652101,
+      "modified_ticks": 639273873821186607
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T073609Z_fd250c80/outputs/reports/token_length_statistics.csv",
+      "bytes": 185,
+      "modified_ticks": 639273873821336249
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/run_configuration.json",
+      "bytes": 5361,
+      "modified_ticks": 639274248228456957
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/snapshot_run_options.json",
+      "bytes": 96,
+      "modified_ticks": 639274248197693128
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/catalog.checkpoint.json",
+      "bytes": 170,
+      "modified_ticks": 639274248320928883
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/catalog.sqlite",
+      "bytes": 2449408,
+      "modified_ticks": 639274248320864832
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/numina/batch_000000000.parquet",
+      "bytes": 340171,
+      "modified_ticks": 639274248275967471
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/numina/batch_000000256.parquet",
+      "bytes": 367194,
+      "modified_ticks": 639274248281125553
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/numina/batch_000000512.parquet",
+      "bytes": 317467,
+      "modified_ticks": 639274248286281639
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/numina/batch_000000768.parquet",
+      "bytes": 310666,
+      "modified_ticks": 639274248291763007
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/numina/batch_000001024.parquet",
+      "bytes": 318027,
+      "modified_ticks": 639274248296519437
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/numina/batch_000001280.parquet",
+      "bytes": 298302,
+      "modified_ticks": 639274248301514586
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/numina/batch_000001536.parquet",
+      "bytes": 269627,
+      "modified_ticks": 639274248306022120
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/numina/batch_000001792.parquet",
+      "bytes": 294040,
+      "modified_ticks": 639274248309985075
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/numina/batch_000002048.parquet",
+      "bytes": 295277,
+      "modified_ticks": 639274248314984905
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/numina/batch_000002304.parquet",
+      "bytes": 221053,
+      "modified_ticks": 639274248318251702
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/numina/checkpoint.json",
+      "bytes": 2962,
+      "modified_ticks": 639274248318424488
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/batch_000000000.parquet",
+      "bytes": 239935,
+      "modified_ticks": 639274248233015896
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/batch_000000256.parquet",
+      "bytes": 240811,
+      "modified_ticks": 639274248235732304
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/batch_000000512.parquet",
+      "bytes": 236505,
+      "modified_ticks": 639274248238503471
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/batch_000000768.parquet",
+      "bytes": 253012,
+      "modified_ticks": 639274248241497694
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/batch_000001024.parquet",
+      "bytes": 262588,
+      "modified_ticks": 639274248244415207
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/batch_000001280.parquet",
+      "bytes": 249383,
+      "modified_ticks": 639274248247260162
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/batch_000001536.parquet",
+      "bytes": 255259,
+      "modified_ticks": 639274248250554583
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/batch_000001792.parquet",
+      "bytes": 198166,
+      "modified_ticks": 639274248253773103
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/batch_000002048.parquet",
+      "bytes": 370913,
+      "modified_ticks": 639274248257150252
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/batch_000002304.parquet",
+      "bytes": 256887,
+      "modified_ticks": 639274248260221141
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/changes_000000000.jsonl",
+      "bytes": 71507,
+      "modified_ticks": 639274248233184444
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/changes_000000256.jsonl",
+      "bytes": 72340,
+      "modified_ticks": 639274248235881445
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/changes_000000512.jsonl",
+      "bytes": 73119,
+      "modified_ticks": 639274248238664083
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/changes_000000768.jsonl",
+      "bytes": 72778,
+      "modified_ticks": 639274248241621642
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/changes_000001024.jsonl",
+      "bytes": 72654,
+      "modified_ticks": 639274248244514491
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/changes_000001280.jsonl",
+      "bytes": 72767,
+      "modified_ticks": 639274248247448290
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/changes_000001536.jsonl",
+      "bytes": 73254,
+      "modified_ticks": 639274248250784799
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/changes_000001792.jsonl",
+      "bytes": 72199,
+      "modified_ticks": 639274248253959509
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/changes_000002048.jsonl",
+      "bytes": 72447,
+      "modified_ticks": 639274248257359489
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/changes_000002304.jsonl",
+      "bytes": 55208,
+      "modified_ticks": 639274248260303761
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/checkpoints/orca/checkpoint.json",
+      "bytes": 4000,
+      "modified_ticks": 639274248260476943
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/configs/formatting_contract.json",
+      "bytes": 1589,
+      "modified_ticks": 639274248351773522
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/conflicting_exact_answers.csv",
+      "bytes": 272,
+      "modified_ticks": 639274248322545372
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/dataset_inventory.json",
+      "bytes": 1128,
+      "modified_ticks": 639274248318584097
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/decisions_log.md",
+      "bytes": 257,
+      "modified_ticks": 639274248347993949
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639274248228764824
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/evaluation_exact_overlap.csv",
+      "bytes": 636,
+      "modified_ticks": 639274248324223221
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/evaluation_near_candidates.csv",
+      "bytes": 89,
+      "modified_ticks": 639274248346784871
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/evaluation_near_overlap.csv",
+      "bytes": 89,
+      "modified_ticks": 639274248348029142
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/evaluation_near_review_sample.csv",
+      "bytes": 218,
+      "modified_ticks": 639274248346824976
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/exact_answer_equivalence_audit.csv",
+      "bytes": 41,
+      "modified_ticks": 639274248322564751
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/exact_duplicates.csv",
+      "bytes": 272,
+      "modified_ticks": 639274248322545372
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/formatted_examples_review_20.csv",
+      "bytes": 23926,
+      "modified_ticks": 639274248356610955
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/missed_match_review.csv",
+      "bytes": 1467,
+      "modified_ticks": 639274248347978742
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/near_duplicate_candidates.csv",
+      "bytes": 73,
+      "modified_ticks": 639274248326446873
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/near_duplicate_review_sample.csv",
+      "bytes": 202,
+      "modified_ticks": 639274248326489200
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/numina_inspection_25.csv",
+      "bytes": 33019,
+      "modified_ticks": 639274248321856650
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/orca_answer_extraction_review_25.csv",
+      "bytes": 42505,
+      "modified_ticks": 639274248322236990
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/orca_extraction_changes.csv",
+      "bytes": 331488,
+      "modified_ticks": 639274248322494493
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/orca_inspection_25.csv",
+      "bytes": 30977,
+      "modified_ticks": 639274248321339713
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/overlength_quarantine.csv",
+      "bytes": 870,
+      "modified_ticks": 639274248356482518
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/prompt_specification.json",
+      "bytes": 741,
+      "modified_ticks": 639274248351783634
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/quality_audit.csv",
+      "bytes": 996,
+      "modified_ticks": 639274248322283527
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/rebuild_metrics.json",
+      "bytes": 524,
+      "modified_ticks": 639274248357422933
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/repository_revisions.json",
+      "bytes": 202,
+      "modified_ticks": 639274248318478961
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/review_flags_audit.csv",
+      "bytes": 191,
+      "modified_ticks": 639274248322307574
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/snapshot_provenance.json",
+      "bytes": 865,
+      "modified_ticks": 639274248318465895
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/target_encoding_quarantine.csv",
+      "bytes": 155491,
+      "modified_ticks": 639274248356219207
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180019Z_fe4b3b6e/outputs/reports/token_length_statistics.csv",
+      "bytes": 271,
+      "modified_ticks": 639274248356472499
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/run_configuration.json",
+      "bytes": 5361,
+      "modified_ticks": 639274252406186808
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/snapshot_run_options.json",
+      "bytes": 96,
+      "modified_ticks": 639274252383178618
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/catalog.checkpoint.json",
+      "bytes": 170,
+      "modified_ticks": 639274249386477590
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/catalog.sqlite",
+      "bytes": 2449408,
+      "modified_ticks": 639274249386403300
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/numina/batch_000000000.parquet",
+      "bytes": 340171,
+      "modified_ticks": 639274249341895345
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/numina/batch_000000256.parquet",
+      "bytes": 367194,
+      "modified_ticks": 639274249347223413
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/numina/batch_000000512.parquet",
+      "bytes": 317467,
+      "modified_ticks": 639274249352278908
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/numina/batch_000000768.parquet",
+      "bytes": 310666,
+      "modified_ticks": 639274249356845339
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/numina/batch_000001024.parquet",
+      "bytes": 318027,
+      "modified_ticks": 639274249361683059
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/numina/batch_000001280.parquet",
+      "bytes": 298302,
+      "modified_ticks": 639274249366963140
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/numina/batch_000001536.parquet",
+      "bytes": 269627,
+      "modified_ticks": 639274249371463783
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/numina/batch_000001792.parquet",
+      "bytes": 294040,
+      "modified_ticks": 639274249375852972
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/numina/batch_000002048.parquet",
+      "bytes": 295277,
+      "modified_ticks": 639274249381076993
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/numina/batch_000002304.parquet",
+      "bytes": 221053,
+      "modified_ticks": 639274249384560002
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/numina/checkpoint.json",
+      "bytes": 2962,
+      "modified_ticks": 639274249384734542
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/batch_000000000.parquet",
+      "bytes": 239935,
+      "modified_ticks": 639274249293524824
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/batch_000000256.parquet",
+      "bytes": 240811,
+      "modified_ticks": 639274249296463582
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/batch_000000512.parquet",
+      "bytes": 236505,
+      "modified_ticks": 639274249299402108
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/batch_000000768.parquet",
+      "bytes": 253012,
+      "modified_ticks": 639274249302458348
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/batch_000001024.parquet",
+      "bytes": 262588,
+      "modified_ticks": 639274249305990660
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/batch_000001280.parquet",
+      "bytes": 249383,
+      "modified_ticks": 639274249309130152
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/batch_000001536.parquet",
+      "bytes": 255259,
+      "modified_ticks": 639274249312538961
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/batch_000001792.parquet",
+      "bytes": 198166,
+      "modified_ticks": 639274249315564221
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/batch_000002048.parquet",
+      "bytes": 370913,
+      "modified_ticks": 639274249320104632
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/batch_000002304.parquet",
+      "bytes": 256887,
+      "modified_ticks": 639274249323553272
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/changes_000000000.jsonl",
+      "bytes": 71507,
+      "modified_ticks": 639274249293714272
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/changes_000000256.jsonl",
+      "bytes": 72340,
+      "modified_ticks": 639274249296660102
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/changes_000000512.jsonl",
+      "bytes": 73119,
+      "modified_ticks": 639274249299555292
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/changes_000000768.jsonl",
+      "bytes": 72778,
+      "modified_ticks": 639274249302681361
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/changes_000001024.jsonl",
+      "bytes": 72654,
+      "modified_ticks": 639274249306161828
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/changes_000001280.jsonl",
+      "bytes": 72767,
+      "modified_ticks": 639274249309356880
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/changes_000001536.jsonl",
+      "bytes": 73254,
+      "modified_ticks": 639274249312747165
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/changes_000001792.jsonl",
+      "bytes": 72199,
+      "modified_ticks": 639274249315831562
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/changes_000002048.jsonl",
+      "bytes": 72447,
+      "modified_ticks": 639274249320313751
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/changes_000002304.jsonl",
+      "bytes": 55208,
+      "modified_ticks": 639274249323661492
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/checkpoints/orca/checkpoint.json",
+      "bytes": 4000,
+      "modified_ticks": 639274249323765175
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/configs/formatting_contract.json",
+      "bytes": 1589,
+      "modified_ticks": 639274252453122113
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/debug_32_pilot.jsonl",
+      "bytes": 158187,
+      "modified_ticks": 639274252458831516
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/debug_32_pilot_ids.txt",
+      "bytes": 2112,
+      "modified_ticks": 639274252458841504
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/debug_32_pilot_summary.json",
+      "bytes": 1517,
+      "modified_ticks": 639274252459039734
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/train_n100_pilot.jsonl",
+      "bytes": 493016,
+      "modified_ticks": 639274252459723657
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/train_n100_pilot_ids.txt",
+      "bytes": 6600,
+      "modified_ticks": 639274252459746820
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/train_n100_pilot_summary.json",
+      "bytes": 1522,
+      "modified_ticks": 639274252459977698
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/train_n32_pilot.jsonl",
+      "bytes": 158187,
+      "modified_ticks": 639274252459069711
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/train_n32_pilot_ids.txt",
+      "bytes": 2112,
+      "modified_ticks": 639274252459084992
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/train_n32_pilot_summary.json",
+      "bytes": 1518,
+      "modified_ticks": 639274252459359024
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/train_n64_pilot.jsonl",
+      "bytes": 306705,
+      "modified_ticks": 639274252459413587
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/train_n64_pilot_ids.txt",
+      "bytes": 4224,
+      "modified_ticks": 639274252459430997
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/manifests/train_n64_pilot_summary.json",
+      "bytes": 1519,
+      "modified_ticks": 639274252459647543
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/processed/row_status_audit_pilot.parquet",
+      "bytes": 442072,
+      "modified_ticks": 639274252461205929
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/processed/train_pool_pilot.parquet",
+      "bytes": 219943,
+      "modified_ticks": 639274252458764590
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/audit_summary_pilot.json",
+      "bytes": 7058,
+      "modified_ticks": 639274252461244761
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/conflicting_exact_answers.csv",
+      "bytes": 272,
+      "modified_ticks": 639274252424368969
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/dataset_inventory.json",
+      "bytes": 1128,
+      "modified_ticks": 639274252420497820
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/data_audit_pilot.md",
+      "bytes": 1873,
+      "modified_ticks": 639274252461262073
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/decisions_log.md",
+      "bytes": 514,
+      "modified_ticks": 639274252450393097
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639274252406275151
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/evaluation_exact_overlap.csv",
+      "bytes": 661,
+      "modified_ticks": 639274252426134966
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/evaluation_near_candidates.csv",
+      "bytes": 89,
+      "modified_ticks": 639274252449175301
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/evaluation_near_overlap.csv",
+      "bytes": 89,
+      "modified_ticks": 639274252450437974
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/evaluation_near_review_sample.csv",
+      "bytes": 218,
+      "modified_ticks": 639274249402650753
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/exact_answer_equivalence_audit.csv",
+      "bytes": 41,
+      "modified_ticks": 639274252424389145
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/exact_duplicates.csv",
+      "bytes": 272,
+      "modified_ticks": 639274252424363683
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/formatted_examples_review_20.csv",
+      "bytes": 23926,
+      "modified_ticks": 639274249410130939
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/handoff_readiness.json",
+      "bytes": 2174,
+      "modified_ticks": 639274252461402074
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/missed_match_review.csv",
+      "bytes": 1467,
+      "modified_ticks": 639274249403658858
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/near_duplicate_candidates.csv",
+      "bytes": 73,
+      "modified_ticks": 639274252429267620
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/near_duplicate_review_sample.csv",
+      "bytes": 202,
+      "modified_ticks": 639274249391382880
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/numina_inspection_25.csv",
+      "bytes": 33019,
+      "modified_ticks": 639274249387342701
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/orca_answer_extraction_review_25.csv",
+      "bytes": 42505,
+      "modified_ticks": 639274249387722729
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/orca_extraction_changes.csv",
+      "bytes": 331488,
+      "modified_ticks": 639274252424305806
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/orca_inspection_25.csv",
+      "bytes": 30977,
+      "modified_ticks": 639274249386882831
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/overlength_quarantine.csv",
+      "bytes": 895,
+      "modified_ticks": 639274252457044239
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/prompt_specification.json",
+      "bytes": 741,
+      "modified_ticks": 639274252453122113
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/quality_audit.csv",
+      "bytes": 996,
+      "modified_ticks": 639274252424107512
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/rebuild_metrics.json",
+      "bytes": 448,
+      "modified_ticks": 639274252461431638
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/reference_label_validation.json",
+      "bytes": 1396,
+      "modified_ticks": 639274250665722170
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/repository_revisions.json",
+      "bytes": 202,
+      "modified_ticks": 639274252420487714
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/review_flags_audit.csv",
+      "bytes": 191,
+      "modified_ticks": 639274252424117287
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/snapshot_provenance.json",
+      "bytes": 865,
+      "modified_ticks": 639274252420477599
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/target_encoding_quarantine.csv",
+      "bytes": 214064,
+      "modified_ticks": 639274252456933799
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T180206Z_eaf9409d/outputs/reports/token_length_statistics.csv",
+      "bytes": 271,
+      "modified_ticks": 639274252457030709
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/run_configuration.json",
+      "bytes": 5468,
+      "modified_ticks": 639274261248967295
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/snapshot_run_options.json",
+      "bytes": 96,
+      "modified_ticks": 639274261224784736
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/catalog.checkpoint.json",
+      "bytes": 170,
+      "modified_ticks": 639274258185653686
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/catalog.sqlite",
+      "bytes": 2449408,
+      "modified_ticks": 639274258185571717
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/numina/batch_000000000.parquet",
+      "bytes": 340171,
+      "modified_ticks": 639274258116324971
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/numina/batch_000000256.parquet",
+      "bytes": 367194,
+      "modified_ticks": 639274258122862415
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/numina/batch_000000512.parquet",
+      "bytes": 317467,
+      "modified_ticks": 639274258130228199
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/numina/batch_000000768.parquet",
+      "bytes": 310666,
+      "modified_ticks": 639274258138348704
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/numina/batch_000001024.parquet",
+      "bytes": 318027,
+      "modified_ticks": 639274258145624541
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/numina/batch_000001280.parquet",
+      "bytes": 298302,
+      "modified_ticks": 639274258153078308
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/numina/batch_000001536.parquet",
+      "bytes": 269627,
+      "modified_ticks": 639274258159955767
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/numina/batch_000001792.parquet",
+      "bytes": 294040,
+      "modified_ticks": 639274258168559932
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/numina/batch_000002048.parquet",
+      "bytes": 295277,
+      "modified_ticks": 639274258176340319
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/numina/batch_000002304.parquet",
+      "bytes": 221053,
+      "modified_ticks": 639274258182377993
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/numina/checkpoint.json",
+      "bytes": 2962,
+      "modified_ticks": 639274258182569021
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/batch_000000000.parquet",
+      "bytes": 239935,
+      "modified_ticks": 639274258048586473
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/batch_000000256.parquet",
+      "bytes": 240811,
+      "modified_ticks": 639274258052496645
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/batch_000000512.parquet",
+      "bytes": 236505,
+      "modified_ticks": 639274258057719041
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/batch_000000768.parquet",
+      "bytes": 253012,
+      "modified_ticks": 639274258062295493
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/batch_000001024.parquet",
+      "bytes": 262588,
+      "modified_ticks": 639274258068308741
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/batch_000001280.parquet",
+      "bytes": 249383,
+      "modified_ticks": 639274258073513955
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/batch_000001536.parquet",
+      "bytes": 255259,
+      "modified_ticks": 639274258078956076
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/batch_000001792.parquet",
+      "bytes": 198166,
+      "modified_ticks": 639274258083758827
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/batch_000002048.parquet",
+      "bytes": 370913,
+      "modified_ticks": 639274258089310734
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/batch_000002304.parquet",
+      "bytes": 256887,
+      "modified_ticks": 639274258094622765
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/changes_000000000.jsonl",
+      "bytes": 71507,
+      "modified_ticks": 639274258048763554
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/changes_000000256.jsonl",
+      "bytes": 72340,
+      "modified_ticks": 639274258052660693
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/changes_000000512.jsonl",
+      "bytes": 73119,
+      "modified_ticks": 639274258057879692
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/changes_000000768.jsonl",
+      "bytes": 72778,
+      "modified_ticks": 639274258062513794
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/changes_000001024.jsonl",
+      "bytes": 72654,
+      "modified_ticks": 639274258068497234
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/changes_000001280.jsonl",
+      "bytes": 72767,
+      "modified_ticks": 639274258073664387
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/changes_000001536.jsonl",
+      "bytes": 73254,
+      "modified_ticks": 639274258079178404
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/changes_000001792.jsonl",
+      "bytes": 72199,
+      "modified_ticks": 639274258083917958
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/changes_000002048.jsonl",
+      "bytes": 72447,
+      "modified_ticks": 639274258089492776
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/changes_000002304.jsonl",
+      "bytes": 55208,
+      "modified_ticks": 639274258094806365
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/checkpoints/orca/checkpoint.json",
+      "bytes": 4000,
+      "modified_ticks": 639274258095005330
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/configs/formatting_contract.json",
+      "bytes": 1589,
+      "modified_ticks": 639274261305743135
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/debug_32_pilot.jsonl",
+      "bytes": 158187,
+      "modified_ticks": 639274261314641873
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/debug_32_pilot_ids.txt",
+      "bytes": 2112,
+      "modified_ticks": 639274261314641873
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/debug_32_pilot_summary.json",
+      "bytes": 1517,
+      "modified_ticks": 639274261314915081
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/train_n100_pilot.jsonl",
+      "bytes": 493016,
+      "modified_ticks": 639274261315566278
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/train_n100_pilot_ids.txt",
+      "bytes": 6600,
+      "modified_ticks": 639274261315586513
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/train_n100_pilot_summary.json",
+      "bytes": 1522,
+      "modified_ticks": 639274261315807361
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/train_n32_pilot.jsonl",
+      "bytes": 158187,
+      "modified_ticks": 639274261314961918
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/train_n32_pilot_ids.txt",
+      "bytes": 2112,
+      "modified_ticks": 639274261314966981
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/train_n32_pilot_summary.json",
+      "bytes": 1518,
+      "modified_ticks": 639274261315153522
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/train_n64_pilot.jsonl",
+      "bytes": 306705,
+      "modified_ticks": 639274261315225040
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/train_n64_pilot_ids.txt",
+      "bytes": 4224,
+      "modified_ticks": 639274261315234572
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/manifests/train_n64_pilot_summary.json",
+      "bytes": 1519,
+      "modified_ticks": 639274261315476740
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/processed/protected_questions.csv",
+      "bytes": 1026211,
+      "modified_ticks": 639274261269292231
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/processed/row_status_audit_pilot.parquet",
+      "bytes": 442072,
+      "modified_ticks": 639274261316903093
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/processed/train_pool_pilot.parquet",
+      "bytes": 219943,
+      "modified_ticks": 639274261314595308
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/audit_summary_pilot.json",
+      "bytes": 7058,
+      "modified_ticks": 639274261316933101
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/conflicting_exact_answers.csv",
+      "bytes": 272,
+      "modified_ticks": 639274261267406004
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/dataset_inventory.json",
+      "bytes": 1128,
+      "modified_ticks": 639274261262909012
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/data_audit_pilot.md",
+      "bytes": 1873,
+      "modified_ticks": 639274261316948619
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/decisions_log.md",
+      "bytes": 514,
+      "modified_ticks": 639274261301082259
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/environment.json",
+      "bytes": 328,
+      "modified_ticks": 639274261249035008
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/evaluation_exact_overlap.csv",
+      "bytes": 661,
+      "modified_ticks": 639274261274010976
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/evaluation_near_candidates.csv",
+      "bytes": 89,
+      "modified_ticks": 639274261299427456
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/evaluation_near_overlap.csv",
+      "bytes": 89,
+      "modified_ticks": 639274261301122255
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/evaluation_near_review_sample.csv",
+      "bytes": 218,
+      "modified_ticks": 639274258224626128
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/evaluation_protection_scope.json",
+      "bytes": 1653,
+      "modified_ticks": 639274261301198969
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/exact_answer_equivalence_audit.csv",
+      "bytes": 41,
+      "modified_ticks": 639274261267416009
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/exact_duplicates.csv",
+      "bytes": 272,
+      "modified_ticks": 639274261267395952
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/formatted_examples_review_20.csv",
+      "bytes": 23926,
+      "modified_ticks": 639274258235455292
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/handoff_readiness.json",
+      "bytes": 2165,
+      "modified_ticks": 639274261317041582
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/missed_match_review.csv",
+      "bytes": 1467,
+      "modified_ticks": 639274258225747135
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/near_duplicate_candidates.csv",
+      "bytes": 73,
+      "modified_ticks": 639274261277283063
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/near_duplicate_review_sample.csv",
+      "bytes": 202,
+      "modified_ticks": 639274258202687814
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/numina_inspection_25.csv",
+      "bytes": 33019,
+      "modified_ticks": 639274258186813879
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/orca_answer_extraction_review_25.csv",
+      "bytes": 42505,
+      "modified_ticks": 639274258187504355
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/orca_extraction_changes.csv",
+      "bytes": 331488,
+      "modified_ticks": 639274261267341512
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/orca_inspection_25.csv",
+      "bytes": 30977,
+      "modified_ticks": 639274258186216461
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/overlength_quarantine.csv",
+      "bytes": 895,
+      "modified_ticks": 639274261312953782
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/prompt_specification.json",
+      "bytes": 741,
+      "modified_ticks": 639274261305755998
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/quality_audit.csv",
+      "bytes": 996,
+      "modified_ticks": 639274261267126776
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/rebuild_metrics.json",
+      "bytes": 445,
+      "modified_ticks": 639274261317072785
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/repository_revisions.json",
+      "bytes": 202,
+      "modified_ticks": 639274261262892609
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/review_flags_audit.csv",
+      "bytes": 191,
+      "modified_ticks": 639274261267141859
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/snapshot_provenance.json",
+      "bytes": 865,
+      "modified_ticks": 639274261262882604
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/target_encoding_quarantine.csv",
+      "bytes": 214064,
+      "modified_ticks": 639274261312772534
+    },
+    {
+      "path": "capstone_person1/runs/full_run_v2_20261012T181641Z_cfe8ce44/outputs/reports/token_length_statistics.csv",
+      "bytes": 271,
+      "modified_ticks": 639274261312932732
+    },
+    {
+      "path": "capstone_person1/outputs/NOT_FOR_MAIN_RUNS.md",
+      "bytes": 307,
+      "modified_ticks": 639271628887331142
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/debug_32_pilot.jsonl",
+      "bytes": 48722,
+      "modified_ticks": 639271596288362779
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/debug_32_pilot_ids.txt",
+      "bytes": 2080,
+      "modified_ticks": 639271596288035440
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/debug_32_pilot_summary.json",
+      "bytes": 1159,
+      "modified_ticks": 639271596288518293
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n1000_pilot.jsonl",
+      "bytes": 1610121,
+      "modified_ticks": 639271596288736589
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n1000_pilot_ids.txt",
+      "bytes": 65000,
+      "modified_ticks": 639271596287810263
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n1000_pilot_summary.json",
+      "bytes": 1194,
+      "modified_ticks": 639271596288097920
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n2000_pilot.jsonl",
+      "bytes": 3209252,
+      "modified_ticks": 639271596289036286
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n2000_pilot_ids.txt",
+      "bytes": 130000,
+      "modified_ticks": 639271596288453316
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n2000_pilot_summary.json",
+      "bytes": 1217,
+      "modified_ticks": 639271596287892810
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n4000_pilot.jsonl",
+      "bytes": 6416370,
+      "modified_ticks": 639271596289586985
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n4000_pilot_ids.txt",
+      "bytes": 260000,
+      "modified_ticks": 639271596287721254
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n4000_pilot_summary.json",
+      "bytes": 1220,
+      "modified_ticks": 639271596288150835
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n500_pilot.jsonl",
+      "bytes": 809041,
+      "modified_ticks": 639271596288257278
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n500_pilot_ids.txt",
+      "bytes": 32500,
+      "modified_ticks": 639271596287977143
+    },
+    {
+      "path": "capstone_person1/outputs/manifests/train_n500_pilot_summary.json",
+      "bytes": 1190,
+      "modified_ticks": 639271596288309602
+    },
+    {
+      "path": "capstone_person1/outputs/processed/numina_canonical_pilot.parquet",
+      "bytes": 35565256,
+      "modified_ticks": 639271596294970682
+    },
+    {
+      "path": "capstone_person1/outputs/processed/orca_canonical_pilot.parquet",
+      "bytes": 31242812,
+      "modified_ticks": 639271596297906948
+    },
+    {
+      "path": "capstone_person1/outputs/processed/row_status_audit_pilot.parquet",
+      "bytes": 7083517,
+      "modified_ticks": 639271596290927453
+    },
+    {
+      "path": "capstone_person1/outputs/processed/train_pool_pilot.parquet",
+      "bytes": 2768695,
+      "modified_ticks": 639271596290039329
+    },
+    {
+      "path": "capstone_person1/outputs/reports/audit_summary_pilot.json",
+      "bytes": 6818,
+      "modified_ticks": 639271596286238518
+    },
+    {
+      "path": "capstone_person1/outputs/reports/conflicting_exact_answers.csv",
+      "bytes": 1017,
+      "modified_ticks": 639271596286672733
+    },
+    {
+      "path": "capstone_person1/outputs/reports/dataset_inventory.json",
+      "bytes": 878,
+      "modified_ticks": 639271596286737104
+    },
+    {
+      "path": "capstone_person1/outputs/reports/data_audit_pilot.md",
+      "bytes": 1748,
+      "modified_ticks": 639271596286334981
+    },
+    {
+      "path": "capstone_person1/outputs/reports/decisions_log.md",
+      "bytes": 255,
+      "modified_ticks": 639271596287397528
+    },
+    {
+      "path": "capstone_person1/outputs/reports/environment.json",
+      "bytes": 273,
+      "modified_ticks": 639271596285813666
+    },
+    {
+      "path": "capstone_person1/outputs/reports/evaluation_exact_overlap.csv",
+      "bytes": 341,
+      "modified_ticks": 639271596286175036
+    },
+    {
+      "path": "capstone_person1/outputs/reports/evaluation_near_candidates.csv",
+      "bytes": 88,
+      "modified_ticks": 639271596286591341
+    },
+    {
+      "path": "capstone_person1/outputs/reports/evaluation_near_overlap.csv",
+      "bytes": 88,
+      "modified_ticks": 639271596285902735
+    },
+    {
+      "path": "capstone_person1/outputs/reports/evaluation_near_review_sample.csv",
+      "bytes": 128,
+      "modified_ticks": 639271596286899000
+    },
+    {
+      "path": "capstone_person1/outputs/reports/exact_duplicates.csv",
+      "bytes": 20953,
+      "modified_ticks": 639271596287469099
+    },
+    {
+      "path": "capstone_person1/outputs/reports/formatted_examples_review_20.csv",
+      "bytes": 25590,
+      "modified_ticks": 639271596286819378
+    },
+    {
+      "path": "capstone_person1/outputs/reports/near_duplicate_candidates.csv",
+      "bytes": 33605,
+      "modified_ticks": 639271596286087035
+    },
+    {
+      "path": "capstone_person1/outputs/reports/near_duplicate_review_sample.csv",
+      "bytes": 32741,
+      "modified_ticks": 639271596285997980
+    },
+    {
+      "path": "capstone_person1/outputs/reports/numina_inspection_25.csv",
+      "bytes": 28427,
+      "modified_ticks": 639271596287154594
+    },
+    {
+      "path": "capstone_person1/outputs/reports/orca_answer_extraction_review_25.csv",
+      "bytes": 20375,
+      "modified_ticks": 639271596287228699
+    },
+    {
+      "path": "capstone_person1/outputs/reports/orca_answer_extraction_review_25.xlsx",
+      "bytes": 13213,
+      "modified_ticks": 639271596287545500
+    },
+    {
+      "path": "capstone_person1/outputs/reports/orca_inspection_25.csv",
+      "bytes": 27057,
+      "modified_ticks": 639271596287064265
+    },
+    {
+      "path": "capstone_person1/outputs/reports/overlength_quarantine.csv",
+      "bytes": 120709,
+      "modified_ticks": 639271596286424985
+    },
+    {
+      "path": "capstone_person1/outputs/reports/quality_audit.csv",
+      "bytes": 514,
+      "modified_ticks": 639271596286982528
+    },
+    {
+      "path": "capstone_person1/outputs/reports/repository_revisions.json",
+      "bytes": 347,
+      "modified_ticks": 639271596285742096
+    },
+    {
+      "path": "capstone_person1/outputs/reports/review_flags_audit.csv",
+      "bytes": 191,
+      "modified_ticks": 639271596286509266
+    },
+    {
+      "path": "capstone_person1/outputs/reports/token_length_statistics.csv",
+      "bytes": 258,
+      "modified_ticks": 639271596287308091
+    },
+    {
+      "path": "capstone_person1/preserved_inputs/pre_alignment_dce3ef7348754718/Person1_Full_Run.ipynb",
+      "bytes": 693447,
+      "modified_ticks": 639273625921349914
+    },
+    {
+      "path": "capstone_person1/preserved_inputs/pre_alignment_dce3ef7348754718/pipeline_controls.py",
+      "bytes": 23144,
+      "modified_ticks": 639273619331149954
+    },
+    {
+      "path": "capstone_person1/preserved_inputs/pre_alignment_dce3ef7348754718/preservation.json",
+      "bytes": 772,
+      "modified_ticks": 639273681496413995
+    },
+    {
+      "path": "capstone_person1/preserved_inputs/pre_alignment_dce3ef7348754718/snapshot_stream.py",
+      "bytes": 9172,
+      "modified_ticks": 639273625879270542
+    },
+    {
+      "path": "capstone_person1/preserved_inputs/pre_alignment_dce3ef7348754718/streaming_rebuild.py",
+      "bytes": 13635,
+      "modified_ticks": 639273625890811092
+    },
+    {
+      "path": "capstone_person1/inputs_from_team/frozen_development_metadata_TEMPLATE.json",
+      "bytes": 136,
+      "modified_ticks": 639271627725542448
+    },
+    {
+      "path": "capstone_person1/inputs_from_team/frozen_development_TEMPLATE.csv",
+      "bytes": 26,
+      "modified_ticks": 639271627692226573
+    },
+    {
+      "path": "capstone_person1/inputs_from_team/parent_checkpoint_R1000_TEMPLATE.json",
+      "bytes": 130,
+      "modified_ticks": 639271627703805890
+    },
+    {
+      "path": "capstone_person1/inputs_from_team/parent_seen_groups_R1000_TEMPLATE.csv",
+      "bytes": 30017,
+      "modified_ticks": 639271596285190139
+    },
+    {
+      "path": "capstone_person1/inputs_from_team/person2_token_verification_metadata_TEMPLATE.json",
+      "bytes": 167,
+      "modified_ticks": 639271627714557571
+    },
+    {
+      "path": "capstone_person1/inputs_from_team/person2_token_verification_TEMPLATE.csv",
+      "bytes": 32,
+      "modified_ticks": 639271627678721661
+    },
+    {
+      "path": "capstone_person1/inputs_from_team/person3_question_metadata_TEMPLATE.json",
+      "bytes": 1708,
+      "modified_ticks": 639274261131575889
+    },
+    {
+      "path": "capstone_person1/inputs_from_team/reserved_evaluation.csv",
+      "bytes": 470559,
+      "modified_ticks": 639271596285312591
+    },
+    {
+      "path": "capstone_person1/inputs_from_team/reserved_evaluation_metadata.json",
+      "bytes": 584,
+      "modified_ticks": 639271596285507342
+    },
+    {
+      "path": "capstone_person1/inputs_from_team/reserved_evaluation_TEMPLATE.csv",
+      "bytes": 26,
+      "modified_ticks": 639271596285426811
+    },
+    {
+      "path": "capstone_person1/configs/formatting_contract.json",
+      "bytes": 1592,
+      "modified_ticks": 639274250660742815
+    },
+    {
+      "path": "capstone_person1/configs/person1_data_config.json",
+      "bytes": 2051,
+      "modified_ticks": 639273681481926386
+    },
+    {
+      "path": "capstone_person1/diagnostics/person3_manifest_interface_v1/processed/protected_questions.csv",
+      "bytes": 1026211,
+      "modified_ticks": 639274257214746224
+    },
+    {
+      "path": "capstone_person1/diagnostics/person3_manifest_interface_v1/reports/evaluation_protection_scope.json",
+      "bytes": 1255,
+      "modified_ticks": 639274257219741422
+    }
+  ],
+  "paths_repaired": true
+}

@@ -1,0 +1,21 @@
+{
+  "reviewer": "Codex",
+  "human_signoff": false,
+  "cases": 12,
+  "evidence_path": "capstone_person1\\releases\\pilot_v3_final_20261012\\reports\\duplicate_and_overlap_reports\\pair_policy_review.csv",
+  "scope": "Actual pilot pair texts inspected; conservative quarantine false positives documented",
+  "notes": [
+    "Inspected prices 800/1080 versus 500/725: changed givens, distinct profit instances; retaining is correct.",
+    "Inspected square areas and rectangle dimensions: changed numerical parameters, distinct requested fractions.",
+    "Inspected cycle costs and selling prices: distinct loss-percentage instances; retaining is correct.",
+    "Inspected powers 34^30 versus 17^2011: different units-digit problems, template relatives.",
+    "Inspected shared-work times 10 versus 20 days: changed parameter, distinct instances.",
+    "Inspected purchase/sale amounts 600/1080 versus 1000/2000: distinct gain problems.",
+    "Forward whitewashing cost versus inverse room dimension with changed rate: distinct tasks; conservative quarantine accepted, not proven duplication.",
+    "Changed wage totals/hours and slightly changed question wording: distinct parameter instances; conservative unresolved quarantine is accepted as a documented false-positive cost.",
+    "Ticket difference 90 versus 190 and comma-format change: distinct parameters; conservative quarantine is accepted, not a family-identity claim.",
+    "Pole-crossing times 12 versus 4 seconds and terminal punctuation differ: distinct length instances; conservative quarantine accepted.",
+    "Identical slopes and coordinates, rephrased request: plausible same instance missed at a high threshold; both are quarantined so neither enters the release.",
+    "Age totals 72 versus 42: distinct numerical instances; conservative unresolved quarantine accepted."
+  ]
+}

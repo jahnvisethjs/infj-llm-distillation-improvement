@@ -1,0 +1,19 @@
+{
+  "pairs": [
+    {"index":0,"id_prefix":"2d289aea","decision":"accept_policy_disposition","notes":"Road-work counts, daily hours and duration differ. Even when the implied workforce coincides, the premises are distinct numerical instances; retain template relation without merging."},
+    {"index":1,"id_prefix":"8cf93221","decision":"accept_policy_disposition","notes":"Production means and n differ (60/62/14 versus 50/54/9). Matching final production values do not establish identical questions; retain distinct templates."},
+    {"index":2,"id_prefix":"6b3b19d9","decision":"accept_policy_disposition","notes":"Library weekday and total means change (80/90 versus 240/290), changing Sunday counts; distinct instances remain separate."},
+    {"index":3,"id_prefix":"0a28edd9","decision":"accept_policy_disposition","notes":"Vote share and total differ, so the template relation is valid. Both questions also contain noninteger vote counts near integers; full solutions were inspected and silently round those premises. Additional formatted reviews must quarantine both for defective inputs."},
+    {"index":4,"id_prefix":"15cef223","decision":"accept_policy_disposition","notes":"Percentage reference term differs (40% of 140 versus 30% of 120); retain separate numerical instances found by the signature channel."},
+    {"index":5,"id_prefix":"33c660d5","decision":"accept_policy_disposition","notes":"Bridge length changes from 265 to 205 metres, changing inferred train length. High-similarity template relatives remain distinct."},
+    {"index":6,"id_prefix":"abfad96f","decision":"accept_policy_disposition","notes":"Whitewashing unit cost changes from 6 to 4 alongside punctuation/case changes. Distinct costs are conservatively withheld by unresolved policy; no identity is asserted."},
+    {"index":7,"id_prefix":"59e9fcd5","decision":"accept_policy_disposition","notes":"Catch-up distance changes from 80 to 120 km and wording differs. Conservative quarantine removes distinct targets; this limitation is recorded."},
+    {"index":8,"id_prefix":"9afe10cd","decision":"accept_policy_disposition","notes":"Book/continent premises and target are identical; only Bryan versus he differs in the question. Quarantine protects against near-instance leakage."},
+    {"index":9,"id_prefix":"9946a963","decision":"accept_policy_disposition","notes":"Harvest problems swap the given and queried quantities (strawberry plants versus tomatoes per plant). They share an equation but differ in target; conservative quarantine does not certify identity."},
+    {"index":10,"id_prefix":"24793f36","decision":"accept_policy_disposition","notes":"Partnership share changes from 6300 to 6100 with wording differences. Distinct monetary instances are conservatively excluded, not merged as proven duplicates."},
+    {"index":11,"id_prefix":"7d92ed80","decision":"accept_policy_disposition","notes":"Bus premises 360 students and 45 per bus are identical, with paraphrased requested bus count. Withhold the near-identical questions pending explicit identity decision."}
+  ],
+  "formatted": [],
+  "risk": [],
+  "prior": []
+}

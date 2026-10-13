@@ -1,0 +1,30 @@
+{
+  "contract_version": "person1-plain-text-labels-v3",
+  "prompt_template": "Question: {problem}\nSolve the problem step by step. End with: Final answer: <answer>.\nSolution:\n",
+  "prompt_template_sha256": "22e10ad6ce4d2f2a959577326b6eca275528821da148bae57a9a4ad2bf6e64db",
+  "tokenizer_id": "Qwen/Qwen2.5-0.5B",
+  "tokenizer_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "tokenizer_class": "Qwen2TokenizerFast",
+  "tokenizer_verified_at_load": true,
+  "eos_token": "<|endoftext|>",
+  "pad_token": "<|endoftext|>",
+  "eos_token_id": 151643,
+  "pad_token_id": 151643,
+  "is_fast": true,
+  "tokenizer_asset_sha256": {
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+  },
+  "add_special_tokens": false,
+  "apply_chat_template": false,
+  "encoding": "combined_prompt_and_completion_with_character_offsets",
+  "completion_policy": "preserve_correct_terminal_block; quarantine_unproven_consistency",
+  "append_eos_count": 1,
+  "loss": "completion_and_eos_only",
+  "ignore_label": -100,
+  "padding": "right_padding; attention_mask=0; labels=-100_by_position",
+  "budget": "sum(label != -100 for label in labels)",
+  "max_total_tokens": 2048,
+  "evaluation_input": "render_prompt(problem); no_reference_answer_or_eos",
+  "other_model_tokenizers": "load_corresponding_pinned_tokenizer_and_verify_before_reusing_counts"
+}

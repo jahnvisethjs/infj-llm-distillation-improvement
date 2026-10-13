@@ -17,4 +17,4 @@ Freeze set roles, source revisions/splits, selection policy/seeds, question IDs/
 python -m capstone_person1.import_person3_manifests --output-root capstone_person1/diagnostics/person3_manifest_import
 ```
 
-The existing reserved question inputs cover 1,319 GSM8K test and 500 MATH500 questions. Your final-test role confirmation and development/fast-development coverage are pending. The import validates frozen inputs and exports protection scope; final overlap checking against Person 1's final banks is still required. No evaluator or evaluation results are supplied by this package.
+The existing reserved question inputs cover 1,319 GSM8K test and 500 MATH500 questions. Your final-test role confirmation and development/fast-development coverage are pending. The import validates frozen inputs and exports protection scope; Known final questions were checked against the completed Person 1 banks. Once your additional frozen questions arrive, Person 1 must produce a new protected release before comparative main runs. No evaluator or evaluation results are supplied by this package.

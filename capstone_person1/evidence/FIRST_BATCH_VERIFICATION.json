@@ -1,0 +1,114 @@
+{
+  "recorded_utc": "2026-10-12T18:08:43.293228+00:00",
+  "status": "DIAGNOSTIC_ONLY",
+  "data_ready_for_trainer": false,
+  "main_run_ready": false,
+  "continuation_ready": false,
+  "first_batch_code_verified": true,
+  "test_count": 55,
+  "test_command": "python -m unittest capstone_person1.test_pipeline_controls capstone_person1.test_target_regressions capstone_person1.test_data_contract capstone_person1.test_snapshot_stream capstone_person1.test_snapshot_catalog capstone_person1.test_handoff_gate",
+  "notebook_validation": [
+    "nbformat_schema",
+    "magic_aware_python_syntax",
+    "embedded_controls_and_contract_agreement",
+    "cleared_outputs",
+    "original_input_hash_unchanged"
+  ],
+  "preserved_notebook_sha256": "dce3ef73487547183993eb359c65b23b62e0f71deb4d76c331c076fc7c22a869",
+  "untouched_original_colab_recovered": false,
+  "code_sha256": {
+    "pipeline_controls.py": "d44b41664f7564a7226f0331c389c66397da637a62769513b3230fa0fe6100dc",
+    "person1_data_contract.py": "eea80909f46e0dad54e4a517136433041ede0890a44a1a7f1703ae41adbfc722",
+    "snapshot_stream.py": "3d6a9e303e207119f6fc84a7862cdd459c31d43b3d7c7157e7f3403a807ab517",
+    "snapshot_catalog.py": "3ea871f8b38962ed1f80d80cf827223e972328bf9c1d3511fa8415a596530dfd",
+    "streaming_rebuild.py": "f6fd389e8ec76180ae6054ec6e8ff2d54fcadaab70acf0b377349328dd831728",
+    "configuration.py": "dfd02166f7f0270c523311d6949c9a417daf232fb722658a7debd393ce300c7d",
+    "tokenizer_adapter.py": "524b8189f14d4a484c9555c2874efe74a9ad9ff9c608826fd005c08da04b49de"
+  },
+  "corrected_notebook_sha256": "3dc4777f836983ae3ab6edd57dd64dbeaf68c7b076332e23aa8cdf1e86afa867",
+  "successful_diagnostic": {
+    "run": "full_run_v2_20261012T180206Z_eaf9409d",
+    "rows_processed": 5000,
+    "elapsed_seconds": 5.510038100008387,
+    "peak_rss_mib": 195.5859375,
+    "source_rows_reused": 5000,
+    "nested_sizes": [
+      32,
+      64,
+      100
+    ],
+    "research_ready": false,
+    "manifest_sha256": {
+      "32": "a5438725686bfc914cc375dcacdcb2590bbbfe535980313b0cc97e5b139a37e0",
+      "64": "00f57a02b6ea064c66a760694f17f8cc23cd73fbe2dbd2fc734ff0c978e8d352",
+      "100": "a4055bd1f80b86231b17d83ccf13fc78766811f8fba240beed422fdc27206420"
+    }
+  },
+  "initial_run_metrics_from_captured_execution": {
+    "elapsed_seconds": 12.418359700008295,
+    "peak_rss_mib": 199.0859375
+  },
+  "counts": {
+    "rows_used_this_run": {
+      "orca": 2500,
+      "numina": 2500
+    },
+    "eligible_before_exact_dedup": 775,
+    "near_duplicate_scope_per_source": 139,
+    "overlength_or_boundary_rows_removed": 56,
+    "working_pool_rows": 100,
+    "working_pool_source_counts": {
+      "numina": 50,
+      "orca": 50
+    },
+    "final_status_counts": {
+      "excluded_quality": 4225,
+      "eligible_not_sampled": 497,
+      "overlength_or_target_encoding_error": 56,
+      "usable_candidate_not_selected": 122,
+      "train_pool": 100
+    }
+  },
+  "actual_tokenizer_class": "Qwen2TokenizerFast",
+  "actual_saved_manifest_reference_labels": {
+    "train_n100_pilot.jsonl": {
+      "rows": 100,
+      "supervised_tokens": 31973,
+      "status": "passed"
+    },
+    "train_n32_pilot.jsonl": {
+      "rows": 32,
+      "supervised_tokens": 10476,
+      "status": "passed"
+    },
+    "train_n64_pilot.jsonl": {
+      "rows": 64,
+      "supervised_tokens": 20072,
+      "status": "passed"
+    }
+  },
+  "evidence": {
+    "reference_label_validation": "runs\\full_run_v2_20261012T180206Z_eaf9409d\\outputs\\reports\\reference_label_validation.json",
+    "formatting_contract": "configs/formatting_contract.json",
+    "handoff_readiness": "runs\\full_run_v2_20261012T180206Z_eaf9409d\\outputs\\reports\\handoff_readiness.json",
+    "preservation": "preserved_inputs\\pre_alignment_dce3ef7348754718\\preservation.json"
+  },
+  "failed_diagnostics_retained": [
+    {
+      "run": "full_run_v2_20261012T073609Z_fd250c80",
+      "reason": "contiguous snapshot supply shortage under strict target encoding"
+    },
+    {
+      "run": "full_run_v2_20261012T180019Z_fe4b3b6e",
+      "reason": "raw provenance dropped before manifest export; fixed and regression-tested"
+    }
+  ],
+  "remaining": [
+    "Person 3 manifest import and known/pending protection scope",
+    "Instance/near-instance matching policy and final group mapping",
+    "Disjoint 40K training, 10K selection, 1K loss banks and fixed source length bins",
+    "Larger stratified reviews and actual applied decisions",
+    "Independent data/main/continuation readiness and integration package",
+    "Complete pinned upstream fields, representative upstream pilot and full regeneration"
+  ]
+}

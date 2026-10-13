@@ -1,0 +1,7 @@
+a4cbe6a494260ef3205a6391da67b28d3f7eb6bfe3fabf0df6e8708b077bca86  person1-v3-01-training-and-handoff.zip
+af04edf4de7b2a66964d2969507bb52dd264294278984656d02ac32f582b527b  person1-v3-02-canonical-orca.zip
+ac83ec8cdf346f2a7a09c7856756fe0e922472f0f12e479934c7e29d468b99e8  person1-v3-03-canonical-numina.zip
+5798c3d97e227c42e6f198006c3d8d3ea6518f23eca6ad47d8c1672123ffdf5a  person1-v3-04-numina-canonical-shards.zip
+f85dac34f9e914db45d8b5d1e8d77c006a8d5a89d56db47d7caa1fba0795dc58  person1-v3-05-processing-provenance.zip
+12c0abc75f2511bcd608ec0a236de0a5db900b50f45b58d58bd3284f25b3875a  person1-v3-06-pinned-upstream-sources.zip
+6cd05628d4f8651200c470abe084da7d3f0f03a23b688454952b97baae2d7cb4  person1-v3-07-pinned-tokenizer.zip

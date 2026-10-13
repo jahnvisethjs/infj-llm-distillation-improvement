@@ -1,0 +1,52 @@
+{
+  "orca": {
+    "dataset_id": "microsoft/orca-math-word-problems-200k",
+    "revision": "29255d1770cc4eac66e5e7fa378cba542c026350",
+    "split": "train",
+    "files": [
+      {
+        "path": "data/train-00000-of-00001.parquet",
+        "bytes": 84248748,
+        "lfs_sha256": "38513af71b04e2f710c6cd98f750bf72a87b7a4da1804caaa76f898585c1cfaf",
+        "local_path": "sources/orca/29255d1770cc4eac66e5e7fa378cba542c026350/data/train-00000-of-00001.parquet",
+        "sha256": "38513af71b04e2f710c6cd98f750bf72a87b7a4da1804caaa76f898585c1cfaf",
+        "rows": 200035
+      }
+    ],
+    "total_bytes": 84248748,
+    "rows": 200035
+  },
+  "numina": {
+    "dataset_id": "AI-MO/NuminaMath-1.5",
+    "revision": "1b05109f9e5c1ad06c0663519502416c30b300f8",
+    "split": "train",
+    "files": [
+      {
+        "path": "data/train-00000-of-00003.parquet",
+        "bytes": 195064200,
+        "lfs_sha256": "1e37cedcc5104c0d5a9afbf8b26328a59d7005cd37c2bd08352419f5f0e03214",
+        "local_path": "sources/numina/1b05109f9e5c1ad06c0663519502416c30b300f8/data/train-00000-of-00003.parquet",
+        "sha256": "1e37cedcc5104c0d5a9afbf8b26328a59d7005cd37c2bd08352419f5f0e03214",
+        "rows": 298739
+      },
+      {
+        "path": "data/train-00001-of-00003.parquet",
+        "bytes": 175917356,
+        "lfs_sha256": "bc48fdddc1ab4e559727ad4f1f03b0263785c1c16b7964fb885fba07e18d6a39",
+        "local_path": "sources/numina/1b05109f9e5c1ad06c0663519502416c30b300f8/data/train-00001-of-00003.parquet",
+        "sha256": "bc48fdddc1ab4e559727ad4f1f03b0263785c1c16b7964fb885fba07e18d6a39",
+        "rows": 298738
+      },
+      {
+        "path": "data/train-00002-of-00003.parquet",
+        "bytes": 160374171,
+        "lfs_sha256": "951aa899fe2a1b64f5b40c6636372d35b9db4f0b9c922e874d4bf357db64da66",
+        "local_path": "sources/numina/1b05109f9e5c1ad06c0663519502416c30b300f8/data/train-00002-of-00003.parquet",
+        "sha256": "951aa899fe2a1b64f5b40c6636372d35b9db4f0b9c922e874d4bf357db64da66",
+        "rows": 298738
+      }
+    ],
+    "total_bytes": 531355727,
+    "rows": 896215
+  }
+}

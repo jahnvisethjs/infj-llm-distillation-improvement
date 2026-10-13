@@ -126,11 +126,11 @@ class BenchmarkManifestTests(unittest.TestCase):
         self.mutate_metadata(lambda value: value['sets']['gdev']['selection_policy'].pop('seed'))
         with self.assertRaisesRegex(ValueError, 'seed'): self.load()
 
-    def test_actual_notebook_exact_and_near_stages_record_honest_scope(self):
+    def test_archived_diagnostic_stages_record_honest_scope(self):
         # Exercise the notebook stage seam, including its real variable names.
         metadata_path = self.root / 'reserved_evaluation_metadata.json'
         metadata_path.write_bytes(self.reserved_metadata.read_bytes())
-        notebook_path = Path(__file__).resolve().parents[2] / 'Person1_Full_Run_v2.ipynb'
+        notebook_path = Path(__file__).resolve().parents[2] / 'capstone_person1/preserved_inputs/pre_named_stages_v3/Person1_Full_Run_v2.ipynb'
         notebook = json.loads(notebook_path.read_text(encoding='utf-8'))
         ns = dict(vars(controls))
         ns.update(vars(benchmarks))

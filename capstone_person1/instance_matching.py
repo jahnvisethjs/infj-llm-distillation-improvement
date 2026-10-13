@@ -22,7 +22,12 @@ def context_equivalent(problem, left, right):
     assignments = re.findall(r'^\s*([a-zA-Z])\s*=', str(left)) + re.findall(r'^\s*([a-zA-Z])\s*=', str(right))
     if assignments and (len(set(assignments)) > 1 or any(not re.search(r'\b' + re.escape(var) + r'\b', problem) for var in assignments)):
         return None
-    return answers_equivalent(left, right)
+    a,b=scalar_fraction(left),scalar_fraction(right)
+    if a is not None and b is not None: return a==b
+    # Mathematical variable case is significant. Symbolic transformations beyond
+    # cosmetic spacing are unresolved unless a separate checker establishes them.
+    cosmetic=lambda text:re.sub(r'\s+|\\left|\\right|\$|\\!|\\,|\\;', '', str(text))
+    return True if cosmetic(left)==cosmetic(right) else None
 
 
 def context_answer_key(problem, answer):

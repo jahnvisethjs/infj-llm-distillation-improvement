@@ -1,0 +1,39 @@
+{
+  "reference_population": "all checked encodable unique candidates before allocation",
+  "source_edges": {
+    "numina": [
+      20.0,
+      130.0,
+      178.0,
+      220.0,
+      260.0,
+      306.0,
+      360.0,
+      430.0,
+      538.0,
+      733.0,
+      1969.0
+    ],
+    "orca": [
+      18.0,
+      109.0,
+      149.0,
+      182.0,
+      214.0,
+      245.0,
+      278.0,
+      315.0,
+      363.0,
+      436.0,
+      1887.0
+    ]
+  },
+  "endpoint_rule": "searchsorted(inner_edges, side=right)",
+  "split_seed": 1729,
+  "ordering_seed": 42,
+  "quotas_per_source": {
+    "train_bank": 20000,
+    "selection_bank": 5000,
+    "loss_dev": 500
+  }
+}

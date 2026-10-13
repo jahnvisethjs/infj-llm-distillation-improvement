@@ -5,9 +5,20 @@ from capstone_person1.instance_matching import pair_kind, normalize_instance, co
 from capstone_person1.pipeline_controls import sha256_text
 from capstone_person1.pipeline_controls import extract_orca_final_answer
 from capstone_person1.pool_allocation import allocate_banks, assign_bins
+from capstone_person1.missed_match_search import retrieve_signature_pairs
 
 
 class ReleaseComponentsTests(unittest.TestCase):
+    def test_alternate_retrieval_finds_variants_without_deciding_identity(self):
+        rows=pd.DataFrame([dict(row_id='a',problem='Arrange letters of ELLIPSE.'),dict(row_id='b',problem='Arrange letters of BALLOON.')])
+        protected=pd.DataFrame([dict(set_id='test',problem_id='q',problem='Arrange letters of ELLIPSE?')])
+        pairs,overlaps=retrieve_signature_pairs(rows,protected)
+        self.assertEqual(len(pairs),1)
+        self.assertEqual(len(overlaps),2)
+        grouped,report,status=apply_instance_decisions(rows,pairs,overlaps)
+        self.assertEqual(grouped['problem_group_id'].nunique(),2)
+        self.assertIn('unresolved',report['action'].tolist())
+
     def test_terminal_quantity_requires_corroborating_derivation(self):
         solution = 'Amount given by dad = $225 - $109.65\nAmount given by dad = $115.35\n\nCarl\'s dad gave him $115.35.'
         self.assertEqual(extract_orca_final_answer('How much did his dad give him?', solution), ('2307/20', 'corroborated_terminal_quantity'))
@@ -25,6 +36,8 @@ class ReleaseComponentsTests(unittest.TestCase):
         self.assertIsNone(context_equivalent('How many items?', 'b=2', '2'))
         self.assertTrue(context_equivalent('Find b.', 'b=2', '2'))
         self.assertTrue(context_equivalent('Find the quantity.', '9/3', '3'))
+        self.assertIsNone(context_equivalent('Find X.', 'X', 'x'))
+        self.assertNotEqual(normalize_instance('Find x².'),normalize_instance('Find x2.'))
 
     def test_similarity_does_not_automatically_group_instances(self):
         frame = pd.DataFrame([{'row_id':'a','problem':'Buy 3 apples.'},{'row_id':'b','problem':'Buy 5 apples.'}])
@@ -51,6 +64,7 @@ class ReleaseComponentsTests(unittest.TestCase):
         for name, count in [('train_bank',40),('selection_bank',10),('loss_dev',4)]:
             self.assertEqual(len(banks[name]), count)
             self.assertEqual(banks[name]['row_id'].tolist(), again[name]['row_id'].tolist())
+            self.assertTrue(banks[name]['split'].eq(name).all())
             rebound = assign_bins(banks[name], edges['source_edges'])
             self.assertEqual(rebound['length_bin'].tolist(), banks[name]['length_bin'].tolist())
         all_ids = [value for frame in banks.values() for value in frame['problem_group_id']]

@@ -1,0 +1,12 @@
+{
+  "preserved_utc": "2026-10-12T02:15:49.637954+00:00",
+  "notebook_sha256": "dce3ef73487547183993eb359c65b23b62e0f71deb4d76c331c076fc7c22a869",
+  "meaning": "Actual locally available, previously modified pre-alignment input; not the untouched original Colab notebook",
+  "untouched_original_notebook_recovery": "pending; unavailable in the local workspace",
+  "files": {
+    "Person1_Full_Run.ipynb": "dce3ef73487547183993eb359c65b23b62e0f71deb4d76c331c076fc7c22a869",
+    "pipeline_controls.py": "a043ade66ffc1f93cc257fd13de4f3b2d031c6d52c0fa3ee62100654da7c6c59",
+    "streaming_rebuild.py": "c3b144a66ff47a0284d395941e795bb6e26bbef96466d53ad6d76c50e59c61e4",
+    "snapshot_stream.py": "07d5ea94b76337801c191234ba8cbe8ce7c768702d0e27ba5ed1a6c2f4f3038a"
+  }
+}

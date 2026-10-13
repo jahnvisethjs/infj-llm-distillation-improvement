@@ -36,7 +36,7 @@ def canonicalize_orca(row, idx, *, spec, config):
         'answer_evidence_text': extraction.evidence_text, 'answer_confidence': extraction.confidence,
         'answer_type': answer_type(final_answer), 'answer_ambiguity_reason': extraction.ambiguity_reason,
         'answer_evidence_basis': extraction.evidence_basis,
-        'extraction_consistency_status': extraction_consistency_status(extraction, final_answer),
+        'extraction_consistency_status': 'consistent_terminal_evidence' if extraction.candidate and extraction.confidence!='heuristic' and context_equivalent(problem,extraction.candidate,final_answer) is True else 'unresolved_requires_review',
         'solution_completeness_status': 'unknown',
         'source_fields_origin': row.get('__source_fields_origin', 'pinned_upstream'),
         'question_type': 'math-word-problem', 'problem_type': '', 'synthetic': True,
@@ -96,7 +96,7 @@ def canonicalize_numina(row, idx, *, spec, config):
         'answer_evidence_text': extraction.evidence_text, 'answer_confidence': extraction.confidence,
         'answer_type': answer_type(final_answer), 'answer_ambiguity_reason': extraction.ambiguity_reason,
         'answer_evidence_basis': extraction.evidence_basis,
-        'extraction_consistency_status': extraction_consistency_status(extraction, final_answer),
+        'extraction_consistency_status': 'consistent_terminal_evidence' if extraction.candidate and extraction.confidence!='heuristic' and context_equivalent(problem,extraction.candidate,final_answer) is True else 'unresolved_requires_review',
         'solution_completeness_status': 'unknown',
         'source_fields_origin': row.get('__source_fields_origin', 'pinned_upstream'),
         'provided_answer_raw': raw_text(row.get('answer', '')),
@@ -109,3 +109,4 @@ def canonicalize_numina(row, idx, *, spec, config):
         'split': 'candidate' if len(flags) == 0 else 'quarantine',
         'problem_char_length': len(problem), 'solution_char_length': len(solution),
     }
+

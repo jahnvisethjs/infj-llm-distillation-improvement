@@ -13,9 +13,12 @@ capstone_person1/runtime_deps/
 capstone_person1/sources/
 capstone_person1/runs/
 capstone_person1/releases/
+capstone_person1/distribution/
 capstone_person1/outputs/
 capstone_person1/logs/
-capstone_person1/preserved_inputs/
+capstone_person1/preserved_inputs/*
+!capstone_person1/preserved_inputs/pre_alignment_dce3ef7348754718/
+!capstone_person1/preserved_inputs/pre_named_stages_v3/
 capstone_person1/diagnostics/person3_manifest_import/
 
 # Local credentials

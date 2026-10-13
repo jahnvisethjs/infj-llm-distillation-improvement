@@ -1,0 +1,16 @@
+{
+  "formatted": [
+    {"index":0,"id_prefix":"012f280c","decision":"accept_structural_target","notes":"Coprime divisor ratios correspond uniquely to prime exponents -3 through 3. Product geometric sums give S=2480.437, hence floor(S/10)=248; terminal target agrees."},
+    {"index":1,"id_prefix":"02b65603","decision":"accept_structural_target","notes":"For this strictly increasing odd cubic, opposite function values imply 3a+b=1. AM-GM yields b/a+4a/b+1>=5, attained at a=1/5,b=2/5; target agrees."},
+    {"index":2,"id_prefix":"056c6499","decision":"accept_structural_target","notes":"Cross multiplication gives x=3(x-2), hence x=3; source checks both denominators and equality. Named assignment target matches the asked variable."},
+    {"index":3,"id_prefix":"0a3b06d2","decision":"quarantine","notes":"Two numbered tasks request four completing-square entries and a factorization, but the scalar final target supplies only the factorization. The Complete/Factorize wording reveals a verb-dependent multipart filter gap."},
+    {"index":4,"id_prefix":"0c222b0e","decision":"accept_structural_target","notes":"Common-denominator numerator becomes (m+2)^2, then reciprocal multiplication reduces to m+2 on the original domain m!=-1,-2; terminal target agrees."},
+    {"index":5,"id_prefix":"11cc678e","decision":"accept_structural_target","notes":"AM-GM after adding/subtracting 1 gives minimum 2sqrt(a)-1=5, so a=9; equality 3^x=2 is attainable and checked in source."},
+    {"index":6,"id_prefix":"11d3b2a8","decision":"accept_structural_target","notes":"Opposite of 3a-2 is -(3a-2)=-3a+2; brief reasoning and target agree."},
+    {"index":7,"id_prefix":"186a366d","decision":"quarantine","notes":"Rotation composition is written in the wrong order: E first maps to C about D, then C to A about B, while the solution asserts the reverse composition. Claimed area decomposition/tight result is unsupported; withhold defective geometry reasoning."},
+    {"index":8,"id_prefix":"1b276b47","decision":"quarantine","notes":"Pearson calculation gives exact r=-14/(10sqrt(2)), but final -0.99 is a rounded approximation without requested rounding precision. Withhold this approximate target for an exact-value question."},
+    {"index":9,"id_prefix":"1bb41588","decision":"quarantine","notes":"Correct weighted probability is 27/50+1/30=43/75, but worked arithmetic equates it to 58/100 before the final fraction; internally contradictory reasoning is withheld."},
+    {"index":200,"id_prefix":"0a28edd9","decision":"quarantine","notes":"Question gives 8199.999999999998 votes, which is impossible as an exact discrete count. Solution explicitly rounds it to 8200 for simplicity. Do not silently change the raw premise; quarantine this additional inspected case."},
+    {"index":201,"id_prefix":"4a3642e3","decision":"quarantine","notes":"Question gives 10000.000000000002 votes, an invalid exact discrete count. Worked solution silently replaces it by 10000 and outputs 2000. Quarantine this additional inspected input rather than normalize away its defect."}
+  ]
+}

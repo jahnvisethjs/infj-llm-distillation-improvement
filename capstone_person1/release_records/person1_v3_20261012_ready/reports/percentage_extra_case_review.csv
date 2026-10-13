@@ -1,0 +1,265 @@
+sample_id,row_id,dataset_id,problem,solution,final_answer,completion,extraction_mode,provided_answer_parse_status,answer_type,quality_flags_json,answer_evidence_text,supervised_tokens,source_sha256,reviewer,reviewed_utc,policy_version,decision,notes
+formatted:2656218fce21d0bf7f7eba6acba27cdc18ef849fb63b83658bd75dedcacd2aa0,2656218fce21d0bf7f7eba6acba27cdc18ef849fb63b83658bd75dedcacd2aa0,orca,"There are 250 female managers in a certain company. The total number of female employees in the company is 625. If a certain fraction of all the employees are managers and the same fraction of all male employees are managers, what is this fraction?","Let's denote the total number of employees in the company as E and the total number of managers as M. We are given that 250 of the managers are female, and there are 625 female employees in total.
+
+We are told that the same fraction of all employees are managers, and the same fraction of all male employees are managers. This means that the ratio of managers to total employees is the same as the ratio of female managers to female employees, and also the same as the ratio of male managers to male employees.
+
+Let's denote the fraction of employees who are managers as F. Then we can write the following equation based on the information given:
+
+F = Number of Female Managers / Total Number of Female Employees
+F = 250 / 625
+
+To simplify this fraction, we divide both the numerator and the denominator by 125:
+
+F = (250 / 125) / (625 / 125)
+F = 2 / 5
+
+So the fraction of employees who are managers is 2/5, or 40%. This means that 40% of all employees, regardless of gender, are managers.",2/5,"Let's denote the total number of employees in the company as E and the total number of managers as M. We are given that 250 of the managers are female, and there are 625 female employees in total.
+
+We are told that the same fraction of all employees are managers, and the same fraction of all male employees are managers. This means that the ratio of managers to total employees is the same as the ratio of female managers to female employees, and also the same as the ratio of male managers to male employees.
+
+Let's denote the fraction of employees who are managers as F. Then we can write the following equation based on the information given:
+
+F = Number of Female Managers / Total Number of Female Employees
+F = 250 / 625
+
+To simplify this fraction, we divide both the numerator and the denominator by 125:
+
+F = (250 / 125) / (625 / 125)
+F = 2 / 5
+
+So the fraction of employees who are managers is 2/5, or 40%. This means that 40% of all employees, regardless of gender, are managers.
+
+Final answer: 2/5",corroborated_terminal_quantity,corroborated_terminal_quantity,numeric_scalar,[],"So the fraction of employees who are managers is 2/5, or 40%. This means that 40% of all employees, regardless of gender, are managers.",255,4ca4b24394cdb543982b85cc3ec7bd661e4902b39d502941257c588f39abae16,Codex,2026-10-13T03:07:38.775679+00:00,person1-release-review-v2,accept_structural_target,"Question explicitly requests a fraction, and 250/625=2/5 is the requested correct representation; percentage repetition is equivalent commentary. Retain scalar fraction."
+formatted:379754c35f976dc420c6669d93f4a124743e8075d5d7e9279df7c808a3322b5a,379754c35f976dc420c6669d93f4a124743e8075d5d7e9279df7c808a3322b5a,orca,"A certain percentage of the members of a study group are women, and 40 percent of those women are lawyers. The probability that a randomly selected member is a woman lawyer is 0.32. What percentage of the study group are women?","Let's denote the percentage of the study group that are women as W. We know that 40% of these women are lawyers. So, the probability of a randomly selected member being a woman lawyer is the product of the probability of selecting a woman and the probability that the woman selected is a lawyer.
+
+The probability of selecting a woman is W (as a decimal, so if W is 50%, then W as a decimal is 0.50). The probability that the woman selected is a lawyer is 0.40 (or 40%). The product of these two probabilities is given as 0.32 (or 32%).
+
+So we have the equation:
+
+W * 0.40 = 0.32
+
+To find W, we divide both sides of the equation by 0.40:
+
+W = 0.32 / 0.40
+W = 0.8
+
+So, W as a percentage is 80%. Therefore, 80% of the study group are women.",4/5,"Let's denote the percentage of the study group that are women as W. We know that 40% of these women are lawyers. So, the probability of a randomly selected member being a woman lawyer is the product of the probability of selecting a woman and the probability that the woman selected is a lawyer.
+
+The probability of selecting a woman is W (as a decimal, so if W is 50%, then W as a decimal is 0.50). The probability that the woman selected is a lawyer is 0.40 (or 40%). The product of these two probabilities is given as 0.32 (or 32%).
+
+So we have the equation:
+
+W * 0.40 = 0.32
+
+To find W, we divide both sides of the equation by 0.40:
+
+W = 0.32 / 0.40
+W = 0.8
+
+So, W as a percentage is 80%. Therefore, 80% of the study group are women.
+
+Final answer: 4/5",corroborated_terminal_quantity,corroborated_terminal_quantity,numeric_scalar,[],"So, W as a percentage is 80%. Therefore, 80% of the study group are women.",227,a5de68968d852def9ed570c283ae084c0c125534bee322086f302854fd7fb990,Codex,2026-10-13T03:07:38.775679+00:00,person1-release-review-v2,quarantine,Repeated terminal80% leaves bare4/5 in appended block; withhold ambiguous percentage display.
+formatted:7501924be7896e2b0b82cbeed5672adca19452c4152f4efa9016563a93e0dad1,7501924be7896e2b0b82cbeed5672adca19452c4152f4efa9016563a93e0dad1,orca,"A number is 8% of a third number, and another number is 16% of the same third number. The first number is 50% of the second number. What percentage is the first number of the third number?","Let's denote the third number as X.
+
+According to the problem, the first number is 8% of X, so we can write it as:
+First number = 0.08X
+
+The second number is 16% of X, so we can write it as:
+Second number = 0.16X
+
+It is also given that the first number is 50% of the second number. Therefore, we can write:
+First number = 0.5 * Second number
+
+Substituting the value of the second number from the second equation into the third equation, we get:
+0.08X = 0.5 * 0.16X
+
+Now, we can solve for X:
+0.08X = 0.08X
+
+This confirms that the first number is indeed 8% of the third number, as stated in the problem. Therefore, the first number is 8% of the third number.",2/25,"Let's denote the third number as X.
+
+According to the problem, the first number is 8% of X, so we can write it as:
+First number = 0.08X
+
+The second number is 16% of X, so we can write it as:
+Second number = 0.16X
+
+It is also given that the first number is 50% of the second number. Therefore, we can write:
+First number = 0.5 * Second number
+
+Substituting the value of the second number from the second equation into the third equation, we get:
+0.08X = 0.5 * 0.16X
+
+Now, we can solve for X:
+0.08X = 0.08X
+
+This confirms that the first number is indeed 8% of the third number, as stated in the problem. Therefore, the first number is 8% of the third number.
+
+Final answer: 2/25",terminal_answer_clause,terminal_answer_clause,numeric_scalar,[],"This confirms that the first number is indeed 8% of the third number, as stated in the problem. Therefore, the first number is 8% of the third number.",209,1598c0d1a92e2dcf8fd00927a5e6a20add47a1043725c17b340d0ff2d66a836b,Codex,2026-10-13T03:07:38.775679+00:00,person1-release-review-v2,quarantine,Repeated terminal8% leaves bare2/25 in appended block; withhold ambiguous percentage display.
+formatted:b6c0884471d183ce4b919c718093c0177bae3306df8503dfdffe0890a07ebbc8,b6c0884471d183ce4b919c718093c0177bae3306df8503dfdffe0890a07ebbc8,orca,"The radius of a circle is decreased by some percentage, resulting in a 75% decrease in the area. What is the percentage decrease in the radius?","Let the original radius of the circle be \( r \). The area of the circle is given by \( A = \pi r^2 \).
+
+If the area is decreased by 75%, the new area \( A' \) is 25% of the original area \( A \). So we have:
+\[ A' = 0.25A \]
+
+Substituting the formula for the area of a circle, we get:
+\[ A' = 0.25 \pi r^2 \]
+
+Let the new radius be \( r' \). The new area can also be expressed as:
+\[ A' = \pi (r')^2 \]
+
+Setting the two expressions for \( A' \) equal to each other, we get:
+\[ \pi (r')^2 = 0.25 \pi r^2 \]
+
+Dividing both sides by \( \pi \), we get:
+\[ (r')^2 = 0.25 r^2 \]
+
+Taking the square root of both sides, we get:
+\[ r' = \sqrt{0.25} r \]
+\[ r' = 0.5 r \]
+
+This means the new radius is 50% of the original radius. Therefore, the radius has decreased by 50%.",1/2,"Let the original radius of the circle be \( r \). The area of the circle is given by \( A = \pi r^2 \).
+
+If the area is decreased by 75%, the new area \( A' \) is 25% of the original area \( A \). So we have:
+\[ A' = 0.25A \]
+
+Substituting the formula for the area of a circle, we get:
+\[ A' = 0.25 \pi r^2 \]
+
+Let the new radius be \( r' \). The new area can also be expressed as:
+\[ A' = \pi (r')^2 \]
+
+Setting the two expressions for \( A' \) equal to each other, we get:
+\[ \pi (r')^2 = 0.25 \pi r^2 \]
+
+Dividing both sides by \( \pi \), we get:
+\[ (r')^2 = 0.25 r^2 \]
+
+Taking the square root of both sides, we get:
+\[ r' = \sqrt{0.25} r \]
+\[ r' = 0.5 r \]
+
+This means the new radius is 50% of the original radius. Therefore, the radius has decreased by 50%.
+
+Final answer: 1/2",corroborated_terminal_quantity,corroborated_terminal_quantity,numeric_scalar,[],"This means the new radius is 50% of the original radius. Therefore, the radius has decreased by 50%.",280,d97fd715d9bd9a31a73f16bf19fdd2ede7e7490d4b64b07bba56392eca6415ad,Codex,2026-10-13T03:07:38.775679+00:00,person1-release-review-v2,quarantine,"Radius factor .5 implies50% decrease, but repeated terminal50% leaves bare1/2; withhold ambiguous percentage display."
+formatted:c5245cee7b7e8a10a9c0a1eee6319d6e694f99a1386c27c9228680a497b1af22,c5245cee7b7e8a10a9c0a1eee6319d6e694f99a1386c27c9228680a497b1af22,orca,"In a heated election featuring four candidates, Geoff received 1 percent of the 12,000 votes cast. To win the election, a candidate needed to receive more than x% of the vote. If Geoff needed exactly 5,000 more votes to win the election, what is the value of x?","Geoff received 1 percent of the 12,000 votes, which means he received:
+
+0.01 * 12,000 = 120 votes
+
+Geoff needed exactly 5,000 more votes to win the election, so the total number of votes required to win would be:
+
+120 votes (Geoff's votes) + 5,000 votes (additional votes needed) = 5,120 votes
+
+To find the percentage of votes this represents out of the total 12,000 votes cast, we divide the number of votes needed to win by the total number of votes and multiply by 100:
+
+(5,120 / 12,000) * 100 = 42.6667%
+
+Since a candidate needed to receive more than x% of the vote to win, and Geoff needed 42.6667% to win, the value of x must be slightly less than 42.6667%. Therefore, we can round down to the nearest whole number to find the maximum value of x that would require more votes to win:
+
+x = 42.6667% (rounded down to the nearest whole number) = 42%
+
+So, the value of x is 42%. Geoff needed more than 42% of the vote to win the election.",21/50,"Geoff received 1 percent of the 12,000 votes, which means he received:
+
+0.01 * 12,000 = 120 votes
+
+Geoff needed exactly 5,000 more votes to win the election, so the total number of votes required to win would be:
+
+120 votes (Geoff's votes) + 5,000 votes (additional votes needed) = 5,120 votes
+
+To find the percentage of votes this represents out of the total 12,000 votes cast, we divide the number of votes needed to win by the total number of votes and multiply by 100:
+
+(5,120 / 12,000) * 100 = 42.6667%
+
+Since a candidate needed to receive more than x% of the vote to win, and Geoff needed 42.6667% to win, the value of x must be slightly less than 42.6667%. Therefore, we can round down to the nearest whole number to find the maximum value of x that would require more votes to win:
+
+x = 42.6667% (rounded down to the nearest whole number) = 42%
+
+So, the value of x is 42%. Geoff needed more than 42% of the vote to win the election.
+
+Final answer: 21/50",corroborated_terminal_quantity,corroborated_terminal_quantity,numeric_scalar,[],"So, the value of x is 42%. Geoff needed more than 42% of the vote to win the election.",314,59302b16b61a622fdef7a0d5fbd02478ca4b52d9109bd254241d1b71917bf1fc,Codex,2026-10-13T03:07:38.775679+00:00,person1-release-review-v2,quarantine,"Teacher rounds42.6667% down to42 without requested rounding, and winning requires a strict threshold; target unsupported. Percentage display also ambiguous."
+formatted:de987b27d95ba90e5be7e15e3dbebb5fbdf5fb905415cc53ff8cad1e93b77a16,de987b27d95ba90e5be7e15e3dbebb5fbdf5fb905415cc53ff8cad1e93b77a16,orca,"Danny has 5 bottles of soda. He drinks 80% of the first bottle, 60% of the second bottle, and 25% of the third bottle. He gives away 70% of the fourth bottle and 85% of the fifth bottle. How much soda does Danny have left, expressed as a percentage of a bottle?","To find out how much soda Danny has left, we need to calculate the remaining percentage of each bottle after he drinks or gives away a certain amount, and then add those percentages together.
+
+For the first bottle, he drinks 80%, so he has 20% left.
+For the second bottle, he drinks 60%, so he has 40% left.
+For the third bottle, he drinks 25%, so he has 75% left.
+For the fourth bottle, he gives away 70%, so he has 30% left.
+For the fifth bottle, he gives away 85%, so he has 15% left.
+
+Now, we add up the remaining percentages:
+20% + 40% + 75% + 30% + 15% = 180%
+
+Since each bottle is considered 100%, and he has 180% left, this means Danny has the equivalent of 1.8 bottles of soda left. To express this as a percentage of a bottle, we can say he has 180% of a bottle left.",9/5,"To find out how much soda Danny has left, we need to calculate the remaining percentage of each bottle after he drinks or gives away a certain amount, and then add those percentages together.
+
+For the first bottle, he drinks 80%, so he has 20% left.
+For the second bottle, he drinks 60%, so he has 40% left.
+For the third bottle, he drinks 25%, so he has 75% left.
+For the fourth bottle, he gives away 70%, so he has 30% left.
+For the fifth bottle, he gives away 85%, so he has 15% left.
+
+Now, we add up the remaining percentages:
+20% + 40% + 75% + 30% + 15% = 180%
+
+Since each bottle is considered 100%, and he has 180% left, this means Danny has the equivalent of 1.8 bottles of soda left. To express this as a percentage of a bottle, we can say he has 180% of a bottle left.
+
+Final answer: 9/5",corroborated_terminal_quantity,corroborated_terminal_quantity,numeric_scalar,[],"Since each bottle is considered 100%, and he has 180% left, this means Danny has the equivalent of 1.8 bottles of soda left. To express this as a percentage of a bottle, we can say he has 180% of a bottle left.",246,d657fec6cc69e4ff17c88863c6bea972999eb42a60136a53a96cb0c8b80cd857,Codex,2026-10-13T03:07:38.775679+00:00,person1-release-review-v2,quarantine,"Remaining volumes sum180% of one bottle, but repeated terminal180% leaves bare9/5; withhold ambiguous percentage display."
+formatted:e0da7f69d61a4c6ac13cf2489e9d4f0d40b2469a847e52045384b3978853fbba,e0da7f69d61a4c6ac13cf2489e9d4f0d40b2469a847e52045384b3978853fbba,orca,"in a recent election , geoff received 0.5 percent of the 6000 votes cast . to win the election , a candidate needed to receive more than x % of the vote . if geoff needed exactly 3000 more votes to win the election , what is the value of x ?","Geoff received 0.5% of the 6000 votes cast, which is:
+
+0.005 * 6000 = 30 votes
+
+Geoff needed exactly 3000 more votes to win the election. So the total number of votes Geoff needed to win was:
+
+30 votes (received) + 3000 votes (needed) = 3030 votes
+
+To find the percentage of votes Geoff needed to win (x%), we divide the number of votes needed to win by the total number of votes cast and then multiply by 100 to convert it to a percentage:
+
+(3030 / 6000) * 100 = 50.5%
+
+Therefore, the value of x is 50.5%. Geoff needed to receive more than 50.5% of the votes to win the election.",101/200,"Geoff received 0.5% of the 6000 votes cast, which is:
+
+0.005 * 6000 = 30 votes
+
+Geoff needed exactly 3000 more votes to win the election. So the total number of votes Geoff needed to win was:
+
+30 votes (received) + 3000 votes (needed) = 3030 votes
+
+To find the percentage of votes Geoff needed to win (x%), we divide the number of votes needed to win by the total number of votes cast and then multiply by 100 to convert it to a percentage:
+
+(3030 / 6000) * 100 = 50.5%
+
+Therefore, the value of x is 50.5%. Geoff needed to receive more than 50.5% of the votes to win the election.
+
+Final answer: 101/200",corroborated_terminal_quantity,corroborated_terminal_quantity,numeric_scalar,[],"Therefore, the value of x is 50.5%. Geoff needed to receive more than 50.5% of the votes to win the election.",203,2fe52e9c752abb4720e6da053abd2c0cc532fa68c4168ca2945b8df7fa8c0dfe,Codex,2026-10-13T03:07:38.775679+00:00,person1-release-review-v2,quarantine,"Exactly3030 votes required to win would imply threshold just below50.5%, not strict more-than50.5%; teacher target contradicts stated exact additional vote count."
+formatted:e2cc5045314e574b75dc8953f15ae681e6f399301485577706d35432657dcf21,e2cc5045314e574b75dc8953f15ae681e6f399301485577706d35432657dcf21,orca,A stock with an 18% yield is quoted at a certain price. The stock is currently quoted at 150. What is the current yield of the stock?,"To calculate the current yield of the stock, we need to know the annual dividend amount per share that the stock is paying to produce the 18% yield at the original quoted price. However, since we don't have the original quoted price or the annual dividend amount, we cannot calculate the current yield directly.
+
+If we assume that the 18% yield is based on the current quoted price of 150, we can calculate the annual dividend amount as follows:
+
+Annual Dividend Amount = Current Quoted Price × Yield
+Annual Dividend Amount = 150 × 18%
+Annual Dividend Amount = 150 × 0.18
+Annual Dividend Amount = 27
+
+Now, if the stock is still paying the same annual dividend amount of 27, we can calculate the current yield based on the current quoted price of 150:
+
+Current Yield = (Annual Dividend Amount / Current Quoted Price) × 100%
+Current Yield = (27 / 150) × 100%
+Current Yield = 0.18 × 100%
+Current Yield = 18%
+
+So, if the 18% yield is based on the current quoted price of 150, then the current yield remains 18%. However, if the 18% yield was based on a different original quoted price, we would need that information to accurately calculate the current yield.",9/50,"To calculate the current yield of the stock, we need to know the annual dividend amount per share that the stock is paying to produce the 18% yield at the original quoted price. However, since we don't have the original quoted price or the annual dividend amount, we cannot calculate the current yield directly.
+
+If we assume that the 18% yield is based on the current quoted price of 150, we can calculate the annual dividend amount as follows:
+
+Annual Dividend Amount = Current Quoted Price × Yield
+Annual Dividend Amount = 150 × 18%
+Annual Dividend Amount = 150 × 0.18
+Annual Dividend Amount = 27
+
+Now, if the stock is still paying the same annual dividend amount of 27, we can calculate the current yield based on the current quoted price of 150:
+
+Current Yield = (Annual Dividend Amount / Current Quoted Price) × 100%
+Current Yield = (27 / 150) × 100%
+Current Yield = 0.18 × 100%
+Current Yield = 18%
+
+So, if the 18% yield is based on the current quoted price of 150, then the current yield remains 18%. However, if the 18% yield was based on a different original quoted price, we would need that information to accurately calculate the current yield.
+
+Final answer: 9/50",corroborated_terminal_quantity,corroborated_terminal_quantity,numeric_scalar,[],"So, if the 18% yield is based on the current quoted price of 150, then the current yield remains 18%. However, if the 18% yield was based on a different original quoted price, we would need that information to accurately calculate the current yield.",312,8b81ec413f3e69b45eb9179cbec2b7c61b9127d72ea824b57be8c2aca1958fb8,Codex,2026-10-13T03:07:38.775679+00:00,person1-release-review-v2,quarantine,"Teacher explicitly lacks original quote/dividend, then assumes quoted yield applies currently. Current yield not determined by supplied historical quote; retain quarantine."

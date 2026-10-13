@@ -1,0 +1,4260 @@
+{
+  "status": "diagnostic_only",
+  "sampling": "100 fixed-seed random positions across each whole historical snapshot",
+  "seed": 1729,
+  "sources": {
+    "orca": {
+      "reference_encoding_rejected": 94,
+      "initial_eligible": 6,
+      "rows_inspected": 100,
+      "reference_encoding_passed": 6
+    },
+    "numina": {
+      "reference_encoding_rejected": 77,
+      "initial_eligible": 25,
+      "rows_inspected": 100,
+      "reference_encoding_passed": 23
+    }
+  },
+  "cases": [
+    {
+      "source": "orca",
+      "original_row_id": "1296",
+      "row_id": "bb6bfa928125a8e08d7414b0f7be371d4739599c1e0123f1dcadf47b55cda0e4",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "So, the remainder when B is divided by 9 is 4.",
+        "evidence_start": 924,
+        "evidence_end": 970,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "1507",
+      "row_id": "a4911c64f082f105c1b7d96f405da98521d44697d574737688cb362b34643d0a",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Hyojin is taller than Minwoo. Hyojin is 1.4 meters tall, while Minwoo is 1.3 meters tall.",
+        "evidence_start": 0,
+        "evidence_end": 89,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "1639",
+      "row_id": "49e52e7c0ca2eee783bc3c6ff1b3d9dbf776a8e03e9af97620d63c1898fb20ee",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Since 16 radishes can be planted and only 8 cabbages can be planted, radishes were planted more than cabbages.",
+        "evidence_start": 704,
+        "evidence_end": 814,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "11789",
+      "row_id": "1f7dcb624995a1ec1dc5e30b67f919445393629cd2a4017166d824ca6641980f",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Therefore, Daphney will pay $15 for the 5 kg of potatoes.",
+        "evidence_start": 159,
+        "evidence_end": 216,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "12553",
+      "row_id": "4e3bb21fdca9a35dfa571d635be323e1084eb6b76489e8e14e264901384949c3",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "54000",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, Tom spends $54,000.",
+        "evidence_start": 726,
+        "evidence_end": 756,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "13751",
+      "row_id": "41ead4bc69c87fdcc442adf9b040d1f7049e5d7b77782295a051fdeb2a5a5867",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "200",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, Azalea sheared 200 sheep.",
+        "evidence_start": 805,
+        "evidence_end": 841,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "14779",
+      "row_id": "7d83b35d5a4edbadf3e80785c7c417a8166abd7069cd32a9887136c241432566",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "150",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, Dawn makes $150.00 per hour.",
+        "evidence_start": 440,
+        "evidence_end": 472,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "15250",
+      "row_id": "e20d4e1f182f3a549678d66cec4f979ace0b72e765bbdc3cb7785215def7efa9",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Together, Bruce and Michael scored 4 (Bruce's goals) + 12 (Michael's goals) = 16 goals.",
+        "evidence_start": 107,
+        "evidence_end": 194,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "15297",
+      "row_id": "1d9981bdf705d73c574acc8d5200e68ba30d0812bbbf588413f37c01d8845305",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "40",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, Edward used 40 feet of copper pipe for the job.",
+        "evidence_start": 328,
+        "evidence_end": 386,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "25571",
+      "row_id": "9e141ccd6981835885d79c69eaa80a46cc23d7fa7209684f806f47a110d01281",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "15",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Cleo had 15 marbles on the third day.",
+        "evidence_start": 746,
+        "evidence_end": 783,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "27772",
+      "row_id": "4a7c1275ac602e1b747c3b2a162563f35f18e9ab57f8b3413378bac58ccdd1fd",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "5",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, two days ago, the shop washed 5 kilos of laundry.",
+        "evidence_start": 718,
+        "evidence_end": 771,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "29307",
+      "row_id": "5449c7e46b59a6af8c576072526b8c76a6830623c36d1bfbed933f1baf0ca4cd",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Since John and Steve split the costs evenly, each person paid $18.00 / 2 = $9.00.",
+        "evidence_start": 59,
+        "evidence_end": 140,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "31897",
+      "row_id": "8e76e68f920a7f9cb4490bd314b076107acac130294819c2eda330984919af8f",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "However, the question also states that Jason has 21 toys, which contradicts the previous information. There seems to be a mistake in the question. If Jason has 21 toys, then he does not have the same number of toys as John. Jason has 21 toys, not 7.",
+        "evidence_start": 230,
+        "evidence_end": 479,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "37519",
+      "row_id": "9cb06578107cbc896da5d85a20cd336e74652ec7c9d839254b7fc888c0487cbd",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "325000",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, the fourth and fifth suppliers each receive 325,000 cars.",
+        "evidence_start": 933,
+        "evidence_end": 1001,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "40902",
+      "row_id": "f548229b1e8cfded4804f341f39246744362fcfb1865cf7c599ebd9f3d2ba04f",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "8",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Tyler bought 8 pairs of scissors.",
+        "evidence_start": 607,
+        "evidence_end": 640,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "41789",
+      "row_id": "f39bb5540ff23b38024579509df3c3bc438be42f1dbeeba5bb40b13682249b3b",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "11",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, one-third of the class is under 11 years.",
+        "evidence_start": 995,
+        "evidence_end": 1040,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "44474",
+      "row_id": "3b78fb489cb6e53e7a4f433bca3a8609a4ac5f5e73e15e4da3b91438675bbce0",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "22",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, Isha's pencil was initially 22 inches long.",
+        "evidence_start": 569,
+        "evidence_end": 616,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "45432",
+      "row_id": "1f745f9d74489630fdef6446a5fa3a2367023b50b30ba0466ed0e7f3d8fbf090",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "17",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Coach Mike got back 17 cents in change.",
+        "evidence_start": 262,
+        "evidence_end": 301,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "45636",
+      "row_id": "21050acb850ad26d6eb0b5fffccfb512f7405e99b04ff23474d1a86c9b0cd91e",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "16",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, the car dealer sold 16 cars on the second day.",
+        "evidence_start": 452,
+        "evidence_end": 502,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "45944",
+      "row_id": "4343afd8535b0649a3ab6d2bc7037b8da6dccf19fb9af35cf51ed64c9bda034f",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "So, the total number of shoes they must sell each month is 39 (already sold) + 41 (still need to sell) = 80 pairs of shoes.",
+        "evidence_start": 320,
+        "evidence_end": 443,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "47846",
+      "row_id": "40c0c07ee4916f5108b632532f0cee9868ae57aaf209dbb948f827558b2f1378",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "2",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Amy made $2 per hour.",
+        "evidence_start": 485,
+        "evidence_end": 506,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "54434",
+      "row_id": "cfb8e33c98ce98683c1192577052cad6bcf58414cb57504fbcc1b67b250cfdfa",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "3/50",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, the annual interest rate is approximately 6%.",
+        "evidence_start": 1333,
+        "evidence_end": 1389,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "55501",
+      "row_id": "89054a37487284b3447725f15dda7023bda159906601dc9c929cfe83af26c767",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "3/20",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, Sheela deposited approximately 15% of her monthly income in the bank savings account.",
+        "evidence_start": 425,
+        "evidence_end": 514,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "57095",
+      "row_id": "b40220b2e36629f57e2131105254609dbacff5d3936203b5b1932ad1591aedb1",
+      "quality_flags": [
+        "missing_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "However, we don't have the value of T, the time it takes for Machine Q to produce 990 sprockets. We need more information to determine T. If we had the time it takes for Machine P to produce 990 sprockets, we could then find T since we know Machine P takes 10 hours longer than Machine Q. Without this information, we cannot calculate the exact percentage increase.",
+        "evidence_start": 744,
+        "evidence_end": 1109,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "58459",
+      "row_id": "a4dc4f6aa9355dfe367b8a02df0dec0cfbc0e90c775cee87b5d6f28dc5a9ea33",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "8",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, 8 pencils were sold at the selling price.",
+        "evidence_start": 699,
+        "evidence_end": 744,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "60908",
+      "row_id": "0bbdc3ee5a643719e8feb84b411a6406099846d19721d60bd6f865c5393cb6f5",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "50000",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, p invested Rs 50,000.00 in the business.",
+        "evidence_start": 1207,
+        "evidence_end": 1258,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "71732",
+      "row_id": "8fb76f478216e30d58cbd12ace183ca953470273479e27d1c52cc57cde46ae1a",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "6",
+        "mode": "terminal_answer_clause",
+        "evidence_text": "Therefore, the third number in the proportion is 6.",
+        "evidence_start": 538,
+        "evidence_end": 589,
+        "confidence": "terminal_clause",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 261
+    },
+    {
+      "source": "orca",
+      "original_row_id": "72397",
+      "row_id": "14e2b9ceb35cf6aafab910d6d35d97d330ff9a38e3a5f68afaa695f415b8138b",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "70",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, the remainder is 70.",
+        "evidence_start": 399,
+        "evidence_end": 430,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "74470",
+      "row_id": "0cb2c9197c972bba1dd0f1f4f60c8186d48b18b325bbcd68964020f4cc7540bb",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "40",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, the sum of their present ages is 40 years.",
+        "evidence_start": 197,
+        "evidence_end": 243,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "75030",
+      "row_id": "1fb1bbb4f01948bf5ea46ff8935d98c222c2d52d989befe2676603fad907a59c",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "18",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, the divisor to get Gokul's age is 18.",
+        "evidence_start": 641,
+        "evidence_end": 689,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "75903",
+      "row_id": "e821d0a38f96cfc578a9e45ff1f8d6919568e64df7caca8c641ffaf78003c36e",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "660",
+        "mode": "terminal_answer_clause",
+        "evidence_text": "So the actual number of children in the school is 660.",
+        "evidence_start": 934,
+        "evidence_end": 988,
+        "confidence": "terminal_clause",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 313
+    },
+    {
+      "source": "orca",
+      "original_row_id": "76018",
+      "row_id": "6ad039cc623710a0379fc951ba330f0e1347ffdfef729d1c20767a29ee185228",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Therefore, the maximum number of subjects a teacher can teach, given that there are at least 6 teachers, is 3.",
+        "evidence_start": 764,
+        "evidence_end": 874,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "76592",
+      "row_id": "9c909b778aea0733a4548573781381ddb6710b14fe61bec352b37e5cd0796c5c",
+      "quality_flags": [
+        "missing_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "Without additional information, we cannot determine the exact number of students who did not answer yes for either subject.",
+        "evidence_start": 927,
+        "evidence_end": 1050,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "78159",
+      "row_id": "6e49d6034b15d163eec39d242c6d75356bad6d4ee2fa58cb036fe099f495a62c",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "So the initial percentage of grape juice in the mixture was 0.1, or 10%.",
+        "evidence_start": 759,
+        "evidence_end": 831,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "85911",
+      "row_id": "528be8dcd715e63dae23e56092892cbf889826607ab6d4acd0bdf582ed6ea2e9",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "96",
+        "mode": "terminal_answer_clause",
+        "evidence_text": "So, the value of x is 96.",
+        "evidence_start": 224,
+        "evidence_end": 249,
+        "confidence": "terminal_clause",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 118
+    },
+    {
+      "source": "orca",
+      "original_row_id": "92039",
+      "row_id": "3b48307f80d64cab5f40c6a8715db0b2ff08d8162d64353997eaa06b35f53341",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "1/5",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, the man had to increase his monthly expenses by 20%.",
+        "evidence_start": 1311,
+        "evidence_end": 1374,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "92324",
+      "row_id": "5c69d0b7265f400b8e4e621c1a0bb8ad843f25c9c6cc9be530d2638cb26979e9",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "83",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, the fourth person is 83 inches tall.",
+        "evidence_start": 918,
+        "evidence_end": 958,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "92995",
+      "row_id": "57fd7c5891f3072036a399b76bffec93936500b396391acdfdc89443a7919fc5",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "800",
+        "mode": "terminal_answer_clause",
+        "evidence_text": "Therefore, the number of students in the course is 800.",
+        "evidence_start": 921,
+        "evidence_end": 976,
+        "confidence": "terminal_clause",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 353
+    },
+    {
+      "source": "orca",
+      "original_row_id": "95182",
+      "row_id": "b42c068eb05be11f3fa590c10e45f9f06a2d75c90566a684937fb4faf3fa607e",
+      "quality_flags": [
+        "missing_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "If the mean of the second set of numbers is indeed 78, then the value of x that we calculated from the first set of numbers does not fit the second set of numbers. Therefore, we need to recheck the given information or the calculations to resolve this inconsistency.",
+        "evidence_start": 1330,
+        "evidence_end": 1596,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "96341",
+      "row_id": "ba6166ff9c3d08ff0e417c1f90dca14443cf5f0a0451596537efdeb7e6775269",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_unmarked_math_expression",
+        "evidence_text": "So, the person spent \\( \\frac{1}{3} \\) of his money on clothes.",
+        "evidence_start": 1327,
+        "evidence_end": 1390,
+        "confidence": "none",
+        "ambiguity_reason": "unmarked_math_expression",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_unmarked_math_expression"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "96946",
+      "row_id": "d5df76b3f922bfc997705589e9f8b372a7ea7b7dfcb407d03af195e6ff958952",
+      "quality_flags": [
+        "missing_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "Please check the problem statement again for any errors or missing information.",
+        "evidence_start": 1371,
+        "evidence_end": 1450,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "97094",
+      "row_id": "b53a80efb7258ebdc01c7ceac6e21c098de60c7a51b9f78e5f301681bbac5b0c",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "201/10",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, Little John initially had $20.10.",
+        "evidence_start": 350,
+        "evidence_end": 387,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "98898",
+      "row_id": "c89af29969491e005270b7c3a13f6a309c27c4e4691fd9604fdb7beb9a1193b0",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "15/4",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, it takes approximately 3.75 years for the average hard drive capacity to double.",
+        "evidence_start": 929,
+        "evidence_end": 1020,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "103098",
+      "row_id": "c02639249936476f5b81a523f68fbfa547221ff951d18085f579f4a591653f16",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "502/25",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, the number we're looking for is 20.08.",
+        "evidence_start": 520,
+        "evidence_end": 562,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "103841",
+      "row_id": "dbc3593d21197d04e2f881da25301a2bd3e1a633a0dec4af3648fd676acbd102",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Therefore, the average age of the 9 persons is approximately 11.44 years.",
+        "evidence_start": 1372,
+        "evidence_end": 1445,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "105391",
+      "row_id": "a10afefa72f480924a85b48035aee283f10009365dbaad4256d12b2ff6ccf5a0",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "1667/10000",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, approximately 16.67% of the total remaining employees would be journeymen after laying off half of them.",
+        "evidence_start": 1050,
+        "evidence_end": 1158,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "107635",
+      "row_id": "19ac3d809a934cd666ebe392de4bd24177aa947fe99e2316ad6a188d87c8a803",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "2/5",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, Jeff has 2/5 of the money Daya has.",
+        "evidence_start": 666,
+        "evidence_end": 705,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "107688",
+      "row_id": "b8759be5ce0e3aa52acdba330eff0ecd77939859a8bbd5d1e7b891447f351c8c",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "2/5",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, the value of m / x is 2/5.",
+        "evidence_start": 578,
+        "evidence_end": 615,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "108394",
+      "row_id": "46caea93a77a0b14b8edcfd22064c0f34b3e48fa2a5de1ca0c062a424cffc491",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "8",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So there are 8 workers in the factory.",
+        "evidence_start": 1162,
+        "evidence_end": 1200,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "110396",
+      "row_id": "9dff80083f9f13baead0cfa9cbca45fecd4b4dd62c5e617beb1eb7e21c9b7a9b",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "144",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, 144 degrees of the circle should be used to represent the career that is preferred by one of the males and one of the females in the class.",
+        "evidence_start": 690,
+        "evidence_end": 840,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "113907",
+      "row_id": "2defb39b76f399b9b307d0ed90e9d1b80c81cbd45e03486f5ff1bbe04a2a94fd",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "60",
+        "mode": "terminal_answer_clause",
+        "evidence_text": "Therefore, the area of the rhombus is 60 square centimeters.",
+        "evidence_start": 299,
+        "evidence_end": 359,
+        "confidence": "terminal_clause",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 131
+    },
+    {
+      "source": "orca",
+      "original_row_id": "114828",
+      "row_id": "a4b922851f9d3e86fac2a2d622e994ae66d9232658df0de1c0b9bf4e5e128f13",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "3",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, the ratio of the amount of flavoring to corn syrup in the sport formulation is 3 times that of the standard formulation.",
+        "evidence_start": 1260,
+        "evidence_end": 1384,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "115223",
+      "row_id": "9b163423d87f56972b1d7d69388144c6ff5f570dab189ac2eff45aa08ba81406",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "So the probability that either event A or event B occurs is 0.60 or 60%.",
+        "evidence_start": 462,
+        "evidence_end": 534,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "116672",
+      "row_id": "9aa68c4c04945c3f46d0a9f362c8922a130d399367d8253f9bf3b028745a519e",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "So, 45 graduates continued on to their second degree.",
+        "evidence_start": 1066,
+        "evidence_end": 1119,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Target does not demonstrably agree with the terminal solution answer"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "117518",
+      "row_id": "2354750bd60e9fa6f38caebd8c0ca06dc89cbe47e82fb6ae5b6069fda24d06aa",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Therefore, 15 buyers purchase both cake mix and muffin mix.",
+        "evidence_start": 999,
+        "evidence_end": 1058,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Target does not demonstrably agree with the terminal solution answer"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "117900",
+      "row_id": "5bb6f92d76c28e2b8fba74749f1dd52bf7c4e10286d7377c56d1d51c5bcec03e",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Therefore, there are 263 students in the graduating class.",
+        "evidence_start": 1265,
+        "evidence_end": 1323,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Target does not demonstrably agree with the terminal solution answer"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "118455",
+      "row_id": "84c86cfb7494db4be3d1284a13238e9d65a0f27272ae95bff1a8c6db73857eb4",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "24",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, there are currently 24 women in the room.",
+        "evidence_start": 784,
+        "evidence_end": 829,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "119804",
+      "row_id": "036329647e77b1891e6482fc8846ca9da0dd5fd3c061a727eac9d1d17ad9e9e6",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "30",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, the speed of the train is 30 km/hr.",
+        "evidence_start": 584,
+        "evidence_end": 630,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "119928",
+      "row_id": "6061e6da0c545d29e26e40c86ae4e3f6656e846d18f54144d897b4b28e4c5c4c",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Therefore, 6 pumps would need to work 22.5 hours a day to empty the tank in 1 day. However, since it's not practical for the pumps to work more than 24 hours in a day, this scenario is not possible. The pumps cannot empty the tank in 1 day if they are limited to working less than or equal to 24 hours a day.",
+        "evidence_start": 611,
+        "evidence_end": 919,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "119988",
+      "row_id": "7d66cc5d1279d8ad78a77bd52a2949ad26ad56422f936861180b21be3bd5099e",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "5/4",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, it will take the train 1.25 seconds to cross the electric pole.",
+        "evidence_start": 890,
+        "evidence_end": 964,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "120190",
+      "row_id": "c2847cf96d6c16961f90a6e9af2995bb5f479f3ed9d653f6ee0d37575f8f9ea9",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Therefore, the cyclist's average speed for the remaining 16 miles of the trip was 10 miles per hour.",
+        "evidence_start": 1254,
+        "evidence_end": 1354,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "121959",
+      "row_id": "19e06631c7c5dea986d03bc5a8166c1fcb27c8ab5ab61ed203a65bdc601edfe1",
+      "quality_flags": [
+        "missing_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "Without the size of the tiles, we cannot provide an exact number of tiles needed. If you can provide the size of the tiles, we can complete the calculation.",
+        "evidence_start": 751,
+        "evidence_end": 907,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "121974",
+      "row_id": "a8e4d9b6874e1fa32ef27cdbc8ba047516abd2135b889381f4a5081371a9e769",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "15",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, the project will be completed in 15 days in total.",
+        "evidence_start": 1552,
+        "evidence_end": 1613,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "125792",
+      "row_id": "132764b3cbe82eb4fde9a45e60c2b673739daf3bef46b1a8d397898a785bb8c9",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Therefore, it took Jack 75 minutes to walk 7 miles.",
+        "evidence_start": 504,
+        "evidence_end": 555,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "128845",
+      "row_id": "ca3aeb3293fe40b2f5e0210b9bab2c6455bbe3f1ca0ba437991fd2a154d1f493",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "So, the distance traveled downstream in 44 minutes is approximately 35.2 kilometers.",
+        "evidence_start": 909,
+        "evidence_end": 993,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "131000",
+      "row_id": "dd43da65bc403ac602356bcf0493593d1ee7a810524f49f8d33c1cef33be6bbc",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "So, the person covers one-half (or 50%) of the total distance initially at a speed of 80 kmph.",
+        "evidence_start": 1207,
+        "evidence_end": 1301,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "131413",
+      "row_id": "2b5263a175a19814bb5ab1e701e255a9e11a035de428c2903ce363c1abf0ab1f",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "34997/500",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, the length of the train is approximately 69.994 meters.",
+        "evidence_start": 619,
+        "evidence_end": 685,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "135184",
+      "row_id": "abfe45183755b565100236334ce99441c70c95acbd814049c7ce7cbdafa54134",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "So the weight of 9 meters of the same rod would be 34.2 kg.",
+        "evidence_start": 561,
+        "evidence_end": 620,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "135312",
+      "row_id": "7479a5ed9b36be476237bed2118c3629f7080018d37a4b5dd9f771d2d4b776e3",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "20",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, the average speed at which John traveled by car is \\( v = 20 \\) miles per hour.",
+        "evidence_start": 1402,
+        "evidence_end": 1485,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "136289",
+      "row_id": "f12e261430cfe867ef0fd256aa1538a85214fb0699fcf28c7d422e192ee1e2f7",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Without the specific value of W, we cannot simplify this further. However, if we knew how many days 10 women take to complete the work (W), we could plug that value into the equation to find the number of days (D) it will take for 5 women and 10 children to complete the work.",
+        "evidence_start": 1271,
+        "evidence_end": 1547,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "142007",
+      "row_id": "236759654fb5c78e7c4f9f52e63c6876a6050ac1e9f8c8ceb7910d35547fb36c",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Therefore, it takes the boat 5 hours to travel 135 km downstream.",
+        "evidence_start": 692,
+        "evidence_end": 757,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "143817",
+      "row_id": "6e954a349b64ab73ec6ff591da456508debec74242ff6d9a701d286fd05c340d",
+      "quality_flags": [
+        "missing_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "However, the question asks for a certain number of flips where the coin landed tails up, not a range. Since the probability is the same for 0, 1, or 2 flips, we need additional information to determine the exact number of flips where the coin landed tails up. Without further information, we cannot definitively say on how many flips the coin landed tails up.",
+        "evidence_start": 1110,
+        "evidence_end": 1469,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "143847",
+      "row_id": "56993c1fe24f150d6141d9447d93bc757cc8c467165590e6123f91fe72935f64",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "1/1296",
+        "mode": "terminal_answer_clause",
+        "evidence_text": "So the probability that all five 6-faced dice show the same number is 1/1296.",
+        "evidence_start": 886,
+        "evidence_end": 963,
+        "confidence": "terminal_clause",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 248
+    },
+    {
+      "source": "orca",
+      "original_row_id": "146559",
+      "row_id": "89f3bd1b3344b134b9255f2cbb94ab554a340c57df977ddbd3ab483747ba6149",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "24",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, Penelope saved $24 every day.",
+        "evidence_start": 330,
+        "evidence_end": 370,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "146754",
+      "row_id": "b3802ac813742b6940becc64b3f65fe4c30c8a5ab201fc31cf78f303a1f0fdf7",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "7084",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Samuel has to pay a total of $7084 for the coaching.",
+        "evidence_start": 1082,
+        "evidence_end": 1134,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "148708",
+      "row_id": "269e82b8f83ee4884ad09aa8d25e16cbf061fd85b4e3ab3392e1713a2d72be65",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "So, the number of moles of HCl formed is 1 mole.",
+        "evidence_start": 828,
+        "evidence_end": 876,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Target does not demonstrably agree with the terminal solution answer"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "149408",
+      "row_id": "5d87d8ad6b7c40cebcc46e91dd6e79d8607a768cfe4e1c8f7423a60c3ad7a42b",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "So, it takes the airplane 24 hours to fly 1584 miles at an average speed of 66 miles per hour.",
+        "evidence_start": 348,
+        "evidence_end": 442,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "150515",
+      "row_id": "6103a26065e6bf16304938f66eea387f385b58b363dcd5e6f9665eb6a9c7c97c",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Therefore, 8 moles of C4H10O weigh 593.12 grams.",
+        "evidence_start": 791,
+        "evidence_end": 839,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "150721",
+      "row_id": "3594a1889b2a49f4be537ffffb5b5e0a92b4e3821baf131c24bc02ccd861c922",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "15",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Kelly needs to give away 15 games.",
+        "evidence_start": 260,
+        "evidence_end": 294,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "152504",
+      "row_id": "1916593eddc21593242cf8e4b7e2831286b161b9b66d9e556433ab3505787093",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "6",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So there were 6 people in each van.",
+        "evidence_start": 785,
+        "evidence_end": 820,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "153981",
+      "row_id": "0f392220ba06044bce8e7cb63431922e523bfdbc3d28f625ca5c8bf04599a2ed",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "36 games (last year) - 25 games (this year) = 11 games fewer this year.",
+        "evidence_start": 242,
+        "evidence_end": 313,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "158743",
+      "row_id": "fc83859626c140b18a4d79e24d42c7d1360ab0740c1a6ac3cb3be828b433d1c2",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "109",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, Paul sold 109 books.",
+        "evidence_start": 261,
+        "evidence_end": 285,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "159271",
+      "row_id": "2b8a179ad739c665131696f1d45cda789c9d475694a39bd9b8291eb876013c1a",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "253",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "There are 253 boys in the school.",
+        "evidence_start": 219,
+        "evidence_end": 252,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "160782",
+      "row_id": "0ed084a41567563be24c0d020645d124e3eae83a23132030d009e5a7b1d67a88",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "356",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, Philip's collection has 356 oranges.",
+        "evidence_start": 158,
+        "evidence_end": 198,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "163042",
+      "row_id": "ed9effc827543f4a942668f7dcd0e70feb05b583a9236b52df274c43884ad26b",
+      "quality_flags": [
+        "missing_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "So, Gail would not have any more fish in the first tank than in the second and third tanks combined after accounting for the fish that eat each other.",
+        "evidence_start": 1611,
+        "evidence_end": 1761,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "165720",
+      "row_id": "1cedbb7ff2781baa40252dc2e10856845e41854a285b5122add3c7286ac184f3",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "960",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "The ship has traveled a total distance of 960 miles in the four days.",
+        "evidence_start": 862,
+        "evidence_end": 931,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "169549",
+      "row_id": "b38cf979823d5d8910ea03faaa77727786bd2733b21dc9a3f23918f145b5a910",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "In conclusion, Bill makes 17 trips, Jean makes 23 trips, and the average weight per trip is 196.25 lbs.",
+        "evidence_start": 1104,
+        "evidence_end": 1207,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "171374",
+      "row_id": "683b949992be04248d14b58733b9bfb03c2f3648936ffb35cb5bc2a865ea5c42",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "In total, there are 10 apples and 15 oranges left, which sums up to 10 + 15 = 25 fruits left.",
+        "evidence_start": 697,
+        "evidence_end": 790,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "174911",
+      "row_id": "17cd8134350260d5a96f6c8a03c3aefa70a79e9fe21580863467fa55a7b8b7f8",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "117/10",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, the difference is 11.7 tickets.",
+        "evidence_start": 360,
+        "evidence_end": 395,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "180154",
+      "row_id": "efc60e3a7ef5e7e1041b0f9656f89dbe3f5d5663290863bbbfc20450c8ffe2cd",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "8951/50",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, the book must be marked at approximately $179.02 in order to achieve the desired profit, commission, and bonus after all the discounts.",
+        "evidence_start": 1679,
+        "evidence_end": 1818,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "184143",
+      "row_id": "e0c019fd18b6eeedd51a973c1ba974cd047941fbbd4f9ce161af64cd10fefa5c",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "410",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, the weight of Joe's first lift was 410 pounds.",
+        "evidence_start": 953,
+        "evidence_end": 1003,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "185239",
+      "row_id": "b93141905be9881aebe3c2d7e134f2d50f0769a64f79c47c67a0fb726383b233",
+      "quality_flags": [
+        "missing_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "Without the actual values of X, Y, and Z, we cannot calculate a numerical average. However, if you provide the values of X, Y, and Z, I can calculate the average for you.",
+        "evidence_start": 346,
+        "evidence_end": 516,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "186629",
+      "row_id": "15e1e0f14e7e586cec4ff049edcd8eb30a63377b85ad93386969b7130872e6fa",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "This is the fraction e of the remaining weighted votes that must be against the resolution for the total weighted count to result in a vote of 2 to 1 against the resolution.",
+        "evidence_start": 1791,
+        "evidence_end": 1964,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "188122",
+      "row_id": "c5b5c26ffcc26966c1315146ca42f8b11f7318161448fd9c271e0391d628642d",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "The tourist must pay a total tax of $288.80 on the goods with a total value of $2,890.",
+        "evidence_start": 1130,
+        "evidence_end": 1216,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "190463",
+      "row_id": "79720cc6814da063583b7cbb76118e534f2d2d225718c54e943bb33bf206aee8",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "70",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, the least possible value of \\( p + q \\) is 70.",
+        "evidence_start": 1015,
+        "evidence_end": 1065,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "190574",
+      "row_id": "5fa005e5cab9be8f63fb3818042913b440b77934cbc09510c457834aad186e91",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Therefore, b's height is approximately 66.67% more than that of a, and c's height is 25% more than that of a, respectively.",
+        "evidence_start": 861,
+        "evidence_end": 984,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "191523",
+      "row_id": "7ce67579ef59e074388c5b3994697bb78ecd89ef9dd09612978412255a23edfb",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Comparing the total costs, the 2.2 meters by 2.2 meters carpet squares would be the most cost-effective option with a total cost of $1190, as opposed to the 1.6 meters by 1.6 meters carpet squares which would cost $1408.",
+        "evidence_start": 1686,
+        "evidence_end": 1906,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "191575",
+      "row_id": "f24f5bf5c63ef1e9cb6dbee4d74b6a81383014ab9774c069f572d779d2e72706",
+      "quality_flags": [
+        "ambiguous_final_answer",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "So, the volume of the rectangular prism increases by 152%.",
+        "evidence_start": 1047,
+        "evidence_end": 1105,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Target does not demonstrably agree with the terminal solution answer"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "193878",
+      "row_id": "57a11a14f665b86185f577a858efde5b42384d8701ac8ca5b02bc1dc463ac23a",
+      "quality_flags": [
+        "heuristic_terminal_answer_requires_individual_review"
+      ],
+      "extraction": {
+        "candidate": "27",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, the speed of the boat in still water is 27 km/hr.",
+        "evidence_start": 802,
+        "evidence_end": 855,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "orca",
+      "original_row_id": "199590",
+      "row_id": "954b1d01279750d06bf1c38f83a28482cc51f560b0a305e8f57b364fd88baa1d",
+      "quality_flags": [
+        "missing_final_answer",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "So, 82 more bottles of regular soda than diet soda were sold at the store. The discount rates do not affect the count of the bottles sold.",
+        "evidence_start": 728,
+        "evidence_end": 866,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "5186",
+      "row_id": "71bef9196afff8b1ca3c440fd223c061a790044eb3271da95c43d2f51116b561",
+      "quality_flags": [
+        "numina_problem_not_valid",
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_unmarked_math_expression",
+        "evidence_text": "Answer to the variant: $6-2: -\\pi / 6, -2 \\pi / 9, \\sin (\\pi /(3 \\sqrt{3})), \\sin (2 \\pi /(3 \\sqrt{3}))$.",
+        "evidence_start": 63,
+        "evidence_end": 168,
+        "confidence": "none",
+        "ambiguity_reason": "unmarked_math_expression",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_unmarked_math_expression"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "6029",
+      "row_id": "f595cb7ab5099e26ab663d72aabdd8864f35b931902f44a8cd0ccfc3ec56fe94",
+      "quality_flags": [
+        "numina_problem_not_valid",
+        "missing_or_external_diagram"
+      ],
+      "extraction": {
+        "candidate": "30",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Answer: 30. Solution. Note that each rhombus corresponds to one internal edge. By counting the internal edges, we get the answer - 30 rhombuses.",
+        "evidence_start": 0,
+        "evidence_end": 144,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "6556",
+      "row_id": "2b3fc976d4fe5cd808f8f505ddabdc3bbc7f7fe013fa7226deb965a494722883",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Answer to variant 2: 40/41.",
+        "evidence_start": 1844,
+        "evidence_end": 1871,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "47156",
+      "row_id": "ae0f030d6e37216978562b282707771615d3ade41e045d768c04ac19a1eff1f0",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "## Problem Kuznetsov Differentiation 15-27",
+        "evidence_start": 971,
+        "evidence_end": 1013,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "50215",
+      "row_id": "1735b9d48957ebc729f34308be6b361a0193ddae1148a3391b040d2dd7bff3f2",
+      "quality_flags": [
+        "numina_problem_not_valid",
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_unmarked_math_expression",
+        "evidence_text": "Thus, $AC = \\frac{\\sqrt{a^2 + b^2 - 2ab \\cos \\alpha}}{\\sin \\alpha}$.",
+        "evidence_start": 553,
+        "evidence_end": 621,
+        "confidence": "none",
+        "ambiguity_reason": "unmarked_math_expression",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_unmarked_math_expression"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "55005",
+      "row_id": "961e743dae71642f29321ae14406f572c2fe7ee239c8914de91393c5703855d2",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope",
+        "missing_or_sentinel_final_answer",
+        "missing_or_external_diagram"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "Submit a comment",
+        "evidence_start": 1677,
+        "evidence_end": 1693,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "59117",
+      "row_id": "2763be261a82afb727bdae65dc0f8f0f5585e118627454e7b5d077016ff1835f",
+      "quality_flags": [
+        "numina_problem_not_valid"
+      ],
+      "extraction": {
+        "candidate": "20",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "20.",
+        "evidence_start": 316,
+        "evidence_end": 319,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "61001",
+      "row_id": "8274cbcad6609c1a6b2c1e45177f32dd51af3f3ff84190fb3b9bdc5f5dc72232",
+      "quality_flags": [
+        "missing_or_sentinel_final_answer",
+        "numina_problem_not_valid"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "When the segment $C 1 A 1$ is rotated, it transforms into the segment $B A 2$. Therefore, the midpoint $Q$ of segment $C 1 A 1$ transforms into the midpoint $P$ of segment $B A 2$. Consequently, triangle $A P Q$ is equilateral.",
+        "evidence_start": 518,
+        "evidence_end": 745,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "61190",
+      "row_id": "6b6e9aba7eb7316cf5433d7724cd61519db28f12d4c6e75a6974866f412f8212",
+      "quality_flags": [
+        "numina_problem_not_valid"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "## Problem",
+        "evidence_start": 352,
+        "evidence_end": 362,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "102285",
+      "row_id": "ea68239f06f3fdfaf9327d71e3e09c04f7a400d544e8751f8c2d278e968907f5",
+      "quality_flags": [
+        "numina_problem_not_valid"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_unmarked_math_expression",
+        "evidence_text": "Let $b_{n}$ be the number of $n$-digit numbers where 1 and 6 are adjacent, and $c_{n}$ be the number of $n$-digit numbers where the first digit is 1 or 6 and 1 and 6 are adjacent. Then $b_{n}=2 c_{n-1}+4 b_{n-1}$; we can establish the recursive formula for $c_{n}$: considering the first two digits are 16 or 61; the first two digits are 11 or 66; the second digit is not 1 or 6. Thus, $c_{n}=6^{n-2}+c_{n-1}+4 b_{n-2}$, substituting into the previous recursive formula, we get $b_{n}=2 \\times 6^{n-2}+4 b_{n-2}+$ $5 b_{n-1}$, combining $b_{1}=0, b_{2}=2$, we find $b_{5}=1470$. Therefore, $|A \\cap B|=6^{5}-456-1470+30=5880$, there are 5880 5-digit numbers that meet the requirements.",
+        "evidence_start": 578,
+        "evidence_end": 1263,
+        "confidence": "none",
+        "ambiguity_reason": "unmarked_math_expression",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_unmarked_math_expression"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "111091",
+      "row_id": "4a233b990b4718ff13f1d3442266413ec356368e6a16d2714b049d5618350d25",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_unmarked_math_expression",
+        "evidence_text": "Therefore, $A H=B C \\cdot \\cot \\angle B A C=3 \\cdot \\cot 30^{\\circ}=3 \\sqrt{3}$.",
+        "evidence_start": 586,
+        "evidence_end": 666,
+        "confidence": "none",
+        "ambiguity_reason": "unmarked_math_expression",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_unmarked_math_expression"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "117229",
+      "row_id": "96ada20db84754c625156a01b357130bdbfef17afc93a8f2943f440412b9683e",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Given the dividend is at least 123, the divisor must be at least 62. \nBy trying the divisors $62, 63, 64, 65, 68, 82, 83, 84, 85, 86$, we find that only the above two solutions are valid.",
+        "evidence_start": 643,
+        "evidence_end": 830,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "127591",
+      "row_id": "ccbc63217299963ded041421f229e339022c6e05e7afca063192838ecb7deb1e",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "[Solution] From $\\frac{1}{x+\\sqrt{x^{2}+1}}$\n$$\n\\begin{array}{l}\n=\\frac{\\sqrt{x^{2}+1}-x}{\\left(\\sqrt{x^{2}+1}+x\\right)\\left(\\sqrt{x^{2}+1}-x\\right)} \\\\\n=\\sqrt{x^{2}+1}-x,\n\\end{array}\n$$\n$\\therefore$ the original expression $=2 x$, so when $x$ is a rational number, the original expression is also a rational number. Therefore, the answer is $(B)$.",
+        "evidence_start": 0,
+        "evidence_end": 348,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "150079",
+      "row_id": "793b9560da3a2b5717e0a0f43c45089f3e1c01c53de71c7d18f183f2a147ae15",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "1990 Solution There are 30\u00b729\u00b728/6 = 4060 triples in all. Let m be the number of triples with 0 or 3 edges, and let n be the number of triples with 1 or 2 edges. So m + n = 4060. Each point is joined to 6 others, so it is in 6\u00b75/2 = 15 triples where it is joined to both the other points, and it is in 23\u00b722/2 = 253 triples where it is not joined to either of the other points. So the total number of triples (a,b,c), where a is joined to b and c or not joined to b or c is 30(15+253) = 8040. This counts the m triples 3 times each, and the n triples once each, so 3m+n = 8040. Hence m = 1990. 24th ASU 1990 \u00a9 John Scholes jscholes@kalva.demon.co.uk 2 March 2004 Last corrected/updated 2 Mar 04",
+        "evidence_start": 0,
+        "evidence_end": 694,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "163608",
+      "row_id": "5f4656aec14059fb74bc557dbe21d6be2fa6a1bd9b6e7c4b040c4c2211c0cc7a",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_unmarked_math_expression",
+        "evidence_text": "Zapisana funkcija: $f(x)=\\frac{2 x+1}{x+3}$",
+        "evidence_start": 645,
+        "evidence_end": 688,
+        "confidence": "none",
+        "ambiguity_reason": "unmarked_math_expression",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_unmarked_math_expression"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "177898",
+      "row_id": "d0a28693cc1fa0f0082add329f220f1fb0b3152c9b1c4ed69124cc4b25d1fe17",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_unmarked_math_expression",
+        "evidence_text": "$$\n\\begin{gathered}\n\\left(\\frac{a-b}{c}+\\frac{b-c}{a}+\\frac{c-a}{b}\\right) \\cdot\\left(\\frac{c}{a-b}+\\frac{a}{b-c}+\\frac{b}{c-a}\\right)= \\\\\n=\\left(\\frac{a-b}{a+b}+\\frac{b-a-b}{a}+\\frac{a+b-a}{b}\\right) \\cdot\\left(\\frac{a+b}{a-b}+\\frac{b}{b-a-b}+\\frac{b}{a+b-a}\\right)= \\\\\n=\\left(\\frac{a-b}{a+b}-1+1\\right)\\left(\\frac{a+b}{a-b}-1+1\\right)=\\frac{a-b}{a+b} \\cdot \\frac{a+b}{a-b}=1\n\\end{gathered}\n$$",
+        "evidence_start": 15,
+        "evidence_end": 409,
+        "confidence": "none",
+        "ambiguity_reason": "unmarked_math_expression",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_unmarked_math_expression"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "181729",
+      "row_id": "cdfee7c2d27f3240a0024c7069d530225b4868153029bd610cd14f2556f5532b",
+      "quality_flags": [
+        "numina_problem_not_valid",
+        "missing_or_external_diagram",
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "![](https://cdn.mathpix.com/cropped/2024_06_06_69be9c4355ed0dc2557cg-15.jpg?height=457&width=551&top_left_y=500&top_left_x=750)",
+        "evidence_start": 338,
+        "evidence_end": 465,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "191385",
+      "row_id": "ea9de43c18eb1a66c67c9120cb73de1a19cdad662b400751b8008460cabf530b",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "ANSwER: (D)",
+        "evidence_start": 355,
+        "evidence_end": 366,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "217738",
+      "row_id": "286e43735610771d7cc07087ddfaa16914583717a85815c863024774acbeab83",
+      "quality_flags": [
+        "missing_solution",
+        "outside_math_word_problem_metadata_scope",
+        "missing_or_sentinel_final_answer",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "",
+        "evidence_start": 0,
+        "evidence_end": 0,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "222006",
+      "row_id": "ecb4d39521795dee738b645f6f1a24d3c281ace76bc705a9171fc2d43bbc3891",
+      "quality_flags": [
+        "unsupported_final_answer_structure",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "\\[\n\\boxed{\\Gamma_2 \\cap AB \\setminus \\{A, B\\}}\n\\]",
+        "evidence_start": 1516,
+        "evidence_end": 1565,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "228382",
+      "row_id": "f919f294958984145ba5fb098ab42b2a6bd3445b4458b106adb544b0ce9e97a5",
+      "quality_flags": [
+        "missing_solution",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "",
+        "evidence_start": 0,
+        "evidence_end": 0,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "233838",
+      "row_id": "dc2da7fb7e1691e7438c7fe3fd82eb61911de3947ebf472616d0b578c0c66c4d",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "216543",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{216543}",
+        "evidence_start": 2207,
+        "evidence_end": 2221,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 759
+    },
+    {
+      "source": "numina",
+      "original_row_id": "243635",
+      "row_id": "0e953cb5600f1965df27e576737a6cd72787082399090f542d1d7266e6c5644a",
+      "quality_flags": [
+        "missing_solution",
+        "outside_math_word_problem_metadata_scope",
+        "missing_or_sentinel_final_answer"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "",
+        "evidence_start": 0,
+        "evidence_end": 0,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "286930",
+      "row_id": "183b3a316469e137e18dcec2350dc0e2cee195372578ab26adddff1fc858068f",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_unmarked_math_expression",
+        "evidence_text": "Since in a geometric sequence, $a_4a_7+a_5a_6=18$, \nit follows that $a_4a_7=a_5a_6=a_1a_{10}$, \nwhich means $2a_1a_{10}=18$, thus $a_1a_{10}=9$, \nthen $\\log_3a_1+\\log_3a_2+\\ldots+\\log_3a_{10}=\\log_3(a_1a_2\\ldots a_{10})=\\log_3(a_1a_{10})^5=5\\log_3 9=5\\times 2=10$, \ntherefore, the correct choice is: $\\boxed{B}$ \nThis problem mainly tests the application of properties of geometric sequences, combined with the rules of logarithmic operations for solving.",
+        "evidence_start": 0,
+        "evidence_end": 455,
+        "confidence": "none",
+        "ambiguity_reason": "unmarked_math_expression",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_unmarked_math_expression"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "289591",
+      "row_id": "e6fd04bf4e709d6e511264fe1bf49d64574cd74611c737ee21deff27993efb17",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "This problem tests the understanding of the coordinate relationship when vectors are parallel. Remembering the properties of parallel vectors is key.",
+        "evidence_start": 273,
+        "evidence_end": 422,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "297883",
+      "row_id": "965296e57c64b6005a2365038a40ce53b967609e230f11f6e9ba4ec6b5516e96",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "111",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{111}",
+        "evidence_start": 935,
+        "evidence_end": 946,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 408
+    },
+    {
+      "source": "numina",
+      "original_row_id": "300123",
+      "row_id": "5e51cba24d7ea6156d10cabbaa4eaa6e72441f0fdfded93450952c81e33b7d72",
+      "quality_flags": [
+        "numina_problem_not_valid",
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Hence, the answer is:\n\\[\\boxed{m = \\frac{3}{5}, \\quad n = \\frac{1}{5}}\\]",
+        "evidence_start": 1244,
+        "evidence_end": 1316,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "303615",
+      "row_id": "382714b0019c01385978307f5c34dc4214a379ed62edac8f722dfd87d7b7f5bc",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "112",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{112}",
+        "evidence_start": 428,
+        "evidence_end": 439,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 254
+    },
+    {
+      "source": "numina",
+      "original_row_id": "304072",
+      "row_id": "4066595b51a1ca73a0688a3572e490855871728af105884ce348c4fc06738b2b",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "19",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{19}",
+        "evidence_start": 757,
+        "evidence_end": 767,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 322
+    },
+    {
+      "source": "numina",
+      "original_row_id": "306368",
+      "row_id": "b4ecf1a6533134294c3ae643079723cbf9b9e15cf7f76562b55a524942d1a16c",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multiple_boxes",
+        "evidence_text": "From the problem statement, we have $\\tan{\\angle FME} = \\frac{m}{8}$. Since both $\\angle NME$ and $\\angle FMN$ are acute, it follows that $\\angle NME = \\angle FMN$. Therefore, $\\boxed{\\lambda = 1}$.",
+        "evidence_start": 1619,
+        "evidence_end": 1817,
+        "confidence": "none",
+        "ambiguity_reason": "multiple_boxes",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_multiple_boxes"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "312638",
+      "row_id": "8c5074a989b764aede82c7863e31f71d50108376575bd234d8d359cdde5d4ffc",
+      "quality_flags": [
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Therefore, the largest integer $n$ that satisfies $T_n < 167$ is $\\boxed{4}$.",
+        "evidence_start": 1479,
+        "evidence_end": 1556,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 737
+    },
+    {
+      "source": "numina",
+      "original_row_id": "343646",
+      "row_id": "e30195abc19153d34d6693c4d73c2ef5b7e63188b1c706a62ede8fa4643365d7",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multiple_boxes",
+        "evidence_text": "$(2)$ To find the value of this expression, we'll first use the given trigonometric identity $\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}$ and the Pythagorean identity $\\sin^{2}\\alpha + \\cos^{2}\\alpha = 1$ to simplify the expression.\n$$\n\\begin{aligned}\n\\frac{1}{4}\\sin^{2}\\alpha + \\frac{1}{3}\\sin \\alpha \\cos \\alpha + \\frac{1}{2}\\cos^{2}\\alpha &= \\frac{\\frac{1}{4}\\sin^{2}\\alpha + \\frac{1}{3}\\sin \\alpha \\cos \\alpha + \\frac{1}{2}\\cos^{2}\\alpha}{\\sin^{2}\\alpha + \\cos^{2}\\alpha} \\\\\n&= \\frac{\\frac{1}{4}\\tan^{2}\\alpha + \\frac{1}{3}\\tan \\alpha + \\frac{1}{2}}{\\tan^{2}\\alpha + 1} \\\\\n&= \\frac{\\frac{1}{4}(2)^{2} + \\frac{1}{3}(2) + \\frac{1}{2}}{(2)^{2} + 1} \\\\\n&= \\boxed{\\frac{13}{30}}\n\\end{aligned}\n$$",
+        "evidence_start": 401,
+        "evidence_end": 1099,
+        "confidence": "none",
+        "ambiguity_reason": "multiple_boxes",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_multiple_boxes"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "368157",
+      "row_id": "d0fee44e00d27da9a9eca1cdda70fcc81a7957381f380cae2b971a3c9a7f35ef",
+      "quality_flags": [
+        "unsupported_final_answer_structure",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "$\\boxed{\\text{The company needs to purchase 9 model } A \\text{ cars and 21 model } B \\text{ cars, or purchase 10 model } A \\text{ cars and 20 model } B \\text{ cars.}}$",
+        "evidence_start": 2053,
+        "evidence_end": 2220,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_multiple_boxes"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "369298",
+      "row_id": "0005f38ffdd90814658a0f75a31e67b65bc9ccbc811f677c6350d20a386e0f3c",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "Since $\\{(x, y) | (m+3)x + y = 3m-4\\} \\cap \\{(x, y) | 7x + (5-m)y - 8 = 0\\} = \\emptyset$, \nit follows that $\\frac {m+3}{7} = \\frac {1}{5-m} \\neq \\frac {3m-4}{8}$, solving this gives $m = -2$. \nTherefore, the equation of the line becomes $x + y + 2 = 0$. The intersection points with the coordinate axes are $(-2, 0)$ and $(0, -2)$. \nThe area of the triangle formed by the line $x + y + 2 = 0$ and the coordinate axes is $\\frac {1}{2} \\times 2 \\times 2 = 2$. \nHence, the correct choice is $\\boxed{A}$. \nBy using $\\{(x, y) | (m+3)x + y = 3m-4\\} \\cap \\{(x, y) | 7x + (5-m)y - 8 = 0\\} = \\emptyset$ to find the value of $m$, and then finding the intersection points of the line $(m+3)x + y = 3m+4$ with the coordinate axes, we can solve for the area of the triangle. \nThis problem tests the application of the concept of parallel lines and the method of finding the area of a triangle, examining computational skills.",
+        "evidence_start": 0,
+        "evidence_end": 912,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "371980",
+      "row_id": "3d88c50968f19f8e49790e54036a032179ed844dafda44806a61bf1011982026",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multiple_boxes",
+        "evidence_text": "Therefore, the value of $\\left(a+b\\right)^{2}$ is $\\boxed{16}$, which corresponds to choice $\\boxed{A}$.",
+        "evidence_start": 461,
+        "evidence_end": 565,
+        "confidence": "none",
+        "ambiguity_reason": "multiple_boxes",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_multiple_boxes"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "380730",
+      "row_id": "8d6f5649b60bd8c0a9b4f9300adebe12f5401312aa36870e85c11f0aa24ceace",
+      "quality_flags": [
+        "unsupported_final_answer_structure",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "1. $ \\boxed{A \u222a B = {x | 0 < x < 4}, A \u2229 \u2201$_{\nm U}$B = {x | 0 < x \u2264 1}}$\n2. $ \\boxed{m \\in (-1, 0]}$",
+        "evidence_start": 273,
+        "evidence_end": 373,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_multiple_boxes"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "385366",
+      "row_id": "8c1e52cca16e73d7ded92fa69e896f9c0c137cf9be451d45b0b4e4678eb396c3",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "Therefore, following the steps closely and encapsulating the final answer, we get $\\boxed{3}$ as the cube root of $4x + 3y$.",
+        "evidence_start": 847,
+        "evidence_end": 971,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "387786",
+      "row_id": "1d874d0c95546c70b189614dc84d25130adfb117b2c799526bb61ed663c282c4",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Therefore, the range of $k$ for which the graph of the given function lies in the second and fourth quadrants is:\n\\[\\boxed{k < -1}\\]",
+        "evidence_start": 517,
+        "evidence_end": 649,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "388379",
+      "row_id": "6077cdf9edaf5f275114857116ca2793f7d2b017b5a96bd92687c7986817799a",
+      "quality_flags": [
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Therefore, the probability that the new student will earn at least 4 credits in terms of club activities is $\\boxed{\\frac{1}{6}}$.",
+        "evidence_start": 2489,
+        "evidence_end": 2619,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_multiple_boxes"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "395594",
+      "row_id": "bf9e1e08b346c926b7299e4d16eae5614e14d064ff042336b80d84addcab7e09",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope",
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Therefore, the correct answer, following the rules and encapsulating it, is $\\boxed{\\text{A: } x\\neq 2}$.",
+        "evidence_start": 553,
+        "evidence_end": 658,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "412393",
+      "row_id": "e4df2bad4b1e67861ddbb484f77e1f5a9e2c33b8dfc766846ea52c84c118919c",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "k=\\frac{1}{15}",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{k=\\frac{1}{15}}",
+        "evidence_start": 601,
+        "evidence_end": 623,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 269
+    },
+    {
+      "source": "numina",
+      "original_row_id": "415367",
+      "row_id": "7038cc750fc234bd0e7a7e63b43da969687b5e78d72b32d9e4226502940bcb28",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "Solution: A, If a person shoots 10 times and hits the target 7 times, then the frequency of hitting the target is 0.7, which is a random event, incorrect; \nB is a random event, a student conducting a coin-tossing experiment 6 times does not guarantee 3 times \"heads up\", incorrect; \nC is a random event, buying such a lottery ticket, it is possible to win or not win, but it cannot be predicted in advance, incorrect. \nD is correct, for example, the probability of randomly selecting a real number between 0 and 5 that is not equal to 3.35264 is 1, but it is not a certain event. \nTherefore, the correct choice is $\\boxed{D}$. \nBy judging each of the four propositions, a conclusion can be drawn. \nThis question examines the judgment of the truth and falsity of propositions, testing the student's ability to analyze and solve problems, which is quite basic.",
+        "evidence_start": 0,
+        "evidence_end": 858,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "421564",
+      "row_id": "4087e6cafab89e8800fb3689ae31301aa0cce6e2d1354e023f04d7e470290631",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Thus, $m = -2$ or $m \\geqslant 2$. So, the range of $m$ is $\\boxed{m = -2 \\text{ or } m \\geqslant 2}$.",
+        "evidence_start": 526,
+        "evidence_end": 628,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "430543",
+      "row_id": "00803a010043b4e24b9dc5e1e27bb241f1b8da66067732c7f31e4179015d342e",
+      "quality_flags": [
+        "unsupported_final_answer_structure",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Therefore, the answers are: \n$(1)$ $x=\\boxed{\\frac {\\pi}{6}}$ \n$(2)$ The maximum value of $f(x)$ is $\\boxed{\\frac {3}{2}}$, and the interval of monotonic increase is $\\boxed{[k\\pi- \\frac {\\pi}{6},k\\pi+ \\frac {\\pi}{3}](k\\in\\mathbb{Z})}$.",
+        "evidence_start": 779,
+        "evidence_end": 1015,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_multiple_boxes"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "430753",
+      "row_id": "ece239ffac59e3fc7deaf6463257dfc2bebdb8fc19827992af38eac6dcc175f5",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope"
+      ],
+      "extraction": {
+        "candidate": "\\frac{17}{18}",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{\\frac{17}{18}}",
+        "evidence_start": 1278,
+        "evidence_end": 1299,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 570
+    },
+    {
+      "source": "numina",
+      "original_row_id": "433576",
+      "row_id": "b3385a8639815d4405dfb0c79467addb351614b4761e9213aee82a103ba149d0",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Therefore, the square root of $\\sqrt{4x-2y}$ is $\\boxed{\\pm 2}$.",
+        "evidence_start": 1431,
+        "evidence_end": 1495,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "455630",
+      "row_id": "396608026d07962cdd00814629719a3a835323db2e887aba73c47976e9d358c2",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Solution: For the function $f(x)=\\ln(x+2)+\\ln(x-2)$, \nwe have $\\begin{cases} x+2 > 0 \\\\ x-2 > 0 \\end{cases}$, solving this yields $x > 2$, \nthus, the domain of $f(x)$ is $\\{x|x > 2\\}$, which is not symmetric about the origin, \ntherefore, $f(x)$ is neither an odd nor an even function; \nHence, the correct choice is $\\boxed{D}$. \nAccording to the problem, by analyzing the domain of the function $f(x)$ first, we can determine that the domain of $f(x)$ is $\\{x|x > 2\\}$, which is not symmetric about the origin. Based on the properties of the odd and even functions, we can find the answer. \nThis problem examines the determination of the odd and even properties of functions, noting that the domain of the function should be analyzed first.",
+        "evidence_start": 0,
+        "evidence_end": 740,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "459314",
+      "row_id": "4f9933685231e2b8e3c772d9932354108964c56f8e766e70713fb42c1f9646ec",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Solution: \n$(1)$ From the given information, we have $f\u2032(x)= \\frac {1}{x}$, so $f\u2032(1)=1= \\frac {1}{2}a$, which gives $a=2$. \nSince $g(1)=0= \\frac {1}{2}a+b$, we get $b=-1$, thus $g(x)=x-1$. \n$(2)$ Since $\\varphi(x)= \\frac {m(x-1)}{x+1}-f(x)= \\frac {m(x-1)}{x+1}-\\ln x$ is a decreasing function on $[1,+\\infty)$. \nTherefore, $\\varphi\u2032(x) = \\frac {-x^{2}+(2m-2)(x-1)}{x(x+1)^{2}}\\leqslant 0$ holds true on $[1,+\\infty)$. \nThis means $x^{2}-(2m-2)x+1\\geqslant 0$ holds true on $[1,+\\infty)$, \nthus $2m-2\\leqslant x+ \\frac {1}{x}$, for $x\\in[1,+\\infty)$, \nSince $x+ \\frac {1}{x}\\in[2,+\\infty)$, we have $2m-2\\leqslant 2$, which gives $m\\leqslant 2$, \nTherefore, the range of the number $m$ is $\\boxed{(-\\infty,2]}$.",
+        "evidence_start": 0,
+        "evidence_end": 711,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "460892",
+      "row_id": "f8aac5414da1d5d74b84d56215af04f359f794de546f145b81cd184c25a7efd6",
+      "quality_flags": [
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "This problem tests our understanding of how to find function values and requires careful reading to notice the function's property for the solution.",
+        "evidence_start": 516,
+        "evidence_end": 664,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "470075",
+      "row_id": "1dcd867332eb511d508805abba0c65802db384cb507fa377266711afebae2952",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope"
+      ],
+      "extraction": {
+        "candidate": "-\\frac{12}{13}",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{-\\frac{12}{13}}",
+        "evidence_start": 978,
+        "evidence_end": 1000,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 373
+    },
+    {
+      "source": "numina",
+      "original_row_id": "471602",
+      "row_id": "e22b3fbd9d0c2e117e9063b44c635d2e4f640ecc0eeb1bf1f6e83beeacc46e5b",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "This problem tests the application of dot product operations and the cosine theorem, and it is considered a basic question.",
+        "evidence_start": 656,
+        "evidence_end": 779,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "479217",
+      "row_id": "42d43bc9d6f4a6eac3e180f8541034d345eb443bd8ac10d948f727d6803a26b7",
+      "quality_flags": [
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "(1) Since the graph of $f(x)$ passes through the point $(0, \\dfrac {1}{2})$, we have $\\sin \u03c6= \\dfrac {1}{2}$.\nGiven that $0 < \u03c6 < \\dfrac {\u03c0}{2}$, we have $\u03c6= \\dfrac {\u03c0}{6}$...(1 point)\nThe distance between two adjacent symmetry axes is $\\dfrac {\u03c0}{2}$, so we know the period of $f(x)$ is $T=\u03c0$.\nThen $\\dfrac {2\u03c0}{\u03c9}=\u03c0\u2234\u03c9=2$...(2 points)\n$\\therefore f(x)=\\sin (2x+ \\dfrac {\u03c0}{6})$...(4 points)\nLet $2k\u03c0- \\dfrac {\u03c0}{2}\\leqslant 2x+ \\dfrac {\u03c0}{6}\\leqslant 2k\u03c0+ \\dfrac {\u03c0}{2},k\u2208Z$,\nwe get $k\u03c0- \\dfrac {\u03c0}{3}\\leqslant x\\leqslant k\u03c0+ \\dfrac {\u03c0}{6},k\u2208Z$...(5 points)\nWhen $k=0$, $- \\dfrac {\u03c0}{3}\\leqslant x\\leqslant \\dfrac {\u03c0}{6}$; when $k=1$, $ \\dfrac {2\u03c0}{3}\\leqslant x\\leqslant \\dfrac {7\u03c0}{6}$\nSo the monotonically increasing interval of the function $f(x)$ in $[0,\u03c0]$ is $[0, \\dfrac {\u03c0}{6}]$, $[ \\dfrac {2\u03c0}{3},\u03c0]$...(6 points)\n(2) From $f( \\dfrac {A}{2})-\\cos A= \\dfrac {1}{2}$, we can get $\\sin (A+ \\dfrac {\u03c0}{6})-\\cos A= \\dfrac {1}{2}$\nThen $\\dfrac { \\sqrt {3}}{2}\\sin A- \\dfrac {1}{2}\\cos A= \\dfrac {1}{2}$...(7 points)\nSimplify to get $\\sin (A- \\dfrac {\u03c0}{6})= \\dfrac {1}{2}$...(8 points)\nGiven that $0 < A < \u03c0\u2234- \\dfrac {\u03c0}{6} < A- \\dfrac {\u03c0}{6} < \\dfrac {5\u03c0}{6}$...(9 points)\n$\\therefore A- \\dfrac {\u03c0}{6}= \\dfrac {\u03c0}{6}$, $\\therefore A= \\dfrac {\u03c0}{3}$...(10 points)\nAlso, $bc=1$, $b+c=3$, by cosine theorem we can get $a^{2}=b^{2}+c^{2}-2bc\\cos A=(b+c)^{2}-3bc=6$,...(11 points)\n$\\therefore a= \\boxed{\\sqrt {6}}$...(12 points)",
+        "evidence_start": 0,
+        "evidence_end": 1428,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_unmarked_math_expression"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "479713",
+      "row_id": "c1b4418a6e07772b0b8559148312171d827e7ee197c31df182fa552a4f5b0bfe",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_unmarked_math_expression",
+        "evidence_text": "$$f(x)= \\begin{cases} -x^{2}+x+1,&(x > 0) \\\\ 0,&(x=0) \\\\ \\boxed{x^{2}+x-1},&(x < 0)\\\\ \\end{cases}$$",
+        "evidence_start": 399,
+        "evidence_end": 498,
+        "confidence": "none",
+        "ambiguity_reason": "unmarked_math_expression",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_unmarked_math_expression"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "479953",
+      "row_id": "5c1ce9dbd24d36c4df9a5953caddc011252ab1d93d2e64ec336bd50630abbb69",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope",
+        "unsupported_final_answer_structure",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Thus, the correct choice is $\\boxed{\\text{B}}$.",
+        "evidence_start": 569,
+        "evidence_end": 616,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "480760",
+      "row_id": "b57b510c4301530f102eeb1edb70ed0cbc069d27ba696b4f3cb156c085f60126",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope"
+      ],
+      "extraction": {
+        "candidate": "A",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{A}",
+        "evidence_start": 724,
+        "evidence_end": 733,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "symbolic_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 177
+    },
+    {
+      "source": "numina",
+      "original_row_id": "487897",
+      "row_id": "212e1497168651653aeb3157f10ba188afbff2deb1d4bcd296e1dd8184368d60",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Therefore, the range of $|PA|^{2}+|PB|^{2}$ is $[37-4\\sqrt{5}, 37+4\\sqrt{5}]$. Hence, the final answer is encapsulated as:\n\\[\\boxed{[37-4\\sqrt{5}, 37+4\\sqrt{5}]}\\]",
+        "evidence_start": 1077,
+        "evidence_end": 1240,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "503168",
+      "row_id": "f3e65b56f6819c32124ab91ed65207c6129c03bcd20c7f4de92e1b7891cb5a9d",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope"
+      ],
+      "extraction": {
+        "candidate": "C",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{C}",
+        "evidence_start": 249,
+        "evidence_end": 258,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "symbolic_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 120
+    },
+    {
+      "source": "numina",
+      "original_row_id": "515383",
+      "row_id": "21a0cc7febe2755627c37a5cf3f6f53e0d891aa543d9ba32ca3f3ea88ab2d2cf",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "\\sqrt {2}",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{ \\sqrt {2}}",
+        "evidence_start": 1020,
+        "evidence_end": 1038,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "symbolic_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 345
+    },
+    {
+      "source": "numina",
+      "original_row_id": "524000",
+      "row_id": "b8b264835935cd7c0d44f74fcf02f3911f839895d74c14cb826360fd186f8c48",
+      "quality_flags": [
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "By employing a method similar to derivation and analogy, multiplying the binomial expansion by $x$, differentiating twice, and then setting $x=1$, we can find the answer. This problem tests the ability to utilize reasoning by analogy, mastery of differentiation rules, and the key is multiplying both sides by $x$. It assesses the student's ability to transform and calculate, and it is considered a medium-difficulty question.",
+        "evidence_start": 838,
+        "evidence_end": 1265,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "525655",
+      "row_id": "8f673cd65eca97b1bae69a2a70d13744210ab993402381d3a1a912c8377f5641",
+      "quality_flags": [
+        "suspected_multi_part_requires_review",
+        "nonterminal_or_multiple_final_markers"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Final Answer:\n- Other Root: $\\boxed{2-\\sqrt{3}}$\n- Value of $c$: $\\boxed{1}$",
+        "evidence_start": 1206,
+        "evidence_end": 1282,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_multiple_final_markers"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "540736",
+      "row_id": "843c02cb55792670be8be381a00f230b62dbeab4e105bd03b6938b1634f277bf",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "4. Therefore, the answer is \\boxed{(-2, 4]}.",
+        "evidence_start": 579,
+        "evidence_end": 623,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "541250",
+      "row_id": "7974516cb816e793052a28faaa1c202bd8da8ccb5502dd6c3193f915f6af7630",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "So, the correct answer is A.",
+        "evidence_start": 327,
+        "evidence_end": 355,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "545159",
+      "row_id": "63fcec9d3c45a9fb6ec525ecde3851648e39d5a1baa1d2501ff329de4e6e9ba8",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Therefore, the perimeter of rhombus $ABCD$ is $\\boxed{20cm}$, which corresponds to choice $\\boxed{C}$.",
+        "evidence_start": 1050,
+        "evidence_end": 1152,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_multiple_boxes"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "568031",
+      "row_id": "d3ca7d380da4ace65c64f626d5ead39d25599a78e1cb94dafc299237529b28c5",
+      "quality_flags": [
+        "embedded_orca_source_removed",
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "So, an adult's ticket costs $\\boxed{\\$9}$ .",
+        "evidence_start": 766,
+        "evidence_end": 809,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "575270",
+      "row_id": "439365a81497997ee581366c68ede2c710f0bd1a58f3338dda47e1f981af75c6",
+      "quality_flags": [
+        "embedded_orca_source_removed",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "So, there are $\\boxed{9}$ students in the first group.",
+        "evidence_start": 687,
+        "evidence_end": 741,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "575389",
+      "row_id": "1431f90c8d39f8ff9e9bfca4524c14c6d25099dc8b3a5faffb768ab6d7fa8d7f",
+      "quality_flags": [
+        "embedded_orca_source_removed",
+        "unsupported_final_answer_structure",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Therefore, the ratio of the speed at which Pipe B fills the tank to the speed at which Pipe A fills the tank is $\\boxed{5:1}$ .",
+        "evidence_start": 1301,
+        "evidence_end": 1428,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "587018",
+      "row_id": "df22035da1bd786c2f593c0fe75b3f5aefebed4ac5a9e5e6110a76538b9c1c26",
+      "quality_flags": [
+        "embedded_orca_source_removed"
+      ],
+      "extraction": {
+        "candidate": "15",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, Tom's ribbon is $\\boxed{15}$ meters long.",
+        "evidence_start": 635,
+        "evidence_end": 680,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "594833",
+      "row_id": "9248056427c686b2907af127f2cd6ebd805bb96f2b781b3bde98ef4323a370c5",
+      "quality_flags": [
+        "embedded_orca_source_removed"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "So, the first number in the second part of the ratio is $\\boxed{1.666..}$ . (or 5/3 if you prefer to leave it as a fraction).",
+        "evidence_start": 463,
+        "evidence_end": 588,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "597634",
+      "row_id": "59a9fa8af76d3d533a88c4d59a8f69feb41607a1930f4cd427c24a0b89240200",
+      "quality_flags": [
+        "suspect_answer_format",
+        "embedded_orca_source_removed",
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "253/250",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "If the result is given as $\\boxed{1.012,}$ then it has been rounded to three decimal places.",
+        "evidence_start": 166,
+        "evidence_end": 258,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Target does not demonstrably agree with the terminal solution answer"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "602062",
+      "row_id": "ce1ce74a3c33b0a00c6797d44bd61b07f80e5609f79f38c843149526d63c77f3",
+      "quality_flags": [
+        "embedded_orca_source_removed",
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "419/4",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, Megan's final balance in euros is $\\boxed{104.75\\%}$ of her starting balance in dollars.",
+        "evidence_start": 1819,
+        "evidence_end": 1911,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Target does not demonstrably agree with the terminal solution answer"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "602887",
+      "row_id": "13307e765bec1fad3dd12757f6c0e1cd0cf0896d70bebedb16affc119207e18f",
+      "quality_flags": [
+        "embedded_orca_source_removed"
+      ],
+      "extraction": {
+        "candidate": "34371/625",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, the speed of the train is approximately $\\boxed{54.9936}$ km/hr.",
+        "evidence_start": 918,
+        "evidence_end": 993,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "615925",
+      "row_id": "66e5c2cce27e91f1aeb29edc28d37d46244740d653126e7dd49e1533f56b6f5b",
+      "quality_flags": [
+        "embedded_orca_source_removed"
+      ],
+      "extraction": {
+        "candidate": "1/2",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Therefore, $\\boxed{1/2}$ of the roses in each row are red.",
+        "evidence_start": 1164,
+        "evidence_end": 1222,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "634972",
+      "row_id": "5ed7a4c9baafc3aac2075387e232541462ed76bb04a95781453623df0384b963",
+      "quality_flags": [
+        "embedded_orca_source_removed"
+      ],
+      "extraction": {
+        "candidate": "59",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "Since $\\boxed{59}$ satisfies all the given conditions, it is indeed the smallest positive integer that meets the requirements.",
+        "evidence_start": 985,
+        "evidence_end": 1111,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "637085",
+      "row_id": "5664e81e3e87f5317cdbd825f969e2367c59c4b1b7ffe0a542b49898d36bb3c0",
+      "quality_flags": [
+        "embedded_orca_source_removed",
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "So the simplified ratio of test points to quiz points is $\\boxed{4:1}$ .",
+        "evidence_start": 836,
+        "evidence_end": 908,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "643131",
+      "row_id": "133a8f459a38fe2f4529fd1dbc6cc89d38c02feef69d407749c35c2878b9bb7e",
+      "quality_flags": [
+        "embedded_orca_source_removed"
+      ],
+      "extraction": {
+        "candidate": "76",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{76}",
+        "evidence_start": 968,
+        "evidence_end": 978,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 266
+    },
+    {
+      "source": "numina",
+      "original_row_id": "652170",
+      "row_id": "e5344252d35e03ee822e78fc29c86823db58f23c2a5e147d894124eddcd77c2b",
+      "quality_flags": [
+        "embedded_orca_source_removed",
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Therefore, there are $\\boxed{4}$ green balls in the bag.",
+        "evidence_start": 1287,
+        "evidence_end": 1343,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "662880",
+      "row_id": "01c777af0ace9965de82e8ee13c344a91b88884359aa9740c42dda1cff4572b7",
+      "quality_flags": [
+        "suspect_answer_format",
+        "numina_problem_not_valid",
+        "embedded_orca_source_removed",
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "Since the number of apples Sean has does not change after Susan gives him the apples (he still has $\\boxed{17),}$ it means Sean did not exchange any apples for tickets at the store. Therefore, the number of tickets Sean bought at the store is not related to the number of apples he has, and the information provided does not allow us to determine the number of tickets he bought.",
+        "evidence_start": 346,
+        "evidence_end": 725,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "678199",
+      "row_id": "ba67c0f002b958d17898a0fe46ea7da0158d72d2f2e20e619fc52ff49cf39840",
+      "quality_flags": [
+        "embedded_orca_source_removed"
+      ],
+      "extraction": {
+        "candidate": "2.08",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{2.08}",
+        "evidence_start": 1548,
+        "evidence_end": 1560,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 534
+    },
+    {
+      "source": "numina",
+      "original_row_id": "685499",
+      "row_id": "e98821d88bce2e9e46a6152365a48a3918cf319da8d9064f4077ae430856ec5d",
+      "quality_flags": [
+        "embedded_orca_source_removed"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "So, 34 (total rowers) - 13 (morning rowers) = $\\boxed{21}$ campers went rowing in the afternoon.",
+        "evidence_start": 222,
+        "evidence_end": 318,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "699645",
+      "row_id": "b41be8834a80db3a82307993acbca2dcb79510fb74bf16dc47fc4f4086aac3e4",
+      "quality_flags": [
+        "embedded_orca_source_removed"
+      ],
+      "extraction": {
+        "candidate": "3",
+        "mode": "terminal_single_number_review",
+        "evidence_text": "So, it takes John $\\boxed{3}$ seconds to sneeze once.",
+        "evidence_start": 335,
+        "evidence_end": 388,
+        "confidence": "heuristic",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Heuristic answer requires an individual corrected/reviewed terminal block"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "720617",
+      "row_id": "9711c9cb069332fa5db79c9cb5426e524666685630d0fde09f641821f1cd75db",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "2. Parallelogram.\nAs shown in Figure 3, draw $D E \\perp$\n$A B$ at $E$, and $B F \\perp C D$ at\n$F$. Then\n$\\angle E A D=\\angle F C B$.\nAlso, $A D=B C$, so\n$\\triangle E A D \\cong \\triangle F C B$.\nTherefore, $D E=B F, A E=C F$.\nConnect $B D$.\nThen Rt $\\triangle B E D \\cong$ Rt $\\triangle D F B$.\nThus, $B E=D F$.\n(2) - (1) gives $A B=C D$.\nTherefore, quadrilateral $A B C D$ is a parallelogram.",
+        "evidence_start": 0,
+        "evidence_end": 392,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "736572",
+      "row_id": "dcbe2faec61881acc015133855ee11db1b74268d64352000533667ec9dec011f",
+      "quality_flags": [
+        "outside_math_word_problem_metadata_scope",
+        "numina_solution_not_valid",
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "missing",
+        "evidence_text": "None",
+        "evidence_start": 364,
+        "evidence_end": 368,
+        "confidence": "none",
+        "ambiguity_reason": "",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "No supported terminal answer evidence; quarantine for review"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "740957",
+      "row_id": "3dd124718b2a13306ebd2c47e63ec3abb98f2cd87db5f26d68db5628ba4c390f",
+      "quality_flags": [
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "We get\n$(30107,437)=23$.\nTherefore, $(81719,52003,33649,30107)=23$.",
+        "evidence_start": 1045,
+        "evidence_end": 1112,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "752491",
+      "row_id": "f77b367d37058ad8ffc5a21ddc156c9407184390e0bcc19106515225a7c34e89",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Since the calculations are consistent and the inverse was properly applied, we conclude with the final matrix:\n\\[\\boxed{\\mathbf{M} = \\begin{pmatrix} -1.2 & -1.4 \\\\ 1.7 & 1.9 \\end{pmatrix}}.\\]",
+        "evidence_start": 775,
+        "evidence_end": 966,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "761853",
+      "row_id": "46c8de31836931de6e38b1bd3dfe25d2e5d61b15aa14b69a2dd9d66f30ca1559",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_terminal",
+        "evidence_text": "The area of the rectangle is:\n\\[ \\text{Area} = 8 \\cdot 5.5 = 44 \\text{ square centimeters}. \\]\n\\[ \\boxed{44} \\text{ square centimeters} \\]",
+        "evidence_start": 406,
+        "evidence_end": 544,
+        "confidence": "none",
+        "ambiguity_reason": "terminal",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_terminal"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "766093",
+      "row_id": "461a887301c91e3d999518b5d0dffd2be76bf0270ec9a2b0a7b5472f1d7f4e26",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "-\\frac{66}{65}",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{-\\frac{66}{65}}",
+        "evidence_start": 519,
+        "evidence_end": 541,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 350
+    },
+    {
+      "source": "numina",
+      "original_row_id": "766301",
+      "row_id": "ec9500e6cb5b4100f521b709d1edc2ddedd63b6376ad74d0f36b4097f711ace8",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "-\\frac{1}{7} + \\frac{8}{7}i",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{-\\frac{1}{7} + \\frac{8}{7}i}",
+        "evidence_start": 919,
+        "evidence_end": 954,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "symbolic_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 510
+    },
+    {
+      "source": "numina",
+      "original_row_id": "775514",
+      "row_id": "9bdbcff07b7c2dba27520ebce98a4fbae05c7ec860c40eebef24461bb428b9d9",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "2048",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{2048}",
+        "evidence_start": 419,
+        "evidence_end": 431,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 222
+    },
+    {
+      "source": "numina",
+      "original_row_id": "798363",
+      "row_id": "648955db2f1299850ae0df234f36cc1b8ae9dbe1480abe933f74a002f0c3c948",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "\\frac{41\\pi}{4}",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{\\frac{41\\pi}{4}}",
+        "evidence_start": 456,
+        "evidence_end": 479,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "symbolic_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 210
+    },
+    {
+      "source": "numina",
+      "original_row_id": "829487",
+      "row_id": "b4fbbe6ac98a0ade3da875bc57417896f206c8bc5a526b9cac677576d1e12035",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Therefore, the perimeter of square B is \\( \\boxed{12\\sqrt{3} \\text{ cm}} \\).",
+        "evidence_start": 608,
+        "evidence_end": 684,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "836129",
+      "row_id": "8d1ee05c650133fcd754f260f63299e912f65c9ebd69340b1de0203acb900bfc",
+      "quality_flags": [
+        "suspected_multi_part_requires_review"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_multi_part",
+        "evidence_text": "Conclusion with boxed answers:\n\\[ b_2 = \\boxed{95} \\]\n\\[ b_{11} = \\boxed{55} \\]",
+        "evidence_start": 593,
+        "evidence_end": 672,
+        "confidence": "none",
+        "ambiguity_reason": "multi_part",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_multiple_boxes"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "859640",
+      "row_id": "3ca5109bda03f34e1ff9a54bd027bf8b1411af9d294738216789717752ea63b4",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "58",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{58}",
+        "evidence_start": 929,
+        "evidence_end": 939,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 532
+    },
+    {
+      "source": "numina",
+      "original_row_id": "863500",
+      "row_id": "6c58c14a125cbd94c66d350d62263a614202039604a4a1a92dfd141b9ed55b1b",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "-3",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{-3}",
+        "evidence_start": 694,
+        "evidence_end": 704,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 256
+    },
+    {
+      "source": "numina",
+      "original_row_id": "869264",
+      "row_id": "8d3f86650352b4be2653a710394907b7dd887aa73f3c361a0a8de8104250594c",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "\\frac{1}{9}",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{\\frac{1}{9}}",
+        "evidence_start": 464,
+        "evidence_end": 483,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 194
+    },
+    {
+      "source": "numina",
+      "original_row_id": "869460",
+      "row_id": "74d7613302ae669dab15819351ac71383c8817725593ef3177bbb2deb9894849",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Using the properties of a rotation matrix,\n$$\n\\begin{pmatrix}\n\\cos\\theta & -\\sin\\theta\\\\\n\\sin\\theta & \\cos\\theta\n\\end{pmatrix}^k = \\begin{pmatrix} \\cos k\\theta & -\\sin k\\theta \\\\\n\\sin k\\theta & \\cos k\\theta\n\\end{pmatrix}.\n$$\nWe compute the fourth power of the matrix:\n$$\n\\begin{pmatrix} 1 & -\\sqrt{3} \\\\ \\sqrt{3} & 1 \\end{pmatrix}^4 = 2^4 \\begin{pmatrix} \\cos (\\frac{8\\pi}{3}) & -\\sin (\\frac{8\\pi}{3}) \\\\ \\sin (\\frac{8\\pi}{3}) & \\cos (\\frac{8\\pi}{3}) \\end{pmatrix} = 16 \\begin{pmatrix} \\cos (2\\pi + \\frac{2\\pi}{3}) & -\\sin (2\\pi + \\frac{2\\pi}{3}) \\\\ \\sin (2\\pi + \\frac{2\\pi}{3}) & \\cos (2\\pi + \\frac{2\\pi}{3}) \\end{pmatrix}.\n$$\nSince $\\cos$ and $\\sin$ are $2\\pi$ periodic,\n$$\n\\begin{pmatrix} \\cos \\frac{2\\pi}{3} & -\\sin \\frac{2\\pi}{3} \\\\ \\sin \\frac{2\\pi}{3} & \\cos \\frac{2\\pi}{3} \\end{pmatrix} = \\begin{pmatrix} -1/2 & -\\sqrt{3}/2 \\\\ \\sqrt{3}/2 & -1/2 \\end{pmatrix}.\n$$\nSo,\n$$\n\\boxed{\\begin{pmatrix} -8 & -8\\sqrt{3} \\\\ 8\\sqrt{3} & -8 \\end{pmatrix}}.\n$$",
+        "evidence_start": 385,
+        "evidence_end": 1337,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "874046",
+      "row_id": "190d3546575b6190122edd31371f2149bbfbe4904997c4a1971b8a12e4f28e33",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "\\sqrt{726}",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{\\sqrt{726}}",
+        "evidence_start": 608,
+        "evidence_end": 626,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "symbolic_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 275
+    },
+    {
+      "source": "numina",
+      "original_row_id": "875271",
+      "row_id": "be7c0b399c2d49d0d6321b9c2e4599800f6ca93aecd9da906072ac7063bdc0cf",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Using the projection formula, the projection of $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$ onto $\\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}$ is computed:\n\\[\n\\operatorname{proj}_{\\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}} \\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\frac{\\begin{pmatrix} x \\\\ y \\end{pmatrix} \\cdot \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}}{\\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix} \\cdot \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}} \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}\n= \\frac{x + 4y}{17} \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}\n= \\begin{pmatrix} \\frac{x + 4y}{17} \\\\ \\frac{4x + 16y}{17} \\end{pmatrix}.\n\\]\nTo find the matrix for this projection, we express this as a product of a matrix and the vector $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$:\n\\[\n\\begin{pmatrix} \\frac{x + 4y}{17} \\\\ \\frac{4x + 16y}{17} \\end{pmatrix} = \\begin{pmatrix} 1/17 & 4/17 \\\\ 4/17 & 16/17 \\end{pmatrix} \\begin{pmatrix} x \\\\ y \\end{pmatrix}.\n\\]\nThus, the matrix for this transformation is $\\boxed{\\begin{pmatrix} 1/17 & 4/17 \\\\ 4/17 & 16/17 \\end{pmatrix}}$.",
+        "evidence_start": 0,
+        "evidence_end": 1007,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "890077",
+      "row_id": "2d7f91fc91580023e93cd920c03c4f6f93c1d0f95169a33a3ae9534d0f064baf",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "18",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{18}",
+        "evidence_start": 458,
+        "evidence_end": 468,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 254
+    },
+    {
+      "source": "numina",
+      "original_row_id": "891045",
+      "row_id": "c386939b1d204fa66e1411ca2debc5817c04bc20a42c982e4d625b88dc610a11",
+      "quality_flags": [
+        "unsupported_final_answer_structure"
+      ],
+      "extraction": {
+        "candidate": "",
+        "mode": "ambiguous_boxed_structure",
+        "evidence_text": "Hence, $\\lceil y \\rceil - y = 1 - \\{y\\}$, and the final answer is $\\boxed{1 - \\{y\\}}$.",
+        "evidence_start": 779,
+        "evidence_end": 865,
+        "confidence": "none",
+        "ambiguity_reason": "boxed_structure",
+        "answer_type": "missing",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "rejected",
+      "reason": "Ambiguous solution conclusion requires review: ambiguous_boxed_structure"
+    },
+    {
+      "source": "numina",
+      "original_row_id": "895582",
+      "row_id": "26d6f82d4a6a8fc671ec327c7be67cc3bd570a2904028b78aedf277e93303c5d",
+      "quality_flags": [],
+      "extraction": {
+        "candidate": "\\frac{1}{21952}",
+        "mode": "boxed",
+        "evidence_text": "\\boxed{\\frac{1}{21952}}",
+        "evidence_start": 1363,
+        "evidence_end": 1386,
+        "confidence": "marked_terminal",
+        "ambiguity_reason": "",
+        "answer_type": "numeric_scalar",
+        "evidence_basis": "canonical_solution"
+      },
+      "reference_encoding": "passed",
+      "supervised_tokens": 418
+    }
+  ],
+  "limitations": [
+    "Historical Numina answers may be truncated and validity labels are inferred.",
+    "Encoding success alone does not mean eligible, mathematically correct or decontaminated.",
+    "This is not the required pilot from complete pinned upstream fields."
+  ]
+}

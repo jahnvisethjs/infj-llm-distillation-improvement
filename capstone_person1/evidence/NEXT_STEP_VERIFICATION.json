@@ -1,0 +1,72 @@
+{
+  "control_version": "person1-v2.1",
+  "regression_and_integration_tests_passed": 32,
+  "smoke_1000": {
+    "run": "full_run_v2_20261012T004452Z_ffd466bf",
+    "rows_processed": 1000,
+    "elapsed_seconds": 11.443845400004648,
+    "peak_rss_mib": 199.3671875,
+    "source_rows_reused": 0,
+    "nested_sizes": [
+      32,
+      64,
+      100
+    ],
+    "research_ready": false,
+    "manifest_sha256": {
+      "32": "22514cec7d9ee2fa5c65d4f639f1024285d398fd3998f03d64e405ecce5d79a1",
+      "64": "94eff034d7247c0af101115eb3cddc6385e38138d3cea5a196f7514b89d1e545",
+      "100": "b277ba57857e902b60eb58e226f262d1616895cf234787a149e2703030e9166a"
+    }
+  },
+  "smoke_5000_resume": {
+    "run": "full_run_v2_20261012T004834Z_c75c286d",
+    "rows_processed": 5000,
+    "elapsed_seconds": 5.358244799950626,
+    "peak_rss_mib": 213.328125,
+    "source_rows_reused": 5000,
+    "nested_sizes": [
+      32,
+      64,
+      100
+    ],
+    "research_ready": false,
+    "manifest_sha256": {
+      "32": "09d24618f538e7e6f37fc2797f74ad1b55b8146b6dc4219ad15b6d47a0580762",
+      "64": "6e6d6cf3f8488a565351804e3ff542fd88e2036a0460d36f6394d2022f83f813",
+      "100": "b7695b08e97cd47449edc94d321c7363fd6df4da9ef545b6232e275c3857bc8e"
+    }
+  },
+  "smoke_5000_first_execution": {
+    "elapsed_seconds_after_setup": 19.607591999985743,
+    "observed_peak_rss_mib": 214.34375,
+    "measurement_source": "Successful first-execution command output; metrics file now records the verified resume"
+  },
+  "incomplete_attempts_marked": [
+    "full_run_v2_20261009T165951Z_38717bdb",
+    "full_run_v2_20261009T170300Z_fc38eb6b",
+    "full_run_v2_20261009T170322Z_1689bb57",
+    "full_run_v2_20261009T170322Z_a51293a2",
+    "full_run_v2_20261009T170339Z_d108d925",
+    "full_run_v2_20261009T170355Z_03437e99",
+    "full_run_v2_20261009T170409Z_a35cd0ed",
+    "full_run_v2_20261009T170950Z_af956a20",
+    "full_run_v2_20261009T170957Z_2b03b5a3",
+    "full_run_v2_20261009T170957Z_f4135e09",
+    "full_run_v2_20261009T171002Z_a5b6ed9e",
+    "full_run_v2_20261009T171006Z_d8452084",
+    "full_run_v2_20261009T171010Z_dfb0f060",
+    "full_run_v2_20261009T171014Z_af2cfd59",
+    "full_run_v2_20261009T171018Z_2e01e113",
+    "full_run_v2_20261009T171109Z_bb006f1b"
+  ],
+  "full_million_row_run_started_for_this_milestone": false,
+  "research_ready": false,
+  "next_dependencies": [
+    "frozen development questions",
+    "shared evaluator equivalence checker",
+    "complete pinned upstream fields",
+    "independent reviews",
+    "actual training labels and corrected parent"
+  ]
+}

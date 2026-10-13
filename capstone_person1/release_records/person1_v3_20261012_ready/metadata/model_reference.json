@@ -1,0 +1,9 @@
+{
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "tokenizer_id": "Qwen/Qwen2.5-0.5B",
+  "tokenizer_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "revision_basis": "The same pinned model repository commit used for verified tokenizer assets; Person 2 should pin this commit when loading the initial base model.",
+  "model_weights_loaded_by_person1": false,
+  "training_and_save_reload_verification": "pending with Person 2"
+}

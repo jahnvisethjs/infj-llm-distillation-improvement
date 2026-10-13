@@ -27,8 +27,8 @@ def main():
         base = 'https://huggingface.co'
         with get(f"{base}/api/datasets/{spec['dataset_id']}/tree/{spec['revision']}?recursive=true&limit=1000") as response:
             tree = json.load(response)
-        assets = [entry for entry in tree if entry['type'] == 'file' and entry['path'].endswith('.parquet')
-                  and Path(entry['path']).name.startswith('train-')]
+        assets = sorted([entry for entry in tree if entry['type'] == 'file' and entry['path'].endswith('.parquet')
+                  and Path(entry['path']).name.startswith('train-')],key=lambda entry:entry['path'])
         if not assets: raise ValueError('No pinned train Parquet files found for ' + source)
         folder = root / source / spec['revision']
         folder.mkdir(parents=True, exist_ok=True)

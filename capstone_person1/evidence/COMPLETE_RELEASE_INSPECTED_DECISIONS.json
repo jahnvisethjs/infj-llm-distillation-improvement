@@ -1,0 +1,1515 @@
+{
+  "pairs": [
+    {
+      "index": 0,
+      "id_prefix": "72b076b9",
+      "decision": "accept_policy_disposition",
+      "notes": "Train lengths and opposing speeds differ, changing the crossing time. Signature retrieval identifies a template without merging instances."
+    },
+    {
+      "index": 1,
+      "id_prefix": "e1f473a4",
+      "decision": "accept_policy_disposition",
+      "notes": "Choir total and initial blonde counts change; added blonde girls do not change the requested black-haired count. Distinct numerical instances remain separate."
+    },
+    {
+      "index": 2,
+      "id_prefix": "5b0c8c3b",
+      "decision": "accept_policy_disposition",
+      "notes": "Sex and neutral-boy counts differ consistently, even though both totals are 60. Coincident answers do not establish question identity; retain template relatives."
+    },
+    {
+      "index": 3,
+      "id_prefix": "00e3284d",
+      "decision": "accept_policy_disposition",
+      "notes": "Multiplier, subtracted value and resulting value all change. Distinct missing-number instances are retained below the LSH threshold through signature retrieval."
+    },
+    {
+      "index": 4,
+      "id_prefix": "080d3d88",
+      "decision": "accept_policy_disposition",
+      "notes": "x/y ratio changes from 3 to 4, changing the requested percentage deficit; retain separate numerical instances."
+    },
+    {
+      "index": 5,
+      "id_prefix": "e725cd94",
+      "decision": "accept_policy_disposition",
+      "notes": "Upstream and still-water speeds differ, so downstream speed differs. Mathematical template relation does not establish identity."
+    },
+    {
+      "index": 6,
+      "id_prefix": "1bdeff53",
+      "decision": "accept_policy_disposition",
+      "notes": "Twin age changes from 8 to 2 with minor wording changes. Different age-product increments are conservatively quarantined; no duplicate identity is asserted."
+    },
+    {
+      "index": 7,
+      "id_prefix": "7cdbe6be",
+      "decision": "accept_policy_disposition",
+      "notes": "The first book problem cannot determine an exact average from at-least-three bounds; the second supplies an average and asks a maximum. Both are already withheld under unresolved policy, protecting the defective/changed-target pair."
+    },
+    {
+      "index": 8,
+      "id_prefix": "1316b308",
+      "decision": "accept_policy_disposition",
+      "notes": "Train length and speed change alongside case/punctuation. These distinct numerical problems are conservatively withheld, not merged as proven duplicates."
+    },
+    {
+      "index": 9,
+      "id_prefix": "270a79cc",
+      "decision": "accept_policy_disposition",
+      "notes": "Bookcase quantities and requested total are identical; fill-in versus direct-question phrasing is a near-instance paraphrase. Quarantine prevents leakage."
+    },
+    {
+      "index": 10,
+      "id_prefix": "34af6649",
+      "decision": "accept_policy_disposition",
+      "notes": "Calcium iodide and calcium oxide are different compound inputs, so mass-percentage targets differ. This conservative retrieval false positive remains withheld without an equivalence claim."
+    },
+    {
+      "index": 11,
+      "id_prefix": "94e60b86",
+      "decision": "accept_policy_disposition",
+      "notes": "Faster-train speed and passing duration differ, with minor wording/unit changes. Conservative unresolved quarantine removes distinct instances; limitation recorded."
+    }
+  ],
+  "formatted": [
+    {
+      "index": 0,
+      "id_prefix": "04f923ba",
+      "decision": "quarantine",
+      "notes": "Final 3sqrt(3)-1 is correct, but combination step replaces the valid product by an unequal expression with extra 2a+b factor. Withhold contradictory worked algebra."
+    },
+    {
+      "index": 1,
+      "id_prefix": "0583d62e",
+      "decision": "accept_structural_target",
+      "notes": "Difference of products simplifies to 2x-9; x=sqrt(2)-1 gives 2sqrt(2)-11, matching target."
+    },
+    {
+      "index": 2,
+      "id_prefix": "066e6389",
+      "decision": "quarantine",
+      "notes": "Solution obtains a congruence class and lists multiple possible third numbers, then arbitrarily selects 8. Its upper-bound arithmetic also incorrectly allows k=154. Unique scalar answer is unsupported."
+    },
+    {
+      "index": 3,
+      "id_prefix": "0692ef13",
+      "decision": "quarantine",
+      "notes": "Correct threshold 1006 is paired with contradictory class counts: source says 1005 pairs plus singleton zero, then only 1005 pairs. There are actually 1004 complementary pairs plus zero; withhold internally inconsistent proof wording."
+    },
+    {
+      "index": 4,
+      "id_prefix": "0cb53966",
+      "decision": "accept_structural_target",
+      "notes": "Point (4,2) gives exponent 1/2; rationalization telescopes sum to sqrt(n+1)-1 and S2017=sqrt(2018)-1."
+    },
+    {
+      "index": 5,
+      "id_prefix": "0d3a18d1",
+      "decision": "accept_structural_target",
+      "notes": "Opposites give a+b=0, reciprocals cd=1, and x^2=7; expression is 7+0+0+1=8."
+    },
+    {
+      "index": 6,
+      "id_prefix": "0da54165",
+      "decision": "accept_structural_target",
+      "notes": "Quotient/remainder reconstructs 9*22+4=202; reversing operations gives (202+8)/7-16=14. Terminal quantity agrees."
+    },
+    {
+      "index": 7,
+      "id_prefix": "0ec39186",
+      "decision": "accept_structural_target",
+      "notes": "Zero second difference yields arithmetic progression with a1=2 and d=2, hence an=2n. Escaped math delimiters remain readable; target agrees."
+    },
+    {
+      "index": 8,
+      "id_prefix": "0ee49952",
+      "decision": "accept_structural_target",
+      "notes": "Maximal fixed-sum integer product balances die values at 2 and 3; a+b=25 and 2a+3b=70 give five twos. Terminal target agrees."
+    },
+    {
+      "index": 9,
+      "id_prefix": "10c9dec8",
+      "decision": "accept_structural_target",
+      "notes": "Evenness and increasing positive branch imply |x|=|2x-3|, giving roots 1 and 3 and sum 4; target agrees under the stated increasing condition."
+    },
+    {
+      "index": 10,
+      "id_prefix": "142e6fdd",
+      "decision": "accept_structural_target",
+      "notes": "Sector equations imply 2(r-1)^2=0, r=1 and angle 2 radians. Corroborated terminal scalar matches worked calculation."
+    },
+    {
+      "index": 11,
+      "id_prefix": "169fc21c",
+      "decision": "accept_structural_target",
+      "notes": "Pairs (2,3) through (2004,2005) flip even-digit parity without carrying; 1002 pairs each contribute one, and 1 contributes none."
+    },
+    {
+      "index": 12,
+      "id_prefix": "171a14b0",
+      "decision": "accept_structural_target",
+      "notes": "At x=-1 the recurrence gives f(1)=-f(-1)=-f(1), hence f(1)=0; target agrees."
+    },
+    {
+      "index": 13,
+      "id_prefix": "183f75e0",
+      "decision": "accept_structural_target",
+      "notes": "Expanding (a-2i)i gives 2+ai; equating parts yields a=-1,b=2 and squared sum 5."
+    },
+    {
+      "index": 14,
+      "id_prefix": "185dd576",
+      "decision": "quarantine",
+      "notes": "Correct target sqrt(3)/3 is preceded by a rewrite that drops parentheses around the fraction difference and changes division precedence. Withhold the malformed worked equality."
+    },
+    {
+      "index": 15,
+      "id_prefix": "18e90ece",
+      "decision": "quarantine",
+      "notes": "Target pi/3 is correct, but source explicitly allows cos(theta)=1 for an acute angle and rejects it through an invalid set-distinctness argument. Withhold faulty reasoning."
+    },
+    {
+      "index": 16,
+      "id_prefix": "1a2269f9",
+      "decision": "accept_structural_target",
+      "notes": "Focus lies at (0,1/(4m)); given line fixes its y coordinate at 2, yielding m=1/8."
+    },
+    {
+      "index": 17,
+      "id_prefix": "1a2eeb65",
+      "decision": "accept_structural_target",
+      "notes": "Root condition gives m^2-m=3, so requested expression is 1; target agrees."
+    },
+    {
+      "index": 18,
+      "id_prefix": "1e6d7299",
+      "decision": "accept_structural_target",
+      "notes": "Cumulative time N(N+1)/2: ten problems require 55 minutes and eleven 66; maximum ten is verified in source."
+    },
+    {
+      "index": 19,
+      "id_prefix": "224eb4b6",
+      "decision": "quarantine",
+      "notes": "Squared-equation line drops the required square from 2y^2 before subsequently treating it as a quadratic. Target x=5 checks, but displayed worked equations are inconsistent."
+    },
+    {
+      "index": 20,
+      "id_prefix": "243735d1",
+      "decision": "accept_structural_target",
+      "notes": "Under usual independent uniform rock-paper-scissors choices, one all-scissors outcome among 27 gives 1/27; terminal target agrees."
+    },
+    {
+      "index": 21,
+      "id_prefix": "297d1dcd",
+      "decision": "quarantine",
+      "notes": "Teacher evaluates 2*(2)^2 as 16 instead of 8. Actual endpoint maximum is 15, not 23; reject incorrect answer and arithmetic."
+    },
+    {
+      "index": 22,
+      "id_prefix": "2f29613f",
+      "decision": "accept_structural_target",
+      "notes": "Equal-person-count equation 3(x-2)=2x+9 gives fifteen cars; terminal target agrees."
+    },
+    {
+      "index": 23,
+      "id_prefix": "31ff0d9f",
+      "decision": "accept_structural_target",
+      "notes": "Common integer t gives 4t=2001k. Coprimality of 4 and 2001 forces positive integer k a multiple of 4, attained at t=2001; target agrees."
+    },
+    {
+      "index": 24,
+      "id_prefix": "32820819",
+      "decision": "accept_structural_target",
+      "notes": "Completing square yields (x-1)^2-4, so symmetry axis x=1. Assignment target refers to the requested line."
+    },
+    {
+      "index": 25,
+      "id_prefix": "32f6038e",
+      "decision": "accept_structural_target",
+      "notes": "Question explicitly requests an estimate. Upper 40% threshold has CDF about .6; supplied .25 normal quantile approximation gives 500+100*.25=525."
+    },
+    {
+      "index": 26,
+      "id_prefix": "3601d1e8",
+      "decision": "accept_structural_target",
+      "notes": "Right translation gives x+3=1, hence x=-2; vertical motion does not alter requested coordinate."
+    },
+    {
+      "index": 27,
+      "id_prefix": "363d940c",
+      "decision": "accept_structural_target",
+      "notes": "Inspected four-color counting argument and symbolic target 6(2^n-4+4*2^(m-2)), symmetric as 6(2^n+2^m-4) and giving 24 for 2x2. Structural review does not independently certify the general combinatorial proof."
+    },
+    {
+      "index": 28,
+      "id_prefix": "3818f823",
+      "decision": "accept_structural_target",
+      "notes": "Subtracting 1+2i from 10-3i gives 9-5i; terminal complex scalar agrees."
+    },
+    {
+      "index": 29,
+      "id_prefix": "3c889dac",
+      "decision": "accept_structural_target",
+      "notes": "Complex division gives z=-1/2-i/2; imaginary part -1/2 is the requested scalar and matches target."
+    },
+    {
+      "index": 30,
+      "id_prefix": "3e63a2c2",
+      "decision": "accept_structural_target",
+      "notes": "Vieta gives root sum 5 and product -6, so reciprocal sum is -5/6; target agrees."
+    },
+    {
+      "index": 31,
+      "id_prefix": "3f99a767",
+      "decision": "accept_structural_target",
+      "notes": "Two litres is 2000 ml; four removals of x ml leave 2000-4x. Symbolic quantity target agrees."
+    },
+    {
+      "index": 32,
+      "id_prefix": "40247c64",
+      "decision": "quarantine",
+      "notes": "Source first claims two unit disks fit optimally in side 2sqrt(2), then requires side 2+sqrt(2) for the same two-disk problem. Contradictory lower-bound argument is withheld despite plausible final five-disk value."
+    },
+    {
+      "index": 33,
+      "id_prefix": "41c41c75",
+      "decision": "accept_structural_target",
+      "notes": "Downward translation subtracts three from 3x+2, giving y=3x-1; target agrees."
+    },
+    {
+      "index": 34,
+      "id_prefix": "45a67b02",
+      "decision": "accept_structural_target",
+      "notes": "Semicircle arc length pi*l equals base circumference 2pi*r, so l=2r; total area 3pi*r^2=3pi gives r=1. Source uses perimeter loosely for the arc, but formula/target agree."
+    },
+    {
+      "index": 35,
+      "id_prefix": "45b2a2da",
+      "decision": "accept_structural_target",
+      "notes": "For requested x<0, -x>0 and oddness gives f(x)=-f(-x)=-x^2-1. Opening condition text is damaged, but problem and remaining calculation specify the case clearly."
+    },
+    {
+      "index": 36,
+      "id_prefix": "4675b4ea",
+      "decision": "accept_structural_target",
+      "notes": "Right triangle gives OP=sqrt(680^2-320^2)=600; nearest outer-circle boundary is 1000-600=400."
+    },
+    {
+      "index": 37,
+      "id_prefix": "4ce09177",
+      "decision": "accept_structural_target",
+      "notes": "sqrt(16)=4 and (1/2)^-2=4, giving 8; terminal target agrees."
+    },
+    {
+      "index": 38,
+      "id_prefix": "4d6309d4",
+      "decision": "quarantine",
+      "notes": "Teacher replaces 2*10^n by 20^n, contradicts its own modular impossibility arguments, computes 4571424, then boxes unrelated 285714. Reasoning and terminal target do not agree."
+    },
+    {
+      "index": 39,
+      "id_prefix": "50fd2482",
+      "decision": "accept_structural_target",
+      "notes": "For two distinct selected elements of M={0,...,6}, attainable sums are 1 through 11, giving 2^11-2=2046 nonempty proper subsets. Source assumes selection without replacement."
+    },
+    {
+      "index": 40,
+      "id_prefix": "55f91f1e",
+      "decision": "accept_structural_target",
+      "notes": "Positive natural-number count uses allowed digits 0,2,6,8: one one-digit, six two-digit and 24 three-digit multiples of four, total 31; leading zeros excluded."
+    },
+    {
+      "index": 41,
+      "id_prefix": "57e8fe58",
+      "decision": "accept_structural_target",
+      "notes": "Extremum at three gives a=2; derivative signs and endpoint/critical values f2=4,f4=8 give maximum 8. One inequality fragment is damaged but explicit intervals and values remain clear."
+    },
+    {
+      "index": 42,
+      "id_prefix": "598420ef",
+      "decision": "accept_structural_target",
+      "notes": "Defined operation gives 1/2-1/(x-1)=1, hence x=-1; nonzero operands and substitution check hold."
+    },
+    {
+      "index": 43,
+      "id_prefix": "630df57c",
+      "decision": "accept_structural_target",
+      "notes": "Area equation gives radius 1 cm; two radii plus arc length four gives perimeter 6 cm. Unit-bearing terminal target agrees."
+    },
+    {
+      "index": 44,
+      "id_prefix": "65cb56a8",
+      "decision": "accept_structural_target",
+      "notes": "Inspected maximal-element deletion/Fibonacci argument with F0=F1=1; target F(n+2)-2 matches the solution and small n=1,2,3 cases 1,3,6. General proof is not independently certified."
+    },
+    {
+      "index": 45,
+      "id_prefix": "6d5f8a0d",
+      "decision": "quarantine",
+      "notes": "Worked solution is visibly truncated around the t-domain and never defines the f(t) whose derivative/minimum it invokes. Withhold incomplete reasoning despite plausible scalar optimum."
+    },
+    {
+      "index": 46,
+      "id_prefix": "71932819",
+      "decision": "accept_structural_target",
+      "notes": "Oddness factors f(x)+f(-x) as (1+a)(3^x+3^-x); positive second factor forces a=-1."
+    },
+    {
+      "index": 47,
+      "id_prefix": "71d7e611",
+      "decision": "accept_structural_target",
+      "notes": "Nonconstant linear-function condition gives |m|=3 and m!=3, hence m=-3; source explicitly checks both possibilities."
+    },
+    {
+      "index": 48,
+      "id_prefix": "72216a85",
+      "decision": "accept_structural_target",
+      "notes": "Nonnegative summands vanish, giving a=2,b=-3 and b^a=9; target agrees."
+    },
+    {
+      "index": 49,
+      "id_prefix": "754f61dd",
+      "decision": "accept_structural_target",
+      "notes": "Rationalized quotient has real part (a-2)/5; pure imaginary requires a=2 and resulting imaginary part is nonzero."
+    },
+    {
+      "index": 50,
+      "id_prefix": "7b1bb244",
+      "decision": "accept_structural_target",
+      "notes": "Focus-to-point distances for y^2=4x are x+1; focal chord length is x1+x2+2=8."
+    },
+    {
+      "index": 51,
+      "id_prefix": "7c126c93",
+      "decision": "accept_structural_target",
+      "notes": "With t=y/x>0, AM-GM on t+2 and 16/(t+2) gives minimum 6, attained at t=2."
+    },
+    {
+      "index": 52,
+      "id_prefix": "7f690b39",
+      "decision": "quarantine",
+      "notes": "Question states the slope itself is 45 degrees, conflating slope with inclination angle. Although interpreting it as an angle gives m=1, withhold the malformed geometric premise."
+    },
+    {
+      "index": 53,
+      "id_prefix": "81d24079",
+      "decision": "accept_structural_target",
+      "notes": "Source explicitly identifies and corrects an initial sign error, then expands to -32a^2-8ab+9b^2 and evaluates at a=1,b=-2 to 20. Corrected terminal result agrees; intermediate error is acknowledged rather than silently contradictory."
+    },
+    {
+      "index": 54,
+      "id_prefix": "864490bd",
+      "decision": "accept_structural_target",
+      "notes": "Only binomial r=2 and r=3 contribute x^3, with coefficients 10 and -40, total -30."
+    },
+    {
+      "index": 55,
+      "id_prefix": "86d93873",
+      "decision": "accept_structural_target",
+      "notes": "Parenthetical fraction sum is -1/4; dividing by -1/18 gives 9/2=4.5. Terminal mixed-number notation 4 1/2 matches the worked value."
+    },
+    {
+      "index": 56,
+      "id_prefix": "888b99b1",
+      "decision": "accept_structural_target",
+      "notes": "Using the cube-root value supplied in the question, scaling 25.36 by 100^3 gives 2.938*100=293.8; target agrees with given-precision calculation."
+    },
+    {
+      "index": 57,
+      "id_prefix": "8aa88e30",
+      "decision": "accept_structural_target",
+      "notes": "At x=1, relation gives f3=-2f1; evenness and f(-1)=4 imply f(-3)=-8."
+    },
+    {
+      "index": 58,
+      "id_prefix": "90afb34a",
+      "decision": "accept_structural_target",
+      "notes": "Coefficient sign can be negative only for odd k<50, giving largest k=49; expansion and target agree."
+    },
+    {
+      "index": 59,
+      "id_prefix": "967b9d42",
+      "decision": "accept_structural_target",
+      "notes": "Four balls in three nonempty distinct boxes form one pair and two singletons. Excluding pair {1,2} gives (6-1)*3!=30."
+    },
+    {
+      "index": 60,
+      "id_prefix": "986e4cfe",
+      "decision": "quarantine",
+      "notes": "Claimed game bound uses all-positive and all-negative choices, which violate the explicit 0<p<10 constraint, and ignores accumulated/adversarial multi-round play. Terminal 1023 is unsupported."
+    },
+    {
+      "index": 61,
+      "id_prefix": "9c11fcda",
+      "decision": "accept_structural_target",
+      "notes": ".3x=.2(80-x)+10 gives x=52 and other part 28; requested smaller part is 28."
+    },
+    {
+      "index": 62,
+      "id_prefix": "9df0907d",
+      "decision": "accept_structural_target",
+      "notes": "Reparameterizing t=x+1 gives f(t)=2t+1 and f3=7; minor trailing fill-in markup does not obscure the question."
+    },
+    {
+      "index": 63,
+      "id_prefix": "a0923b9c",
+      "decision": "accept_structural_target",
+      "notes": "Separated a,b,c arrangements give 12; adjacent a,b block separated from c gives 48-24=24, total 36. Independent inclusion-exclusion also gives 120-48-48+12=36."
+    },
+    {
+      "index": 64,
+      "id_prefix": "a4edac3d",
+      "decision": "accept_structural_target",
+      "notes": "Half-turn reverses sign while full turn preserves sin(x)|cos(x)|; terminal minimum period 2pi agrees. Structural inspection does not claim a separate formal period proof."
+    },
+    {
+      "index": 65,
+      "id_prefix": "ab42bb73",
+      "decision": "accept_structural_target",
+      "notes": "B and C together buy eight of each notebook type, costing 8*(x+y)=24; C therefore spends 24-11=13 yuan."
+    },
+    {
+      "index": 66,
+      "id_prefix": "aec97325",
+      "decision": "accept_structural_target",
+      "notes": "Parallelogram base is area/height=32/8=4 cm; target agrees."
+    },
+    {
+      "index": 67,
+      "id_prefix": "af91f1a5",
+      "decision": "accept_structural_target",
+      "notes": "Subtracting squared sum/difference norms gives four times dot product =10-6=4, hence 1."
+    },
+    {
+      "index": 68,
+      "id_prefix": "b113a861",
+      "decision": "accept_structural_target",
+      "notes": "Given central two-sigma mass .9544 leaves upper tail .0228; door threshold 170+2*7=184 cm matches supplied probabilities."
+    },
+    {
+      "index": 69,
+      "id_prefix": "b33b7d1d",
+      "decision": "quarantine",
+      "notes": "Question has missing/garbled geometric objects. Surface area 6pi does not yield radius sqrt(15), and displayed volume product gives 18, not 18sqrt(3). Reject malformed premise and erroneous reasoning."
+    },
+    {
+      "index": 70,
+      "id_prefix": "b4ebadf2",
+      "decision": "quarantine",
+      "notes": "Derivative sign analysis is truncated to f'(x) 0, omitting needed signs/intervals. Scalar 2 can denote the minimizer, but the requested point and damaged argument require source review."
+    },
+    {
+      "index": 71,
+      "id_prefix": "b54fee6d",
+      "decision": "quarantine",
+      "notes": "Correct dot product 10 is supported by side-length identity, but source explicitly writes 2c*2/(2c)=10, an unequal arithmetic expression caused by missing factor five. Withhold defective worked equality."
+    },
+    {
+      "index": 72,
+      "id_prefix": "b68817d5",
+      "decision": "accept_structural_target",
+      "notes": "Expansion has linear coefficient 3+m; setting it to zero gives m=-3."
+    },
+    {
+      "index": 73,
+      "id_prefix": "b923fa84",
+      "decision": "accept_structural_target",
+      "notes": "Consecutive square partial sums give an=n^2-(n-1)^2=2n-1, hence a10=19."
+    },
+    {
+      "index": 74,
+      "id_prefix": "ba22446d",
+      "decision": "accept_structural_target",
+      "notes": "Parameter elimination gives x+y=1; center distance 1/sqrt(2) in radius-two circle yields chord 2sqrt(4-1/2)=sqrt(14)."
+    },
+    {
+      "index": 75,
+      "id_prefix": "ba977cc0",
+      "decision": "accept_structural_target",
+      "notes": "Moving decimal five places expresses 185000 as 1.85*10^5; target agrees without needing to verify narrative geography."
+    },
+    {
+      "index": 76,
+      "id_prefix": "bccf2842",
+      "decision": "accept_structural_target",
+      "notes": "Eight-card swing changes Linlin's total share from 2/3 to 3/4, giving 96 total and initial Linlin count 72-6=66."
+    },
+    {
+      "index": 77,
+      "id_prefix": "c1eefbf8",
+      "decision": "accept_structural_target",
+      "notes": "First four contain two distinct infected and two healthy mice: C3,2 * A4,2 * A7,2 =3*12*42=1512; remaining infected mouse is fixed in fifth position. Target agrees with examinations stopping there."
+    },
+    {
+      "index": 78,
+      "id_prefix": "c46cfdb4",
+      "decision": "quarantine",
+      "notes": "Teacher states 2010/2=505 rather than 1005, so its counts are erroneous even though adjacent-position averages correctly differ by one and terminal 2346 is correct."
+    },
+    {
+      "index": 79,
+      "id_prefix": "c76c9a1a",
+      "decision": "accept_structural_target",
+      "notes": "Positive allocations of ten identical slots to seven distinct schools use six dividers in nine gaps, C9,6=84."
+    },
+    {
+      "index": 80,
+      "id_prefix": "cd3bba4f",
+      "decision": "quarantine",
+      "notes": "Solution counts Catalan matchings for a convex point configuration but supplies no lower bound for arbitrary nonconvex configurations, which is needed to justify the requested global minimum. Withhold unsupported extremal conclusion."
+    },
+    {
+      "index": 81,
+      "id_prefix": "cea14ba3",
+      "decision": "quarantine",
+      "notes": "Question asks both how many primes and all prime values; target 101 omits count one. Proof also has damaged powers/equalities. Unsupported multipart scalar target is withheld."
+    },
+    {
+      "index": 82,
+      "id_prefix": "cf236d0f",
+      "decision": "accept_structural_target",
+      "notes": "Expansion x^3-3x^2+2x differentiates to 3x^2-6x+2; derivative at zero is 2."
+    },
+    {
+      "index": 83,
+      "id_prefix": "d356a6b3",
+      "decision": "accept_structural_target",
+      "notes": "Angle through (4,-3) has cosine 4/5; sin(9pi/2+theta)=cos(theta), so requested scalar is 4/5."
+    },
+    {
+      "index": 84,
+      "id_prefix": "d64f36f1",
+      "decision": "accept_structural_target",
+      "notes": "Binomial expansion leaves residue (-1)^13=-1 modulo three, whose canonical remainder is 2; target agrees."
+    },
+    {
+      "index": 85,
+      "id_prefix": "d6ad7880",
+      "decision": "accept_structural_target",
+      "notes": "External secant vectors point in the same direction; power of P is PC^2-r^2=17-1=16. Source switches center label to O in one term, but intended center-distance derivation and target agree."
+    },
+    {
+      "index": 86,
+      "id_prefix": "d78b0daf",
+      "decision": "accept_structural_target",
+      "notes": "Expression evaluates 10/3-49+5/3-1=-45. Question includes choices despite word-problem metadata, but asks the scalar value and solution derives it rather than guessing a letter."
+    },
+    {
+      "index": 87,
+      "id_prefix": "dc43ebbd",
+      "decision": "accept_structural_target",
+      "notes": "Inverse-square term 4, nonzero-base zero power 1 and 3tan30=sqrt(3) sum to 5+sqrt(3)."
+    },
+    {
+      "index": 88,
+      "id_prefix": "dd169a7a",
+      "decision": "accept_structural_target",
+      "notes": "Dividing (3+z)i=1 by i gives 3+z=-i and z=-3-i; target agrees."
+    },
+    {
+      "index": 89,
+      "id_prefix": "dd2efb68",
+      "decision": "accept_structural_target",
+      "notes": "Given sine alpha=sqrt(2)/3, cosine(pi-2alpha)=-(1-2*(2/9))=-5/9."
+    },
+    {
+      "index": 90,
+      "id_prefix": "e3f0e03d",
+      "decision": "accept_structural_target",
+      "notes": "Square difference 68 permits positive integer roots 16 and 18, giving N=256-100=156; source factor/parity calculation reaches the same value."
+    },
+    {
+      "index": 91,
+      "id_prefix": "e4810a35",
+      "decision": "quarantine",
+      "notes": "Solving 2sqrt(m)=m-3 yields squared candidates m=1 and 9, not -1 and 9 as source claims. Eccentricity target is correct for valid m=9, but erroneous intermediate root is withheld."
+    },
+    {
+      "index": 92,
+      "id_prefix": "e968d5ac",
+      "decision": "accept_structural_target",
+      "notes": "Binomial exactly-two probability is 3*.6^2*.4=.432=54/125; target agrees under independent trials."
+    },
+    {
+      "index": 93,
+      "id_prefix": "eb55d0d1",
+      "decision": "accept_structural_target",
+      "notes": "Reflection gives (-3,-4); distance to origin sqrt(9+16)=5."
+    },
+    {
+      "index": 94,
+      "id_prefix": "eced7446",
+      "decision": "accept_structural_target",
+      "notes": "Common solution is x=2,y=1. Parameter equations 2a+b=-2,2b-a=6 give a=-2,b=2 and (a+b)^2023=0. Source calls one partial linear combination elimination, but displayed equivalent equations and final values check."
+    },
+    {
+      "index": 95,
+      "id_prefix": "edc922e6",
+      "decision": "accept_structural_target",
+      "notes": "Matching x^2+2ax+a^2 to x^2+6x+k gives a=3 and k=9."
+    },
+    {
+      "index": 96,
+      "id_prefix": "f29de8c5",
+      "decision": "accept_structural_target",
+      "notes": "Expansion cancels x^2 terms and gives -4x+13=4x-1, hence 8x=14 and x=7/4."
+    },
+    {
+      "index": 97,
+      "id_prefix": "fcfaf398",
+      "decision": "accept_structural_target",
+      "notes": "Period relation fixes phase pi/6; zero at pi/9 gives omega=9k+3, whose smallest positive value is 3."
+    },
+    {
+      "index": 98,
+      "id_prefix": "fd2710db",
+      "decision": "accept_structural_target",
+      "notes": "First odd summand in m-cube decomposition is m^2-m+1; setting it to 73 gives positive root m=9."
+    },
+    {
+      "index": 99,
+      "id_prefix": "ffc654a8",
+      "decision": "accept_structural_target",
+      "notes": "Regression prediction at x=80 is 5*80+250=650 kg; unit-bearing terminal target agrees."
+    },
+    {
+      "index": 100,
+      "id_prefix": "00a5fe2c",
+      "decision": "accept_structural_target",
+      "notes": "John's earlier age 36 equals twice James' future age; James is 12 now and older brother 16. Corroborated final quantity agrees."
+    },
+    {
+      "index": 101,
+      "id_prefix": "09f60277",
+      "decision": "accept_structural_target",
+      "notes": "Ratio 4:16 simplifies to 1:4; C's 1600 gives B 400 and total 2000."
+    },
+    {
+      "index": 102,
+      "id_prefix": "0a57dfa5",
+      "decision": "accept_structural_target",
+      "notes": "Two boxes each have five blue balls, giving ten; red balls are irrelevant and target matches."
+    },
+    {
+      "index": 103,
+      "id_prefix": "0abbc3ed",
+      "decision": "quarantine",
+      "notes": "Question says third competitor jumps two feet shorter than himself, an impossible relation. Solution silently changes the reference to second competitor; withhold altered-premise answer."
+    },
+    {
+      "index": 104,
+      "id_prefix": "0b206209",
+      "decision": "accept_structural_target",
+      "notes": "Outfit product 8 times pants count equals 72, giving nine pants; terminal quantity agrees."
+    },
+    {
+      "index": 105,
+      "id_prefix": "0c0b33b1",
+      "decision": "accept_structural_target",
+      "notes": "At child's age ten, father is forty and mother 28+10=38; age difference is two."
+    },
+    {
+      "index": 106,
+      "id_prefix": "0d9da1f7",
+      "decision": "accept_structural_target",
+      "notes": "Cuboid base area is volume/height=144/8=18 square metres; target scalar agrees with units in reasoning."
+    },
+    {
+      "index": 107,
+      "id_prefix": "0e6bf76c",
+      "decision": "quarantine",
+      "notes": "Cross multiplication wrongly cancels x instead of producing x^2 and asserts 432=75. Actual positive solution is 5/12, not 144/25; reject incorrect reasoning/answer."
+    },
+    {
+      "index": 108,
+      "id_prefix": "0e7768ab",
+      "decision": "accept_structural_target",
+      "notes": "Map scale supplied to repeating-decimal precision represents about 60 miles per inch; five inches in five hours yields approximately 60 mph. Source uses that scale precision and terminal quantity agrees."
+    },
+    {
+      "index": 109,
+      "id_prefix": "0eccacdc",
+      "decision": "accept_structural_target",
+      "notes": "3X=X+60 gives prior capacity thirty and current capacity ninety; target answers current total."
+    },
+    {
+      "index": 110,
+      "id_prefix": "0fd6d33e",
+      "decision": "quarantine",
+      "notes": "A cost per metre of wire does not determine fence height. Solution invents cost proportional to length times height as though the rate were per square metre; answer three is unsupported by stated units."
+    },
+    {
+      "index": 111,
+      "id_prefix": "1286cb49",
+      "decision": "quarantine",
+      "notes": "Worked solution states 900 percent profit, while appended plain scalar 9 omits percentage notation and can be read as nine percent in this question. Although 900% normalizes mathematically to ratio nine, withhold this ambiguous percentage target."
+    },
+    {
+      "index": 112,
+      "id_prefix": "160b928a",
+      "decision": "accept_structural_target",
+      "notes": "Division remainder is 217-4*54=1, within zero to three; target agrees."
+    },
+    {
+      "index": 113,
+      "id_prefix": "16c5543e",
+      "decision": "accept_structural_target",
+      "notes": "Weekly total 168 minus class18, homework28, sleep56 and work20 gives 46 available hours."
+    },
+    {
+      "index": 114,
+      "id_prefix": "180de74c",
+      "decision": "accept_structural_target",
+      "notes": "Equal jar counts x satisfy (1/4+1/2+1)x=28, giving sixteen per size and forty-eight total jars."
+    },
+    {
+      "index": 115,
+      "id_prefix": "1a2d6ba7",
+      "decision": "accept_structural_target",
+      "notes": "Eight players contribute forty; remaining eight split between two runners-up gives four each."
+    },
+    {
+      "index": 116,
+      "id_prefix": "1b58cde7",
+      "decision": "accept_structural_target",
+      "notes": "Seventy player-opponent incidences count each chess match twice, giving thirty-five."
+    },
+    {
+      "index": 117,
+      "id_prefix": "1e009f35",
+      "decision": "quarantine",
+      "notes": "Reasoning states 90%, but appended 9/10 omits percentage notation; withhold ambiguous display."
+    },
+    {
+      "index": 118,
+      "id_prefix": "22bfb7ec",
+      "decision": "accept_structural_target",
+      "notes": "Total commissions 2400 versus prior 1250 leave big-sale commission 1150."
+    },
+    {
+      "index": 119,
+      "id_prefix": "25161bb1",
+      "decision": "accept_structural_target",
+      "notes": "Volume 625 cubic feet divided by length fifty and depth one-half gives width twenty-five; intermediate unit annotation is imprecise."
+    },
+    {
+      "index": 120,
+      "id_prefix": "2b14ffb2",
+      "decision": "accept_structural_target",
+      "notes": "With stipulated pi=3.1, circumference difference is 6.2, equivalent to 31/5."
+    },
+    {
+      "index": 121,
+      "id_prefix": "2c7d5a27",
+      "decision": "quarantine",
+      "notes": "Teacher assumes a given side area is the requested upper area; third perpendicular face would be 720 squared divided by 120*72=60. Unsupported orientation and target."
+    },
+    {
+      "index": 122,
+      "id_prefix": "2e47a757",
+      "decision": "accept_structural_target",
+      "notes": "Equating powers 3^(2x)=3^12 gives x=6."
+    },
+    {
+      "index": 123,
+      "id_prefix": "2f746727",
+      "decision": "accept_structural_target",
+      "notes": "Seven remaining apples plus two picked gives nine initially."
+    },
+    {
+      "index": 124,
+      "id_prefix": "33f2cc71",
+      "decision": "accept_structural_target",
+      "notes": "Sixty burritos minus twenty gifts and thirty eaten leaves ten."
+    },
+    {
+      "index": 125,
+      "id_prefix": "3c70d3ab",
+      "decision": "quarantine",
+      "notes": "Annual interest rate is 4.5%, but appended bare 9/200 loses percentage display."
+    },
+    {
+      "index": 126,
+      "id_prefix": "3f51877a",
+      "decision": "quarantine",
+      "notes": "Net price decrease is 10%, but appended 1/10 loses percentage display."
+    },
+    {
+      "index": 127,
+      "id_prefix": "41dc7338",
+      "decision": "quarantine",
+      "notes": "Combined forty-day completion is slower than sixteen-day worker alone, requiring an unstated negative second work rate."
+    },
+    {
+      "index": 128,
+      "id_prefix": "49ac29f1",
+      "decision": "accept_structural_target",
+      "notes": "Perimeter relation six widths equals nine hundred gives width150, length300."
+    },
+    {
+      "index": 129,
+      "id_prefix": "4c4fed39",
+      "decision": "accept_structural_target",
+      "notes": "Fifteen students times two pieces times four quarters times two years gives240."
+    },
+    {
+      "index": 130,
+      "id_prefix": "4c511535",
+      "decision": "accept_structural_target",
+      "notes": "Eighteen equally shared points across nine players gives two each."
+    },
+    {
+      "index": 131,
+      "id_prefix": "4dd16099",
+      "decision": "accept_structural_target",
+      "notes": "Orange price .17 and apple .21 yield six apples plus three oranges=1.77, equivalent177/100."
+    },
+    {
+      "index": 132,
+      "id_prefix": "51c820bc",
+      "decision": "accept_structural_target",
+      "notes": "Computer250 plus refrigerator750 plus television600 totals1600."
+    },
+    {
+      "index": 133,
+      "id_prefix": "59536c1c",
+      "decision": "accept_structural_target",
+      "notes": "Doubling January call component raises bill48 to90; call charge42 and fixed charge6."
+    },
+    {
+      "index": 134,
+      "id_prefix": "635111e0",
+      "decision": "accept_structural_target",
+      "notes": "Five equal earnings minus four withdrawals of18 equals48, giving24; ninth day is first balance48."
+    },
+    {
+      "index": 135,
+      "id_prefix": "64538dff",
+      "decision": "accept_structural_target",
+      "notes": "Pens110-30=80; excess pens over notebooks80-30=50."
+    },
+    {
+      "index": 136,
+      "id_prefix": "6606b424",
+      "decision": "accept_structural_target",
+      "notes": "Original number25; adding five gives30."
+    },
+    {
+      "index": 137,
+      "id_prefix": "6fd36923",
+      "decision": "accept_structural_target",
+      "notes": "Five regular snakes and one four-price snake gives9x=2250, x250."
+    },
+    {
+      "index": 138,
+      "id_prefix": "6ff7b8f4",
+      "decision": "accept_structural_target",
+      "notes": "Five daily counts with increments five sum to5x+50=150, x20."
+    },
+    {
+      "index": 139,
+      "id_prefix": "730916ac",
+      "decision": "accept_structural_target",
+      "notes": "Total27 less cookie23 gives four cake packs."
+    },
+    {
+      "index": 140,
+      "id_prefix": "741ca417",
+      "decision": "accept_structural_target",
+      "notes": "Today total11 less lunch9 gives dinner2; yesterday irrelevant."
+    },
+    {
+      "index": 141,
+      "id_prefix": "757a97c2",
+      "decision": "accept_structural_target",
+      "notes": "Initial bags satisfy x-23+132=164, giving55."
+    },
+    {
+      "index": 142,
+      "id_prefix": "7c93a4fa",
+      "decision": "accept_structural_target",
+      "notes": "Final77 less initial33 gives44 walnut trees."
+    },
+    {
+      "index": 143,
+      "id_prefix": "7ca4dd76",
+      "decision": "accept_structural_target",
+      "notes": "Future Kaylee15 equals three times current Matt, giving5."
+    },
+    {
+      "index": 144,
+      "id_prefix": "7edfcc9b",
+      "decision": "accept_structural_target",
+      "notes": "Vote totals490 and210 have majority280, both integral."
+    },
+    {
+      "index": 145,
+      "id_prefix": "84f904a2",
+      "decision": "accept_structural_target",
+      "notes": "Source explicitly corrects erroneous initial sum to41+3x=50; final x3 checks team total. Self-correction retained."
+    },
+    {
+      "index": 146,
+      "id_prefix": "8559a89b",
+      "decision": "quarantine",
+      "notes": "Food capacity70 adults does not establish actual adult attendance. Remaining food for children is incorrectly counted as additional adults."
+    },
+    {
+      "index": 147,
+      "id_prefix": "8d07ec07",
+      "decision": "accept_structural_target",
+      "notes": "Thirty postcards over six days gives180; revenue900 implies five each."
+    },
+    {
+      "index": 148,
+      "id_prefix": "8f2cc3a0",
+      "decision": "accept_structural_target",
+      "notes": "Sandwiches6.98 leave3.48 for sodas; dividing .87 yields four."
+    },
+    {
+      "index": 149,
+      "id_prefix": "904f3881",
+      "decision": "quarantine",
+      "notes": "Assumed common capacity8 is not uniquely determined. Sprite92 with common capacity4 also yields69 cans; target368 is only one possibility."
+    },
+    {
+      "index": 150,
+      "id_prefix": "92667194",
+      "decision": "accept_structural_target",
+      "notes": "Under standard four-legged table/chair convention, ten furniture items require40 legs."
+    },
+    {
+      "index": 151,
+      "id_prefix": "93a51637",
+      "decision": "accept_structural_target",
+      "notes": "Six ratio parts4800 gives unit800; fifteen total parts12000."
+    },
+    {
+      "index": 152,
+      "id_prefix": "94a9a707",
+      "decision": "accept_structural_target",
+      "notes": "Fencing94.5 at .25 implies perimeter378, scale27 and area12*27^2=8748."
+    },
+    {
+      "index": 153,
+      "id_prefix": "965382a5",
+      "decision": "accept_structural_target",
+      "notes": "Initial96 less final93 gives three eggs taken."
+    },
+    {
+      "index": 154,
+      "id_prefix": "98de3866",
+      "decision": "accept_structural_target",
+      "notes": "Original number1.6*1.275=2.04, equivalent51/25."
+    },
+    {
+      "index": 155,
+      "id_prefix": "99954566",
+      "decision": "quarantine",
+      "notes": "Exact follower increase yields fractional1749.6 YouTube followers; teacher invents rounding without requested estimate."
+    },
+    {
+      "index": 156,
+      "id_prefix": "9cce22f0",
+      "decision": "accept_structural_target",
+      "notes": "Fifty boys equal half the students, giving total100."
+    },
+    {
+      "index": 157,
+      "id_prefix": "9f1d6b1e",
+      "decision": "accept_structural_target",
+      "notes": "Three discounted end-year payments have present value approximately993.47; adding seven gives1000.47. Cent rounding explicitly requested."
+    },
+    {
+      "index": 158,
+      "id_prefix": "a1a6aa4e",
+      "decision": "accept_structural_target",
+      "notes": "Original unit price2058/(2340*.85) is approximately1.0347; solution clearly states approximation."
+    },
+    {
+      "index": 159,
+      "id_prefix": "a6bbd0bc",
+      "decision": "accept_structural_target",
+      "notes": "Vertical square edge has length11 and area121; prose mistakenly says same y-coordinate while correct vertical distance calculation uses same x."
+    },
+    {
+      "index": 160,
+      "id_prefix": "a8eb3b1a",
+      "decision": "accept_structural_target",
+      "notes": "Fifty-seven girls plus sixty-six boys gives123 students."
+    },
+    {
+      "index": 161,
+      "id_prefix": "abdf3914",
+      "decision": "accept_structural_target",
+      "notes": "2700 pages at45 per comic gives60 restored plus15 intact=75."
+    },
+    {
+      "index": 162,
+      "id_prefix": "ada06a59",
+      "decision": "accept_structural_target",
+      "notes": "Stamp total136+312+146=594 cents, equivalent5.94 dollars."
+    },
+    {
+      "index": 163,
+      "id_prefix": "ade149ae",
+      "decision": "accept_structural_target",
+      "notes": "Earning ratio18:20:20 and difference120 imply total3480; common percentage factor cancels."
+    },
+    {
+      "index": 164,
+      "id_prefix": "b0e5a3a0",
+      "decision": "accept_structural_target",
+      "notes": "Thirty men and thirty women leave20 children among80 passengers."
+    },
+    {
+      "index": 165,
+      "id_prefix": "b117da07",
+      "decision": "accept_structural_target",
+      "notes": "Ten cards times30 students times6 classes gives1800;36 packs atthree costs108."
+    },
+    {
+      "index": 166,
+      "id_prefix": "b145f4cd",
+      "decision": "accept_structural_target",
+      "notes": "x1000,y500 give800-250+600=1150."
+    },
+    {
+      "index": 167,
+      "id_prefix": "b48f5c05",
+      "decision": "accept_structural_target",
+      "notes": "Five700-metre round trips in half hour give7 km/h."
+    },
+    {
+      "index": 168,
+      "id_prefix": "b4d855f3",
+      "decision": "quarantine",
+      "notes": "c and k are unspecified; teacher arbitrarily chooses c1 and positivity assumptions. abc not determined."
+    },
+    {
+      "index": 169,
+      "id_prefix": "b5367594",
+      "decision": "accept_structural_target",
+      "notes": "Combined rate7/96 minus Junhyeok1/24 yields1/32, hence32 days."
+    },
+    {
+      "index": 170,
+      "id_prefix": "b837a548",
+      "decision": "accept_structural_target",
+      "notes": "Fourteen cubed equals2744, confirming cube edge14 cm."
+    },
+    {
+      "index": 171,
+      "id_prefix": "bc7f85ae",
+      "decision": "quarantine",
+      "notes": "Cost decrease36.875% is displayed as bare59/160 in terminal block; percentage notation omitted."
+    },
+    {
+      "index": 172,
+      "id_prefix": "becf3f8b",
+      "decision": "accept_structural_target",
+      "notes": "Nine plus seven plus five seashells totals21."
+    },
+    {
+      "index": 173,
+      "id_prefix": "c0259a0a",
+      "decision": "accept_structural_target",
+      "notes": "Second-week420 over40 hours gives10.50, increase .50."
+    },
+    {
+      "index": 174,
+      "id_prefix": "c2c289fc",
+      "decision": "accept_structural_target",
+      "notes": "20x-5(30-x)=325 gives19 correct answers."
+    },
+    {
+      "index": 175,
+      "id_prefix": "c3375847",
+      "decision": "accept_structural_target",
+      "notes": "150 minus25 minus15 minus70 leaves40 hectares."
+    },
+    {
+      "index": 176,
+      "id_prefix": "c515b153",
+      "decision": "accept_structural_target",
+      "notes": "Successive multiplicative discounts10000*.8*.9*.95=6840."
+    },
+    {
+      "index": 177,
+      "id_prefix": "c7b4d9b8",
+      "decision": "accept_structural_target",
+      "notes": "Arithmetic mean convention gives total295 less known245=50 for first coaster."
+    },
+    {
+      "index": 178,
+      "id_prefix": "c887cb28",
+      "decision": "quarantine",
+      "notes": "Peter alone has same rate as combined pair, forcing Matt zero work rate despite premise that both perform the work. Withhold inconsistent conventional worker example."
+    },
+    {
+      "index": 179,
+      "id_prefix": "d18b3887",
+      "decision": "quarantine",
+      "notes": "Teacher counts escalator stops by passenger distance, adds recovery beyond each full stop, includes a stop at completion, and ignores walking during stopped intervals; timing unsupported."
+    },
+    {
+      "index": 180,
+      "id_prefix": "d314e3f3",
+      "decision": "quarantine",
+      "notes": "Path is inside but solution expands dimensions outside. Inside area7150-105*60=850, cost680 rather than720."
+    },
+    {
+      "index": 181,
+      "id_prefix": "d5344d29",
+      "decision": "accept_structural_target",
+      "notes": "Federal150,state36,insurance70,parking10 deductions266 leave184."
+    },
+    {
+      "index": 182,
+      "id_prefix": "d88148b4",
+      "decision": "accept_structural_target",
+      "notes": "Doubling every mark doubles mean70 to140."
+    },
+    {
+      "index": 183,
+      "id_prefix": "da909a98",
+      "decision": "accept_structural_target",
+      "notes": "Total18700 less technician7000 across15 remaining workers gives780."
+    },
+    {
+      "index": 184,
+      "id_prefix": "ddbc6c00",
+      "decision": "accept_structural_target",
+      "notes": "Third bid5(S+200)=2500 implies starting300."
+    },
+    {
+      "index": 185,
+      "id_prefix": "e27062eb",
+      "decision": "accept_structural_target",
+      "notes": "Substituting x3,y10 into x+3y yields33."
+    },
+    {
+      "index": 186,
+      "id_prefix": "e3e1aff2",
+      "decision": "accept_structural_target",
+      "notes": "At twenty percent of initial price, paid amount is .2*600=120."
+    },
+    {
+      "index": 187,
+      "id_prefix": "e6192e8f",
+      "decision": "accept_structural_target",
+      "notes": "Other dimension880/25=35.2; three fenced sides25+2*35.2=95.4."
+    },
+    {
+      "index": 188,
+      "id_prefix": "e644c3e8",
+      "decision": "accept_structural_target",
+      "notes": "Five boxes times .7 feet plus leftoverone gives4.5."
+    },
+    {
+      "index": 189,
+      "id_prefix": "e70e0299",
+      "decision": "quarantine",
+      "notes": "Teacher assumes separate upward rounding of bucketfuls; question does not specify trips or forbid fractional bucket volumes. Withhold ambiguous179 versus exact fractional amount."
+    },
+    {
+      "index": 190,
+      "id_prefix": "e92b0c7d",
+      "decision": "accept_structural_target",
+      "notes": "Discounted720*.9 then tax multiplier1.06 gives686.88 collected."
+    },
+    {
+      "index": 191,
+      "id_prefix": "ed13c2a1",
+      "decision": "accept_structural_target",
+      "notes": "Julia16 and BillSunday8 leave Saturday4; differencefour."
+    },
+    {
+      "index": 192,
+      "id_prefix": "f0733b42",
+      "decision": "accept_structural_target",
+      "notes": "Score deficitfour at quarter-point penalty implies16 wrong plus104 correct=120."
+    },
+    {
+      "index": 193,
+      "id_prefix": "f566d8b3",
+      "decision": "accept_structural_target",
+      "notes": "234 equally shared across six gives39 tickets each."
+    },
+    {
+      "index": 194,
+      "id_prefix": "f5c7d7d3",
+      "decision": "accept_structural_target",
+      "notes": "Middle allowance10, senior25 after150% increase; excess over doubled20 isfive."
+    },
+    {
+      "index": 195,
+      "id_prefix": "f6d0889b",
+      "decision": "accept_structural_target",
+      "notes": "Leak rate1/6-1/12=1/12, giving12 hours to drain."
+    },
+    {
+      "index": 196,
+      "id_prefix": "f8354957",
+      "decision": "accept_structural_target",
+      "notes": "Nine plus six pizzas and four half-pizza equivalents gives17."
+    },
+    {
+      "index": 197,
+      "id_prefix": "f9675824",
+      "decision": "quarantine",
+      "notes": "Four barrels hold172; teacher adds a further20-gallon cask not stated as owned. Target192 relies on unstated inventory."
+    },
+    {
+      "index": 198,
+      "id_prefix": "ff47f6ee",
+      "decision": "quarantine",
+      "notes": "Question says making a cake; teacher silently maximizes whole cakes and incorrectly writes quotient30.5. Remainder interpretation requires corrected explicit premise."
+    },
+    {
+      "index": 199,
+      "id_prefix": "ffe37727",
+      "decision": "quarantine",
+      "notes": "Initial nine roses increase by newly cut flowers, yet conclusion has onlythree. Teacher ignores inconsistent premise."
+    }
+  ],
+  "risk": [
+    {
+      "index": 0,
+      "id_prefix": "00002259",
+      "decision": "retain_quarantine",
+      "notes": "Two requested ages six and twelve exceed scalar target scope; retain tuple quarantine."
+    },
+    {
+      "index": 1,
+      "id_prefix": "3028cf8b",
+      "decision": "retain_quarantine",
+      "notes": "Product already has residue50; any odd multiplier preserves50, not uniquely ending01. Unsupported leading-zero heuristic target."
+    },
+    {
+      "index": 2,
+      "id_prefix": "00012fe4",
+      "decision": "retain_quarantine",
+      "notes": "Invented rounding to two pounds would require at least203 guests, contradicting163; retain heuristic quarantine."
+    },
+    {
+      "index": 3,
+      "id_prefix": "002a8eae",
+      "decision": "retain_quarantine",
+      "notes": "Prior donation amounts absent; source explicitly cannot determine new average."
+    },
+    {
+      "index": 4,
+      "id_prefix": "0054c91a",
+      "decision": "retain_quarantine",
+      "notes": "Single answer sentence provides no worked solution and extraction is unresolved; retain answer-only exclusion."
+    },
+    {
+      "index": 5,
+      "id_prefix": "2f654f34",
+      "decision": "retain_quarantine",
+      "notes": "Question refers to missing figure; retain conservative diagram exclusion despite plausible scalar calculation."
+    },
+    {
+      "index": 6,
+      "id_prefix": "27615267",
+      "decision": "retain_quarantine",
+      "notes": "Missing figure and mojibake square-root notation make supplied prism premise unreliable; retain exclusion."
+    },
+    {
+      "index": 7,
+      "id_prefix": "00001e0c",
+      "decision": "retain_quarantine",
+      "notes": "Single total is solvable100 but both wording triggers conservative multipart flag; retain documented false positive without altering policy."
+    },
+    {
+      "index": 8,
+      "id_prefix": "01e0016b",
+      "decision": "retain_quarantine",
+      "notes": "Only unsupported answer sentence for potato subtraction; retain lack-of-worked-solution exclusion."
+    },
+    {
+      "index": 9,
+      "id_prefix": "00003fc3",
+      "decision": "retain_quarantine",
+      "notes": "Fractional ferris-wheel runs and heuristic approximate conclusion require corrected premise; retain exclusion."
+    },
+    {
+      "index": 10,
+      "id_prefix": "000f2e36",
+      "decision": "retain_quarantine",
+      "notes": "Source supplies unevaluated code rather than final count; retain missing-answer quarantine."
+    },
+    {
+      "index": 11,
+      "id_prefix": "00079d7f",
+      "decision": "retain_quarantine",
+      "notes": "Problem includes derivation and solution only answer; upstream invalid solution and answer-only gates justify exclusion."
+    },
+    {
+      "index": 12,
+      "id_prefix": "0005799f",
+      "decision": "retain_quarantine",
+      "notes": "Source repeats question and gives fraction without derivation; upstream solution validity fails, retain exclusion."
+    },
+    {
+      "index": 13,
+      "id_prefix": "00048209",
+      "decision": "retain_quarantine",
+      "notes": "Construction proof refers to unavailable figures and earlier problems; not scalar verified answer, sentinel notfound retained in quarantine."
+    },
+    {
+      "index": 14,
+      "id_prefix": "0000576a",
+      "decision": "retain_quarantine",
+      "notes": "Polygon deformation asks proof and references another absent solution; sentinel proof unsupported."
+    },
+    {
+      "index": 15,
+      "id_prefix": "00051412",
+      "decision": "retain_quarantine",
+      "notes": "Cube-table proof relies on absent figure and proof sentinel outside word-problem target scope."
+    },
+    {
+      "index": 16,
+      "id_prefix": "0023909d",
+      "decision": "retain_quarantine",
+      "notes": "Pair-valued answer plus translation artifacts and textbook contents outside scalar English target scope; reviewed disposition only, no full proof certification."
+    },
+    {
+      "index": 17,
+      "id_prefix": "000afa95",
+      "decision": "retain_quarantine",
+      "notes": "Chinese graph proof has solution None and proof sentinel; retain missing/non-English exclusion."
+    },
+    {
+      "index": 18,
+      "id_prefix": "0004c6d2",
+      "decision": "retain_quarantine",
+      "notes": "Answer is a three-element set and proof includes missing external image; retain unsupported/external-diagram quarantine."
+    },
+    {
+      "index": 19,
+      "id_prefix": "000c845f",
+      "decision": "retain_quarantine",
+      "notes": "Empty solution and target with inline Asymptote diagram; retain exclusion."
+    },
+    {
+      "index": 20,
+      "id_prefix": "00018017",
+      "decision": "retain_quarantine",
+      "notes": "Empty solution for proof task and missing target; retain exclusion."
+    },
+    {
+      "index": 21,
+      "id_prefix": "0004f94c",
+      "decision": "retain_quarantine",
+      "notes": "Empty solution and target on multichoice walking problem; retain exclusion."
+    },
+    {
+      "index": 22,
+      "id_prefix": "003dc2fa",
+      "decision": "retain_quarantine",
+      "notes": "Vector equation gives X1 whereas supplied target is -1; retain contradictory-target quarantine."
+    },
+    {
+      "index": 23,
+      "id_prefix": "00593cf3",
+      "decision": "retain_quarantine",
+      "notes": "Sequence divisor clearly2, supplied target5 contradicts terminal boxed2; retain exclusion."
+    },
+    {
+      "index": 24,
+      "id_prefix": "f257aa4b",
+      "decision": "retain_quarantine",
+      "notes": "Problem text empty despite worked solution and target300; cannot provide trustworthy question input."
+    },
+    {
+      "index": 25,
+      "id_prefix": "0017dfa4",
+      "decision": "retain_quarantine",
+      "notes": "Four separate calculations have four final blocks; target -1 captures only last, retain multipart quarantine."
+    },
+    {
+      "index": 26,
+      "id_prefix": "0068680c",
+      "decision": "retain_quarantine",
+      "notes": "Choice-bearing target C:11 unsupported; source falsely solves x-1/x=3 as x3. Retain quarantine."
+    },
+    {
+      "index": 27,
+      "id_prefix": "00cc64ea",
+      "decision": "retain_quarantine",
+      "notes": "Two separate calculations have two final blocks; only second target represented, retain exclusion."
+    },
+    {
+      "index": 28,
+      "id_prefix": "00008e19",
+      "decision": "retain_quarantine",
+      "notes": "Coordinate pair with option label unsupported by scalar contract; retain exclusion without claiming full proof review."
+    },
+    {
+      "index": 29,
+      "id_prefix": "00008392",
+      "decision": "retain_quarantine",
+      "notes": "Boxed option C is followed by commentary; not terminal verified scalar and outside metadata scope."
+    },
+    {
+      "index": 30,
+      "id_prefix": "0040a138",
+      "decision": "retain_quarantine",
+      "notes": "Boxed0.6 includes trailing comma and embedded Orca source excluded; retain formatting/provenance quarantine."
+    },
+    {
+      "index": 31,
+      "id_prefix": "0000b44e",
+      "decision": "retain_quarantine",
+      "notes": "Pickle reasoning24 plausible but embedded Orca source remains excluded by declared provenance policy."
+    },
+    {
+      "index": 32,
+      "id_prefix": "00007f30",
+      "decision": "retain_quarantine",
+      "notes": "Ordinal6th unsupported scalar and embedded Orca provenance; retain exclusion."
+    },
+    {
+      "index": 33,
+      "id_prefix": "0011c54b",
+      "decision": "retain_quarantine",
+      "notes": "Digit answer2 is only one of2,5,8; malformed comma and invalid source label also justify quarantine."
+    },
+    {
+      "index": 34,
+      "id_prefix": "0002462c",
+      "decision": "retain_quarantine",
+      "notes": "Only symbolic answer with unsupported mathrm and no derivation; invalid upstream problem/solution retained outside release."
+    },
+    {
+      "index": 35,
+      "id_prefix": "0000de40",
+      "decision": "retain_quarantine",
+      "notes": "Proof task with proof sentinel; outside scalar word-problem scope, no full mathematical certification."
+    },
+    {
+      "index": 36,
+      "id_prefix": "0001da2f",
+      "decision": "retain_quarantine",
+      "notes": "Single difference800 is plausible but conjunction triggers conservative multipart exclusion; retain documented false positive."
+    },
+    {
+      "index": 37,
+      "id_prefix": "00bc6eca",
+      "decision": "retain_quarantine",
+      "notes": "Triangle solution invents equilateral geometry without supplied dimensions and unsupported coordinate answer; retain quarantine."
+    },
+    {
+      "index": 38,
+      "id_prefix": "0015999f",
+      "decision": "retain_quarantine",
+      "notes": "Inline diagram is required to supply angle and lengths; conservative text-only exclusion retained."
+    }
+  ],
+  "prior": []
+}

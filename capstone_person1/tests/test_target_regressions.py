@@ -8,6 +8,15 @@ from capstone_person1.pipeline_controls import (
 
 
 class TargetRegressionTests(unittest.TestCase):
+    def test_percentage_display_preserves_normalized_value(self):
+        from capstone_person1.person1_data_contract import render_completion
+        solution = 'Revenue is 40 and cost 4. Profit divided by cost is 9.\n\nThe answer is 900%.'
+        self.assertTrue(render_completion(solution, '9').endswith('Final answer: 900%'))
+        solution = 'Interest is 90 on 500 over four years.\n\nThe answer is 4.5%.'
+        self.assertTrue(render_completion(solution, '9/200').endswith('Final answer: 4.5%'))
+        marked = 'Compute the ratio carefully.\n\nFinal answer: 25%'
+        self.assertEqual(render_completion(marked, '1/4'), marked)
+
     def test_interior_marker_is_not_terminal(self):
         solution = ('Use the equation to isolate the variable and simplify both sides.\n'
                     'Final answer: 2\nAfter correcting the arithmetic, the number is 32.')

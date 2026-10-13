@@ -54,6 +54,9 @@ def allocate_banks(frame, *, train_per_source=20000, selection_per_source=5000, 
                 remaining[name] -= take
         for name in quotas: banks[name].append(ordered.iloc[chosen[name]])
     banks = {name: stable_order(pd.concat(parts, ignore_index=True), order_seed) for name, parts in banks.items()}
+    for name,rows in banks.items():
+        rows['canonical_split']=rows.get('split','candidate')
+        rows['split']=name
     group_sets = {name: set(rows['problem_group_id']) for name, rows in banks.items()}
     for left in banks:
         for right in banks:

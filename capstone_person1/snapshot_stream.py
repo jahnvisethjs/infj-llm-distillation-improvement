@@ -29,6 +29,9 @@ def atomic_json(path, value):
 
 def notebook_config(notebook):
     """Read literal configuration and execute only the notebook's canonical definitions."""
+    config_path = Path(__file__).resolve().parent / 'configs/person1_data_config.json'
+    if notebook.get('metadata',{}).get('person1_entrypoint') == 'named_upstream_stages_v3':
+        return notebook_settings(json.loads(config_path.read_text(encoding='utf-8')))
     values = {}
     for node in ast.parse(''.join(notebook['cells'][5]['source'])).body:
         if isinstance(node, ast.Assign) and len(node.targets) == 1 and isinstance(node.targets[0], ast.Name):
@@ -44,11 +47,8 @@ def notebook_config(notebook):
 class SnapshotCanonicalizer:
     def __init__(self, notebook):
         self.config = notebook_config(notebook)
-        self.namespace = dict(vars(controls))
-        self.namespace.update(self.config)
-        self.namespace.update(orca_revision=self.config['ORCA_REVISION'], numina_revision=self.config['NUMINA_REVISION'])
-        source = ''.join(notebook['cells'][14]['source']).split('def make_inspection_sheet', 1)[0]
-        exec(compile(source, 'notebook_canonical_definitions', 'exec'), self.namespace)
+        from capstone_person1.canonical_data import canonicalize_orca,canonicalize_numina
+        self.mappers = {'orca':canonicalize_orca,'numina':canonicalize_numina}
 
     def __call__(self, source, row, position):
         revision = self.config[source.upper() + '_REVISION']
@@ -65,7 +65,8 @@ class SnapshotCanonicalizer:
                         problem_type=row['problem_type'], synthetic=row['synthetic'],
                         problem_is_valid='no' if 'numina_problem_not_valid' in old_flags else 'yes',
                         solution_is_valid='no' if 'numina_solution_not_valid' in old_flags else 'yes')
-        result = self.namespace['canonicalize_' + source](base, position)
+        spec={'dataset_id':self.config[source.upper()+'_DATASET_ID'],'revision':revision}
+        result = self.mappers[source](base,position,spec=spec,config={'exclude_synthetic_numina':self.config['EXCLUDE_SYNTHETIC_NUMINA']})
         if source == 'numina' and len(row['final_answer']) >= 500:
             result['quality_flags'].append('possibly_truncated_v1_answer_requires_upstream_reload')
             result['eligible'], result['split'] = False, 'quarantine'

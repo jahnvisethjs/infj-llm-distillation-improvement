@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "release_id": "person1_v3_20261012_ready",
+  "artifacts_checked": 447,
+  "manifests_checked": 11,
+  "complete_row_status_rows": 1096250,
+  "readiness": "DATA_READY_FOR_TRAINER",
+  "all_manifest_reencoding": false,
+  "verified_utc": "2026-10-13T03:20:25.402036+00:00",
+  "release_manifest_sha256": "063f7439679e669f2609fdf9a721113537caf04c551efae07cbfa11640b83a1a",
+  "mandatory_target_reviews_complete": true,
+  "rejected_review_ids_absent_from_banks": true,
+  "formatted_reviews_verified_against_actual_encoding": 208,
+  "historical_2_versus_32_defect_corrected": true
+}

@@ -1,26 +1,9 @@
 # Person 2: training integration
 
-This is a diagnostic integration handoff. You can implement and smoke-test the loader/collator now. Main experiment data is pending; the fixture is not R1000 or a final training bank.
+Person 1's complete local release is DATA_READY_FOR_TRAINER. Read the [release handoff](../release_records/person1_v3_20261012_ready/PERSON2_HANDOFF.md) and [published release record](../release_records/person1_v3_20261012_ready/README.md). The full data bundle is distributed through [GitHub Release downloads](DATA_DOWNLOADS.md), organized by purpose; extract the archives into the repository root. After obtaining it, load `manifests/debug_32.jsonl`, then the declared training prefixes.
 
-Read [the reference encoder contract](contracts/REFERENCE_ENCODER.md). Use the pinned Qwen2.5-0.5B fast tokenizer, combined prompt/completion encoding, completion-only labels, one supervised EOS and positional padding. EOS and PAD share ID 151643; preserve the real EOS label. Do not truncate overlength solutions or apply a chat template.
+Use [shared reference encoding](contracts/REFERENCE_ENCODER.md) with contract `person1-plain-text-labels-v3`. Encode combined prompt/completion text without a chat template, mask prompt labels, supervise completion plus one EOS, and mask padding by position. EOS/PAD share 151643. Verified percentage notation is preserved in completions while comparison keys may use ratios.
 
-After the setup commands in [the package README](../README.md), encode an included fixture row:
+Follow [actual-label/parent integration checks](contracts/TRAINER_INTEGRATION.md): verify all 32 debug IDs and all 1,000 R1000 IDs against their exact manifest hashes using your actual collator labels. Train/save/reload the debug checkpoint before main experiments. Independent learning-curve runs initialize from the pinned base model. Planned R1000 seen groups are not actual training evidence; bind the real run/checkpoint and seen groups after training.
 
-```python
-import json
-from pathlib import Path
-from capstone_person1.person1_data_contract import load_tokenizer, encode_example, pad_encoded
-
-tokenizer = load_tokenizer(cache_dir="capstone_person1/cache/huggingface", local_files_only=True)
-path = Path("capstone_person1/diagnostics/integration_smoke/debug_32_pilot.jsonl")
-row = json.loads(path.read_text(encoding="utf-8").splitlines()[0])
-encoded = encode_example(tokenizer, row["problem"], row["solution"], row["final_answer"])
-batch_row = pad_encoded(encoded, length=2048)
-supervised_tokens = sum(label != -100 for label in batch_row["labels"])
-```
-
-Compare your actual collator's input IDs, attention masks, labels and supervised-token counts against this encoder before running a training/save/reload smoke test. No training has been executed by this handoff.
-
-For the later corrected release, return one actual label-derived count per training row, bound to the exact manifest/checksum. Templates are in `inputs_from_team/person2_token_verification_TEMPLATE.csv` and `person2_token_verification_metadata_TEMPLATE.json`. Parent evidence uses `parent_checkpoint_R1000_TEMPLATE.json` and `parent_seen_groups_R1000_TEMPLATE.csv`; provide the actual checkpoint identity, training-manifest hash and groups seen. Leave these templates unsigned until real evidence exists.
-
-The verified diagnostic token counts do not finalize the R1000 continuation budget. Person 1 data readiness must be assessed separately from later trainer/parent integration and experiment readiness.
+The selection bank is disjoint from the entire 40K training bank and 1K loss set. Person 4 scores under its frozen actual parent. Main-run readiness also requires Person 3's evaluator/split freeze. No actual training, model checkpoint or evaluation result is claimed by this repository.

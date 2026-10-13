@@ -1,5 +1,5 @@
 {
-  "configuration_version": "person1-config-v3",
+  "configuration_version": "person1-config-v3.1",
   "notebook": "Person1_Full_Run_v2.ipynb",
   "model_id": "Qwen/Qwen2.5-0.5B",
   "tokenizer_id": "Qwen/Qwen2.5-0.5B",
@@ -20,7 +20,9 @@
   "loss_dev_per_source": 500,
   "required_training_prefixes": [500, 1000, 2000, 4000],
   "optional_training_prefixes": [8000, 16000, 40000],
-  "candidate_universe_per_source": 45000,
+  "candidate_universe_per_source": 65000,
+  "review_source_blacklist_numina": ["synthetic_math", "metamath"],
+  "review_source_blacklist_rationale": "Actual stratified inspection found substantive mathematical defects despite upstream Yes labels; withhold this cohort pending independent correctness verification.",
   "intended_overlap_policy": "instance_or_near_instance",
   "legacy_matching_engine_status": "archived_diagnostic_only; release_uses_instance_decisions_v1",
   "lsh_candidate_threshold": 0.65,

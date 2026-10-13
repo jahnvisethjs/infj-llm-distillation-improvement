@@ -32,7 +32,7 @@ From the project workspace, with its Python dependencies installed:
 python -m capstone_person1.import_person3_manifests --output-root capstone_person1/diagnostics/person3_manifest_import
 ```
 
-The same helper is embedded in v2's protection stage. It exports:
+The corrected notebook uses the named release pipeline. The standalone importer reads `frozen_development.csv` / `frozen_development_metadata.json`; the named release runner reads `development_evaluation.csv` / `development_evaluation_metadata.json`. For the later protected release, copy the approved frozen pair unchanged to those runner filenames under its `inputs_from_team/`. The CSV content hash and confirmed role metadata remain identical. The importer exports:
 
 - `processed/protected_questions.csv`: question texts, explicit roles/source provenance, normalized hashes and input-manifest hashes.
 - `reports/evaluation_protection_scope.json`: actual set counts, unique question count, confirmation/coverage status, input hashes and overlap-check scope.

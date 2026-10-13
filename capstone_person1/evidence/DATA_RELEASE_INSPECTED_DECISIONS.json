@@ -1,0 +1,39 @@
+{
+  "pairs": [
+    {"index":0,"id_prefix":"2e695264","decision":"accept_policy_disposition","notes":"Same work template but first workforce changes from 20 to 16 men, so the second workforce differs. Retain distinct instances despite high similarity."},
+    {"index":1,"id_prefix":"3a788eac","decision":"accept_policy_disposition","notes":"Interest difference changes from 420 to 840; the implied principal doubles. Retain separate numerical instances."},
+    {"index":2,"id_prefix":"058ee1de","decision":"accept_policy_disposition","notes":"Train speed and crossing duration both change (90/15 versus 360/30). Signature retrieval discovers a template relation below the LSH threshold without merging instances."},
+    {"index":3,"id_prefix":"49924e89","decision":"accept_policy_disposition","notes":"Side measurement excess changes from 10% to 5%, producing different area errors. Template-relative retention is appropriate."},
+    {"index":4,"id_prefix":"30e0ccf9","decision":"accept_policy_disposition","notes":"Vote share and winning margin change (56%,288 versus 62%,324). Distinct election instances remain separate."},
+    {"index":5,"id_prefix":"149c35be","decision":"accept_policy_disposition","notes":"Walking rate changes from 5/4 to 7/6 of usual speed, changing the inferred travel time; retain both template relatives."},
+    {"index":6,"id_prefix":"49d46395","decision":"accept_policy_disposition","notes":"Mechanic premises and target are identical apart from punctuation spacing; quarantine avoids near-instance leakage pending an explicit identity decision."},
+    {"index":7,"id_prefix":"657cb247","decision":"accept_policy_disposition","notes":"Bus problems share an equation but ask different unknowns (departures versus initial passengers). Conservative unresolved quarantine is safe and may exclude distinct targets; no identity is asserted."},
+    {"index":8,"id_prefix":"8872042f","decision":"accept_policy_disposition","notes":"TV season problem differs only by a comma; same numerical premises and question. Retain quarantine rather than leave near-identical records across banks."},
+    {"index":9,"id_prefix":"76b2b7e0","decision":"accept_policy_disposition","notes":"Complex expressions  (3-4i)/i and (3+2i)/(2-3i) are different instances. This is a conservative retrieval false positive; both remain withheld under the unresolved policy, with no duplicate identity claim."},
+    {"index":10,"id_prefix":"66b2a85c","decision":"accept_policy_disposition","notes":"One gift-shop question adds a 10% discount, changing the answer. Distinct near-text examples are conservatively withheld; similarity alone does not certify equivalence."},
+    {"index":11,"id_prefix":"2f091c2d","decision":"accept_policy_disposition","notes":"Class size changes from 35 to 32, altering the constrained maximum books. This conservative unresolved exclusion removes distinct instances and is recorded as such rather than a proven duplicate."}
+  ],
+  "formatted": [
+    {"index":0,"id_prefix":"029cb76c","decision":"accept_structural_target","notes":"Inspected circle-area maximization and common-chord expression 2R1R2/sqrt(R1^2+R2^2); symbolic terminal box and appended target agree. Geometry is not independently certified."},
+    {"index":1,"id_prefix":"0404bdcc","decision":"accept_structural_target","notes":"Parallel-vector determinant gives -24k=8, hence -1/3; terminal and formatted target agree."},
+    {"index":2,"id_prefix":"053fda63","decision":"quarantine","notes":"Integral of an absolute value cannot be negative. Teacher simplifies ln(2)-2ln(5/4) incorrectly to 3ln(2)-2ln(5), and also solves the crossing equation incorrectly. Withhold erroneous reasoning/target."},
+    {"index":3,"id_prefix":"0883b3ed","decision":"accept_structural_target","notes":"Substituting root 1 into x^2-3x-k=0 gives k=-2; reasoning and target agree."},
+    {"index":4,"id_prefix":"09830e7b","decision":"accept_structural_target","notes":"Sine identities reduce the given equality directly to sin(alpha-pi/6)=-sqrt(2)/2. One malformed fraction appears early, but subsequent explicit expressions and terminal target are readable and agree."},
+    {"index":5,"id_prefix":"09d77d8e","decision":"quarantine","notes":"Question already contains the boxed answer 0 in the requested number-of-common-points slot. Withhold answer-filled question; discriminant reasoning does not remove this input leakage."},
+    {"index":6,"id_prefix":"0b59e5cb","decision":"accept_structural_target","notes":"Collinearity gives x=1/2; vector sum (3/2,3) has norm 3sqrt(5)/2, matching target."},
+    {"index":7,"id_prefix":"0bda8c36","decision":"accept_structural_target","notes":"Arithmetic progression symmetry gives 3a9=9 and S17=17a9=51; terminal target preserved."},
+    {"index":8,"id_prefix":"12f69ca1","decision":"accept_structural_target","notes":"sqrt(4)+2^-1=2+1/2=5/2; solution and formatted answer agree."},
+    {"index":9,"id_prefix":"1316829b","decision":"accept_structural_target","notes":"Inspected ordered-solution generating function and terminal 12. Independent parity check over F2 gives 12 noncancelled exponents from (x8+x12+x20+x28)(x2+x4+x6+x8); appended target agrees."},
+    {"index":10,"id_prefix":"133f6910","decision":"accept_structural_target","notes":"sin(270-31)=-cos(31)=-a; symbolic target agrees with explicit trigonometric derivation."},
+    {"index":11,"id_prefix":"1dad1f4c","decision":"quarantine","notes":"Finite-field reduction wrongly asserts x^2017 equals x modulo x^5-1 (2017 mod 5 is 2), and cancels x-1, a nonunit of the quotient. Reasoning and claimed remainder 5 are unsupported."},
+    {"index":12,"id_prefix":"1e275318","decision":"accept_structural_target","notes":"Nested radical/fraction roots are correct and a=43 passes. For a<=42, radical <=7 and subtracted fraction is positive, excluding all smaller integers; target 43 agrees."},
+    {"index":13,"id_prefix":"1e8155e8","decision":"accept_structural_target","notes":"Digit equation b=24a-40c, with 0<=b<=6 and nonzero a,c<=6, forces b=0,a=5,c=3; both bases yield 248."},
+    {"index":14,"id_prefix":"221f65c8","decision":"accept_structural_target","notes":"Perfect-square factorization of u^2-14u+49, u=x+y, is (x+y-7)^2; short but contains the requested reasoning step."},
+    {"index":15,"id_prefix":"22dbf554","decision":"quarantine","notes":"Question requests two mathematical tasks using dollar-wrapped numbered labels, including monotonicity; final scalar covers only part 2. Solution also has damaged inequalities. This exposes a multipart-label filter gap."},
+    {"index":16,"id_prefix":"254cd079","decision":"accept_structural_target","notes":"Divisor inclusion-exclusion gives 121+64+276-8-8-11+1=435. GCD divisor intersections and terminal target agree."},
+    {"index":17,"id_prefix":"285bf179","decision":"quarantine","notes":"Question asks maximum for every n, while target 3 is only the n=4 special case; solution says n for n>4. Also includes translation-assistant chatter and a malformed inequality. Scalar target is incomplete."},
+    {"index":18,"id_prefix":"29ed3d37","decision":"accept_structural_target","notes":"Subtracting the two linear equations gives x-y=7-8=-1; terminal target agrees."},
+    {"index":19,"id_prefix":"380b250b","decision":"accept_structural_target","notes":"An integer sum of 8.5 and 11 requires an even count of 8.5, hence reduces to 17 and 11. Frobenius value 187-17-11=159; target agrees."}
+  ],
+  "risk": []
+}

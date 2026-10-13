@@ -1,0 +1,778 @@
+sample_id,row_id,dataset_id,problem,solution,final_answer,completion,extraction_mode,provided_answer_parse_status,answer_type,quality_flags_json,answer_evidence_text,supervised_tokens,source_sha256,reviewer,reviewed_utc,policy_version,decision,notes
+risk:00002259b7e396c0befac8c2af9d3ec636bd5e3a9ffd4fb49a2592fb625f23e6,00002259b7e396c0befac8c2af9d3ec636bd5e3a9ffd4fb49a2592fb625f23e6,orca,"The present ages of Lewis and Brown are in the ratio 1:2. Three years from now, the ages will be in the ratio 3:5. Find the present ages of Lewis and Brown.","Let's denote the present age of Lewis as L and the present age of Brown as B. According to the information given, we have the following two ratios:
+
+1. The present ages of Lewis and Brown are in the ratio 1:2, so we can write this as:
+ L / B = 1 / 2
+ This implies that B = 2L. (Equation 1)
+
+2. Three years from now, the ages will be in the ratio 3:5, so we can write this as:
+ (L + 3) / (B + 3) = 3 / 5
+ Cross-multiplying gives us:
+ 5(L + 3) = 3(B + 3)
+ 5L + 15 = 3B + 9
+ 5L - 3B = 9 - 15
+ 5L - 3B = -6 (Equation 2)
+
+Now we can use Equation 1 (B = 2L) to substitute B in Equation 2:
+
+ 5L - 3(2L) = -6
+ 5L - 6L = -6
+ -L = -6
+ L = 6
+
+Now that we have the value of L, we can find B using Equation 1:
+
+ B = 2L
+ B = 2 * 6
+ B = 12
+
+Therefore, the present age of Lewis is 6 years, and the present age of Brown is 12 years.",,,ambiguous_multi_part,ambiguous_multi_part,missing,"[""ambiguous_final_answer"", ""missing_or_sentinel_final_answer"", ""suspected_multi_part_requires_review""]","Therefore, the present age of Lewis is 6 years, and the present age of Brown is 12 years.",0,2691f96ee0d40d6da5e2eba55a439dbde2e1dd2c264bd7d16776dc96ddf71e0a,Codex,2026-10-13T02:55:22.750203+00:00,person1-release-review-v2,retain_quarantine,Two requested ages six and twelve exceed scalar target scope; retain tuple quarantine.
+risk:3028cf8bb8e64d306a5d173505b5e07e015f6f1d1d786fd280e77040c253ae72,3028cf8bb8e64d306a5d173505b5e07e015f6f1d1d786fd280e77040c253ae72,orca,The last two digits in the multiplication of some numbers are 50. The numbers are 122 × 123 × 125 × 129 and one more number. What is the missing number?,"To find the last two digits of the multiplication of these numbers, we can multiply the last two digits of each number and then take the last two digits of the result. This is because the last two digits of a product are only affected by the last two digits of the factors.
+
+Let's multiply the last two digits of each number and find the last two digits of the product:
+
+- The last two digits of 122 are 22.
+- The last two digits of 123 are 23.
+- The last two digits of 125 are 25.
+- The last two digits of 129 are 29.
+
+Now, let's multiply these last two digits:
+
+22 × 23 = 506, so the last two digits are 06.
+06 × 25 = 150, so the last two digits are 50.
+50 × 29 = 1450, so the last two digits are 50.
+
+We can see that the last two digits of the product of the given numbers are already 50. Therefore, the last two digits of the missing number must be 01 because when we multiply any number by 01, the last two digits of the product remain unchanged.
+
+So, the missing number has the last two digits 01.",01,,terminal_single_number_review,terminal_single_number_review,unsupported_numeric_expression,"[""unsupported_final_answer_structure"", ""heuristic_terminal_answer_requires_individual_review""]","So, the missing number has the last two digits 01.",0,ca018b1d872485a55415dd01186b4288a562bee5d1816b180f08c588aff7d789,Codex,2026-10-13T02:55:22.750434+00:00,person1-release-review-v2,retain_quarantine,"Product already has residue50; any odd multiplier preserves50, not uniquely ending01. Unsupported leading-zero heuristic target."
+risk:00012fe4f1ad1bbfd11db392d65ed941089c38ae4010832ce11093cfa04fa071,00012fe4f1ad1bbfd11db392d65ed941089c38ae4010832ce11093cfa04fa071,orca,"The guests at a football banquet consumed a total of 406 pounds of food. If no individual guest consumed more than a certain amount of food, the minimum number of guests that could have attended the banquet is 163. What is the maximum amount of food an individual guest could have consumed?","If the minimum number of guests that could have attended the banquet is 163, then to find the maximum amount of food an individual guest could have consumed, we divide the total amount of food by the number of guests.
+
+Maximum amount of food per guest = Total food consumed / Number of guests
+Maximum amount of food per guest = 406 pounds / 163 guests
+
+Now, let's calculate the maximum amount of food per guest:
+
+Maximum amount of food per guest = 406 / 163
+Maximum amount of food per guest ≈ 2.49141104294479 pounds
+
+Since no individual guest could have consumed more than a certain amount of food, we need to round down to the nearest whole number or fraction that makes sense in the context of food consumption. It's not practical to consider fractions of a pound for food consumption, so we'll round down to the nearest whole number.
+
+Maximum amount of food per guest ≈ 2 pounds
+
+Therefore, the maximum amount of food an individual guest could have consumed is 2 pounds.",2,,terminal_single_number_review,terminal_single_number_review,numeric_scalar,"[""heuristic_terminal_answer_requires_individual_review""]","Therefore, the maximum amount of food an individual guest could have consumed is 2 pounds.",0,6f78b38a12a80e2b9f681c689f5b7d2e0f469ffd1449f88850d7e4b1bce9f784,Codex,2026-10-13T02:55:22.750668+00:00,person1-release-review-v2,retain_quarantine,"Invented rounding to two pounds would require at least203 guests, contradicting163; retain heuristic quarantine."
+risk:002a8eae67b0b9f2cf760d1852dbbd8a73bdd9ecb2a91d1de4ec97e9b2738365,002a8eae67b0b9f2cf760d1852dbbd8a73bdd9ecb2a91d1de4ec97e9b2738365,orca,"If John makes a contribution to a charity fund at school, the average contribution size will increase by a certain percentage reaching a certain amount per person. There were 2 other contributions made before John's. The size of his donation is $125. What is the average contribution size per person after John's donation?","To find the average contribution size per person after John's donation, we need to know the total amount contributed by the three people (including John) and then divide that by the number of contributors (3).
+
+Let's denote the average contribution size before John's donation as A and the total amount contributed by the first two people as T.
+
+Since there were 2 contributions before John, the total amount contributed by the first two people would be:
+T = 2 * A
+
+After John's contribution of $125, the new total amount contributed by all three people would be:
+New Total = T + $125
+New Total = 2 * A + $125
+
+The new average contribution size per person after John's donation would be the new total divided by the number of contributors (3):
+New Average = (2 * A + $125) / 3
+
+However, without knowing the initial average contribution size (A), we cannot calculate the exact new average contribution size per person. If you can provide the initial average or the total amount contributed by the first two people, I can help you calculate the new average.",,,missing,missing,missing,"[""missing_final_answer"", ""missing_or_sentinel_final_answer""]","However, without knowing the initial average contribution size (A), we cannot calculate the exact new average contribution size per person. If you can provide the initial average or the total amount contributed by the first two people, I can help you calculate the new average.",0,a7a47dcc67a3f9d795b79206e1451b3019ac4d29217af625c0b999a8fc228fea,Codex,2026-10-13T02:55:22.750894+00:00,person1-release-review-v2,retain_quarantine,Prior donation amounts absent; source explicitly cannot determine new average.
+risk:0054c91ac5a208ea8973f7e368daf2619944ee001a7fa0cacd32459fc143c414,0054c91ac5a208ea8973f7e368daf2619944ee001a7fa0cacd32459fc143c414,orca,What is the sum of +47 and -27?,The sum of +47 and -27 is +20.,,,ambiguous_terminal,ambiguous_terminal,missing,"[""ambiguous_final_answer"", ""missing_or_sentinel_final_answer"", ""suspected_answer_only_solution""]",The sum of +47 and -27 is +20.,0,7f6d64ad587dd61728cdda4f25e1b339449b90bc51cc0674147b6ad36a5a5c9d,Codex,2026-10-13T02:55:22.751442+00:00,person1-release-review-v2,retain_quarantine,Single answer sentence provides no worked solution and extraction is unresolved; retain answer-only exclusion.
+risk:2f654f340d87a14c7f389156863e6b9326302e83db05e278db1ca58f0c27eb48,2f654f340d87a14c7f389156863e6b9326302e83db05e278db1ca58f0c27eb48,orca,"right triangle abc is the base of the prism in the figure above . if ab = ac = √ 2 and the height of the prism is 3 , what is the volume of the prism ?","To find the volume of the prism, we need to calculate the area of the base triangle and then multiply it by the height of the prism.
+
+Since triangle ABC is a right triangle with AB = AC = √2, it is an isosceles right triangle. The area of an isosceles right triangle can be found using the formula:
+
+Area = (leg * leg) / 2
+
+In this case, both legs AB and AC are equal to √2, so the area of the base triangle ABC is:
+
+Area = (√2 * √2) / 2
+Area = (2) / 2
+Area = 1
+
+Now that we have the area of the base, we can find the volume of the prism by multiplying the area of the base by the height of the prism:
+
+Volume = Base Area * Height
+Volume = 1 * 3
+Volume = 3
+
+Therefore, the volume of the prism is 3 cubic units.",3,,corroborated_terminal_quantity,corroborated_terminal_quantity,numeric_scalar,"[""missing_or_external_diagram""]","Therefore, the volume of the prism is 3 cubic units.",0,3c5377a631c200777259cc13d7d42c73584df4d2fa22089087ac44d28f8691ce,Codex,2026-10-13T02:55:22.751635+00:00,person1-release-review-v2,retain_quarantine,Question refers to missing figure; retain conservative diagram exclusion despite plausible scalar calculation.
+risk:27615267ba4a6d5288a6a11216dd91667f4dcacec3e535bdb3f6d8cfd7cdd7d4,27615267ba4a6d5288a6a11216dd91667f4dcacec3e535bdb3f6d8cfd7cdd7d4,orca,"right triangle xyzs the base of the prism in the figure above . if xy = xz = â ˆ š 9 and the height of the prism is 6 , what is the volume of the prism ?","To find the volume of a prism, you use the formula:
+
+Volume = Base Area × Height
+
+Since the base of the prism is a right triangle (triangle XYZ), we need to find the area of the right triangle first. The area of a right triangle is given by:
+
+Area = (1/2) × Base × Height
+
+In a right triangle, the two sides that form the right angle are considered the base and height for the purpose of calculating the area. Since XY = XZ = √9, we know that both of these sides are equal in length. The square root of 9 is 3, so XY = XZ = 3.
+
+Now we can calculate the area of the right triangle XYZ:
+
+Area = (1/2) × XY × XZ
+Area = (1/2) × 3 × 3
+Area = (1/2) × 9
+Area = 4.5
+
+Now that we have the area of the base, we can calculate the volume of the prism. The height of the prism is given as 6.
+
+Volume = Base Area × Height
+Volume = 4.5 × 6
+Volume = 27
+
+So the volume of the prism is 27 cubic units.",27,,corroborated_terminal_quantity,corroborated_terminal_quantity,numeric_scalar,"[""missing_or_external_diagram""]",So the volume of the prism is 27 cubic units.,0,8d437f5f8558226583142d9e09eb3935575414fcbc63ca34eb44aeef88594367,Codex,2026-10-13T02:55:22.751789+00:00,person1-release-review-v2,retain_quarantine,Missing figure and mojibake square-root notation make supplied prism premise unreliable; retain exclusion.
+risk:00001e0cd8f01b4b0a3ba43804a81735594245bbbd3aa9ed3a141850703ada26,00001e0cd8f01b4b0a3ba43804a81735594245bbbd3aa9ed3a141850703ada26,orca,"A certain manufacturer of cake, muffin, and bread mixes has some buyers, of whom 50 purchase cake mix, 40 purchase muffin mix, and 16 purchase both cake mix and muffin mix. If a buyer is to be selected at random, the probability that the buyer selected will be one who purchases neither cake mix nor muffin mix is 0.26. How many buyers are there in total?","Let's denote the total number of buyers as \( T \), the number of cake mix buyers as \( C \), the number of muffin mix buyers as \( M \), and the number of buyers who purchase both as \( B \).
+
+From the information given, we have:
+\( C = 50 \)
+\( M = 40 \)
+\( B = 16 \)
+
+The probability that a buyer purchases neither cake mix nor muffin mix is 0.26, which means that 26% of the total buyers do not purchase either of the mixes. Let's denote the number of buyers who purchase neither as \( N \).
+
+We can use the principle of inclusion-exclusion to find \( N \). The principle of inclusion-exclusion states that for any two sets, the size of their union is the size of the first set plus the size of the second set minus the size of their intersection.
+
+So, the number of buyers who purchase either cake mix or muffin mix (or both) is:
+\( C + M - B \)
+
+The number of buyers who purchase neither is then:
+\( T - (C + M - B) \)
+
+Since \( N \) is 26% of \( T \), we can write:
+\( N = 0.26T \)
+
+Now we can set up the equation:
+\( T - (C + M - B) = 0.26T \)
+
+Substitute the given values for \( C \), \( M \), and \( B \):
+\( T - (50 + 40 - 16) = 0.26T \)
+\( T - 74 = 0.26T \)
+
+Now, solve for \( T \):
+\( T - 0.26T = 74 \)
+\( 0.74T = 74 \)
+\( T = 74 / 0.74 \)
+\( T = 100 \)
+
+So, there are 100 buyers in total.",,,ambiguous_multi_part,ambiguous_multi_part,missing,"[""ambiguous_final_answer"", ""missing_or_sentinel_final_answer"", ""suspected_multi_part_requires_review""]","So, there are 100 buyers in total.",0,559bba4e5e1736738b306ef6a7d10891d0c118a8fe2918ba5468838ffd15603d,Codex,2026-10-13T02:55:22.751936+00:00,person1-release-review-v2,retain_quarantine,Single total is solvable100 but both wording triggers conservative multipart flag; retain documented false positive without altering policy.
+risk:01e0016b6e0088dc0840aa5cb3c6f4c9911d743bec0751f6427bb896e8837a2c,01e0016b6e0088dc0840aa5cb3c6f4c9911d743bec0751f6427bb896e8837a2c,orca,Mary had 8 potatoes in the garden . The rabbits ate 3 of the potatoes. Mary has _____ potatoes now .,Mary now has 5 potatoes.,5,,terminal_single_number_review,terminal_single_number_review,numeric_scalar,"[""heuristic_terminal_answer_requires_individual_review"", ""suspected_answer_only_solution""]",Mary now has 5 potatoes.,0,e275173da2107f5763aedf4cbf0523dbb501415024e3973ead99a589ed8633a7,Codex,2026-10-13T02:55:22.752108+00:00,person1-release-review-v2,retain_quarantine,Only unsupported answer sentence for potato subtraction; retain lack-of-worked-solution exclusion.
+risk:00003fc39bcb3fc7f0ea67191698672dd6e5b9598ed6e5dc7c5563ecbbd099c9,00003fc39bcb3fc7f0ea67191698672dd6e5b9598ed6e5dc7c5563ecbbd099c9,orca,"The ferris wheel in paradise park has a certain number of seats. 14.0 people want to ride the ferris wheel, and it has to run 2.333333333 times for everyone to get a turn. How many seats does the ferris wheel have?","To find out the number of seats on the ferris wheel, we can divide the total number of people by the number of times the ferris wheel has to run to accommodate everyone.
+
+Number of people = 14.0
+Number of runs = 2.333333333
+
+Number of seats = Number of people / Number of runs
+Number of seats = 14.0 / 2.333333333
+
+Now, let's do the calculation:
+
+Number of seats ≈ 14.0 / 2.333333333
+Number of seats ≈ 6
+
+So, the ferris wheel has approximately 6 seats.",6,,terminal_single_number_review,terminal_single_number_review,numeric_scalar,"[""heuristic_terminal_answer_requires_individual_review""]","So, the ferris wheel has approximately 6 seats.",0,f04bee23ac46289e93e8794f0feb2cf62641dfd3f0ccdec144ca5111198d977c,Codex,2026-10-13T02:55:22.752256+00:00,person1-release-review-v2,retain_quarantine,Fractional ferris-wheel runs and heuristic approximate conclusion require corrected premise; retain exclusion.
+risk:000f2e365a5bd87cfc31574861f1d9b1df809ced5b97de87851c58f764c015e8,000f2e365a5bd87cfc31574861f1d9b1df809ced5b97de87851c58f764c015e8,orca,A four-digit number is 100 less than the fourth power of the sum of its digits. How many such numbers exist?,"Let's denote the four-digit number as \(ABCD\), where \(A\), \(B\), \(C\), and \(D\) are the digits from the thousands place to the units place, respectively. The value of the four-digit number \(ABCD\) is \(1000A + 100B + 10C + D\).
+
+According to the problem, the four-digit number is 100 less than the fourth power of the sum of its digits. So, we can write the equation as:
+
+\[1000A + 100B + 10C + D + 100 = (A + B + C + D)^4\]
+
+Now, since \(ABCD\) is a four-digit number, \(A\) cannot be 0. Therefore, \(A\) ranges from 1 to 9. The digits \(B\), \(C\), and \(D\) can range from 0 to 9.
+
+We need to find all combinations of \(A\), \(B\), \(C\), and \(D\) that satisfy the equation. To do this, we can use a brute-force approach by checking all possible combinations of \(A\), \(B\), \(C\), and \(D\) and counting the ones that satisfy the equation.
+
+Let's write a simple program to do this:
+
+```python
+count = 0
+for A in range(1, 10):
+ for B in range(0, 10):
+ for C in range(0, 10):
+ for D in range(0, 10):
+ number = 1000*A + 100*B + 10*C + D
+ sum_of_digits = A + B + C + D
+ if number + 100 == sum_of_digits**4:
+ count += 1
+ print(f""The number {number} is 100 less than the fourth power of the sum of its digits {sum_of_digits**4}"")
+print(f""There are {count} such numbers."")
+```
+
+This program will iterate through all possible values of \(A\), \(B\), \(C\), and \(D\), check if the condition is met, and count the number of such occurrences. It will also print out the numbers that meet the condition.",,,missing,missing,missing,"[""missing_final_answer"", ""missing_or_sentinel_final_answer""]","This program will iterate through all possible values of \(A\), \(B\), \(C\), and \(D\), check if the condition is met, and count the number of such occurrences. It will also print out the numbers that meet the condition.",0,8f700bd35cb40bb49ba81303a61c9a22ed4027d2d5052c4be8439dcac07f1d33,Codex,2026-10-13T02:55:22.752397+00:00,person1-release-review-v2,retain_quarantine,Source supplies unevaluated code rather than final count; retain missing-answer quarantine.
+risk:00079d7fca071281960538bb544205e34f115534e6c2413673fa50fb00b33fb1,00079d7fca071281960538bb544205e34f115534e6c2413673fa50fb00b33fb1,numina,"Problem 9. Each knight gives one affirmative answer to four questions, while a liar gives three. In total, there were $109+98+104+119=430$ affirmative answers. If all the residents of the city were knights, the total number of affirmative answers would be 200. The 230 extra ""yes"" answers come from the lies of the liars. Thus, the number of liars is $\frac{230}{2}=115$.
+
+Let $k$ be the number of knights living in the quarter $\Gamma$, then $119-k$ is the number of affirmative answers to the fourth question given by the liars. Therefore, the number of liars living in the quarter $\Gamma$ is $115-(119-k)=k-4$. In the other quarters, the number of liars is greater than the number of knights.","Answer: in the quarter $\Gamma$, for 4 people.",4,,terminal_single_number_review,parsed,numeric_scalar,"[""numina_solution_not_valid"", ""suspected_answer_only_solution"", ""unproven_solution_target_consistency""]","Answer: in the quarter $\Gamma$, for 4 people.",0,af4079230d435e05253df9fefbd2cee70a2f4896b740adf8bc4d6e7214000077,Codex,2026-10-13T02:55:22.752537+00:00,person1-release-review-v2,retain_quarantine,Problem includes derivation and solution only answer; upstream invalid solution and answer-only gates justify exclusion.
+risk:0005799f8c92d86ef0d58293ec2192d569737e71f4e1f76deff3c1fbede4910a,0005799f8c92d86ef0d58293ec2192d569737e71f4e1f76deff3c1fbede4910a,numina,"# Problem 9. (4 points)
+
+Among all fractions of the form $\frac{m}{n}$, where $m$ and $n$ are four-digit numbers with the same sum of digits, the largest one was chosen. Find it. Write the answer as an improper fraction (do not round or simplify!).
+
+#","# Problem 9. (4 points)
+
+Among all fractions of the form $\frac{m}{n}$, where $m$ and $n$ are four-digit numbers with the same sum of digits, the largest one was chosen. Find it. Write the answer as an improper fraction (do not round or simplify it).
+
+Answer: 9900/1089",\frac{9900}{1089},,terminal_single_number_review,parsed,numeric_scalar,"[""numina_solution_not_valid"", ""unproven_solution_target_consistency""]",Answer: 9900/1089,0,ff0787721d7c42f5e6fddfe97f7901c78cddf179113fcf8d5f4694480a075f19,Codex,2026-10-13T02:55:22.752678+00:00,person1-release-review-v2,retain_quarantine,"Source repeats question and gives fraction without derivation; upstream solution validity fails, retain exclusion."
+risk:000482091965e3afd0b73fda57332b7a20fff4243988eb4f41255bba73cbfa11,000482091965e3afd0b73fda57332b7a20fff4243988eb4f41255bba73cbfa11,numina,"193. Find the points of intersection of two circles $S_{1}$ and $S_{2}$, given by their centers $A_{1}$ and $A_{2}$ and radii $B_{1} C_{1}$ and $B_{2} C_{2}$.
+
+Note that if on a plane, even not a whole circle $S$ is given, but a line (however small!) arc $M N$ of a circle (with its center $O$), then it is already possible to solve with one ruler all construction problems that can be solved with a compass and ruler. This result follows from the fact that the points of intersection of any line $l$ with a circle $S$, the arc $M N$ of which is known to us, can be determined with one ruler (see problems 148 from § 3 and 154 from § 4, p. 83 and 89); therefore, all constructions that can be performed with one ruler when a circle $S$ is present on the plane can also be performed if not the entire circle is given, but only some of its arc.
+
+It should also be noted that the condition that the center of the circle $S$ (or the arc $M N$, if we consider a part of the circle to be given, not the whole circle) is known to us is very important. Indeed, it is not difficult to show that if the center of the given circle $S$ is unknown to us, then it is impossible to determine it without using a compass. The proof of this is similar to the reasoning we used above to show that it is impossible to construct a parallel to a known line with one ruler. Suppose we have found some construction, performable with one ruler, that allows us to determine the center $O$ of the circle $S$; the drawing of this construction represents some system of lines - lines, somehow related to the circle $S$, two of which intersect at the point $O$. Project this drawing onto a new plane $\pi^{\prime}$ so that the circle $S$ turns into a new circle $S^{\prime}$, and the center $O$ of the circle $S$ - into a point $O^{\prime}$, which is not the center of $S^{\prime}$; this is possible according to the results of § 3 (see, in particular, Theorem 1 on p. 71). In this case, we will obtain on the plane $\pi^{\prime}$ a drawing similar to the original one in every way, only this drawing will determine not the center of the circle $S^{\prime}$, but another point $O^{\prime}$. Therefore, there cannot exist a construction, performable with one ruler, that allows us to find the center of a given circle, and therefore no construction can give us the assurance that we have found the center of the circle $S$. But from this it follows that if the center of the given circle $S$ is unknown, then it is impossible to solve all problems that are solvable with a compass and ruler (for example, with a compass and ruler, it is possible to determine the center of $S$, but with one ruler, it is impossible to do so).
+
+Moreover, if two non-intersecting circles with unknown centers are given on the plane, then one ruler is insufficient to determine the centers of these circles ${ }^{2}$ (with the exception of the case when it is known that the circles are concentric; see problem 194b below)). However, it can be shown that if two intersecting or tangent circles (see problems 194a, b) or three (even if they do not intersect) circles ${ }^{2}$ are given on the plane, then it is always possible to determine the centers of these circles with one ruler, and, consequently, to solve all problems that are solvable with a compass and ruler.","193. Let us first find the points $P_{1}, Q_{1}$ and $P_{2}, Q_{2}$ of the line of centers $A_{1} A_{2}$ of the circles $S_{1}$ and $S_{2}$ (see Fig. 361; see problem 192). It is clear that if the segments $P_{1} Q_{1}$ and $P_{2} Q_{2}$ lie one outside the other, or one inside the other, then the circles $S_{1}$ and $S_{2}$ do not intersect. Leaving these cases aside, let us assume that the point $P_{2}$ lies inside the segment $P_{1} Q_{1}$, and the point $Q_{1}$ lies inside the segment $P^{2} Q^{2}$.
+
+Now let us determine the point $D$, where the line of centers $A_{1} A_{2}$ intersects the common chord $X Y$ of the circles $S_{1}$ and $S_{2}$ ( $X$ and $Y$ are the points of intersection of the circles). For this, consider the transformation of the line $A_{1} A_{2}$, which maps each of its points $R$ to a point $R^{\prime}$ such that $\angle R X R^{\prime}=90^{\circ}$. This is a projective transformation of the line, which can be described as follows: $A_{1} A_{2}$ is projected from the point $X$ onto an arbitrary circle $S$ passing through $X$, then $S$ is rotated around its center by $180^{\circ}$, and finally, $S$ is projected from $X$ back onto the line $A_{1} A_{2}$ (compare with the solution of problem 182a)). It is clear that as a result of this transformation, the point $P_{1}$ is mapped to the point $Q_{1}$, the point $Q_{1}$ to the point $P_{1}$, and the point $P_{2}$ to the point $Q_{2}$. Thus, we know the images of three points of the line $\ell$. Using a single ruler, we can determine the point to which any given point $M$ of the line $l$ is mapped under the considered projective transformation: indeed, we can easily perform our transformation by projecting the line $l$ onto another line $l_{1}$, then projecting the line $l_{1}$ onto another line $l_{2}$, and finally projecting $l_{2}$ back onto $l$ (see Fig. S9 on p. 109) ${ }^{1}$ ). In particular, the point $D$ will be found as the point to which the ""infinitely distant point"" of the line $l$ is mapped (for this, we need to draw a line parallel to $l$, which we can do using a single ruler; see problem 190a)).
+
+The line $X Y$ is the perpendicular erected at the point $D$ to the line $A_{1} A_{2}$; this perpendicular we can construct according to the solution of problem 190b). The desired points $X$ and $Y$ will now be found as the points of intersection of the constructed line $X Y$ with one of the circles $S_{1}$ or $S_{2}$ (see problem 192).",notfound,,ambiguous_multi_part,missing,missing,"[""missing_or_sentinel_final_answer"", ""numina_problem_not_valid"", ""suspected_multi_part_requires_review"", ""unproven_solution_target_consistency""]",The line $X Y$ is the perpendicular erected at the point $D$ to the line $A_{1} A_{2}$; this perpendicular we can construct according to the solution of problem 190b). The desired points $X$ and $Y$ will now be found as the points of intersection of the constructed line $X Y$ with one of the circles $S_{1}$ or $S_{2}$ (see problem 192).,0,abb9edc068a3c282c6704cbd90679b9b045aa61275087bd4738b5ff682ca52d6,Codex,2026-10-13T02:55:22.752818+00:00,person1-release-review-v2,retain_quarantine,"Construction proof refers to unavailable figures and earlier problems; not scalar verified answer, sentinel notfound retained in quarantine."
+risk:0000576ad447b4c7206b08686095c6d1fb8f3c17a1df254c06297a379976640e,0000576ad447b4c7206b08686095c6d1fb8f3c17a1df254c06297a379976640e,numina,A flat polygon $A_{1} A_{2} \ldots A_{n}$ is composed of p rigid rods connected by hinges. Can it be deformed into a triangle?,"If $n>4$, then see the solution of problem 78105. It is also proved there that for $n=4$ any quadrilateral can be deformed, except for a parallelogram.",proof,,terminal_single_number_review,missing,missing,"[""missing_or_sentinel_final_answer"", ""unproven_solution_target_consistency""]","If $n>4$, then see the solution of problem 78105. It is also proved there that for $n=4$ any quadrilateral can be deformed, except for a parallelogram.",0,e52fcb1506365e69334432f49e808dc3e26ed5fdc843672be1bb5dfb93673c00,Codex,2026-10-13T02:55:22.752960+00:00,person1-release-review-v2,retain_quarantine,Polygon deformation asks proof and references another absent solution; sentinel proof unsupported.
+risk:0005141228ccf4a71a6fd455dad7044f62c49f489169586f13ff18afcb8e9364,0005141228ccf4a71a6fd455dad7044f62c49f489169586f13ff18afcb8e9364,numina,"Emelyanov L.A.
+
+In a 99×101 table, cubes of natural numbers are arranged as shown in the figure.
+
+Prove that the sum of all numbers in the table is divisible by 200.
+
+#","Consider the same table, but written in reverse order. In the upper left corner of this table, the number 1993 is placed. Add this table to the original one. In the resulting table, each cell contains the sum of two cubes $a^{3}+b^{3}$ $=(a+b)\left(a^{2}-a b+b^{2}\right)=200\left(a^{2}-a b+b^{2}\right)$. Factor out the common factor 200. In the remaining table, all numbers appear twice, except for the numbers on the $100-$th diagonal, but there are even numbers there, so the sum of the numbers in the remaining table is even.
+
+Send a comment",proof,,missing,missing,missing,"[""outside_math_word_problem_metadata_scope"", ""missing_or_sentinel_final_answer"", ""missing_or_external_diagram"", ""unproven_solution_target_consistency""]",Send a comment,0,1ded7e27d4f21c4b5208825c2a561f66b0303c78cb3854e50b956d06d0e773e4,Codex,2026-10-13T02:55:22.753117+00:00,person1-release-review-v2,retain_quarantine,Cube-table proof relies on absent figure and proof sentinel outside word-problem target scope.
+risk:0023909ded1aa5015718625acdc998de682644e1c83569861626a53eb8a455f1,0023909ded1aa5015718625acdc998de682644e1c83569861626a53eb8a455f1,numina,"Find the pairs $(n, m)$ such that $n>2, m>2$, and there are infinitely many natural numbers $k$ such that $k^{n}+k^{2}-1$ divides $k^{m}+k-1$.
+
+将上面的文本翻译成英文，请保留源文本的换行和格式，直接输出翻译结果。 
+
+(Note: The note at the end is not part of the translation but is provided to clarify the instruction was followed.)","If $(n, m)$ is such a pair, let $P_{n}(X)=X^{n}+X^{2}-1$ and $P_{m}(X)=X^{m}+X-1$. Then the remainder $R$ in the Euclidean division of $P_{m}$ by $P_{n}$ is of degree strictly less than $n$. Thus, for an infinite number of integers $k, P_{n}(k)$ divides $R(k)$ and $\left|P_{n}(k)\right|>|R(k)|$, which shows that $R(k)=0$. $R$ therefore has an infinite number of roots, which shows that $R=0$ and that $P_{n}$ divides $P_{m}$. Working modulo $X^{n}+X^{2}-1$, we have $\frac{X^{n}}{1+X} \equiv 1-X$ (1+X is invertible because -1 is not a root of $X^{n}+X^{2}-1$) and $X^{m}+X-1 \equiv 0$ so $X^{m} \equiv 1-X$, hence $X^{m+1}+X^{m}-X^{n} \equiv 0$ and $P_{k}(X)=X^{k+1}+X^{k}-1$ is divisible by $P_{n}$, by setting $k=m-n$. Since $P_{k} \neq 0$, we know that $k+1 \geqslant n$.
+
+If $k+1=n$ then $P_{n}$ divides $P_{k}-P_{n}=X^{n-1}-X^{2}$, so $n=3$ and $m=5$, which works. On the contrary, if $k \geqslant n$, note that $P_{n}(0)=-1$ and that $P_{n}(1)=1: P_{n}$ therefore has a root $x \in (0 ; 1)$. However, $x^{k+1} < 1$. So $P_{k}(x)<P_{n}(x)=0$, which is absurd because $x$ is a root of $n$ that $P_{k}$ does not share.
+
+Thus, the only pair that works is $(3,5)$.
+
+## VI. Fourth Period
+
+## Content of this section
+
+1 Group A: arithmetic
+
+1 Arithmetic Course/TD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .","(3,5)",,ambiguous_multi_part,parsed,unsupported_multi_answer,"[""non_english_text"", ""unsupported_final_answer_structure"", ""suspected_multi_part_requires_review"", ""unproven_solution_target_consistency""]",1 Arithmetic Course/TD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .,0,8c06ac7ef12335584359b116199735dfd1ab0aad79a26c323ef3c1210cf992a7,Codex,2026-10-13T02:55:22.753258+00:00,person1-release-review-v2,retain_quarantine,"Pair-valued answer plus translation artifacts and textbook contents outside scalar English target scope; reviewed disposition only, no full proof certification."
+risk:000afa95de10331d722ef2b574f69eeeed7a70d764a7f6f78edfd64f5655ab64,000afa95de10331d722ef2b574f69eeeed7a70d764a7f6f78edfd64f5655ab64,numina,15. 证明每个具有 Hamilton 总的图包含 4-流. ( $G$ 的一个Hamilton 睈 (Hamilton cycle)是 $G$ 中一个包含所有顶点的圈.),None,proof,,missing,missing,missing,"[""outside_math_word_problem_metadata_scope"", ""missing_or_sentinel_final_answer"", ""numina_solution_not_valid"", ""non_english_text"", ""suspected_answer_only_solution"", ""unproven_solution_target_consistency""]",None,0,62d53b7353eb3287606a49afea79bfa98812915420e09628516f02cf22fbfba7,Codex,2026-10-13T02:55:22.753726+00:00,person1-release-review-v2,retain_quarantine,Chinese graph proof has solution None and proof sentinel; retain missing/non-English exclusion.
+risk:0004c6d2b0d3cec5831275c9981a20acf45131dc6ec266acff1235d076b7e416,0004c6d2b0d3cec5831275c9981a20acf45131dc6ec266acff1235d076b7e416,numina,Problem 4. Determine all non-zero natural numbers $p$ for which there exists $n \in \mathbb{N}^{*}$ such that $p^{n}+3^{n}$ divides the number $p^{n+1}+3^{n+1}$.,"Solution and grading: We have the equality $p^{n+1}+3^{n+1}=\left(p^{n}+3^{n}\right)(p+3)-3 p\left(p^{n-1}+3^{n-1}\right)$.
+
+If $p^{n}+3^{n}$ divides the number $p^{n+1}+3^{n+1}$, then $p^{n}+3^{n}$ divides $3 p\left(p^{n-1}+3^{n-1}\right)$. If we assume that $p$ and 3 are coprime, then $p^{n}+3^{n}$ will be coprime with 3 and with $p$. We obtain that $p^{n}+3^{n}$ divides $p^{n-1}+3^{n-1}$, which is false because $p^{n}+3^{n}>p^{n-1}+3^{n-1}>0$. From here we get that $p$ is divisible by
+
+![](https://cdn.mathpix.com/cropped/2024_06_07_8d1cc49a3c6af70227b2g-2.jpg?height=52&width=1832&top_left_y=1123&top_left_x=141)
+
+Let $k \in \mathbb{N}^{*}$ such that $p=3 k$. Then $3^{n}\left(k^{n}+1\right) \mid 3 \cdot 3 k \cdot 3^{n-1}\left(k^{n-1}+1\right)$, from which we get that $k^{n}+1 \mid 3 k^{n}+3 k$, i.e., $k^{n}+1 \mid 3 k^{n}+3+3 k-3$. Then $k^{n}+1 \mid 3 k-3$. For $n \geq 2$, we have $k^{n}+1 \geq$ $k^{2}+1>3 k-3$, so it remains that $3 k-3=0$ or $n=1$.
+
+The first case leads to $p=3$, and the property in the statement is valid for any $n \in \mathbb{N}^{*}$.
+
+In the second case, from $k+1 \mid 3 k-3$ we get $k \in\{1,2,5\}$, so $p \in\{3,6,15\}$. 2p","p\in{3,6,15}",,ambiguous_unmarked_math_expression,parsed,unsupported_multi_answer,"[""missing_or_external_diagram"", ""unsupported_final_answer_structure"", ""unproven_solution_target_consistency""]","In the second case, from $k+1 \mid 3 k-3$ we get $k \in\{1,2,5\}$, so $p \in\{3,6,15\}$. 2p",0,e659de24fddb003aa9b53f6d14a53794a7da70d98158325f584b29734a004cc0,Codex,2026-10-13T02:55:22.754113+00:00,person1-release-review-v2,retain_quarantine,Answer is a three-element set and proof includes missing external image; retain unsupported/external-diagram quarantine.
+risk:000c845f6b5daaf4b476326112b74b538859c7c438f6280d5b058890a86393d0,000c845f6b5daaf4b476326112b74b538859c7c438f6280d5b058890a86393d0,numina,"Let $S=\{(x,y) : x \in \{0,1,2,3,4\}, y \in \{0,1,2,3,4,5\}$, and $(x,y) \neq (0,0) \}$. Let $T$ be the set of all right triangles whose vertices are in $S$. For every right triangle $t=\triangle ABC$ with vertices $A$, $B$, and $C$ in counter-clockwise order and right angle at $A$, let $f(t)= \tan (\angle CBA)$. What is
+\[ \displaystyle \prod_{t \in T} f(t) \text{?} \]
+[asy]
+size((120));
+dot((1,0));
+dot((2,0));
+dot((3,0));
+dot((4,0));
+dot((0,1));
+dot((0,2));
+dot((0,3));
+dot((0,4));
+dot((0,5));
+dot((1,1));
+dot((1,2));
+dot((1,3));
+dot((1,4));
+dot((1,5));
+dot((2,1));
+dot((2,2));
+dot((2,3));
+dot((2,4));
+dot((2,5));
+dot((3,1));
+dot((3,2));
+dot((3,3));
+dot((3,4));
+dot((3,5));
+dot((4,1));
+dot((4,2));
+dot((4,3));
+dot((4,4));
+dot((4,5));
+label(""$\circ$"", (0,0));
+label(""$S$"", (-.7,2.5));
+[/asy]
+
+$\textbf{(A)}\ 1 \qquad \textbf{(B)}\ \frac{625}{144} \qquad \textbf{(C)}\ \frac{125}{24} \qquad \textbf{(D)}\ 6 \qquad \textbf{(E)}\ \frac{625}{24}$",,,,missing,missing,missing,"[""missing_solution"", ""outside_math_word_problem_metadata_scope"", ""missing_or_sentinel_final_answer"", ""inline_diagram_code"", ""suspected_multi_part_requires_review"", ""unproven_solution_target_consistency""]",,0,bea4bc09f9a4455113d99a9f6c2ad801e0dcaf731779c30ce08782e1dc81b934,Codex,2026-10-13T02:55:22.754471+00:00,person1-release-review-v2,retain_quarantine,Empty solution and target with inline Asymptote diagram; retain exclusion.
+risk:0001801721ac115a36e71495fb78e425eb1bd21e5f71abd3b2a489d303e361fa,0001801721ac115a36e71495fb78e425eb1bd21e5f71abd3b2a489d303e361fa,numina,"Given the disjoint finite sets of natural numbers $ A $ and $ B $, consisting of $ n $ and $ m $ elements, respectively. It is known that every natural number belonging to $ A $ or $ B $ satisfies at least one of the conditions $ k + 17 \in A $, $ k-31 \in B $. Prove that $ 17n = 31m $",,,,missing,missing,missing,"[""missing_solution"", ""outside_math_word_problem_metadata_scope"", ""missing_or_sentinel_final_answer"", ""suspected_multi_part_requires_review"", ""unproven_solution_target_consistency""]",,0,b3177a5e1ecc73005973c5d3efeda2e03a776bc2e3bbfa8a9e047489e8fd777a,Codex,2026-10-13T02:55:22.754636+00:00,person1-release-review-v2,retain_quarantine,Empty solution for proof task and missing target; retain exclusion.
+risk:0004f94c9ebbddd0d97e2e889551fd07e0b2f4cc26eddd4c62c9ad7f51ee35ac,0004f94c9ebbddd0d97e2e889551fd07e0b2f4cc26eddd4c62c9ad7f51ee35ac,numina,"Two men at points $R$ and $S$, $76$ miles apart, set out at the same time to walk towards each other. The man at $R$ walks uniformly at the rate of $4\dfrac{1}{2}$ miles per hour; the man at $S$ walks at the constant rate of $3\dfrac{1}{4}$ miles per hour for the first hour, at $3\dfrac{3}{4}$ miles per hour for the second hour,
+and so on, in arithmetic progression. If the men meet $x$ miles nearer $R$ than $S$ in an integral number of hours, then $x$ is:
+
+$\textbf{(A)}\ 10 \qquad
+\textbf{(B)}\ 8 \qquad
+\textbf{(C)}\ 6 \qquad
+\textbf{(D)}\ 4 \qquad
+\textbf{(E)}\ 2$",,,,missing,missing,missing,"[""missing_solution"", ""outside_math_word_problem_metadata_scope"", ""missing_or_sentinel_final_answer"", ""suspected_multi_part_requires_review"", ""unproven_solution_target_consistency""]",,0,443a0922369d068a2c113ae99d3a0c3f6832d65dcc9da49f7142a892cebc49dc,Codex,2026-10-13T02:55:22.754782+00:00,person1-release-review-v2,retain_quarantine,Empty solution and target on multichoice walking problem; retain exclusion.
+risk:003dc2fafc9c6c95081c18cdc09f0a45f307a550778d8b70979cd0bd9085c8a4,003dc2fafc9c6c95081c18cdc09f0a45f307a550778d8b70979cd0bd9085c8a4,numina,"Compute $3 \begin{pmatrix} 2 \\ -8 \end{pmatrix} - 2 \begin{pmatrix} X \\ -7 \end{pmatrix}$.
+If we know the answer to the above question is \begin{pmatrix}4\-10\end{pmatrix}, what is the value of unknown variable X?","To solve the problem, we need to compute the expression \(3 \begin{pmatrix} 2 \\ -8 \end{pmatrix} - 2 \begin{pmatrix} X \\ -7 \end{pmatrix}\) and then determine the value of the unknown variable \(X\) given that the result is \(\begin{pmatrix} 4 \\ -10 \end{pmatrix}\).
+
+Let's break it down step by step:
+
+1. **Compute \(3 \begin{pmatrix} 2 \\ -8 \end{pmatrix}\):**
+ \[
+ 3 \begin{pmatrix} 2 \\ -8 \end{pmatrix} = \begin{pmatrix} 3 \cdot 2 \\ 3 \cdot -8 \end{pmatrix} = \begin{pmatrix} 6 \\ -24 \end{pmatrix}
+ \]
+
+2. **Compute \(-2 \begin{pmatrix} X \\ -7 \end{pmatrix}\):**
+ \[
+ -2 \begin{pmatrix} X \\ -7 \end{pmatrix} = \begin{pmatrix} -2 \cdot X \\ -2 \cdot -7 \end{pmatrix} = \begin{pmatrix} -2X \\ 14 \end{pmatrix}
+ \]
+
+3. **Subtract the second vector from the first:**
+ \[
+ \begin{pmatrix} 6 \\ -24 \end{pmatrix} + \begin{pmatrix} -2X \\ 14 \end{pmatrix} = \begin{pmatrix} 6 - 2X \\ -24 + 14 \end{pmatrix} = \begin{pmatrix} 6 - 2X \\ -10 \end{pmatrix}
+ \]
+
+We are given that the result of this operation is \(\begin{pmatrix} 4 \\ -10 \end{pmatrix}\). Therefore, we can set up the following system of equations:
+\[
+\begin{pmatrix} 6 - 2X \\ -10 \end{pmatrix} = \begin{pmatrix} 4 \\ -10 \end{pmatrix}
+\]
+
+From the first component of the vectors, we get:
+\[
+6 - 2X = 4
+\]
+
+Solving for \(X\):
+\[
+6 - 2X = 4
+\]
+\[
+6 - 4 = 2X
+\]
+\[
+2 = 2X
+\]
+\[
+X = 1
+\]
+
+Thus, the value of the unknown variable \(X\) is \(\boxed{1}\).",-1,,boxed,parsed,numeric_scalar,"[""terminal_answer_disagrees_with_target"", ""unproven_solution_target_consistency""]",\boxed{1},0,b6d6b9645354f969f4f91fa18d15b631abdc533c5f198a0a7da82ef9edb18d8f,Codex,2026-10-13T02:55:22.754927+00:00,person1-release-review-v2,retain_quarantine,Vector equation gives X1 whereas supplied target is -1; retain contradictory-target quarantine.
+risk:00593cf31905ce34bd55c3163ad117cf84d4b9ccf497b373b6d31764779af286,00593cf31905ce34bd55c3163ad117cf84d4b9ccf497b373b6d31764779af286,numina,"The sequence 1,000,000; 500,000; 250,000 and so on, is made by repeatedly dividing by X. The last integer in this sequence is 15625. What is the value of unknown variable X?","To determine the value of the unknown variable \(X\) in the given sequence, we start by observing that each term in the sequence is obtained by dividing the previous term by \(X\). The sequence given is: 1,000,000; 500,000; 250,000; and so on, with the last integer in the sequence being 15625.
+
+First, we note that the first term \(a_1\) is 1,000,000 and the second term \(a_2\) is 500,000. The common ratio \(r\) (which is equal to \(X\)) can be found by dividing the second term by the first term:
+\[
+r = \frac{500,000}{1,000,000} = \frac{1}{2}
+\]
+Thus, \(X = 2\).
+
+Next, we need to confirm that 15625 is indeed the last integer in the sequence when we repeatedly divide by 2. The general form of the \(n\)-th term of a geometric sequence is given by:
+\[
+a_n = a_1 \cdot r^{n-1}
+\]
+Substituting the known values, we have:
+\[
+15625 = 1,000,000 \cdot \left(\frac{1}{2}\right)^{n-1}
+\]
+To solve for \(n\), we first isolate the exponent term:
+\[
+\left(\frac{1}{2}\right)^{n-1} = \frac{15625}{1,000,000}
+\]
+Simplifying the right-hand side, we get:
+\[
+\left(\frac{1}{2}\right)^{n-1} = \frac{15625}{10^6}
+\]
+We recognize that 15625 can be expressed as a power of 5:
+\[
+15625 = 5^6
+\]
+And \(10^6\) can be expressed as \(2^6 \cdot 5^6\):
+\[
+\left(\frac{1}{2}\right)^{n-1} = \frac{5^6}{2^6 \cdot 5^6} = \frac{1}{2^6} = \left(\frac{1}{2}\right)^6
+\]
+Since the bases are the same, we can equate the exponents:
+\[
+n-1 = 6
+\]
+Solving for \(n\), we get:
+\[
+n = 7
+\]
+This confirms that the 7th term in the sequence is 15625. To verify, we can calculate the 7th term:
+\[
+a_7 = 1,000,000 \cdot \left(\frac{1}{2}\right)^6 = 1,000,000 \cdot \frac{1}{64} = 15625
+\]
+Thus, the value of \(X\) is indeed 2. Therefore, the final answer is:
+\[
+\boxed{2}
+\]",5,,boxed,parsed,numeric_scalar,"[""terminal_answer_disagrees_with_target"", ""unproven_solution_target_consistency""]",\boxed{2},0,af512785948c902ad138ecce4c064b694f2f5f02b751a01d76b4bd75dcd5e0ed,Codex,2026-10-13T02:55:22.755077+00:00,person1-release-review-v2,retain_quarantine,"Sequence divisor clearly2, supplied target5 contradicts terminal boxed2; retain exclusion."
+risk:f257aa4b0f5228ee58002ef1078bf64aa9c9ddcba4640cc5dfd454ef15f5062f,f257aa4b0f5228ee58002ef1078bf64aa9c9ddcba4640cc5dfd454ef15f5062f,numina,,"To solve the problem of determining how many three-digit numbers are divisible by 3, we will follow these steps:
+
+1. **Identify the range of three-digit numbers:**
+ Three-digit numbers range from 100 to 999.
+
+2. **Determine the divisibility rule for 3:**
+ A number is divisible by 3 if the sum of its digits is divisible by 3.
+
+3. **Find the smallest three-digit number divisible by 3:**
+ The smallest three-digit number is 100. We check if 100 is divisible by 3:
+ \[
+ 1 + 0 + 0 = 1 \quad (\text{not divisible by 3})
+ \]
+ The next number is 101. We check if 101 is divisible by 3:
+ \[
+ 1 + 0 + 1 = 2 \quad (\text{not divisible by 3})
+ \]
+ The next number is 102. We check if 102 is divisible by 3:
+ \[
+ 1 + 0 + 2 = 3 \quad (\text{divisible by 3})
+ \]
+ Therefore, the smallest three-digit number divisible by 3 is 102.
+
+4. **Find the largest three-digit number divisible by 3:**
+ The largest three-digit number is 999. We check if 999 is divisible by 3:
+ \[
+ 9 + 9 + 9 = 27 \quad (\text{divisible by 3})
+ \]
+ Therefore, the largest three-digit number divisible by 3 is 999.
+
+5. **Form an arithmetic sequence:**
+ The sequence of three-digit numbers divisible by 3 forms an arithmetic sequence where the first term \(a\) is 102, the common difference \(d\) is 3, and the last term \(l\) is 999.
+
+6. **Use the formula for the \(n\)-th term of an arithmetic sequence:**
+ The \(n\)-th term of an arithmetic sequence is given by:
+ \[
+ a_n = a + (n-1)d
+ \]
+ We set \(a_n = 999\) and solve for \(n\):
+ \[
+ 999 = 102 + (n-1) \cdot 3
+ \]
+ Simplify the equation:
+ \[
+ 999 - 102 = (n-1) \cdot 3
+ \]
+ \[
+ 897 = (n-1) \cdot 3
+ \]
+ Divide both sides by 3:
+ \[
+ 299 = n-1
+ \]
+ Add 1 to both sides:
+ \[
+ n = 300
+ \]
+
+Therefore, the number of three-digit numbers divisible by 3 is \(\boxed{300}\).",300,,boxed,parsed,numeric_scalar,"[""empty_problem""]",\boxed{300},0,71f094127c75d8f0ec0a2be6b1b7ec6c486a6cdbcdab334c3be63a05b1c8f3fa,Codex,2026-10-13T02:55:22.755229+00:00,person1-release-review-v2,retain_quarantine,Problem text empty despite worked solution and target300; cannot provide trustworthy question input.
+risk:0017dfa4a852a3fdc382500d5edcdb2add8634da02bf3088aacf8fdb23463fb4,0017dfa4a852a3fdc382500d5edcdb2add8634da02bf3088aacf8fdb23463fb4,numina,Calculate:$(1)\left(-8\right)+10-2+\left(-1\right)$;$(2)-2^{2}+|2-3|-2\times \left(-1\right)^{2022}$;$(3)(\frac{2}{3}-\frac{11}{12}-\frac{14}{15})×(-60)$;$(4)(-2)^3×8-8×(\frac{1}{2})^3+8÷\frac{1}{8}$.,"### Problem 1: Calculate $(1)\left(-8\right)+10-2+\left(-1\right)$
+
+#### Solution:
+\[
+\begin{align*}
+\left(-8\right)+10-2+\left(-1\right) &= \left(-8\right)+10+\left(-2\right)+\left(-1\right) \\
+&= (-8) + 10 - 2 - 1 \\
+&= 2 - 2 - 1 \\
+&= 0 - 1 \\
+&= -1
+\end{align*}
+\]
+Final Answer: $\boxed{-1}$
+
+### Problem 2: Calculate $-2^{2}+|2-3|-2\times \left(-1\right)^{2022}$
+
+#### Solution:
+\[
+\begin{align*}
+-2^{2}+|2-3|-2\times \left(-1\right)^{2022} &= -4 + |2-3| - 2 \times 1 \\
+&= -4 + 1 - 2 \\
+&= -4 + 1 - 2 \\
+&= -3 - 2 \\
+&= -5
+\end{align*}
+\]
+Final Answer: $\boxed{-5}$
+
+### Problem 3: Calculate $(\frac{2}{3}-\frac{11}{12}-\frac{14}{15})\times(-60)$
+
+#### Solution:
+\[
+\begin{align*}
+(\frac{2}{3}-\frac{11}{12}-\frac{14}{15})\times(-60) &= \frac{2}{3}\times (-60) - \frac{11}{12}\times (-60) - \frac{14}{15}\times (-60) \\
+&= -40 + 55 + 56 \\
+&= 15 + 56 \\
+&= 71
+\end{align*}
+\]
+Final Answer: $\boxed{71}$
+
+### Problem 4: Calculate $(-2)^3\times8-8\times(\frac{1}{2})^3+8\div\frac{1}{8}$
+
+#### Solution:
+\[
+\begin{align*}
+(-2)^3\times8-8\times(\frac{1}{2})^3+8\div\frac{1}{8} &= (-8)\times 8 - 8 \times \frac{1}{8} + 8 \times 8 \\
+&= -64 - 1 + 64 \\
+&= -65 + 64 \\
+&= -1
+\end{align*}
+\]
+Final Answer: $\boxed{-1}$",-1,,ambiguous_multiple_final_markers,parsed,numeric_scalar,"[""nonterminal_or_multiple_final_markers"", ""unproven_solution_target_consistency""]",Final Answer: $\boxed{-1}$,0,54935eb7230d0f06bb40ea5b375bf75293ed753b70a012ed2e57330660024676,Codex,2026-10-13T02:55:22.755382+00:00,person1-release-review-v2,retain_quarantine,"Four separate calculations have four final blocks; target -1 captures only last, retain multipart quarantine."
+risk:0068680c8aa24feda4f26b719381850ff4e23d3df0cd864b327acc6b670e0161,0068680c8aa24feda4f26b719381850ff4e23d3df0cd864b327acc6b670e0161,numina,"Given the function $f\left(\begin{matrix}x- \frac{1}{x}\end{matrix}\right)=x^2+ \frac{1}{x^{2}}$, find the value of $f(3)$.
+A: $8$
+B: $9$
+C: $11$
+D: $10$","Analysis:
+This problem focuses on finding the value of a given function, specifically a composite function. It is a moderately difficult problem.
+
+Solution Enhancement:
+We are given the function $f(x- \frac{1}{x})=x^2+ \frac{1}{x^{2}}$. To simplify this, we can first note that $x^2+ \frac{1}{x^{2}}=(x- \frac{1}{x})^{2}+2$.
+
+To find the value of $f(3)$, we substitute $x=3$ into the simplified equation:
+
+$$f\left(3-\frac{1}{3}\right)=\left(3-\frac{1}{3}\right)^{2}+2$$
+
+$$f\left(\frac{8}{3}\right)=\left(\frac{8}{3}\right)^{2}+2$$
+
+However, we want to find the value of $f(3)$, not $f\left(\frac{8}{3}\right)$. To do this, we need to find a value of $x$ such that $x-\frac{1}{x}=3$. Solving this equation for $x$ yields $x=3$.
+
+Therefore, we can now find the value of $f(3)$:
+
+$$f(3)=3^{2}+2=11$$
+
+Final answer: $\boxed{C: 11}$",C: 11,,ambiguous_unsupported_structure,parsed,unsupported_structure,"[""outside_math_word_problem_metadata_scope"", ""unsupported_final_answer_structure"", ""unverified_terminal_marker_target"", ""unproven_solution_target_consistency""]",Final answer: $\boxed{C: 11}$,0,6005d808acd35ea01a72d84f94b5c31c8b0588d05954f780795d8fa767749683,Codex,2026-10-13T02:55:22.755545+00:00,person1-release-review-v2,retain_quarantine,Choice-bearing target C:11 unsupported; source falsely solves x-1/x=3 as x3. Retain quarantine.
+risk:00cc64ea8391329396731e4852294df1ef9af5c909cf005b06695e228de0dcdb,00cc64ea8391329396731e4852294df1ef9af5c909cf005b06695e228de0dcdb,numina,"Calculate:$(1)$ Calculate: $(-\frac{1}{2})^{0}+|1-\tan60°|+\sqrt{12} \times (-2)^{-1}$;$(2)$ Simplify first, then evaluate: $(\frac{x^{2}-3x+5}{x-1}+3-x)÷\frac{x^{2}+4x+4}{1-x}$, where $x=\sqrt{3}-2$.","### Problem 1 Calculation:
+
+Given: $(-\frac{1}{2})^{0}+|1-\tan60°|+\sqrt{12} \times (-2)^{-1}$
+
+Step 1: Evaluate each term separately.
+
+- $(-\frac{1}{2})^{0} = 1$ because any non-zero number raised to the power of 0 equals 1.
+- $|1-\tan60°| = |1-\sqrt{3}|$ because $\tan60° = \sqrt{3}$.
+- $\sqrt{12} \times (-2)^{-1} = 2\sqrt{3} \times (-\frac{1}{2})$ since $\sqrt{12} = 2\sqrt{3}$ and $(-2)^{-1} = -\frac{1}{2}$.
+
+Step 2: Combine the results.
+
+- $1 + |1-\sqrt{3}| + 2\sqrt{3} \times (-\frac{1}{2})$
+- $= 1 + (\sqrt{3}-1) + 2\sqrt{3} \times (-\frac{1}{2})$ because $1-\sqrt{3}$ is negative, and the absolute value makes it positive.
+- $= 1 + \sqrt{3} - 1 - \sqrt{3}$ after distributing the multiplication.
+
+Final Answer: $\boxed{0}$
+
+### Problem 2 Simplification and Evaluation:
+
+Given: $(\frac{x^{2}-3x+5}{x-1}+3-x)÷\frac{x^{2}+4x+4}{1-x}$, where $x=\sqrt{3}-2$.
+
+Step 1: Simplify the expression.
+
+- $\frac{x^{2}-3x+5}{x-1}+3-x$ simplifies to $\frac{x^{2}-3x+5+3(x-1)}{x-1}$.
+- $\frac{x^{2}+4x+4}{1-x}$ simplifies to $\frac{(x+2)^{2}}{-(x-1)}$ because $1-x = -(x-1)$.
+
+Step 2: Combine the simplified expressions.
+
+- $\frac{x^{2}-3x+5+3x-3-x^{2}+x}{x-1} \cdot \frac{-(x-1)}{(x+2)^{2}}$
+- $\frac{x+2}{x-1} \cdot \frac{-(x-1)}{(x+2)^{2}}$
+
+Step 3: Further simplify.
+
+- $-\frac{1}{x+2}$ after canceling out $(x-1)$ and simplifying.
+
+Step 4: Substitute $x=\sqrt{3}-2$ into the simplified expression.
+
+- $-\frac{1}{\sqrt{3}-2+2} = -\frac{1}{\sqrt{3}}$
+- Multiplying numerator and denominator by $\sqrt{3}$ gives $-\frac{\sqrt{3}}{3}$.
+
+Final Answer: $\boxed{-\frac{\sqrt{3}}{3}}$",-\frac{\sqrt{3}}{3},,ambiguous_multiple_final_markers,parsed,symbolic_scalar,"[""nonterminal_or_multiple_final_markers"", ""unproven_solution_target_consistency""]",Final Answer: $\boxed{-\frac{\sqrt{3}}{3}}$,0,5e4d853ae89840f81c8697901eb185f8f4d1e64959c0207c69b892afd069b06e,Codex,2026-10-13T02:55:22.755696+00:00,person1-release-review-v2,retain_quarantine,"Two separate calculations have two final blocks; only second target represented, retain exclusion."
+risk:00008e19c0682071c75d135b09643c576756a448425a69b8c5a53130438e413c,00008e19c0682071c75d135b09643c576756a448425a69b8c5a53130438e413c,numina,"Given vectors \\(a=(1,-2)\\) and \\(b=(-3,5)\\), if \\((2a+b) \perp c\\), then the coordinates of \\(c\\) can be
+
+A: \\((-2,3)\\)
+
+B: \\((-2,-3)\\)
+
+C: \\((4,-4)\\)
+
+D: \\((4,4)\\)","To find the vector \\(c\\) that is perpendicular to \\((2a+b)\\), we first calculate \\(2a+b\\). Given \\(a=(1,-2)\\) and \\(b=(-3,5)\\), we have:
+
+\\[
+2a+b = 2(1,-2)+(-3,5) = (2,-4)+(-3,5) = (-1,1)
+\\]
+
+For two vectors to be perpendicular, their dot product must be zero. Thus, we have:
+
+\\[
+(-1,1) \cdot (x,y) = 0
+\\]
+
+Substituting the given options into \\((x,y)\\):
+
+A: \\((-1,1) \cdot (-2,3) = 5 \neq 0\\)
+
+B: \\((-1,1) \cdot (-2,-3) = -1 \neq 0\\)
+
+C: \\((-1,1) \cdot (4,-4) = -8 \neq 0\\)
+
+D: \\((-1,1) \cdot (4,4) = 0\\)
+
+Therefore, the coordinates of \\(c\\) that make \\((2a+b) \perp c\\) can be \\(\boxed{\text{D: }(4,4)}\).","\text{D: }(4,4)",,ambiguous_boxed_structure,parsed,unsupported_multi_answer,"[""outside_math_word_problem_metadata_scope"", ""unsupported_final_answer_structure"", ""unproven_solution_target_consistency""]","Therefore, the coordinates of \\(c\\) that make \\((2a+b) \perp c\\) can be \\(\boxed{\text{D: }(4,4)}\).",0,979bf3289919d3b3fb9dadd835075a8ead4ba5950f61e6be4e98b6700fe6673f,Codex,2026-10-13T02:55:22.755844+00:00,person1-release-review-v2,retain_quarantine,Coordinate pair with option label unsupported by scalar contract; retain exclusion without claiming full proof review.
+risk:000083929e77c61c315927aac968c32765bd9342f029fa78f0e91f75efbd4c3b,000083929e77c61c315927aac968c32765bd9342f029fa78f0e91f75efbd4c3b,numina,"Among the following functions, the one that is an even function and decreases on the interval $(0, +\infty)$ is (　　) 
+A: $y=x^2$ 
+B: $y=x^3$ 
+C: $y=x^{-2}$ 
+D: $y=x^{-3}$","Since $y=x^2$ is an even function and increases on $(0, +\infty)$, 
+thus, option A does not meet the requirements; 
+Since $y=x^3$ is an odd function and increases on $(0, +\infty)$, 
+thus, option B does not meet the requirements; 
+Since $y=x^{-2}$ is an even function and decreases monotonically on $(0, +\infty)$, 
+thus, option C meets the requirements; 
+Since $y=x^{-3}$ is not an even function, thus, option D does not meet the requirements. 
+Therefore, the correct answer is $\boxed{C}$. 
+By judging the monotonicity and parity of the four functions one by one, the answer is obtained. 
+This question mainly examines the judgment of the monotonicity and parity of functions, and it is a basic question.",C,,missing,parsed,symbolic_scalar,"[""outside_math_word_problem_metadata_scope"", ""unproven_solution_target_consistency""]","Since $y=x^2$ is an even function and increases on $(0, +\infty)$, 
+thus, option A does not meet the requirements; 
+Since $y=x^3$ is an odd function and increases on $(0, +\infty)$, 
+thus, option B does not meet the requirements; 
+Since $y=x^{-2}$ is an even function and decreases monotonically on $(0, +\infty)$, 
+thus, option C meets the requirements; 
+Since $y=x^{-3}$ is not an even function, thus, option D does not meet the requirements. 
+Therefore, the correct answer is $\boxed{C}$. 
+By judging the monotonicity and parity of the four functions one by one, the answer is obtained. 
+This question mainly examines the judgment of the monotonicity and parity of functions, and it is a basic question.",0,654b63e9785a99753786c4a170b9ce3efef66aa8393babd1ca4193b4d803c8f1,Codex,2026-10-13T02:55:22.756000+00:00,person1-release-review-v2,retain_quarantine,Boxed option C is followed by commentary; not terminal verified scalar and outside metadata scope.
+risk:0040a13833c6dbac602f744a9e68bf3b3e3a6bbe509dcd44b7a41dd53b5b0ef1,0040a13833c6dbac602f744a9e68bf3b3e3a6bbe509dcd44b7a41dd53b5b0ef1,numina,"There are seven numbers 1.7, 1/5, 1/5, 1, 3/5, 3/8, and 1.4. When you write them down from the largest to the smallest, which number comes the fourth?","To determine the fourth largest number, we need to compare the numbers and order them from largest to smallest.
+
+First, let's convert all the fractions to decimals to make it easier to compare:
+
+1.7 (already a decimal)
+1/5 = 0.2
+1/5 = 0.2
+1 (already a whole number, equivalent to 1.0 as a decimal)
+3/5 = 0.6
+3/8 = 0.375
+1.4 (already a decimal)
+
+Now, let's order them from largest to smallest:
+
+1.7, 1.4, 1.0 (or 1), 0.6, 0.375, 0.2, 0.2
+
+The fourth largest number in this list is $\boxed{0.6,}$ which is the decimal equivalent of 3/5.","0.6,",,ambiguous_terminal,parsed,unsupported_multi_answer,"[""suspect_answer_format"", ""embedded_orca_source_removed"", ""unsupported_final_answer_structure"", ""unproven_solution_target_consistency""]","The fourth largest number in this list is $\boxed{0.6,}$ which is the decimal equivalent of 3/5.",0,0a5bd2c5f4e58b51512f5437ca4bde3bc8f161ca4b9b84a654800fc729b5c1a2,Codex,2026-10-13T02:55:22.756152+00:00,person1-release-review-v2,retain_quarantine,Boxed0.6 includes trailing comma and embedded Orca source excluded; retain formatting/provenance quarantine.
+risk:0000b44ea4e6241395d2c3878f0e82e330b3add923615c49a1455f1d177f8a73,0000b44ea4e6241395d2c3878f0e82e330b3add923615c49a1455f1d177f8a73,numina,Sammy can eat 15 pickle slices. His twin sister Tammy can eat twice as much as Sammy. Their older brother Ron eats 20% fewer pickle slices than Tammy. How many pickle slices does Ron eat?,"If Sammy can eat 15 pickle slices and Tammy can eat twice as much as Sammy, then Tammy can eat:
+
+15 slices * 2 = 30 slices
+
+Ron eats 20% fewer pickle slices than Tammy, so we need to calculate 20% of Tammy's 30 slices:
+
+20% of 30 slices = 0.20 * 30 = 6 slices
+
+Now, we subtract that from Tammy's total to find out how many slices Ron eats:
+
+30 slices - 6 slices = 24 slices
+
+Ron eats $\boxed{24}$ pickle slices.",24,,corroborated_terminal_quantity,parsed,numeric_scalar,"[""embedded_orca_source_removed""]",Ron eats $\boxed{24}$ pickle slices.,0,ab4c02eda4f3754e32924ebe5ac350806a94fe7afc7e7ed5d8e85de9f45a9e63,Codex,2026-10-13T02:55:22.756308+00:00,person1-release-review-v2,retain_quarantine,Pickle reasoning24 plausible but embedded Orca source remains excluded by declared provenance policy.
+risk:00007f302451d31337c769ab703798fa39d597c64aeafba9b898035e545f0f0a,00007f302451d31337c769ab703798fa39d597c64aeafba9b898035e545f0f0a,numina,Dan owns an ice cream shop and every nth customer gets a free ice cream cone. Cones cost $2 each. He sold $100 worth of cones and gave away 10 free ones. What is the value of n?,"Let's denote the number of paying customers as P and the number of free cones given away as F. We know that F = 10 and the total revenue from the paying customers is $100.
+
+Since each cone costs $2, we can calculate the number of cones sold to paying customers (P) by dividing the total revenue by the price per cone:
+
+P = $100 / $2 = 50 cones
+
+Now, we know that Dan gives away a free cone to every nth customer, which means that for every n customers, there is 1 free cone. The total number of customers (T) is the sum of paying customers (P) and free cones (F):
+
+T = P + F
+
+We can now plug in the values we know:
+
+T = 50 (paying customers) + 10 (free cones)
+T = 60 customers
+
+Since every nth customer gets a free cone, and there are 10 free cones given away, we can divide the total number of customers (T) by the number of free cones (F) to find the value of n:
+
+n = T / F
+n = 60 / 10
+n = 6
+
+Therefore, every $\boxed{6th}$ customer gets a free ice cream cone.",6th,,corroborated_terminal_quantity,parsed,unsupported_prose,"[""embedded_orca_source_removed"", ""unsupported_final_answer_structure"", ""unproven_solution_target_consistency""]","Therefore, every $\boxed{6th}$ customer gets a free ice cream cone.",0,4f8f632269b71dc8a35ca9c2ccdde93b06a10e38f5d6df4c8242a8e65e256229,Codex,2026-10-13T02:55:22.756475+00:00,person1-release-review-v2,retain_quarantine,Ordinal6th unsupported scalar and embedded Orca provenance; retain exclusion.
+risk:0011c54b687a0a024d044f0d8dc995487b54549b3de7750527c34a56de6001ac,0011c54b687a0a024d044f0d8dc995487b54549b3de7750527c34a56de6001ac,numina,"5 * 2 is a 3 digit number with * is a missing digit . if the number is divisible by 6 , the missing digit is","To find the missing digit, we need to consider the properties of a number that is divisible by 6. A number is divisible by 6 if it is divisible by both 2 and 3.
+
+For a number to be divisible by 2, it must be even, which means the last digit of the number must be 0, 2, 4, 6, or 8.
+
+For a number to be divisible by 3, the sum of its digits must be divisible by 3.
+
+Let's consider the number 5 * 2, where * is the missing digit. The sum of the known digits is 5 + 2 = 7. To find the missing digit that makes the number divisible by 3, we need to find a digit that, when added to 7, results in a sum that is divisible by 3.
+
+The possible sums that are divisible by 3 and greater than 7 are 9, 12, 15, 18, etc. The smallest sum that is greater than 7 and divisible by 3 is 9. To get a sum of 9, the missing digit must be 2 (because 7 + 2 = 9).
+
+However, we also need to ensure that the resulting number is even, so it is divisible by 2. Since the last digit of the number is already 2 (which is even), we don't need to worry about this condition.
+
+Therefore, the missing digit is $\boxed{2,}$ making the number 522, which is divisible by 6.","2,",,ambiguous_terminal,parsed,unsupported_multi_answer,"[""suspect_answer_format"", ""numina_problem_not_valid"", ""embedded_orca_source_removed"", ""unsupported_final_answer_structure"", ""unproven_solution_target_consistency""]","Therefore, the missing digit is $\boxed{2,}$ making the number 522, which is divisible by 6.",0,bec95b0df53da59f3a9b0957bf07658a55d170716b21b58152dd805ffad7aa1d,Codex,2026-10-13T02:55:22.756618+00:00,person1-release-review-v2,retain_quarantine,"Digit answer2 is only one of2,5,8; malformed comma and invalid source label also justify quarantine."
+risk:0002462cdc96b64ffa886446c398c342b3d7265db332892b3e0f9701122cf95a,0002462cdc96b64ffa886446c398c342b3d7265db332892b3e0f9701122cf95a,numina,$\begin{array}{l}\text { 2. Simplify } 9 \underbrace{9 \cdots 9}_{n \uparrow} \times \underbrace{99 \cdots 9}_{n \uparrow}+399 \underbrace{9 \cdots 9}_{n \uparrow}-\left[10^{2}\right. \\ \left.\cdot \lg 2-10(\sqrt{x-1}+\sqrt{1-x}+10) \lg \frac{1}{5}\right)^{n} \\ = \\\end{array}$,$2 \cdot 10^{\mathrm{n}}$,2 \cdot 10^{\mathrm{n}},,ambiguous_unmarked_math_expression,parsed,unsupported_symbolic_command,"[""numina_problem_not_valid"", ""numina_solution_not_valid"", ""unsupported_final_answer_structure"", ""suspected_answer_only_solution"", ""unproven_solution_target_consistency""]",$2 \cdot 10^{\mathrm{n}}$,0,12f13b500712eb4e93f6f53ada77aed84fc9a5d9e8fd2bfa27ea578f8a35f370,Codex,2026-10-13T02:55:22.756773+00:00,person1-release-review-v2,retain_quarantine,Only symbolic answer with unsupported mathrm and no derivation; invalid upstream problem/solution retained outside release.
+risk:0000de404910fc9358ea87ea6dc2760c09d1c030e287df0d3f06ec9392ac9764,0000de404910fc9358ea87ea6dc2760c09d1c030e287df0d3f06ec9392ac9764,numina,"4. Let $p_{1}, p_{2}, q_{1}, q_{2}$ be real numbers, and $p_{1} p_{2}=2\left(q_{1}+q_{2}\right)$. Prove: The equations $x^{2}+p_{1} x+q_{1}=0$ and $x^{2}+p_{2} x+q_{2}=0$ have at least one real root.","4. Let the discriminants of two equations be $\Delta_{1}$ and $\Delta_{2}$, calculate the overall of $\Delta_{1}$ and $\Delta_{2}$, $\nu_{1}+\Delta_{2}=\left(p_{1}^{2}-4 q_{1}\right)+\left(p_{2}^{2}-4 q_{2}\right)=\left(p_{1}-\right.$ $\left.p_{2}\right)^{2} \geqslant 0$, then at least one of $\Delta_{1}$ and $\Delta_{2}$ is greater than or equal to 0. Therefore, at least one of the equations has real roots.",proof,,missing,missing,missing,"[""outside_math_word_problem_metadata_scope"", ""missing_or_sentinel_final_answer"", ""unproven_solution_target_consistency""]","4. Let the discriminants of two equations be $\Delta_{1}$ and $\Delta_{2}$, calculate the overall of $\Delta_{1}$ and $\Delta_{2}$, $\nu_{1}+\Delta_{2}=\left(p_{1}^{2}-4 q_{1}\right)+\left(p_{2}^{2}-4 q_{2}\right)=\left(p_{1}-\right.$ $\left.p_{2}\right)^{2} \geqslant 0$, then at least one of $\Delta_{1}$ and $\Delta_{2}$ is greater than or equal to 0. Therefore, at least one of the equations has real roots.",0,ea5db71010dfe1e842cb463a83f81c31b541269e49e3109edc0944484e76f930,Codex,2026-10-13T02:55:22.756928+00:00,person1-release-review-v2,retain_quarantine,"Proof task with proof sentinel; outside scalar word-problem scope, no full mathematical certification."
+risk:0001da2f7753722385bc0bb1ba5da7c25430d7b171bebda07c92efd9ff536e1f,0001da2f7753722385bc0bb1ba5da7c25430d7b171bebda07c92efd9ff536e1f,numina,"Calculate the positive difference between the integers \(C\) and \(D\) defined by the expressions:
+\[C = 1 \times 2 + 3 \times 4 + 5 \times 6 + \cdots + 39 \times 40 + 41\]
+\[D = 1 + 2 \times 3 + 4 \times 5 + \cdots + 38 \times 39 + 40 \times 41\]","We compute \(C-D\) as follows:
+\[\begin{aligned}
+C - D &= (1 \times 2 + 3 \times 4 + 5 \times 6 + \cdots + 39 \times 40 + 41) - (1 + 2 \times 3 + 4 \times 5 + \cdots + 38 \times 39 + 40 \times 41) \\
+&= -1 + (1 \times 2 - 2 \times 3) + (3 \times 4 - 4 \times 5) + \cdots + (39 \times 40 - 40 \times 41) + 41 \\
+&= -1 + 2(-2) + 4(-2) + \cdots + 40(-2) + 41 \\
+&= -1 - 2(2 + 4 + \cdots + 40) + 41 \\
+&= -1 - 2 \cdot \left(2 \cdot \frac{20 \times 21}{2}\right) + 41 \\
+&= -1 - 840 + 41 \\
+&= -800.
+\end{aligned}\]
+Thus, the positive difference between $C$ and $D$ is $\boxed{800}$.",800,,ambiguous_multi_part,parsed,numeric_scalar,"[""suspected_multi_part_requires_review"", ""unproven_solution_target_consistency""]","We compute \(C-D\) as follows:
+\[\begin{aligned}
+C - D &= (1 \times 2 + 3 \times 4 + 5 \times 6 + \cdots + 39 \times 40 + 41) - (1 + 2 \times 3 + 4 \times 5 + \cdots + 38 \times 39 + 40 \times 41) \\
+&= -1 + (1 \times 2 - 2 \times 3) + (3 \times 4 - 4 \times 5) + \cdots + (39 \times 40 - 40 \times 41) + 41 \\
+&= -1 + 2(-2) + 4(-2) + \cdots + 40(-2) + 41 \\
+&= -1 - 2(2 + 4 + \cdots + 40) + 41 \\
+&= -1 - 2 \cdot \left(2 \cdot \frac{20 \times 21}{2}\right) + 41 \\
+&= -1 - 840 + 41 \\
+&= -800.
+\end{aligned}\]
+Thus, the positive difference between $C$ and $D$ is $\boxed{800}$.",0,65e0ca207547e92fd6d546eb27c83e7c596da1d137f35f10e98344126495c06c,Codex,2026-10-13T02:55:22.757075+00:00,person1-release-review-v2,retain_quarantine,Single difference800 is plausible but conjunction triggers conservative multipart exclusion; retain documented false positive.
+risk:00bc6eca372d0276b4d5d931f8ce045ccf02e818b73b620a59b6d5eec45c612b,00bc6eca372d0276b4d5d931f8ce045ccf02e818b73b620a59b6d5eec45c612b,numina,"Triangle PQR has its centroid at $(4, -4)$ and an area of 9 square units. The side PQ is horizontal. The triangle is then dilated with the dilation center at (0,0) and a scale factor of 3. What are the coordinates of the vertex of the image of triangle PQR that is farthest from the origin? Give your answer as an ordered pair.","1. The centroid of a triangle divides each median in a 2:1 ratio, meaning the centroid is two-thirds of the way from each vertex to the midpoint of the opposite side. Given the area of the triangle is 9 square units, let's assume an equilateral triangle for simplicity, which has a side length calculated by $\sqrt{\frac{4 \times \text{Area}}{\sqrt{3}}} = \sqrt{\frac{36}{\sqrt{3}}} = 2\sqrt{3}$ units.
+
+2. The horizontal side PQ and the centroid at $(4,-4)$ suggest PQ could be at $(4 - \sqrt{3}, -4)$ and $(4 + \sqrt{3}, -4)$. Using the centroid formula, the third vertex $R$ can be assumed above the midpoint of PQ, and its coordinates can be calculated as $(4, -4 + 2\sqrt{3})$.
+
+3. Applying the dilation transformation with a scale factor of 3, the new coordinates of the vertices are:
+ - $P' = (3 \times (4 - \sqrt{3}), 3 \times -4) = (12 - 3\sqrt{3}, -12)$
+ - $Q' = (3 \times (4 + \sqrt{3}), 3 \times -4) = (12 + 3\sqrt{3}, -12)$
+ - $R' = (3 \times 4, 3 \times (-4 + 2\sqrt{3})) = (12, -12 + 6\sqrt{3})$
+
+4. To find which vertex is farthest from the origin, calculate the distance for each:
+ - Distance of $P'$ from origin: $\sqrt{(12 - 3\sqrt{3})^2 + (-12)^2}$
+ - Distance of $Q'$ from origin: $\sqrt{(12 + 3\sqrt{3})^2 + (-12)^2}$
+ - Distance of $R'$ from origin: $\sqrt{12^2 + (-12 + 6\sqrt{3})^2}$
+
+ After calculations, the vertex $R'$ is the farthest from the origin.
+
+Final answer: $\boxed{(12, -12 + 6\sqrt{3})}$","(12, -12 + 6\sqrt{3})",,ambiguous_unsupported_multi_answer,parsed,unsupported_multi_answer,"[""unsupported_final_answer_structure"", ""unverified_terminal_marker_target"", ""unproven_solution_target_consistency""]","Final answer: $\boxed{(12, -12 + 6\sqrt{3})}$",0,da0fb4510c762f5574495f2d0ed2cdcc13ebbb42cae3fcd00f89aa78046f622d,Codex,2026-10-13T02:55:22.757215+00:00,person1-release-review-v2,retain_quarantine,Triangle solution invents equilateral geometry without supplied dimensions and unsupported coordinate answer; retain quarantine.
+risk:0015999f927da7744934da0ee63ec0a0ba40f9a07b4293ee0c0ed17ea8bc2c72,0015999f927da7744934da0ee63ec0a0ba40f9a07b4293ee0c0ed17ea8bc2c72,numina,"In the following diagram, \(AB=68\). Find \(AX\).
+
+[asy]
+import markers;
+
+real t=.67;
+pair A=(0,0);
+pair B=(3,-2);
+pair C=(1.5,1.5);
+pair X=t*A+(1-t)*B;
+
+draw(C--A--B--C--X);
+
+label(""$A$"",A,SW);
+label(""$B$"",B,E);
+label(""$C$"",C,N);
+label(""$X$"",X,SW);
+
+markangle(n=1,radius=15,A,C,X,marker(markinterval(stickframe(n=1),true)));
+markangle(n=1,radius=15,X,C,B,marker(markinterval(stickframe(n=1),true)));
+
+//label(""$24$"",.5*(B+X),SE);
+label(""$40$"",.5*(B+C),E);
+label(""$20$"",.5*(A+C),NW);
+
+[/asy]","According to the Angle Bisector Theorem, the ratio of the segments on \(AC\) and \(BC\) that \(X\) divides is equal to the ratio of the other two sides of the triangle, hence
+\[
+\frac{AX}{20} = \frac{BX}{40}
+\]
+
+Cross-multiplying gives
+\[
+40 \cdot AX = 20 \cdot BX \quad \text{or} \quad BX = 2AX.
+\]
+
+We know that \(AB = AX + BX = AX + 2AX = 3AX\). Given that \(AB=68\), solving for \(AX\) gives:
+\[
+3AX = 68 \quad \text{so} \quad AX = \frac{68}{3}.
+\]
+
+Thus, \(AX = \boxed{\frac{68}{3}}\).",\frac{68}{3},,boxed,parsed,numeric_scalar,"[""inline_diagram_code""]",\boxed{\frac{68}{3}},0,e8e67d4c50ee76d97c1e34f28a37e7f4c24befafe8f4d32ea5489054ae53edcd,Codex,2026-10-13T02:55:22.757348+00:00,person1-release-review-v2,retain_quarantine,Inline diagram is required to supply angle and lengths; conservative text-only exclusion retained.

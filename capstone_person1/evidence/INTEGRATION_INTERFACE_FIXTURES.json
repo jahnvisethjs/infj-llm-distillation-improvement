@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "scope": "synthetic protocol fixtures only; not actual trainer/parent evidence",
+  "checks": [
+    "complete synthetic label scope passes",
+    "empty label report rejected",
+    "partial label report rejected",
+    "duplicate label report rejected",
+    "unexpected label report rejected",
+    "mismatch label report rejected",
+    "consistent synthetic parent binding passes",
+    "inconsistent seen groups rejected"
+  ]
+}

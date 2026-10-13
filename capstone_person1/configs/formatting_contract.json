@@ -1,5 +1,5 @@
 {
-  "contract_version": "person1-plain-text-labels-v1",
+  "contract_version": "person1-plain-text-labels-v3",
   "prompt_template": "Question: {problem}\nSolve the problem step by step. End with: Final answer: <answer>.\nSolution:\n",
   "prompt_template_sha256": "22e10ad6ce4d2f2a959577326b6eca275528821da148bae57a9a4ad2bf6e64db",
   "tokenizer_id": "Qwen/Qwen2.5-0.5B",
@@ -26,6 +26,5 @@
   "budget": "sum(label != -100 for label in labels)",
   "max_total_tokens": 2048,
   "evaluation_input": "render_prompt(problem); no_reference_answer_or_eos",
-  "other_model_tokenizers": "load_corresponding_pinned_tokenizer_and_verify_before_reusing_counts",
-  "reference_encoder_sha256": "eea80909f46e0dad54e4a517136433041ede0890a44a1a7f1703ae41adbfc722"
+  "other_model_tokenizers": "load_corresponding_pinned_tokenizer_and_verify_before_reusing_counts"
 }

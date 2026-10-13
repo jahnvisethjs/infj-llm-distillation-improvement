@@ -1,0 +1,14 @@
+{
+  "orca": {
+    "path": "metadata/orca_dataset_card.md",
+    "sha256": "8bb74b7e56f580bc92850c70a2fa05365c0f355ebe76da74901e66ecc63b5b84",
+    "declared_license": "mit",
+    "basis": "pinned upstream dataset-card metadata"
+  },
+  "numina": {
+    "path": "metadata/numina_dataset_card.md",
+    "sha256": "fb1d9e6e0d8ad71e47fd1ef5671ee4ca522536aa0a5b8c907c0fbc7e3cd7e6b2",
+    "declared_license": "apache-2.0",
+    "basis": "pinned upstream dataset-card metadata"
+  }
+}

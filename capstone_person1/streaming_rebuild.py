@@ -126,7 +126,8 @@ def main():
     if args.rows_per_source is not None and args.rows_per_source < 100: parser.error('Use at least 100 rows per source')
     if args.max_memory_mb < 128: parser.error('Memory budget must be at least 128 MiB')
     os.chdir(ROOT)
-    notebook_path = ROOT / 'Person1_Full_Run_v2.ipynb'
+    # Historical snapshot diagnostics only; final releases use release_pipeline.
+    notebook_path = PROJECT / 'preserved_inputs/pre_named_stages_v3/Person1_Full_Run_v2.ipynb'
     notebook = json.loads(notebook_path.read_text(encoding='utf-8'))
     mapper = SnapshotCanonicalizer(notebook)
     previous = PROJECT / 'runs/full_run_v1/outputs'

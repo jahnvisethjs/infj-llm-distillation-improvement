@@ -1,0 +1,119 @@
+{
+  "recorded_utc": "2026-10-13T03:22:39.096577+00:00",
+  "status": "DATA_READY_FOR_TRAINER",
+  "person1_deliverables_complete": true,
+  "readiness": {
+    "status": "DATA_READY_FOR_TRAINER",
+    "data_ready_for_trainer": true,
+    "main_run_ready": false,
+    "continuation_ready": false,
+    "data_checks": {
+      "original_source_fields": "passed",
+      "global_exact_groups": "passed",
+      "detected_protected_overlap": "passed",
+      "reference_label_encoding": "passed",
+      "whole_example_length_policy": "passed",
+      "three_bank_disjointness": "passed",
+      "required_manifest_exports": "passed",
+      "ordered_prefix_nesting": "passed",
+      "artifact_reencoding": "passed",
+      "regression_tests": "passed"
+    },
+    "review_status": "passed",
+    "full_source_scope": "passed",
+    "person2_label_verification": "pending",
+    "person3_frozen_evaluation": "pending",
+    "actual_parent_binding": "pending"
+  },
+  "data_ready_for_trainer": true,
+  "main_run_ready": false,
+  "continuation_ready": false,
+  "release": "capstone_person1/releases/person1_v3_20261012_ready",
+  "immutable_after_finalization": true,
+  "test_count": 87,
+  "source_rows": {
+    "orca": 200035,
+    "numina": 896215
+  },
+  "processed_rows": 1096250,
+  "manifest_counts": {
+    "train_bank": 40000,
+    "selection_bank": 10000,
+    "loss_dev": 1000,
+    "train_n500": 500,
+    "train_n1000": 1000,
+    "train_n2000": 2000,
+    "train_n4000": 4000,
+    "train_n8000": 8000,
+    "train_n16000": 16000,
+    "train_n40000": 40000,
+    "debug_32": 32
+  },
+  "reference_supervised_tokens": {
+    "train_bank": 12766973,
+    "selection_bank": 3191599,
+    "loss_dev": 317357,
+    "train_n500": 160220,
+    "train_n1000": 318845,
+    "train_n2000": 638802,
+    "train_n4000": 1277079,
+    "train_n8000": 2554989,
+    "train_n16000": 5114372,
+    "train_n40000": 12766973,
+    "debug_32": 10461
+  },
+  "review_rows": {
+    "formatted": 208,
+    "risk": 39,
+    "prior_rejections": 40,
+    "pair_policy": 12
+  },
+  "reviewer": "Codex; not independent human sign-off",
+  "reference_tokenizer": "Qwen2TokenizerFast",
+  "tokenizer_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "contract_version": "person1-plain-text-labels-v3",
+  "preserved_notebook_sha256": "dce3ef73487547183993eb359c65b23b62e0f71deb4d76c331c076fc7c22a869",
+  "untouched_original_colab_recovered": false,
+  "independent_readback": {
+    "status": "passed",
+    "release_id": "person1_v3_20261012_ready",
+    "artifacts_checked": 447,
+    "manifests_checked": 11,
+    "complete_row_status_rows": 1096250,
+    "readiness": "DATA_READY_FOR_TRAINER",
+    "all_manifest_reencoding": false,
+    "verified_utc": "2026-10-13T03:20:25.402036+00:00",
+    "release_manifest_sha256": "063f7439679e669f2609fdf9a721113537caf04c551efae07cbfa11640b83a1a",
+    "mandatory_target_reviews_complete": true,
+    "rejected_review_ids_absent_from_banks": true,
+    "formatted_reviews_verified_against_actual_encoding": 208,
+    "historical_2_versus_32_defect_corrected": true
+  },
+  "evidence": {
+    "release_manifest": "capstone_person1/releases/person1_v3_20261012_ready/metadata/release_manifest.json",
+    "handoff": "capstone_person1/releases/person1_v3_20261012_ready/PERSON2_HANDOFF.md",
+    "regressions": "evidence/RELEASE_REGRESSION_TESTS.json",
+    "independent_validation": "evidence/FINAL_RELEASE_READBACK.json"
+  },
+  "remaining_person1_current_release": [],
+  "conditional_person1_followup": [
+    "When Person 3 supplies additional frozen evaluation questions, import them and build a new protected version before comparative main runs."
+  ],
+  "remaining_person2": [
+    "Reconcile actual debug_32 and train_n1000 collator labels with reference counts",
+    "Execute QLoRA training/save/reload smoke test",
+    "Run independent learning curves and bind actual R1000 parent"
+  ],
+  "remaining_person3": [
+    "Choose/prepare/freeze development and fast-development questions",
+    "Confirm final-test roles",
+    "Validate generation/scoring and run evaluations"
+  ],
+  "remaining_person4": [
+    "Student-fit scoring, budget-matched continuation selections and analysis"
+  ],
+  "git_actions": 0,
+  "git_status": "paused",
+  "mathematical_correctness": "Unknown corpus-wide; structural consistency and scoped Codex reviews are documented",
+  "previous_status": "capstone_person1/docs/milestones/PRE_FINAL_READY_IMPLEMENTATION_STATUS.json"
+}

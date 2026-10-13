@@ -1,0 +1,147 @@
+{
+  "name": "debug_32",
+  "rows": 32,
+  "manifest_sha256": "4c4a42bbaa938d7727903eef92c08ab0f2d51c0aca63f15e7f58a14588fe8ec7",
+  "ordered_id_sha256": "61a48df9069b8cdab8994b18b44181d8d8adebf4f6e6b1cedfa390077689e44b",
+  "tokenizer_id": "Qwen/Qwen2.5-0.5B",
+  "tokenizer_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "max_total_tokens": 2048,
+  "supervised_tokens": 10461,
+  "source_rows": {
+    "numina": 20,
+    "orca": 12
+  },
+  "source_supervised_tokens": {
+    "numina": 7669,
+    "orca": 2792
+  },
+  "prompt_tokens": 2392,
+  "completion_tokens": 10429,
+  "eos_tokens": 32,
+  "max_total_input_tokens": 1260,
+  "source_length_bins": {
+    "numina": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 2,
+      "8": 2,
+      "9": 2
+    },
+    "orca": {
+      "0": 2,
+      "1": 2,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1
+    }
+  },
+  "source_example_shares": {
+    "numina": 0.625,
+    "orca": 0.375
+  },
+  "source_supervised_token_shares": {
+    "numina": 0.7331039097600612,
+    "orca": 0.2668960902399388
+  },
+  "length_summaries": {
+    "numina": {
+      "prompt_tokens": {
+        "count": 20.0,
+        "mean": 76.55,
+        "std": 36.70576464119412,
+        "min": 32.0,
+        "5%": 37.7,
+        "50%": 74.5,
+        "95%": 132.85000000000005,
+        "max": 187.0
+      },
+      "completion_tokens": {
+        "count": 20.0,
+        "mean": 382.45,
+        "std": 267.6921788763709,
+        "min": 92.0,
+        "5%": 111.0,
+        "50%": 299.5,
+        "95%": 961.8000000000001,
+        "max": 1072.0
+      },
+      "supervised_tokens": {
+        "count": 20.0,
+        "mean": 383.45,
+        "std": 267.6921788763709,
+        "min": 93.0,
+        "5%": 112.0,
+        "50%": 300.5,
+        "95%": 962.8000000000001,
+        "max": 1073.0
+      },
+      "total_tokens": {
+        "count": 20.0,
+        "mean": 460.0,
+        "std": 297.19956081287944,
+        "min": 125.0,
+        "5%": 189.6,
+        "50%": 339.5,
+        "95%": 1095.65,
+        "max": 1260.0
+      }
+    },
+    "orca": {
+      "prompt_tokens": {
+        "count": 12.0,
+        "mean": 71.75,
+        "std": 21.333392518857295,
+        "min": 43.0,
+        "5%": 47.4,
+        "50%": 68.5,
+        "95%": 104.94999999999997,
+        "max": 122.0
+      },
+      "completion_tokens": {
+        "count": 12.0,
+        "mean": 231.66666666666666,
+        "std": 136.09310538500227,
+        "min": 64.0,
+        "5%": 82.15,
+        "50%": 208.0,
+        "95%": 441.5999999999999,
+        "max": 523.0
+      },
+      "supervised_tokens": {
+        "count": 12.0,
+        "mean": 232.66666666666666,
+        "std": 136.09310538500227,
+        "min": 65.0,
+        "5%": 83.15,
+        "50%": 209.0,
+        "95%": 442.5999999999999,
+        "max": 524.0
+      },
+      "total_tokens": {
+        "count": 12.0,
+        "mean": 304.4166666666667,
+        "std": 149.92995839471985,
+        "min": 118.0,
+        "5%": 141.1,
+        "50%": 275.5,
+        "95%": 543.4499999999999,
+        "max": 599.0
+      }
+    }
+  },
+  "validation": {
+    "rows": 32,
+    "supervised_tokens": 10461,
+    "status": "passed"
+  }
+}

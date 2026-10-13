@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-13T03:23:49.449174+00:00",
+  "command": "python -X utf8 -m capstone_person1.scripts.validate_notebook",
+  "working_directory": "capstone_person1/releases/person1_v3_20261012_ready/code",
+  "notebook_sha256": "65aefb53175a40606ccad6a23f60ed0fb0c63b055351bb14e465f922803b5c61",
+  "preserved_original_sha256": "dce3ef73487547183993eb359c65b23b62e0f71deb4d76c331c076fc7c22a869",
+  "checks": [
+    "schema",
+    "magic-aware syntax",
+    "named-stage imports",
+    "cleared outputs",
+    "preserved notebook hashes"
+  ],
+  "output": "Notebook schema/syntax, named-stage imports, cleared outputs and preserved notebook hashes passed."
+}

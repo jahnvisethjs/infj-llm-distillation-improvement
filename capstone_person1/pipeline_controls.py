@@ -11,9 +11,10 @@ import unicodedata
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 
-CONTROL_VERSION = 'person1-v3.1'
+CONTROL_VERSION = 'person1-v3.2'
 PROMPT_SPEC_VERSION = 'math-worked-solution-v2'
 PROMPT_TEMPLATE = (
     'Question: {problem}\n'
@@ -33,7 +34,8 @@ def clean_text(value):
         try:
             if math.isnan(value): return ''
         except (TypeError, ValueError): pass
-    text = unicodedata.normalize('NFKC', str(value)).replace('\r\n', '\n').replace('\r', '\n')
+    # NFC preserves mathematical superscripts and other compatibility characters.
+    text = unicodedata.normalize('NFC', str(value)).replace('\r\n', '\n').replace('\r', '\n')
     return re.sub(r'\n{3,}', '\n\n', re.sub(r'[ \t]+', ' ', text)).strip()
 
 
@@ -215,6 +217,7 @@ class AnswerExtraction:
     def to_dict(self): return asdict(self)
 
 
+@lru_cache(maxsize=256)
 def extract_orca_final_answer(problem, solution):
     """Only the terminal conclusion can supply a target. Never scan earlier givens."""
     solution = clean_text(solution)

@@ -15,17 +15,22 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from capstone_person1.benchmark_manifests import load_protection_inputs, export_protection_inputs
+from capstone_person1.configuration import notebook_settings
 from capstone_person1.instance_matching import instance_hash, retrieve_pairs, apply_instance_decisions, MATCHING_VERSION, context_equivalent
 from capstone_person1.integration_checks import readiness
+from capstone_person1.missed_match_search import retrieve_signature_pairs
 from capstone_person1.person1_data_contract import encode_example, load_tokenizer, formatting_contract, validate_manifest, TOKENIZER_ID, PINNED_TOKENIZER_REVISION
 from capstone_person1.pipeline_controls import file_sha256, sha256_text
 from capstone_person1.pool_allocation import allocate_banks
 from capstone_person1.release_catalog import build_catalog, choose_candidates, export_row_status
-from capstone_person1.release_reviews import make_review_queue, sample_formatted, validate_reviews
+from capstone_person1.release_reviews import make_review_queue, sample_formatted, validate_reviews, prior_rejections, reviewed_rejected_groups, include_added_review_rows
+from capstone_person1.quality_review_policy import review_cohorts
 from capstone_person1.snapshot_stream import atomic_json, stage_batches, selected_records
 from capstone_person1.source_stream import source_binding, canonicalize_upstream
 
 PROJECT = Path(__file__).resolve().parent
+for local_dependencies in ['runtime_deps','vendor']:
+    if (PROJECT/local_dependencies).exists(): sys.path.insert(0,str(PROJECT/local_dependencies))
 
 
 def message(value): print(value,flush=True)
@@ -33,9 +38,12 @@ def message(value): print(value,flush=True)
 
 def freeze_inputs(project,release,config,bindings,protection,pilot):
     code={str(path.relative_to(project)):file_sha256(path) for path in sorted(project.glob('*.py'))}
+    code['../Person1_Full_Run_v2.ipynb']=file_sha256(project.parent/'Person1_Full_Run_v2.ipynb')
     code.update({str(path.relative_to(project)):file_sha256(path) for path in sorted((project/'tests').glob('test_*.py'))})
-    frozen=dict(schema_version='person1-release-v3',configuration=config,sources=bindings,
+    frozen=dict(schema_version='person1-release-v3.1',configuration=config,sources=bindings,
                 protection_inputs=protection['inputs'],pilot_per_source=pilot,code_sha256=code)
+    prior=release/'reports/prior_rejected_targets.json'
+    frozen['prior_rejected_targets_sha256']=file_sha256(prior) if prior.exists() else None
     path=release/'metadata/frozen_inputs.json'
     if path.exists():
         if json.loads(path.read_text(encoding='utf-8'))!=frozen: raise ValueError('Frozen inputs or implementation changed; start a new release')
@@ -52,9 +60,17 @@ def checked_candidates(frame,protection,release,config,*,pair_decisions=None):
     if state_path.exists():
         state=json.loads(state_path.read_text(encoding='utf-8'))
         if state['binding']!=binding or state['sha256']!=file_sha256(path): raise ValueError('Checked candidate stage changed')
-        return pq.read_table(path).to_pandas(),state['report']
+        grouped=pq.read_table(path).to_pandas()
+        report=dict(state['report'],excluded_groups=sorted(set(grouped.loc[grouped['group_excluded'],'problem_group_id'])))
+        return grouped,report
     pairs,protected_pairs=retrieve_pairs(frame,protection['questions'],threshold=config['lsh_candidate_threshold'],
         permutations=config['minhash_permutations'],progress=message)
+    alternate,alternate_protected=retrieve_signature_pairs(frame,protection['questions'])
+    existing={tuple(sorted((pair['row_id_a'],pair['row_id_b']))) for pair in pairs+protected_pairs}
+    missed=[pair for pair in alternate+alternate_protected if tuple(sorted((pair['row_id_a'],pair['row_id_b']))) not in existing]
+    pd.DataFrame(missed).to_csv(reports/'missed_match_candidates.csv',index=False)
+    pairs.extend(pair for pair in missed if not pair['row_id_b'].startswith('protected:'))
+    protected_pairs.extend(pair for pair in missed if pair['row_id_b'].startswith('protected:'))
     decisions=json.loads(Path(pair_decisions).read_text(encoding='utf-8')) if pair_decisions else []
     protected_lookup={'protected:'+row.set_id+':'+row.problem_id:row.problem for row in protection['questions'].itertuples()}
     grouped,pair_report,status=apply_instance_decisions(frame,pairs,protected_pairs,decisions,protected_lookup)
@@ -62,8 +78,9 @@ def checked_candidates(frame,protection,release,config,*,pair_decisions=None):
     # conservatively until an explicit decision is supplied in a new release.
     unresolved_ids=set()
     if not pair_report.empty:
+        candidate_ids=set(grouped['row_id'])
         for row in pair_report[pair_report['action'].eq('unresolved')].itertuples():
-            unresolved_ids.update(value for value in [row.row_id_a,row.row_id_b] if value in set(grouped['row_id']))
+            unresolved_ids.update(value for value in [row.row_id_a,row.row_id_b] if value in candidate_ids)
         group_ids=set(grouped.loc[grouped['row_id'].isin(unresolved_ids),'problem_group_id'])
         grouped.loc[grouped['problem_group_id'].isin(group_ids),'group_excluded']=True
         pair_report.loc[pair_report['action'].eq('unresolved'),'action']='quarantine_unresolved_instance'
@@ -86,10 +103,12 @@ def checked_candidates(frame,protection,release,config,*,pair_decisions=None):
         sample['policy_version']=MATCHING_VERSION
         sample.to_csv(reports/'pair_policy_review.csv',index=False)
     status.update(checked_rows=len(grouped),near_candidates=len(pairs),protected_near_candidates=len(protected_pairs),
+        additional_signature_candidates=len(missed),second_retrieval_channel='parameter signatures with bounded deterministic stars',
         unresolved_pairs_disposition='all implicated final groups quarantined',near_answer_conflict_groups=conflict_groups,
         retained_group_count=int(grouped.loc[~grouped['group_excluded'],'problem_group_id'].nunique()),
         scope='bounded declared universe; global exact checks on complete canonical sources',recall_guaranteed=False,
         intended_overlap_policy=config['intended_overlap_policy'])
+    status['excluded_groups']=sorted(set(grouped.loc[grouped['group_excluded'],'problem_group_id']))
     pq.write_table(pa.Table.from_pandas(grouped,preserve_index=False),path,compression='zstd')
     atomic_json(state_path,dict(binding=binding,sha256=file_sha256(path),report=status))
     return grouped,status
@@ -141,6 +160,10 @@ def write_manifest(frame,name,release,tokenizer,config):
         source_supervised_tokens=frame.groupby('dataset_id')['supervised_tokens'].sum().astype(int).to_dict(),
         prompt_tokens=int(frame['prompt_tokens'].sum()),completion_tokens=int(frame['completion_tokens'].sum()),eos_tokens=int(frame['eos_tokens'].sum()),
         max_total_input_tokens=int(frame['total_tokens'].max()),source_length_bins={source:rows['length_bin'].value_counts().sort_index().to_dict() for source,rows in frame.groupby('dataset_id')})
+    summary['source_example_shares']={source:count/len(frame) for source,count in summary['source_rows'].items()}
+    summary['source_supervised_token_shares']={source:count/summary['supervised_tokens'] for source,count in summary['source_supervised_tokens'].items()}
+    summary['length_summaries']={source:{key:rows[key].describe(percentiles=[.05,.5,.95]).to_dict() for key in ['prompt_tokens','completion_tokens','supervised_tokens','total_tokens']}
+        for source,rows in frame.groupby('dataset_id')}
     summary['validation']=validate_manifest(path,summary,tokenizer)
     atomic_json(directory/(name+'_summary.json'),summary)
     return summary
@@ -149,6 +172,10 @@ def write_manifest(frame,name,release,tokenizer,config):
 def review_queues(encoded,stages,conn,release,pilot):
     reports=release/'reports'
     formatted=sample_formatted(encoded,count=100)
+    formatted_path=reports/'formatted_target_review.csv'
+    if formatted_path.exists():
+        existing=pd.read_csv(formatted_path,dtype=str,keep_default_na=False)
+        formatted=include_added_review_rows(formatted,encoded,existing['row_id'].tolist())
     make_review_queue(formatted,reports/'formatted_target_review.csv','formatted')
     risks=[]
     for source,stage in stages.items():
@@ -163,7 +190,21 @@ def review_queues(encoded,stages,conn,release,pilot):
         chosen=list(dict.fromkeys(chosen))[:40]
         risks.extend(selected_records(stage,chosen))
     make_review_queue(pd.DataFrame(risks),reports/'answer_extraction_review.csv','risk')
-    result=validate_reviews([reports/'formatted_target_review.csv',reports/'answer_extraction_review.csv'],required_formatted_per_source=100)
+    paths=[reports/'formatted_target_review.csv',reports/'answer_extraction_review.csv']
+    prior=prior_rejections(release)
+    if prior:
+        records=[]
+        for source,stage in stages.items():
+            records.extend(selected_records(stage,[row['row_id'] for row in prior if row['dataset_id']==source]))
+        expected={row['row_id']:row['source_sha256'] for row in prior}
+        for row in records:
+            signature=sha256_text(json.dumps({key:row[key] for key in ['row_id','problem','solution','final_answer']},sort_keys=True,ensure_ascii=False))
+            if signature!=expected[row['row_id']]:raise ValueError('Prior rejected target no longer matches pinned canonical source')
+        if len(records)!=len(prior):raise ValueError('Prior rejected target is absent from canonical source')
+        path=reports/'prior_target_review.csv'
+        make_review_queue(pd.DataFrame(records),path,'prior_rejected')
+        paths.append(path)
+    result=validate_reviews(paths,required_formatted_per_source=100)
     pair_path=reports/'duplicate_and_overlap_reports/pair_policy_review.csv'
     pair_complete=True
     if pair_path.exists():
@@ -195,23 +236,37 @@ def package_release(release,config,bindings,scope,reports,summaries,status,finge
     # Bundle only named current stages, helpers, tests, and documented integration.
     bundle=release/'code/capstone_person1'
     bundle.mkdir(parents=True,exist_ok=True)
-    names=['__init__.py','canonical_data.py','configuration.py','pipeline_controls.py','instance_matching.py','source_stream.py',
-           'snapshot_stream.py','release_catalog.py','release_reviews.py','release_pipeline.py','pool_allocation.py','integration_checks.py',
-           'person1_data_contract.py','benchmark_manifests.py']
+    names=[path.name for path in PROJECT.glob('*.py')]
     for name in names:
         source=PROJECT/name
         if source.exists(): shutil.copy2(source,bundle/name)
     shutil.copytree(PROJECT/'tests',bundle/'tests',dirs_exist_ok=True,ignore=shutil.ignore_patterns('__pycache__'))
+    shutil.copytree(PROJECT/'configs',bundle/'configs',dirs_exist_ok=True)
+    shutil.copytree(PROJECT/'inputs_from_team',bundle/'inputs_from_team',dirs_exist_ok=True)
+    shutil.copytree(PROJECT/'preserved_inputs/pre_named_stages_v3',bundle/'preserved_inputs/pre_named_stages_v3',dirs_exist_ok=True)
+    (bundle/'scripts').mkdir(exist_ok=True)
+    shutil.copy2(PROJECT/'scripts/fetch_sources.py',bundle/'scripts/fetch_sources.py')
+    shutil.copy2(PROJECT/'scripts/validate_release.py',bundle/'scripts/validate_release.py')
+    shutil.copy2(PROJECT.parent/'Person1_Full_Run_v2.ipynb',release/'code/Person1_Full_Run_v2.ipynb')
     shutil.copy2(PROJECT.parent/'Person1_Full_Run_v2.ipynb',release/'Person1_Full_Run_v2.ipynb')
     shutil.copy2(PROJECT/'person1_data_contract.py',release/'person1_data_contract.py')
     shutil.copy2(PROJECT/'configs/person1_data_config.json',release/'configs/person1_data_config.json')
     atomic_json(release/'metadata/source_revisions.json',bindings)
+    cards={}
+    for source,spec in bindings.items():
+        card=PROJECT/'sources'/source/spec['revision']/'README.md'
+        if card.exists():
+            destination=release/'metadata'/(source+'_dataset_card.md');shutil.copy2(card,destination)
+            cards[source]=dict(path='metadata/'+destination.name,sha256=file_sha256(card),
+                declared_license='mit' if source=='orca' else 'apache-2.0',basis='pinned upstream dataset-card metadata')
+    atomic_json(release/'metadata/source_cards.json',cards)
     atomic_json(release/'metadata/benchmark_manifests.json',scope)
     versions={}
     for item in ['numpy','pandas','pyarrow','transformers','huggingface-hub','tokenizers','datasketch','jsonschema']:
         try: versions[item]=importlib.metadata.version(item)
         except importlib.metadata.PackageNotFoundError: versions[item]='not_installed'
     atomic_json(release/'metadata/environment.json',dict(python=sys.version,platform=platform.platform(),packages=versions,
+        installed_distributions=sorted([(dist.metadata.get('Name',''),dist.version) for dist in importlib.metadata.distributions()]),
         requirements='code/requirements.txt',models_loaded=False))
     requirements='\n'.join(item+'=='+version for item,version in versions.items() if version!='not_installed')+'\n'
     (release/'code/requirements.txt').write_text(requirements,encoding='utf-8')
@@ -257,28 +312,32 @@ def run_release(release,*,pilot=None,pair_decisions=None,finalize=False):
     if old.exists() and json.loads(old.read_text(encoding='utf-8')).get('immutable_after_finalization'):
         raise ValueError('Release is finalized; use validate_release.py or create a new version')
     config=json.loads((PROJECT/'configs/person1_data_config.json').read_text(encoding='utf-8'))
+    notebook_settings(config)  # Validate pinned revisions, tokenizer identity and quotas.
     inventory=json.loads((PROJECT/'sources/source_inventory.json').read_text(encoding='utf-8'))
     team=PROJECT/'inputs_from_team'
     protection=load_protection_inputs(team/'reserved_evaluation.csv',team/'reserved_evaluation_metadata.json',
         team/'development_evaluation.csv',team/'development_evaluation_metadata.json')
-    scope=export_protection_inputs(protection,release/'benchmarks',release/'reports')
     protection['questions']['problem_hash']=protection['questions']['problem'].map(instance_hash)
+    protection['scope']['matching_identity_normalization']='NFC and whitespace only; preserve mathematical case, numbers, signs and expressions'
+    scope=export_protection_inputs(protection,release/'benchmarks',release/'reports')
     bindings={source:source_binding(PROJECT,source,inventory,config) for source in config['sources']}
     fingerprint=freeze_inputs(PROJECT,release,config,bindings,protection,pilot)
     stages={source:release/'processed'/('canonical_'+source) for source in bindings}
     canonical={source:canonicalize_upstream(PROJECT,source,binding,config,stages[source],limit=pilot) for source,binding in bindings.items()}
     conn=build_catalog(stages,release/'processed/global_exact_catalog.sqlite')
+    cohort_rows,cohort_report=review_cohorts(stages,config,release)
     frame,exact=choose_candidates(conn,stages,set(protection['questions']['problem_hash']),release/'reports/duplicate_and_overlap_reports',
-                                 maximum=min(3000,config['candidate_universe_per_source']) if pilot else config['candidate_universe_per_source'],seed=config['selection_seed'])
+                                 maximum=min(3000,config['candidate_universe_per_source']) if pilot else config['candidate_universe_per_source'],seed=config['selection_seed'],
+                                 review_cohort_hashes=set(cohort_rows['problem_hash']))
     message('Global exact candidate supply: '+json.dumps(exact))
     checked,near=checked_candidates(frame,protection,release,config,pair_decisions=pair_decisions)
-    tokenizer=load_tokenizer(cache_dir=PROJECT/'cache',local_files_only=True)
-    assets=PROJECT/'cache'/('models--Qwen--Qwen2.5-0.5B')/'snapshots'/PINNED_TOKENIZER_REVISION
+    tokenizer=load_tokenizer(cache_dir=PROJECT/'cache/huggingface',local_files_only=True)
+    assets=PROJECT/'cache/huggingface'/('models--Qwen--Qwen2.5-0.5B')/'snapshots'/PINNED_TOKENIZER_REVISION
     contract=formatting_contract(tokenizer,asset_directory=assets,max_total_tokens=config['max_total_tokens'])
     atomic_json(release/'configs/formatting_contract.json',contract)
     encoded,encoding=encode_candidates(checked,tokenizer,release,config)
     reviews=review_queues(encoded,stages,conn,release,pilot)
-    rejected_groups=set(checked.loc[checked['row_id'].isin(reviews['quarantined_row_ids']),'problem_group_id'])
+    rejected_groups=reviewed_rejected_groups(checked,conn,reviews['quarantined_row_ids'])
     checked.loc[checked['problem_group_id'].isin(rejected_groups),'group_excluded']=True
     encoded=encoded[~encoded['problem_group_id'].isin(rejected_groups)].copy()
     quotas=dict(train_per_source=250,selection_per_source=50,loss_per_source=10) if pilot else dict(
@@ -309,12 +368,22 @@ def run_release(release,*,pilot=None,pair_decisions=None,finalize=False):
     checks=dict(original_source_fields='passed',global_exact_groups='passed',detected_protected_overlap='passed',
         reference_label_encoding='passed',whole_example_length_policy='passed',three_bank_disjointness='passed',
         required_manifest_exports='passed' if not pilot else 'pending',ordered_prefix_nesting='passed',artifact_reencoding='passed')
+    regression=PROJECT/'evidence/RELEASE_REGRESSION_TESTS.json'
+    if regression.exists():
+        evidence=json.loads(regression.read_text(encoding='utf-8'))
+        tested_code={str(path.relative_to(PROJECT)).replace('\\','/'):file_sha256(path) for path in list(PROJECT.glob('*.py'))+list((PROJECT/'tests').glob('test_*.py'))}
+        valid=evidence.get('status')=='passed' and evidence.get('code_sha256')==tested_code
+        checks['regression_tests']='passed' if valid else 'pending'
+        if valid:
+            shutil.copy2(PROJECT/'evidence/RELEASE_REGRESSION_TESTS.txt',release/'reports/regression_test_results.txt')
+            shutil.copy2(regression,release/'reports/regression_test_results.json')
+    else: checks['regression_tests']='pending'
     state=readiness(full_scope=pilot is None,data_checks=checks,reviews_complete=reviews['complete'])
     audit=dict(readiness=state,processed_rows=counts,initial_eligible={source:value['eligible_rows'] for source,value in canonical.items()},
-        exact=exact,near=near,encoding=encoding,final_row_status_counts=dict(Counter(statuses)),reviews_pending=len(reviews['pending']),
+        exact=exact,near=near,encoding=encoding,review_cohorts=cohort_report,final_row_status_counts=dict(Counter(statuses)),reviews_pending=len(reviews['pending']),
         observed_training_runs=0,git_actions=0)
     atomic_json(release/'reports/release_validation.json',audit)
-    (release/'reports/data_audit_v3.md').write_text('# Person 1 data audit\n\n'+json.dumps(audit,indent=2)+'\n\nFlags are nonexclusive. Extraction consistency is not mathematical correctness. Pending development protection remains Person 3’s input dependency.\n',encoding='utf-8')
+    (release/'reports/data_audit_v3.md').write_text('# Person 1 data audit\n\n```json\n'+json.dumps(audit,indent=2)+'\n```\n\nFlags are nonexclusive. Extraction consistency is not mathematical correctness. Pending development protection remains Person 3’s input dependency.\n',encoding='utf-8')
     package_release(release,config,bindings,scope,audit,summaries,state,fingerprint,pilot)
     conn.close()
     message('Release status: '+json.dumps(state))

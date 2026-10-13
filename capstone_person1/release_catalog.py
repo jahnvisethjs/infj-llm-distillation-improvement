@@ -39,7 +39,7 @@ def build_catalog(stages, path):
     return conn
 
 
-def choose_candidates(conn, stages, protected_hashes, report_dir, *, maximum=45000, seed=42):
+def choose_candidates(conn, stages, protected_hashes, report_dir, *, maximum=45000, seed=42, review_cohort_hashes=None):
     conflicts, audits = set(), []
     for problem_hash,count in conn.execute('SELECT problem_hash,COUNT(DISTINCT answer_key) FROM rows WHERE eligible=1 GROUP BY problem_hash HAVING COUNT(DISTINCT answer_key)>1'):
         answers = conn.execute('SELECT row_id,problem,final_answer FROM rows WHERE problem_hash=? AND eligible=1 ORDER BY row_id',[problem_hash]).fetchall()
@@ -51,6 +51,7 @@ def choose_candidates(conn, stages, protected_hashes, report_dir, *, maximum=450
     conn.execute('CREATE TEMP TABLE excluded_hash(problem_hash TEXT PRIMARY KEY,reason TEXT)')
     conn.executemany('INSERT INTO excluded_hash VALUES(?,?)',[(item,'conflicting_or_unresolved_exact_answers') for item in sorted(conflicts)])
     conn.executemany('INSERT OR IGNORE INTO excluded_hash VALUES(?,?)',[(item,'exact_protected_overlap') for item in sorted(protected_hashes)])
+    conn.executemany('INSERT OR IGNORE INTO excluded_hash VALUES(?,?)',[(item,'review_cohort_quality_quarantine') for item in sorted(review_cohort_hashes or [])])
     conn.execute('CREATE TEMP TABLE representatives AS SELECT problem_hash,MIN(row_id) row_id FROM rows r WHERE eligible=1 AND NOT EXISTS(SELECT 1 FROM excluded_hash e WHERE e.problem_hash=r.problem_hash) GROUP BY problem_hash')
     conn.execute('CREATE INDEX reps_id ON representatives(row_id)')
     supply, chosen = {}, []
@@ -68,6 +69,8 @@ def choose_candidates(conn, stages, protected_hashes, report_dir, *, maximum=450
 def export_row_status(conn, checked, banks, processed_dir):
     hashes = checked.set_index('problem_hash')[['problem_group_id','group_representative_id','group_excluded']].to_dict('index')
     chosen = {row.row_id:name for name,frame in banks.items() for row in frame.itertuples(index=False)}
+    exclusions_path=Path(processed_dir).parent/'reports/whole_example_encoding_exclusions.csv'
+    encoding_exclusions=set(pd.read_csv(exclusions_path,dtype=str)['row_id']) if exclusions_path.exists() else set()
     records, writer = [], None
     path = Path(processed_dir)/'row_status_audit.parquet'
     schema = pa.schema([('row_id',pa.string()),('dataset_id',pa.string()),('exact_group_id',pa.string()),('problem_group_id',pa.string()),
@@ -82,6 +85,7 @@ def export_row_status(conn, checked, banks, processed_dir):
             if not eligible: status='quality_quarantine'
             elif excluded: status=excluded
             elif group.get('group_excluded'): status='near_review_quarantine_or_protected_overlap'
+            elif row_id in encoding_exclusions: status='reference_encoding_exclusion'
             elif rep and row_id!=rep: status='exact_duplicate_alternative'
             elif group and row_id!=group['group_representative_id']: status='near_duplicate_alternative'
             records.append(dict(row_id=row_id,dataset_id=source,exact_group_id=exact_id,problem_group_id=group.get('problem_group_id',exact_id),

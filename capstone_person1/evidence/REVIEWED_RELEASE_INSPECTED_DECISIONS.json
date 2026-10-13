@@ -1,0 +1,99 @@
+{
+  "pairs": [
+    {
+      "index": 0,
+      "id_prefix": "2e695264",
+      "decision": "accept_policy_disposition",
+      "notes": "Same work template but first workforce changes from 20 to 16 men, so the second workforce differs. Retain distinct instances despite high similarity."
+    },
+    {
+      "index": 1,
+      "id_prefix": "3a788eac",
+      "decision": "accept_policy_disposition",
+      "notes": "Interest difference changes from 420 to 840; the implied principal doubles. Retain separate numerical instances."
+    },
+    {
+      "index": 2,
+      "id_prefix": "058ee1de",
+      "decision": "accept_policy_disposition",
+      "notes": "Train speed and crossing duration both change (90/15 versus 360/30). Signature retrieval discovers a template relation below the LSH threshold without merging instances."
+    },
+    {
+      "index": 3,
+      "id_prefix": "49924e89",
+      "decision": "accept_policy_disposition",
+      "notes": "Side measurement excess changes from 10% to 5%, producing different area errors. Template-relative retention is appropriate."
+    },
+    {
+      "index": 4,
+      "id_prefix": "30e0ccf9",
+      "decision": "accept_policy_disposition",
+      "notes": "Vote share and winning margin change (56%,288 versus 62%,324). Distinct election instances remain separate."
+    },
+    {
+      "index": 5,
+      "id_prefix": "149c35be",
+      "decision": "accept_policy_disposition",
+      "notes": "Walking rate changes from 5/4 to 7/6 of usual speed, changing the inferred travel time; retain both template relatives."
+    },
+    {
+      "index": 6,
+      "id_prefix": "6b05d142",
+      "decision": "accept_policy_disposition",
+      "notes": "Cricket problems swap the given and requested quantities (37 throwers versus 55 total players). They share an equation but are distinct targets; conservative quarantine is recorded without asserting identity."
+    },
+    {
+      "index": 7,
+      "id_prefix": "1de7948c",
+      "decision": "accept_policy_disposition",
+      "notes": "Son age changes from 32 to 26 and includes a unit wording difference. Answers differ; unresolved quarantine is a conservative template false positive, not proven duplication."
+    },
+    {
+      "index": 8,
+      "id_prefix": "79c42c12",
+      "decision": "accept_policy_disposition",
+      "notes": "Square-side errors change from 2% to 3% with wording changes. These numerical instances differ; conservative unresolved exclusion is accepted with that limitation."
+    },
+    {
+      "index": 9,
+      "id_prefix": "89dfbb98",
+      "decision": "accept_policy_disposition",
+      "notes": "Assembly-line constraints and quantities are identical; only stray t/y before ways differs. Withhold this near-identical pair pending explicit identity adjudication."
+    },
+    {
+      "index": 10,
+      "id_prefix": "2ade637c",
+      "decision": "accept_policy_disposition",
+      "notes": "Jacket-sale prices, quantity, receipts and requested time split are identical apart from punctuation spacing. Quarantine prevents near-instance leakage."
+    },
+    {
+      "index": 11,
+      "id_prefix": "b568310b",
+      "decision": "accept_policy_disposition",
+      "notes": "Student counts differ (93 versus 44) and the second question requests rupees rather than unspecified total collection. Distinct targets are conservatively withheld, not merged as duplicates."
+    }
+  ],
+  "formatted": [
+    {"index":0,"id_prefix":"03ad93c9","decision":"accept_structural_target","notes":"Arc distance piR/3 gives central angle pi/3 and chord 2R sin(pi/6)=R; symbolic terminal target agrees."},
+    {"index":1,"id_prefix":"04415ca5","decision":"quarantine","notes":"Proposed pairing Vi to Vi+2n makes every segment a diameter through the center, contradicting the explicit claim that no three pass through the center. Counting pairs does not prove this distinct-intersection maximum."},
+    {"index":2,"id_prefix":"0b72f53c","decision":"accept_structural_target","notes":"a^2+a=1 implies 2(a^2+a)+2021=2023; worked substitution and final target agree."},
+    {"index":3,"id_prefix":"1271f90e","decision":"quarantine","notes":"Correct coefficient is 4860, but displayed exponent (3-r)/2 is wrong and solving that displayed equation incorrectly changes r=1 to r=2. Withhold internally contradictory worked reasoning."},
+    {"index":4,"id_prefix":"13e29d77","decision":"accept_structural_target","notes":"Similar quadrilateral scale factor is 6/3=2; largest corresponding side 6 becomes 12. Perimeter route gives the same target."},
+    {"index":5,"id_prefix":"170e7a85","decision":"quarantine","notes":"Teacher writes 1+2+...+78=364, which is false; the correct triangular-layer sum is 1+3+6+...+78. Withhold defective reasoning even though 364 fits the intended layer count."},
+    {"index":6,"id_prefix":"1cc1c25a","decision":"accept_structural_target","notes":"Line relation 2m+n=1 gives 4m+2n+2022=2024; terminal and formatted targets agree."},
+    {"index":7,"id_prefix":"244d9377","decision":"quarantine","notes":"Geometry derivation confuses opposite angles in sine law, calls a non-midpoint circumcenter the midpoint of AB, describes a tangent at the center, and leaves E coordinates incomplete. Correct-looking target does not establish trustworthy reasoning."},
+    {"index":9,"id_prefix":"28f71667","decision":"accept_structural_target","notes":"Cancelling 99! gives denominator 101*100-1=10099; terminal assignment n=10099 is corroborated by the preceding calculation and matches scalar target."},
+    {"index":10,"id_prefix":"2c2917fe","decision":"accept_structural_target","notes":"Factor common x, then perfect square x^2-4x+4; target x(x-2)^2 agrees."},
+    {"index":11,"id_prefix":"3354fe29","decision":"quarantine","notes":"Escaped Roman labels request both a classification of loci and maximum area; scalar sqrt(3) omits the first requested answer. Damaged delimiter labels expose a remaining multipart detection gap."},
+    {"index":12,"id_prefix":"33da6b8e","decision":"accept_structural_target","notes":"Expansion cancels x^2+4xy, leaving 4y^2=16 for y=2. Nonzero x=2023 satisfies division domain; target agrees."},
+    {"index":13,"id_prefix":"36fcf89d","decision":"quarantine","notes":"Worked solution states slope-positive line y=x-1 but substitutes the different line x+y-1=0 with slope -1. Although reflection gives the same area 2sqrt(2), contradictory line equations make the reasoning defective."},
+    {"index":14,"id_prefix":"3928c123","decision":"quarantine","notes":"Counting all six choices for b,c wrongly assumes b<y automatically. Choice b=4,c=5,x=2,y=3 violates it; the valid count is 5, not 6."},
+    {"index":15,"id_prefix":"3948cd6c","decision":"accept_structural_target","notes":"Solution explicitly rejects the constant-equation interpretation and finishes with reassignment A=-15+5=-10. Terminal assignment refers to the problem's named variable and agrees with the intended sequential instructions."},
+    {"index":16,"id_prefix":"3d575659","decision":"quarantine","notes":"Chosen vectors' dot product is not the stated LHS, and claimed equal norms drop/replace components. No tightness proof supports smallest k=1; withhold invalid argument."},
+    {"index":17,"id_prefix":"4270360b","decision":"quarantine","notes":"Question has two distinct fill-in slots: locus equation and locus length. Final answer supplies only the length 12sqrt(5)/5. Flag unnumbered multi-answer question rather than accept a partial scalar."},
+    {"index":18,"id_prefix":"42fc75d8","decision":"accept_structural_target","notes":"Adding 3m to the given relation cancels the linear term, leaving polynomial 5m^2-5; target agrees."},
+    {"index":19,"id_prefix":"48998c6f","decision":"accept_structural_target","notes":"Even-coefficient sum is (P(1)+P(-1))/2=(-1-243)/2=-122; terminal and appended targets agree."}
+  ],
+  "risk": [],
+  "prior": []
+}

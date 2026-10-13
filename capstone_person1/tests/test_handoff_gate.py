@@ -1,4 +1,4 @@
-"""Integration tests execute the notebook's actual final approval cell."""
+"""Regression tests for the preserved diagnostic notebook's legacy approval cell."""
 import json
 import tempfile
 import unittest
@@ -80,7 +80,7 @@ class HandoffGateTests(unittest.TestCase):
             'summaries': {1000: summary}, 'debug_summary': {'sha256': self.train_hash},
             'PROMPT_SPEC_HASH': self.prompt_hash,
         })
-        n = json.loads((ROOT / 'Person1_Full_Run_v2.ipynb').read_text(encoding='utf-8'))
+        n = json.loads((ROOT / 'capstone_person1/preserved_inputs/pre_named_stages_v3/Person1_Full_Run_v2.ipynb').read_text(encoding='utf-8'))
         with contextlib.redirect_stdout(io.StringIO()):
             exec(compile(''.join(n['cells'][-1]['source']), 'notebook_final_approval', 'exec'), ns)
         return json.loads((self.reports / 'handoff_readiness.json').read_text(encoding='utf-8'))
