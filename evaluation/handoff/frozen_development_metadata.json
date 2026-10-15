@@ -1,0 +1,72 @@
+{
+  "schema_version": "person3-question-manifest-v1",
+  "manifest_sha256": "d1e32da9e99d6beec9b8fa820cfa0315a9b979d7e2e70086fb70f0858d43f97d",
+  "confirmed_by": "Megha Suresh (Person 3)",
+  "confirmed_utc": "2026-10-15T02:55:12+00:00",
+  "set_counts": {
+    "gsm_dev": 500,
+    "math_dev": 500,
+    "gsm_fast": 100,
+    "math_fast": 100
+  },
+  "sets": {
+    "gsm_dev": {
+      "benchmark_family": "gsm8k",
+      "role": "development",
+      "dataset_id": "openai/gsm8k",
+      "configuration": "main",
+      "split": "train",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "origin": "person3_frozen",
+      "selection_policy": {
+        "method": "fixed_seed_sample",
+        "seed": 1729,
+        "rule": "first 500 GSM8K train problems ordered by SHA256('1729|'+problem_id)"
+      }
+    },
+    "math_dev": {
+      "benchmark_family": "math",
+      "role": "development",
+      "dataset_id": "EleutherAI/hendrycks_math",
+      "configuration": "all seven subject configurations: algebra, counting_and_probability, geometry, intermediate_algebra, number_theory, prealgebra, precalculus",
+      "split": "train",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "origin": "person3_frozen",
+      "selection_policy": {
+        "method": "stratified_fixed_seed_sample",
+        "seed": 1729,
+        "rule": "500 MATH train problems, proportional by subject x level (largest-remainder rounding), each stratum ordered by SHA256('1729|'+problem_id); solutions boxing 2+ different answers are skipped and replaced by the next problem in the same stratum"
+      }
+    },
+    "gsm_fast": {
+      "benchmark_family": "gsm8k",
+      "role": "fast_development",
+      "dataset_id": "openai/gsm8k",
+      "configuration": "main",
+      "split": "train",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "origin": "person3_frozen",
+      "selection_policy": {
+        "method": "nested_fixed_seed_sample",
+        "seed": 1729,
+        "rule": "first 100 of gsm_dev ordered by SHA256('1729|'+problem_id)"
+      },
+      "parent_set_id": "gsm_dev"
+    },
+    "math_fast": {
+      "benchmark_family": "math",
+      "role": "fast_development",
+      "dataset_id": "EleutherAI/hendrycks_math",
+      "configuration": "all seven subject configurations: algebra, counting_and_probability, geometry, intermediate_algebra, number_theory, prealgebra, precalculus",
+      "split": "train",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "origin": "person3_frozen",
+      "selection_policy": {
+        "method": "nested_fixed_seed_sample",
+        "seed": 1729,
+        "rule": "first 100 of math_dev ordered by SHA256('1729|'+problem_id)"
+      },
+      "parent_set_id": "math_dev"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "person3-question-manifest-v1",
+  "manifest_sha256": "c78f02fd1a9c87058318ee6b1c92f5ce5aeff8751fc696fa098b3fb0e477fbe4",
+  "confirmed_by": "Megha Suresh (Person 3)",
+  "confirmed_utc": "2026-10-15T02:55:12+00:00",
+  "set_counts": {
+    "gsm8k_test": 1319,
+    "math500_test": 500
+  },
+  "sets": {
+    "gsm8k_test": {
+      "benchmark_family": "gsm8k",
+      "role": "final_test",
+      "dataset_id": "openai/gsm8k",
+      "configuration": "main",
+      "split": "test",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "origin": "person3_confirmed_final_test",
+      "selection_policy": {
+        "method": "all_official_test_questions"
+      }
+    },
+    "math500_test": {
+      "benchmark_family": "math",
+      "role": "final_test",
+      "dataset_id": "HuggingFaceH4/MATH-500",
+      "split": "test",
+      "revision": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be",
+      "origin": "person3_confirmed_final_test",
+      "selection_policy": {
+        "method": "all_official_test_questions"
+      }
+    }
+  }
+}
