@@ -1,0 +1,76 @@
+{
+  "schema_version": "person3-eval-contract-v1",
+  "frozen_generation_settings": {
+    "precision": "fp32",
+    "max_new_tokens": 1024,
+    "batch_size": 16,
+    "stop_at_question": false,
+    "question_text": "p1_clean",
+    "prompt_sha256": "22e10ad6ce4d2f2a959577326b6eca275528821da148bae57a9a4ad2bf6e64db",
+    "add_special_tokens": false,
+    "decoding": "greedy",
+    "eos_token_id": 151643,
+    "adapter_mode": null
+  },
+  "default_base_model": {
+    "model": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "model_revisions": {
+    "Qwen/Qwen2.5-0.5B": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "Qwen/Qwen2.5-1.5B": "8faed761d45a263340a0528343f099c05c9a4323"
+  },
+  "gpu_type": "NVIDIA A100",
+  "software_versions": {
+    "torch": "2.14.1",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "accelerate": "1.10.1",
+    "math-verify": "0.9.0"
+  },
+  "base_model_rule": "adapters are evaluated on the model/revision in Person 2's run_config.json",
+  "prompt_template": "Question: {problem}\nSolve the problem step by step. End with: Final answer: <answer>.\nSolution:\n",
+  "prompt_template_sha256": "22e10ad6ce4d2f2a959577326b6eca275528821da148bae57a9a4ad2bf6e64db",
+  "parser_version": "p3-parser-v6",
+  "grader_tests": "\u001b[32m\u001b[32m\u001b[1m67 passed\u001b[0m\u001b[32m in 0.74s\u001b[0m\u001b[0m",
+  "metrics": [
+    "accuracy",
+    "valid_answer_rate",
+    "accuracy_among_valid",
+    "length_limit_rate",
+    "gen_tokens_mean/median/p95",
+    "repetition_rate",
+    "eval runtime"
+  ],
+  "comparison": "paired bootstrap by problem_id, 2000 resamples, seed 0, 95% percentile CI",
+  "dev_sets": {
+    "dev_gsm": 500,
+    "dev_math": 500,
+    "dev_fast": 200
+  },
+  "final_tests": {
+    "test_gsm": 1319,
+    "test_math500": 500,
+    "rule": "evaluate.py refuses without --final_test; run once on a pre-declared model list"
+  },
+  "file_sha256": {
+    "evaluate.py": "8f2bc66ddfe3a0000bfc1e08ee325a0f520263f057a0e2fc7576d1467776d3d1",
+    "answer_parser.py": "3361e3c81864072961026fca4d7459a17c7544ed5ffec144575ab20eeac93d5d",
+    "metrics.py": "cdeeb9c7237259286e0511601f7d4618e99376925838b6a7e47411545cbd42a7",
+    "rescore.py": "45c3e5a852812dfddd17ab1d9488f011e5776d6fd47bc9550dfb5b6d9617f3b7",
+    "run_eval.py": "1a5a9619ba0c364276ac425189aa40003ae7e285fb43ccb62e80de65b71abe5f",
+    "test_answer_parser.py": "7fb562b4744a795b8b7e08a5c9bf737435c1dbf5f5fb613ff1faf2554e4b9a89",
+    "requirements.txt": "c04a2c855e2ba7b70b48ee97f11d75ed8a831e8f54494d3ac9b6d517a1704829",
+    "data/dev_gsm.jsonl": "3cb2c71007d23e01cb70b6370c1ad82ad5bcea3527c7f3258b4814cf2e3d1cc6",
+    "data/dev_math.jsonl": "641460fdc55beff591daad0cc7530a3f933eb263c3dfdf8a0534fcfaf8196416",
+    "data/dev_fast.jsonl": "e8a749c6bae8f223bb9c4979278323b460b8bd9e4e2a70f20031c8ea8b52939a",
+    "data/test_gsm.jsonl": "bcb312587aaa90d0ce41a9c1b280b227e60d9111f1447da865c6926b36e97397",
+    "data/test_math500.jsonl": "81e134dbb43f099d425df0549a645eb5c35915bf507540f24f80627196f900ae",
+    "data/eval_data_metadata.json": "d7b9c21bcb118683c45e9d98e6e6b3f247735a09a93539c6eca6c753cf819a73",
+    "handoff/frozen_development.csv": "d1e32da9e99d6beec9b8fa820cfa0315a9b979d7e2e70086fb70f0858d43f97d",
+    "handoff/frozen_development_metadata.json": "f994517c38a011c9d6e764dd59ad2bbba486ca359a7692cb44a2d748fb69b4e7",
+    "handoff/reserved_evaluation_metadata.json": "801894e19bd33eaaa8e58a361639c4230d287c4031cec6803c2d733fac9330e4"
+  },
+  "confirmed_by": "Megha Suresh (Person 3)",
+  "confirmed_utc": "2026-10-16T18:32:42+00:00"
+}

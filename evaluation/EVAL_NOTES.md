@@ -14,14 +14,27 @@ Decision log and pilot results. Each decision was made from model outputs or spe
 | 6 | Grader v3: stop reading where the model starts a new task (`Question:`, `[Question]`, "You are an AI assistant") | Base model invents new problems after answering; 0 scores changed on re-grading |
 | 7 | Grader v4: if the `Final answer:` line is empty, read the block below it | R500 writes `Final Answer:` + `\[\boxed{..}\]`; applied to all models; baseline unchanged, R500 MATH +3 correct |
 | 8 | Adapters **merged** before generating | R500 on 200 problems: grading identical 200/200, 25% faster. Rule set in advance: ≥20% faster and ≥198/200 same |
+| 9 | Grader v5: a `Final answer:` that starts a line beats one mid-sentence | Grading Person 1's 162 accepted training targets as if a model wrote them: v4 marked 1 wrong (`...to find the final answer: $$2.938 × 100 = 293.8$$ ... Final answer: 293.8`), v5 0 wrong. 59 tests pass |
+| 10 | Question text cleaned like training prompts (Person 1 `clean_text`) | 134/500 GSM and 140/500 MATH dev questions had double spaces/tabs that training prompts never contain. Changes prompts, so all baselines are re-run |
+| 11 | Grader version kept out of the generation config hash | Re-grading no longer makes a run look like a different configuration; `metrics.py --compare` refuses mixed grader versions |
+| 12 | Adapters tied to their training record | Base model/revision read from Person 2's `run_config.json`; checkpoint SHA-256 and training-manifest SHA-256 saved on every row |
+| 13 | Final tests locked behind `--final_test` | Plan E8: test results must not tune the pilot |
+| 14 | All evaluations on **one GPU type (A100)**; GPU name + CUDA build are part of the generation config hash | Different GPU types can change greedy outputs; the hash stops a run from resuming on, or being mixed with, another platform. L4 pilot results are not compared with A100 results |
+| 15 | Baselines re-run on A100 for both models (`base_a100` 0.5B, `base15` 1.5B); 1.5B adapters compared only with `base15` | Question-text cleaning (#10) and GPU change (#14) mean old baseline outputs can't just be re-graded |
+| 16 | Grader v6: GSM numbers read a Unicode minus (`−5`) as negative and `.5` as 0.5 | Before v6 both lost the sign or decimal point and were graded wrong. Re-grading `base_a100_gsm` and `R500_05B_s42_gsm`: 0 changed. MATH unaffected (math_verify already handled both). 67 tests pass |
+| 17 | Baseline vs fine-tuned comparison checks every setting except adapter on/off | `adapter_mode` is in the settings hash, so baseline and fine-tuned runs always had different hashes and `metrics.py --compare` always stopped. Now compares the `.config.json` settings (GPU, precision, prompt, versions, eval file…) and still refuses mixed grader versions. The summary table uses the same check and leaves out any unfair comparison |
+| 18 | Each fine-tuned run names its baseline when a model has more than one | The summary silently used the last baseline in `runs.json` (could be the old L4 run). Now it stops and asks for `"baseline"` (`sol/add_run.py --baseline base_a100`) |
+| 19 | Paired statistics: exact McNemar test, plus accuracy on problems where **both** models gave a valid answer | Plan promises paired tests; the both-valid comparison separates format gains from reasoning gains. R500 GSM: +14.0 pts overall (McNemar p≈5e-8) but +3.2 pts on both-valid (CI −1.9 to 8.5, p=0.28) |
 
 ## Grader validation
 
-- 55 unit tests; all 2,819 gold answers graded correct when given back as answers; 0 false positives with shuffled answers.
+- 67 unit tests (v6); all 2,819 gold answers graded correct when given back as answers; 0 false positives with shuffled answers.
 - Manual check of 20 baseline outputs (7 correct, 7 wrong, 6 invalid; random seed 7): grader agreed 20/20.
 - All 14 MATH answers graded correct that contained several numbers were genuinely correct.
 
-## Pilot results (dev set, fp32, L4, grader v4)
+## Pilot results — SUPERSEDED (old adapters, unprotected data release, grader v4, raw question text)
+
+Kept as a record only. Do not report or compare with new runs. Redo with Person 2's retrained adapters from the protected release.
 
 | | Baseline | R500 | Change (95% paired bootstrap CI) |
 |---|---|---|---|
@@ -38,7 +51,8 @@ Run time per model, full dev set on L4: baseline ~36 min; R500 ~46 min unmerged 
 
 ## Limitations and open items
 
-- **R500 is a pilot:** one training seed; dev set not yet checked against the training data (Person 1; MetaMath rows are the main risk). R500 was evaluated **unmerged**; re-run it merged if it is kept for final results.
+- **Train/eval precision:** adapters are trained on a 4-bit base and evaluated on the fp32 base (merged). Same for every model, as the plan requires. One-time check pending: R500 on dev_fast with `--precision 4bit` vs fp32; record the agreement here.
+
 - **Strict grading understates the baseline on GSM:** 77/500 answers are sentences with several numbers; in a pilot check about 4 in 10 contained the right number (up to ~6 pts).
 - **MATH loops:** 19–22% of MATH outputs still hit the 1,024 cap for both models.
 - **Failure review pending:** R500 got 44 GSM and 27 MATH problems wrong that the baseline got right.

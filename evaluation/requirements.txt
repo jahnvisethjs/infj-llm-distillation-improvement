@@ -1,9 +1,11 @@
-# versions used for all evaluations (same as Person 2's training stack)
-torch
+# Evaluation stack. Same transformers/peft as Person 2's trainer.
+# Every run also records the actual installed versions in its .config.json.
+torch                 # use Colab's preinstalled CUDA build; its version is logged per run
 transformers==4.57.1
 peft==0.17.1
 accelerate==1.10.1
-datasets
+bitsandbytes==0.48.1  # only needed for the one-time --precision 4bit check
+math-verify==0.9.0    # pinned: a different version can change MATH grades
+datasets              # only used by prepare_eval_data.py; question files are frozen by hash
 huggingface_hub
-math-verify
 pytest

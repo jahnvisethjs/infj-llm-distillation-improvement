@@ -37,6 +37,11 @@ GSM_CASES = [
     ("answer_only_in_new_q", "work...\nQuestion: x\nFinal answer: 5",   "5",    False, "no_answer"),
     ("bracket_question", "The answer is 5.\n[Question]Tom has...\nFinal answer: 8", "5", False, "no_answer"),
     ("system_prompt_junk", "work\nYou are an AI assistant that helps.\nFinal answer: 8", "5", False, "no_answer"),
+    # v5: prose "final answer:" inside reasoning must not beat the terminal marker
+    ("prose_marker_mid_sentence", "Multiply to find the final answer:\n$$2.938 \\times 100 = 293.8.$$\n\nFinal answer: 293.8", "293.8", True, "ok"),
+    ("prose_marker_same_line", "So the final answer: maybe 3 or 4.\nFinal answer: 4", "4", True, "ok"),
+    ("bold_line_marker", "work\n**Final answer:** 12", "12", True, "ok"),
+    ("only_prose_marker", "We now give the final answer: 7", "7", True, "ok"),
     ("marker_then_block", "Final Answer:\n\\[\n\\boxed{28}\n\\]\n\nFinal answer: 28", "28", True, "ok"),
     ("marker_block_only", "Final Answer:\n\\[\n\\boxed{11}\n\\]", "11", True, "ok"),
     ("marker_block_wrong", "Final Answer:\n\\[\n\\boxed{5}\n\\]", "8", False, "ok"),
@@ -92,3 +97,18 @@ def test_math_gold_answer_field_preferred():
 
 def test_extract_handles_none():
     assert extract_answer(None) == (None, "empty")
+
+
+# ---- v6: Unicode minus and leading-dot decimals (GSM)
+@pytest.mark.parametrize("out,gold,exp", [
+    ("Final answer: .5", "#### 0.5", True),
+    ("Final answer: $.75", "#### 0.75", True),
+    ("Final answer: \u22125", "#### -5", True),      # U+2212 minus sign
+    ("Final answer: \uff0d12", "#### -12", True),    # fullwidth minus
+    ("Final answer: \u22125", "#### 5", False),      # sign now counts: -5 is not 5
+    ("Final answer: 3.5", "#### 3.5", True),          # ordinary decimals unchanged
+    ("Final answer: 1,250", "#### 1250", True),
+    ("Final answer: 5 - 3 = 2", "#### 2", False),     # still strict: 3 numbers -> invalid
+])
+def test_gsm_v6_numbers(out, gold, exp):
+    assert score_gsm(out, gold)["correct"] == exp

@@ -7,22 +7,30 @@ Fixed parsing policy (version PARSER_VERSION) -- do NOT change between runs:
      invents new problems / pastes system prompts after answering).
   2. Precedence:
        a) first "Final answer:" marker that has content -> text on that line, or (v4)
-          the block right below an empty marker line (e.g. a \\[ \\boxed{..} \\] display)
+          the block right below an empty marker line (e.g. a \\[ \\boxed{..} \\] display).
+          (v5) Markers that START a line are tried first; a marker buried mid-sentence
+          ("...to find the final answer: $$2.9 x 100 = 293.8$$") is used only if no
+          line-start marker exists. Found by grading Person 1's training targets.
        b) otherwise \\boxed{...}         -> must be exactly ONE distinct boxed value
        c) otherwise                     -> invalid ("no_answer")
      There is deliberately NO "last number anywhere" fallback.
   3. Unparseable / ambiguous outputs count as INCORRECT (and invalid).
+  4. (v6) GSM numbers: a Unicode minus sign (U+2212, fullwidth U+FF0D) reads as "-", and a
+     decimal without a leading zero (".5") reads as 0.5. Before v6 both lost their sign or
+     their decimal point ("-5" -> 5, ".5" -> 5) and were graded wrong. MATH was unaffected
+     (math_verify already handled both).
 """
 from __future__ import annotations
 
 import re
 from fractions import Fraction
 
-PARSER_VERSION = "p3-parser-v4"
+PARSER_VERSION = "p3-parser-v6"
 CUT_AT_NEXT_QUESTION = True  # confirm with team at meeting; log in eval config
 
 _MARKER = re.compile(r"final\s+answer\s*[:：]", re.IGNORECASE)
-_NUM = re.compile(r"-?\d+(?:\.\d+)?(?:/\d+)?")
+_NUM = re.compile(r"-?(?:\d+(?:\.\d+)?|\.\d+)(?:/\d+)?")   # v6: also ".5"
+_MINUS = str.maketrans({"−": "-", "－": "-"})      # v6: Unicode minus signs
 
 
 # ---------------------------------------------------------------- extraction
@@ -85,7 +93,10 @@ def extract_answer(output: str) -> tuple[str | None, str]:
         text = _RUNAWAY.split(text, maxsplit=1)[0]
 
     markers = list(_MARKER.finditer(text))
-    for m in markers:                       # v4: first marker WITH content wins
+    # v5: line-start markers (optionally after markdown "**", "#", ">", "-") take precedence
+    line_start = [m for m in markers
+                  if not text[text.rfind("\n", 0, m.start()) + 1:m.start()].strip(" \t*#>-")]
+    for m in (line_start or markers):       # v4: first marker WITH content wins
         after = text[m.end():].lstrip(" \t")
         line = after.split("\n", 1)[0]
         ans = _clean(line)
@@ -113,6 +124,7 @@ def gsm_gold(answer_field: str) -> str:
 
 def _to_number(s: str) -> Fraction | None:
     """Fixed numeric policy: strip $, %, commas, units text; need exactly one number."""
+    s = s.translate(_MINUS)
     s = s.replace(",", "").replace("$", "").replace("\\$", "").replace("%", "")
     s = re.sub(r"\\[dt]?frac\{(-?\d+)\}\{(\d+)\}", r"\1/\2", s)   # \frac{a}{b}
     s = s.replace("\\!", "").replace("{,}", "")
