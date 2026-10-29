@@ -13,9 +13,9 @@ The corrected local/Colab notebook is `../Person1_Full_Run_v2.ipynb`. It calls t
 Run from the workspace root in an environment with the release's `code/requirements.txt` installed:
 
 ```powershell
-& 'C:\softwares\pythonAnaconda\python.exe' -X utf8 -m unittest discover -s capstone_person1/tests -v
-& 'C:\softwares\pythonAnaconda\python.exe' -X utf8 -m capstone_person1.scripts.validate_notebook
-& 'C:\softwares\pythonAnaconda\python.exe' -X utf8 -m capstone_person1.scripts.validate_release --release capstone_person1/releases/person1_v3_20261012_ready
+python -X utf8 -m unittest discover -s capstone_person1/tests -v
+python -X utf8 -m capstone_person1.scripts.validate_notebook
+python -X utf8 -m capstone_person1.scripts.validate_release --release capstone_person1/releases/person1_v3_20261012_ready
 ```
 
 For a new data version: `python -m capstone_person1.release_pipeline --release capstone_person1/releases/YOUR_NEW_VERSION`. A pilot uses `--pilot 10000` and remains diagnostic. Inspect the generated review queues, record actual case decisions, then resume the unchanged draft. Finalized releases are immutable. The local `runtime_deps/` and `vendor/` installs isolate dependencies; this environment requires elevated read access to those existing installs.

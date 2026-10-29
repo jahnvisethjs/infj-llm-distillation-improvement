@@ -43,9 +43,9 @@ The UTC directory date is October 12; these runs were performed October 11 in Am
 Commands rerun successfully during this review:
 
 ```powershell
-& 'C:\softwares\pythonAnaconda\python.exe' -m unittest capstone_person1.test_pipeline_controls -v
-& 'C:\softwares\pythonAnaconda\python.exe' -u -m capstone_person1.validate_notebook
-& 'C:\softwares\pythonAnaconda\python.exe' -m capstone_person1.validate_tokenizer_adapter
+python -m unittest capstone_person1.test_pipeline_controls -v
+python -u -m capstone_person1.validate_notebook
+python -m capstone_person1.validate_tokenizer_adapter
 ```
 
 - All 32 regression/integration tests passed: extraction and formatting, mathematical scalar equivalence, saved-review enforcement against both pools, stale evidence/changed artifacts, corrected parent identity, interrupted checkpoint resume, changed input/control/shard rejection, and disk-backed exact grouping/catalog reuse.

@@ -1,3 +1,8 @@
+param(
+    [Parameter(Mandatory = $true)]
+    [string]$ReferencePlan
+)
+
 $ErrorActionPreference = 'Stop'
 $orgWorkspace = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..'))
 $orgPrefix = $orgWorkspace.TrimEnd('\') + '\'
@@ -75,5 +80,5 @@ $orgReference = Join-Path $orgProject 'docs\reference\Person1_Codex_Implementati
 Assert-WorkspacePath $orgReference | Out-Null
 if (Test-Path -LiteralPath $orgReference) { throw 'Reference copy already exists.' }
 New-Item -ItemType Directory -Path ([IO.Path]::GetDirectoryName($orgReference)) -Force | Out-Null
-Copy-Item -LiteralPath 'C:\Users\jahnv\Downloads\Person1_Codex_Implementation_Plan.md' -Destination $orgReference
+Copy-Item -LiteralPath $ReferencePlan -Destination $orgReference
 Write-Output "Moved $($orgMoves.Count) files. Stable code, notebooks and run artifacts stay at their recorded paths."

@@ -10,7 +10,7 @@
     "Person 2 actual R1000 training-label counts/metadata missing",
     "Person 2 actual parent checkpoint, manifest and seen groups missing",
     "Person 3 frozen development coverage pending",
-    "Saved review/export evidence incomplete: [Errno 2] No such file or directory: 'C:\\\\Users\\\\jahnv\\\\OneDrive\\\\Desktop\\\\Jahnvi\\\\ASU\\\\fse capstone\\\\capstone_person1\\\\runs\\\\full_run_v2_20261012T181641Z_cfe8ce44\\\\outputs\\\\reports\\\\review_approval.json'",
+    "Saved review/export evidence incomplete: review_approval.json was absent from the diagnostic run output",
     "Shared evaluator equivalence checker missing",
     "Smoke-size run is not a final research handoff"
   ],

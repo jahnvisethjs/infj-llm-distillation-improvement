@@ -6,7 +6,7 @@ The organized folder layout and current phase-by-phase assessment are in [CODEBA
 
 This plan was written from inspection and read-only behavioral probes. The first alignment batch and the Person 3 question-manifest interface are implemented. See [FIRST_ALIGNMENT_BATCH.md](docs/milestones/FIRST_ALIGNMENT_BATCH.md), [BENCHMARK_INTERFACE_BATCH.md](docs/milestones/BENCHMARK_INTERFACE_BATCH.md) and [IMPLEMENTATION_STATUS.json](evidence/IMPLEMENTATION_STATUS.json) for evidence and remaining work. The corrected full release remains incomplete.
 
-Requirements: `C:/Users/jahnv/Downloads/Person1_Codex_Implementation_Plan.md`, together with the user's four-person responsibility table and subsequent ownership clarification. **Person 1 supplies the training/selection data; Person 3 can prepare its own evaluation data.** This clarification takes precedence over making Person 1's provisional benchmark generation mandatory. Existing progress reports describe earlier milestones; they do not establish compliance with all release deliverables.
+Requirements: [`docs/reference/Person1_Codex_Implementation_Plan.md`](docs/reference/Person1_Codex_Implementation_Plan.md), together with the user's four-person responsibility table and subsequent ownership clarification. **Person 1 supplies the training/selection data; Person 3 can prepare its own evaluation data.** This clarification takes precedence over making Person 1's provisional benchmark generation mandatory. Existing progress reports describe earlier milestones; they do not establish compliance with all release deliverables.
 
 ## Target outcome and ownership
 

@@ -1,24 +1,24 @@
-# Download the complete Person 1 datasets
+# Person 1 dataset archive inventory
 
-The complete verified data bundle, pinned raw sources and tokenizer assets are distributed as **GitHub Release downloads** associated with `person1/data-alignment`.
+The complete verified data bundle, pinned raw sources and tokenizer assets are packaged locally. They have **not yet been published** as GitHub Release downloads. This page records the intended archive layout and verified checksums so publication status is not confused with packaging status.
 
-[Open the dataset release](https://github.com/jahnvisethjs/infj-llm-distillation-improvement/releases/tag/person1-data-v3-20261012)
+Planned release tag: `person1-data-v3-20261012`.
 
 | Archive | Download size | Contents |
 |---|---:|---|
-| [person1-v3-01-training-and-handoff.zip](https://github.com/jahnvisethjs/infj-llm-distillation-improvement/releases/download/person1-data-v3-20261012/person1-v3-01-training-and-handoff.zip) | 301.7 MiB | Training/selection/loss JSONL, all prefixes, row/group maps, code, reviews and handoff |
-| [person1-v3-02-canonical-orca.zip](https://github.com/jahnvisethjs/infj-llm-distillation-improvement/releases/download/person1-data-v3-20261012/person1-v3-02-canonical-orca.zip) | 388.4 MiB | All Orca canonical rows, resumable shards and checkpoints |
-| [person1-v3-03-canonical-numina.zip](https://github.com/jahnvisethjs/infj-llm-distillation-improvement/releases/download/person1-data-v3-20261012/person1-v3-03-canonical-numina.zip) | 1251.8 MiB | All Numina canonical rows in one Parquet file |
-| [person1-v3-04-numina-canonical-shards.zip](https://github.com/jahnvisethjs/infj-llm-distillation-improvement/releases/download/person1-data-v3-20261012/person1-v3-04-numina-canonical-shards.zip) | 1252.6 MiB | Numina canonical shards and resume checkpoints |
-| [person1-v3-05-processing-provenance.zip](https://github.com/jahnvisethjs/infj-llm-distillation-improvement/releases/download/person1-data-v3-20261012/person1-v3-05-processing-provenance.zip) | 624.0 MiB | Exact-group catalog, checked candidates and reference-encoded candidates |
-| [person1-v3-06-pinned-upstream-sources.zip](https://github.com/jahnvisethjs/infj-llm-distillation-improvement/releases/download/person1-data-v3-20261012/person1-v3-06-pinned-upstream-sources.zip) | 518.5 MiB | Original pinned upstream Parquet files, inventory and dataset cards |
-| [person1-v3-07-pinned-tokenizer.zip](https://github.com/jahnvisethjs/infj-llm-distillation-improvement/releases/download/person1-data-v3-20261012/person1-v3-07-pinned-tokenizer.zip) | 2.2 MiB | Pinned Qwen2.5-0.5B tokenizer assets; no model weights |
+| `person1-v3-01-training-and-handoff.zip` | 301.7 MiB | Training/selection/loss JSONL, all prefixes, row/group maps, code, reviews and handoff |
+| `person1-v3-02-canonical-orca.zip` | 388.4 MiB | All Orca canonical rows, resumable shards and checkpoints |
+| `person1-v3-03-canonical-numina.zip` | 1251.8 MiB | All Numina canonical rows in one Parquet file |
+| `person1-v3-04-numina-canonical-shards.zip` | 1252.6 MiB | Numina canonical shards and resume checkpoints |
+| `person1-v3-05-processing-provenance.zip` | 624.0 MiB | Exact-group catalog, checked candidates and reference-encoded candidates |
+| `person1-v3-06-pinned-upstream-sources.zip` | 518.5 MiB | Original pinned upstream Parquet files, inventory and dataset cards |
+| `person1-v3-07-pinned-tokenizer.zip` | 2.2 MiB | Pinned Qwen2.5-0.5B tokenizer assets; no model weights |
 
 ## Start training or selection
 
-Clone the repository, then download and extract **01-training-and-handoff** into its root. All paths inside the ZIP begin with `capstone_person1/`. The training release appears at `capstone_person1/releases/person1_v3_20261012_ready/`.
+Clone the repository, then obtain and extract **01-training-and-handoff** into its root. All paths inside the ZIP begin with `capstone_person1/`. The training release appears at `capstone_person1/releases/person1_v3_20261012_ready/`.
 
-Install `requirements-person1.txt` in an isolated environment. Download/extract **07-pinned-tokenizer** for offline reference encoding, or fetch that exact tokenizer revision from Hugging Face. The training/selection/loss data and handoff are usable without downloading the entire original upstream corpus.
+Install `requirements-person1.txt` in an isolated environment. Obtain/extract **07-pinned-tokenizer** for offline reference encoding, or fetch that exact tokenizer revision from Hugging Face. The training/selection/loss data and handoff are usable without obtaining the entire original upstream corpus.
 
 ```python
 import json
@@ -34,7 +34,7 @@ Use `PERSON2_HANDOFF.md` and the shared encoder. Training data is 40,000 groups;
 
 ## Obtain every dataset and processing record
 
-Download **all seven ZIP files**, then extract each into the same repository root. Ordinary ZIP extraction recreates the original folder structure; the archives are independently readable and are not split pieces of one ZIP. Do not rename files inside the release.
+Obtain **all seven ZIP files**, then extract each into the same repository root. Ordinary ZIP extraction recreates the original folder structure; the archives are independently readable and are not split pieces of one ZIP. Do not rename files inside the release.
 
 | Folder after extraction | Use |
 |---|---|
@@ -48,7 +48,7 @@ Download **all seven ZIP files**, then extract each into the same repository roo
 | `capstone_person1/sources/` | Complete original pinned upstream files and source inventory |
 | `capstone_person1/cache/huggingface/` | Exact pinned tokenizer assets |
 
-Verify each downloaded ZIP against [SHA256SUMS.txt](../release_records/person1_v3_20261012_ready/SHA256SUMS.txt). [DATA_DOWNLOADS.json](../release_records/person1_v3_20261012_ready/DATA_DOWNLOADS.json) records every packaged file's original SHA-256 and size. Every archived file was decompressed and checked byte-for-byte before upload. With all release archives extracted, independently validate the complete bundle:
+Verify each ZIP against [SHA256SUMS.txt](../release_records/person1_v3_20261012_ready/SHA256SUMS.txt). [DATA_DOWNLOADS.json](../release_records/person1_v3_20261012_ready/DATA_DOWNLOADS.json) records every packaged file's original SHA-256 and size. Every archived file was decompressed and checked byte-for-byte after packaging. With all release archives extracted, independently validate the complete bundle:
 
 ```powershell
 python -m capstone_person1.scripts.validate_release --release capstone_person1/releases/person1_v3_20261012_ready

@@ -32,14 +32,14 @@ The source stage writes bounded, committed Parquet batches. Checkpoints bind sou
 Local commands, from the workspace root:
 
 ```powershell
-& 'C:\softwares\pythonAnaconda\python.exe' -m unittest capstone_person1.test_pipeline_controls capstone_person1.test_handoff_gate capstone_person1.test_snapshot_stream capstone_person1.test_snapshot_catalog -v
-& 'C:\softwares\pythonAnaconda\python.exe' -m capstone_person1.validate_notebook
-& 'C:\softwares\pythonAnaconda\python.exe' capstone_person1\sync_notebook_controls.py
-& 'C:\softwares\pythonAnaconda\python.exe' capstone_person1\prepare_tokenizer.py
-& 'C:\softwares\pythonAnaconda\python.exe' -u capstone_person1\rebuild_from_snapshot.py --rows-per-source 500
-& 'C:\softwares\pythonAnaconda\python.exe' -u capstone_person1\rebuild_from_snapshot.py --rows-per-source 2500
-& 'C:\softwares\pythonAnaconda\python.exe' -u capstone_person1\rebuild_from_snapshot.py --resume full_run_v2_20261012T004834Z_c75c286d
-& 'C:\softwares\pythonAnaconda\python.exe' -m capstone_person1.verify_smoke_run capstone_person1\runs\full_run_v2_20261012T004834Z_c75c286d
+python -m unittest capstone_person1.test_pipeline_controls capstone_person1.test_handoff_gate capstone_person1.test_snapshot_stream capstone_person1.test_snapshot_catalog -v
+python -m capstone_person1.validate_notebook
+python capstone_person1\sync_notebook_controls.py
+python capstone_person1\prepare_tokenizer.py
+python -u capstone_person1\rebuild_from_snapshot.py --rows-per-source 500
+python -u capstone_person1\rebuild_from_snapshot.py --rows-per-source 2500
+python -u capstone_person1\rebuild_from_snapshot.py --resume full_run_v2_20261012T004834Z_c75c286d
+python -m capstone_person1.verify_smoke_run capstone_person1\runs\full_run_v2_20261012T004834Z_c75c286d
 ```
 
 The local runner uses the same notebook cells and pinned tokenizer vocabulary/offsets. Windows maps run sequentially to avoid notebook multiprocessing/spawn problems. `vendor` holds the project-local pinned `datasketch==2.0.0`; `cache` is disposable download/computation cache. No model training is run by this notebook.

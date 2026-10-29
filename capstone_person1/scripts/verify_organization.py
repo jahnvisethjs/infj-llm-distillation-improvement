@@ -41,10 +41,7 @@ for path in md_paths:
         link_count += 1
 
 reference = PROJECT / 'docs/reference/Person1_Codex_Implementation_Plan.md'
-download = Path('C:/Users/jahnv/Downloads/Person1_Codex_Implementation_Plan.md')
 reference_hash = hashlib.sha256(reference.read_bytes()).hexdigest()
-if reference_hash != hashlib.sha256(download.read_bytes()).hexdigest():
-    raise ValueError('Copied reference plan differs from the downloaded original')
 report = {
     'status': 'passed', 'moved_files': len(plan['moves']),
     'stable_code_and_notebook_hashes_checked': len(plan['stable_code_sha256']),

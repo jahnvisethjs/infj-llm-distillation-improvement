@@ -1,8 +1,8 @@
 # Codebase guide and current Person 1 status
 
-Repository distribution: code, tests and [release records](../release_records/person1_v3_20261012_ready/README.md) are tracked here. All datasets and original upstream files are available through the [download/folder guide](DATA_DOWNLOADS.md); extract the archives into the repository root.
+Repository distribution: code, tests and [release records](../release_records/person1_v3_20261012_ready/README.md) are tracked here. The datasets and original upstream files are packaged in verified local archives but are not yet published; the [archive/folder guide](DATA_DOWNLOADS.md) records the intended distribution.
 
-Updated October 12, 2026 (America/Phoenix). **Person 1's current data deliverables are complete: DATA_READY_FOR_TRAINER.** All **1,096,250 pinned source rows** were processed. The immutable release supplies **40,000 training groups, 10,000 fresh selection groups and 1,000 held-out loss groups**, balanced by source. **87 tests pass**, all 11 manifests were re-encoded during export, and independent read-back verified **447 artifacts** plus the complete row-status audit. Git remains paused.
+Updated October 13, 2026 (America/Phoenix). **Person 1's current data deliverables are complete: DATA_READY_FOR_TRAINER.** All **1,096,250 pinned source rows** were processed. The immutable release supplies **40,000 training groups, 10,000 fresh selection groups and 1,000 held-out loss groups**, balanced by source. **87 tests pass**, all 11 manifests were re-encoded during export, and independent read-back verified **447 artifacts** plus the complete row-status audit. Code and lightweight audit records are tracked; large data publication remains pending.
 
 Requirements are the [supplied implementation plan](reference/Person1_Codex_Implementation_Plan.md), the exact user-supplied plain-text/tokenizer/loss contract, and the clarification that **Person 3 prepares its own evaluation data**. Earlier status is preserved in [PRE_FULL_V3_STATUS.md](milestones/PRE_FULL_V3_STATUS.md).
 
@@ -28,7 +28,7 @@ Requirements are the [supplied implementation plan](reference/Person1_Codex_Impl
 | `cache/`, `vendor/`, `runtime_deps/` | Tokenizer assets and isolated local dependencies |
 | `logs/` | Processing logs |
 | `project_documents/` outside the package | Proposals, charter, rubric and historical audit |
-| GitHub checkout outside the package | Prior branch work; paused |
+| GitHub branch | Code and lightweight audit records; large dataset assets pending publication |
 
 ## Runtime modules
 
