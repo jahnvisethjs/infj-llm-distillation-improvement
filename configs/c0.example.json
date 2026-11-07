@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "synthetic": false,
+  "active_profile": "0.5B",
+  "output_root": "../outputs/person4",
+  "integration": {
+    "notebook": "../Person2_SOL_Seeds17_123_UpTo4000.ipynb",
+    "notebook_sha256": "d2e7f0295657f92578952e0c6dbda476eeb0178878996d4764823b95ffc111fc"
+  },
+  "profiles": {
+    "0.5B": {
+      "model": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+      "run_id": null,
+      "adapter": null,
+      "adapter_sha256": null,
+      "adapter_config_sha256": null,
+      "run_config": null,
+      "run_config_sha256": null,
+      "training_summary": null,
+      "training_summary_sha256": null,
+      "exposure_evidence": null,
+      "exposure_sha256": null
+    },
+    "1.5B": {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "run_id": null,
+      "adapter": null,
+      "adapter_sha256": null,
+      "adapter_config_sha256": null,
+      "run_config": null,
+      "run_config_sha256": null,
+      "training_summary": null,
+      "training_summary_sha256": null,
+      "exposure_evidence": null,
+      "exposure_sha256": null
+    }
+  },
+  "data": {
+    "release": null,
+    "release_sha256": null,
+    "contract_root": null,
+    "candidate_manifest": null,
+    "overlap_report": null,
+    "overlap_sha256": null,
+    "max_total_tokens": 2048,
+    "candidate_count": 5000,
+    "seed": 42
+  },
+  "scoring": {
+    "dtype": "bfloat16",
+    "batch_size": 1,
+    "smoke_rows": 8,
+    "atol": 0.05,
+    "rtol": 0.05
+  },
+  "allocation": {
+    "budget_kind": null,
+    "target_tokens": null,
+    "stratum_proportions": null,
+    "tolerance": 0.005,
+    "boundary_window": 16,
+    "max_swaps": 32,
+    "max_row_counts": 128,
+    "seed": 42
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": null,
+    "schedule": "linear_warmup_constant",
+    "warmup_updates": null,
+    "accumulation": 8,
+    "microbatch_size": 1,
+    "epochs": 1,
+    "packing": false,
+    "save_every": 100,
+    "seed": 42
+  },
+  "evaluation": {
+    "development_manifest": null,
+    "development_sha256": null,
+    "final_manifest": null,
+    "final_sha256": null,
+    "evaluation_contract": null,
+    "contract_sha256": null,
+    "evaluator_script": null,
+    "script_sha256": null,
+    "method_freeze": null,
+    "method_freeze_sha256": null
+  }
+}

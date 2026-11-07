@@ -1,0 +1,146 @@
+{
+  "active_profile": "0.5B",
+  "allocation": {
+    "boundary_window": 16,
+    "budget_kind": "replay",
+    "expected_replay_tokens": 318845,
+    "max_row_counts": 128,
+    "max_swaps": 32,
+    "seed": 42,
+    "stratum_proportions": null,
+    "target_tokens": null,
+    "tolerance": 0.005
+  },
+  "data": {
+    "candidate_count": 5000,
+    "candidate_manifest": "../../data/manifests/selection_bank.jsonl",
+    "checksums_sha256": "16c59962598af51f74899cc83a4de89f223602adbd80aeb7439e0d260dcdabf5",
+    "inherited_encoder": "../../capstone_person1/releases/person1_v3_20261012_ready/code",
+    "inherited_release": "../../capstone_person1/releases/person1_v3_20261012_ready",
+    "max_total_tokens": 2048,
+    "release": "../../data",
+    "release_sha256": "f62f632992ac71500c87edb8a25d4a97860560ed368fc6a5d6e017f33286ceec",
+    "seed": 42
+  },
+  "evaluation": {
+    "contract_sha256": null,
+    "development_manifest": null,
+    "development_sha256": null,
+    "evaluation_contract": null,
+    "evaluator_script": null,
+    "final_manifest": null,
+    "final_sha256": null,
+    "method_freeze": null,
+    "method_freeze_sha256": null,
+    "script_sha256": null
+  },
+  "inputs": {
+    "parent_checksums_sha256": "4445e4763e8572c005eaed7ca2da9c34958bd7d5eed1497596a3be755cfb40b9",
+    "parent_index": "../../R1000_parents_seeds17_123_20261101T023416637853Z/parent_index.json",
+    "parent_index_sha256": "78480edcde9456d46f628bebb25136840f2dfaad18e81049241a9da70e764fc1",
+    "parent_package": "../../R1000_parents_seeds17_123_20261101T023416637853Z"
+  },
+  "integration": {
+    "notebook": "../Person2_SOL_Seeds17_123_UpTo4000.ipynb",
+    "notebook_sha256": "d2e7f0295657f92578952e0c6dbda476eeb0178878996d4764823b95ffc111fc"
+  },
+  "output_root": "../outputs/person4/v4",
+  "profiles": {
+    "0.5B": {
+      "adapter": "../../R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_0_5b/R1000_seed123/final/adapter",
+      "adapter_config_sha256": "4ec285328ab553d9a7ad119059c274f0274c79a2780f0c676f81d9a840b8ba5d",
+      "adapter_sha256": "aa11429355543bcfe35e47856a3c6ada4e5e0eb7f4647318c1c68aee5bf1c3a2",
+      "model": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+      "run_config": "../../R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_0_5b/R1000_seed123/run_config.json",
+      "run_config_sha256": "5b7037c89dba43dd8ba6ac42511e6b8226ba335c59901b26c4a31fef1cdec0fa",
+      "run_id": "qwen2_5_0_5b/R1000_seed123",
+      "training_seed": 123,
+      "training_summary": "../../R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_0_5b/R1000_seed123/training_summary.json",
+      "training_summary_sha256": "1b7aedeffb2f7de0863d10d136466782b16b78d4b67f4790c472ad21cb051201"
+    },
+    "1.5B": {
+      "adapter": "../../R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_1_5b/R1000_seed123/final/adapter",
+      "adapter_config_sha256": "23a98f4e1101f516a9a98bba7cb924dda105cb643d1efc9278a74cd9d3190f89",
+      "adapter_sha256": "849ca63fb2ebffc489144c68f00ac8513f1b9cae0c827c9fe4586cf6b38d370d",
+      "model": "Qwen/Qwen2.5-1.5B",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "run_config": "../../R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_1_5b/R1000_seed123/run_config.json",
+      "run_config_sha256": "be934b2923c91b2beb574199b2f92d8759643cbcbecd6bb2e8dcb5e4f069ff58",
+      "run_id": "qwen2_5_1_5b/R1000_seed123",
+      "training_seed": 123,
+      "training_summary": "../../R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_1_5b/R1000_seed123/training_summary.json",
+      "training_summary_sha256": "7f369a9fb607c0600e669f9ffec663fcf4c5bfaf8075715e8bcf9fd138b9a0ee"
+    }
+  },
+  "protection": {
+    "checker_sha256": "baa9a43db2079005e3b510bb93428a3a48084683f9f8a02274ec0499299c44eb",
+    "checker_source": "../../data/inputs/overlap_evidence/overlap_check.py",
+    "matcher_sha256": "6629846933c90cc6d224d29088b8b66d7f928f98552e2874b4d9447891410418",
+    "matcher_source": "../../data/code/capstone_person1/decontamination.py",
+    "question_manifests": [
+      {
+        "manifest": "../../data/inputs/evaluation/data/dev_gsm.jsonl",
+        "name": "dev_gsm",
+        "role": "development",
+        "sha256": "3cb2c71007d23e01cb70b6370c1ad82ad5bcea3527c7f3258b4814cf2e3d1cc6"
+      },
+      {
+        "manifest": "../../data/inputs/evaluation/data/dev_math.jsonl",
+        "name": "dev_math",
+        "role": "development",
+        "sha256": "641460fdc55beff591daad0cc7530a3f933eb263c3dfdf8a0534fcfaf8196416"
+      },
+      {
+        "manifest": "../../data/inputs/evaluation/data/dev_fast.jsonl",
+        "name": "dev_fast",
+        "role": "fast-development",
+        "sha256": "e8a749c6bae8f223bb9c4979278323b460b8bd9e4e2a70f20031c8ea8b52939a"
+      },
+      {
+        "manifest": "../../data/inputs/evaluation/data/test_gsm.jsonl",
+        "name": "test_gsm",
+        "role": "final",
+        "sha256": "bcb312587aaa90d0ce41a9c1b280b227e60d9111f1447da865c6926b36e97397"
+      },
+      {
+        "manifest": "../../data/inputs/evaluation/data/test_math500.jsonl",
+        "name": "test_math500",
+        "role": "final",
+        "sha256": "81e134dbb43f099d425df0549a645eb5c35915bf507540f24f80627196f900ae"
+      }
+    ],
+    "reserved_manifest": "../../data/manifests/loss_dev.jsonl",
+    "reserved_sha256": "0afb052eb8cf09823def93746c88e89cf5b20907431213075523f2a602829507",
+    "reviews": []
+  },
+  "schema_version": 1,
+  "scoring": {
+    "atol": 0.05,
+    "batch_size": 1,
+    "dtype": "bfloat16",
+    "rtol": 0.05,
+    "smoke_rows": 8
+  },
+  "sol": {
+    "account": null,
+    "note": "Resolve on SOL; measure GPU smoke throughput before full requests",
+    "partition": null,
+    "python": null,
+    "qos": null,
+    "walltime": null
+  },
+  "synthetic": false,
+  "training": {
+    "accumulation": 8,
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "microbatch_size": 1,
+    "optimizer": "AdamW",
+    "packing": false,
+    "save_every": 100,
+    "schedule": "linear_warmup_constant",
+    "seed": 42,
+    "warmup_updates": 10
+  }
+}

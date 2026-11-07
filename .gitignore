@@ -1,0 +1,9 @@
+# New Person 4 runtime artifacts; existing Person 1 inputs remain untouched.
+outputs/person4/
+.test_artifacts/
+__pycache__/
+*.pyc
+*.partial
+configs/c0.local*.json
+docs/
+capstone_person1/

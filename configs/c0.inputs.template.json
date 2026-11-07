@@ -1,0 +1,44 @@
+{
+  "note": "UNRESOLVED INPUT TEMPLATES. Split into separate files, fill with actual evidence, then record their hashes in your config. This file is not valid experiment evidence.",
+  "parent_exposure_evidence": {
+    "run_id": null,
+    "model": null,
+    "revision": null,
+    "adapter_sha256": null,
+    "run_config_sha256": null,
+    "training_summary_sha256": null,
+    "complete_history": null,
+    "history_basis": null,
+    "exposures": [{"manifest": null, "sha256": null, "epochs": null}]
+  },
+  "overlap_report": {
+    "verified": null,
+    "release_sha256": null,
+    "candidate_sha256": null,
+    "development_sha256": null,
+    "final_sha256": null,
+    "excluded_group_ids": null,
+    "method": null,
+    "limitations": null
+  },
+  "evaluation_contract": {
+    "adapter_interface": "person4-evaluate-v1",
+    "decoding": "greedy",
+    "max_new_tokens": null,
+    "stopping": null,
+    "checker_version": null,
+    "precision": null,
+    "prompt_sha256": null,
+    "evaluator_dependencies": null,
+    "checker_validation": {"path": null, "sha256": null}
+  },
+  "checker_validation": {
+    "passed": null,
+    "checker_version": null,
+    "source_dependencies": null,
+    "supported_answer_forms": null,
+    "cases_checked": null,
+    "ambiguity_policy": "unresolved_equivalence"
+  },
+  "method_freeze": {"frozen": null, "method_definition": null}
+}
