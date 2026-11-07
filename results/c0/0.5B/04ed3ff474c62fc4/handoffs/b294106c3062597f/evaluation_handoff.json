@@ -1,0 +1,84 @@
+{
+  "approach_complete": true,
+  "arms": {
+    "C0": {
+      "actual_tokens": 318738,
+      "checkpoint": "/scratch/jseth2/c0/results/0.5B/04ed3ff474c62fc4/runs/C0/pilot01/final/adapter",
+      "checkpoint_sha256": "41d619ed2e9eefa112196637ccd92bd711307f5fd719bc886de399e2988333fd",
+      "reconciliation_sha256": "1640eb3ecf55ba76b05a8e1c2a3418108b01a97b16e7db8429e2fb2773b4d0ae",
+      "run_directory": "/scratch/jseth2/c0/results/0.5B/04ed3ff474c62fc4/runs/C0/pilot01",
+      "selection_sha256": "483004a1a48d13ccf3ed4a93e0d91de7deba2c7721f448df16953c26c7a99198"
+    }
+  },
+  "candidate_sha256": "a1304fddf9d9c66e0ae69a50214945005ca23ae7695434fb54694be7369bea1e",
+  "evaluation_status": "pending",
+  "external_B": {
+    "matched_budget_B_manifest": "/scratch/jseth2/c0/results/0.5B/040cf1675c7b1448/selection/B/manifest.jsonl",
+    "requirement": "same parent, same frozen candidate universe, same recipe, supervised tokens within tolerance of the target",
+    "status": "trained outside this pipeline",
+    "target_tokens": 318845,
+    "tolerance": 0.005
+  },
+  "interpretation": "Completed continuation checkpoints; accuracy and independent correctness unmeasured",
+  "measurement_key": "2c648f29cf0110030822974635b61fd9a53a2b28bb9e0a0b15fe0a3a25bbf151",
+  "pairwise_token_difference": null,
+  "parent": {
+    "adapter": "/scratch/jseth2/c0/R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_0_5b/R1000_seed17/final/adapter",
+    "adapter_config_sha256": "3eb2ae42596047ddd1103b1c0cc95e686b0fde7115e84f29066ff13bfbec1bd1",
+    "adapter_sha256": "11a9de70df8b102e57676fb1c4b8ed61f9f0d1e7f524c6c0f0169368ea17b1cb",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "run_config": "/scratch/jseth2/c0/R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_0_5b/R1000_seed17/run_config.json",
+    "run_config_sha256": "9f591ab337b7ca6a52a4216574818a5a5c0bd67cd064f957476251b5fd23d002",
+    "run_id": "qwen2_5_0_5b/R1000_seed17",
+    "training_seed": 17,
+    "training_summary": "/scratch/jseth2/c0/R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_0_5b/R1000_seed17/training_summary.json",
+    "training_summary_sha256": "c0221614705c4f235564cd7ec3afbd9c27cfe37a20002631ae656f756efbcb05"
+  },
+  "protected_question_sources": [
+    {
+      "manifest": "/scratch/jseth2/c0/data/inputs/evaluation/data/dev_gsm.jsonl",
+      "name": "dev_gsm",
+      "role": "development",
+      "sha256": "3cb2c71007d23e01cb70b6370c1ad82ad5bcea3527c7f3258b4814cf2e3d1cc6"
+    },
+    {
+      "manifest": "/scratch/jseth2/c0/data/inputs/evaluation/data/dev_math.jsonl",
+      "name": "dev_math",
+      "role": "development",
+      "sha256": "641460fdc55beff591daad0cc7530a3f933eb263c3dfdf8a0534fcfaf8196416"
+    },
+    {
+      "manifest": "/scratch/jseth2/c0/data/inputs/evaluation/data/dev_fast.jsonl",
+      "name": "dev_fast",
+      "role": "fast-development",
+      "sha256": "e8a749c6bae8f223bb9c4979278323b460b8bd9e4e2a70f20031c8ea8b52939a"
+    },
+    {
+      "manifest": "/scratch/jseth2/c0/data/inputs/evaluation/data/test_gsm.jsonl",
+      "name": "test_gsm",
+      "role": "final",
+      "sha256": "bcb312587aaa90d0ce41a9c1b280b227e60d9111f1447da865c6926b36e97397"
+    },
+    {
+      "manifest": "/scratch/jseth2/c0/data/inputs/evaluation/data/test_math500.jsonl",
+      "name": "test_math500",
+      "role": "final",
+      "sha256": "81e134dbb43f099d425df0549a645eb5c35915bf507540f24f80627196f900ae"
+    }
+  ],
+  "recipe": {
+    "accumulation": 8,
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "microbatch_size": 1,
+    "optimizer": "AdamW",
+    "packing": false,
+    "save_every": 100,
+    "schedule": "linear_warmup_constant",
+    "seed": 42,
+    "warmup_updates": 10
+  },
+  "stage_fingerprint": "04ed3ff474c62fc4541e36501b2a7c429bb6c242dd75b7026369451cd375c77c",
+  "synthetic": false
+}

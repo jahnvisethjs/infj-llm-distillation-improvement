@@ -1,0 +1,54 @@
+{
+  "atol": 0.25,
+  "candidate_sha256": "a1304fddf9d9c66e0ae69a50214945005ca23ae7695434fb54694be7369bea1e",
+  "code": {
+    "__init__.py": "5e18a4a8ac65c8f1d30b8c92f2b3a59d8f5d24dddd4a3144f7ab223d679cfea3",
+    "__main__.py": "1f3bbd59f091f6f4de00474a56be81edbe477ee30d9865945545d928430ed3b4",
+    "allocation.py": "aabaf268b683fd0bfe3095da2ead539e5e897a2fa173c2f4bf2bc220b911c659",
+    "audit.py": "a7da2ec55c93101b5905bc60e118ad4d96fb61059619f6b02d8dbce9c16ec99a",
+    "bindings.py": "502fb30a10bb6bd3088f9242b5d9943854e999260cdd624ba0575a02dc6118b0",
+    "config.py": "a9f9b0cdc8f832e803964a68158e6abfe7d13cd01bb3126f10840ecfa9d2c02d",
+    "continuation.py": "fdee4ddc1731fe4e5c0281ff4a9d49c9c82d668df144a246db93923f56b8d909",
+    "data.py": "35d15b47b558e1cb105291a4e8330c50d07fd44bbd706615c44e805fda5acd9c",
+    "evaluation.py": "e8ed8f627335dda54507fde999798e83bfae3c4529d102447fbd912718771d64",
+    "handoff.py": "b25783d9982db621e58ea5e86cb2470710a7d69753fa48c4c2dcc462b8d90f2f",
+    "person2_adapter.py": "6065c40332ab8f93e03564f7cd5b7ba08d886b21fb3904bb0049952483442c12",
+    "protection.py": "9b123bd5bcc1a273f3038e0690a57b1794a7138d195399f0f78c0e8939462619",
+    "provenance.py": "70d0d6b822876fed5d7305e11b6d33e677c22f903d2b04c1f75fec62b2039177",
+    "reference_scoring.py": "cac24530acc71366a1c20066185100fdd9eb2023164a717962d13b848800b5a2",
+    "selection.py": "262ba3ba5d0e43fdcda0337755ab4d4b6d1f4156c862b6723d19192914d08ff6",
+    "v4_config.py": "fae8ed5852c525b988a0ed204467f288ef74e29fa4bc45e1f80d9f72eca49519"
+  },
+  "config_fingerprint": "acf0167b451c75b66565b796b8b03011bdfa8898a0ad8b0e0a0647fc259845d2",
+  "measurement_key": "b42cc839389c369715c686b25d57135be016ca0e67e7daca2a9d0040a1795ea4",
+  "padded_batch_max_difference": null,
+  "parent_unchanged": true,
+  "passed": true,
+  "rows": 5000,
+  "rtol": 0.05,
+  "runtime": {
+    "cuda": "12.4",
+    "determinism_environment": {
+      "CUBLAS_WORKSPACE_CONFIG": null,
+      "MKL_THREADING_LAYER": null,
+      "OMP_NUM_THREADS": "4",
+      "PYTHONHASHSEED": null
+    },
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "packages": {
+      "accelerate": "1.10.1",
+      "bitsandbytes": "0.48.1",
+      "numpy": "2.5.4",
+      "peft": "0.17.1",
+      "safetensors": "0.8.0",
+      "torch": "2.6.0+cu124",
+      "transformers": "4.57.1"
+    },
+    "platform": "Linux-4.18.0-553.172.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "python": "3.12.16"
+  },
+  "scores_sha256": "ccb6b18c4e3dba09d2fd4f567e8add05cf597bbe51055730f34f1884c2e8656c",
+  "stage_fingerprint": "ace2b72133a88095d7158bc2d48071e2c6a33304823e9a307181e3e7bdf8629c",
+  "supervised_tokens": 1597332,
+  "synthetic": false
+}

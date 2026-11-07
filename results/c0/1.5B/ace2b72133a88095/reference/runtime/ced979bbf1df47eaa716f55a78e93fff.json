@@ -1,0 +1,33 @@
+{
+  "cache_hits": 0,
+  "end_to_end_wall_seconds": 26.1561015881598,
+  "environment": {
+    "determinism_environment": {
+      "CUBLAS_WORKSPACE_CONFIG": null,
+      "MKL_THREADING_LAYER": null,
+      "OMP_NUM_THREADS": "4",
+      "PYTHONHASHSEED": null
+    },
+    "packages": {
+      "accelerate": "1.10.1",
+      "bitsandbytes": "0.48.1",
+      "numpy": "2.5.4",
+      "peft": "0.17.1",
+      "safetensors": "0.8.0",
+      "torch": "2.6.0+cu124",
+      "transformers": "4.57.1"
+    },
+    "platform": "Linux-4.18.0-553.172.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "python": "3.12.16"
+  },
+  "fresh_forward_seconds": 0.8477987870573997,
+  "fresh_scored_supervised_tokens": 3813,
+  "fresh_supervised_tokens_per_second": 4497.529435297297,
+  "newly_scored_rows": 8,
+  "note": "Forward projection excludes load, tokenization and disk overhead; resume/cold costs are distinct",
+  "peak_memory_bytes": 3426870784,
+  "projected_full_pool_forward_seconds": 355.1576533249332,
+  "rows": 8,
+  "seconds": 1.0526558209676296,
+  "smoke": true
+}

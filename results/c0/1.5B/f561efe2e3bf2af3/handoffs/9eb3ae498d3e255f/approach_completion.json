@@ -1,0 +1,52 @@
+{
+  "approach_complete": true,
+  "arms": {
+    "C0": {
+      "actual_tokens": 318816,
+      "checkpoint": "/scratch/jseth2/c0/results/1.5B/f561efe2e3bf2af3/runs/C0/pilot01/final/adapter",
+      "checkpoint_sha256": "faf612e73b2bb8ab42ea3121afdd3f6dafdc402a121b855c3f31ece8e5659896",
+      "reconciliation_sha256": "096518020c363332447a7ba206533b6470cf87599b02a07e1debd8e137ccb233",
+      "run_directory": "/scratch/jseth2/c0/results/1.5B/f561efe2e3bf2af3/runs/C0/pilot01",
+      "selection_sha256": "1b38af587145757cd70973e354f76c99df881c3498cf6f40945606305223a082"
+    }
+  },
+  "candidate_sha256": "a1304fddf9d9c66e0ae69a50214945005ca23ae7695434fb54694be7369bea1e",
+  "evaluation_status": "pending",
+  "external_B": {
+    "matched_budget_B_manifest": "/scratch/jseth2/c0/results/1.5B/887ffd3f372c3d9a/selection/B/manifest.jsonl",
+    "requirement": "same parent, same frozen candidate universe, same recipe, supervised tokens within tolerance of the target",
+    "status": "trained outside this pipeline",
+    "target_tokens": 318845,
+    "tolerance": 0.005
+  },
+  "interpretation": "Completed continuation checkpoints; accuracy and independent correctness unmeasured",
+  "measurement_key": "b42cc839389c369715c686b25d57135be016ca0e67e7daca2a9d0040a1795ea4",
+  "pairwise_token_difference": null,
+  "parent": {
+    "adapter": "/scratch/jseth2/c0/R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_1_5b/R1000_seed17/final/adapter",
+    "adapter_config_sha256": "c39e85324555f49bbfcfdc75261498367599880ef870f147334e2577a0fc265c",
+    "adapter_sha256": "e0e419f2963dae8a6ae8f03637fdf5c255c8634ddf882360164b6f6843c30a75",
+    "model": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "run_config": "/scratch/jseth2/c0/R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_1_5b/R1000_seed17/run_config.json",
+    "run_config_sha256": "177ee9fb3f4b9dd11c0f2e1c891d0e313937c43174a641dc1fa1adf58ca878d0",
+    "run_id": "qwen2_5_1_5b/R1000_seed17",
+    "training_seed": 17,
+    "training_summary": "/scratch/jseth2/c0/R1000_parents_seeds17_123_20261101T023416637853Z/qwen2_5_1_5b/R1000_seed17/training_summary.json",
+    "training_summary_sha256": "04e957f0e8ca245e505b92c20d1c5acdd928bf458a572f45e8dd498364b112be"
+  },
+  "recipe": {
+    "accumulation": 8,
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "microbatch_size": 1,
+    "optimizer": "AdamW",
+    "packing": false,
+    "save_every": 100,
+    "schedule": "linear_warmup_constant",
+    "seed": 42,
+    "warmup_updates": 10
+  },
+  "stage_fingerprint": "f561efe2e3bf2af305f49b210c00a87cc5ce566eb53f92c7df4c5d35356c2cce",
+  "synthetic": false
+}
