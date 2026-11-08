@@ -78,6 +78,8 @@ def cpsat_select(cfg, method, rows, priorities, target, root):
         raise PipelineError("allocation.utility_scale must be a positive integer")
     if method == "B":
         utilities = None  # Method B's own seeded hash utility, reproduced exactly
+    elif all("utility_integer" in r for r in priorities):
+        utilities = {r["row_id"]: r["utility_integer"] for r in priorities}  # C1/E: exact integers from generation_scoring
     else:
         utilities = {r["row_id"]: int(round(r["utility"] * scale)) for r in priorities}
     bank = [{k: v for k, v in r.items() if k not in ("canonical_text_hash", "split")} for r in rows]
@@ -89,7 +91,8 @@ def cpsat_select(cfg, method, rows, priorities, target, root):
     except (ValueError, AssertionError) as exc:
         raise PipelineError(f"CP-SAT selection failed: {exc}") from exc
     if chosen is None:
-        write_json(root / "allocation_failure.json", solver_report)
+        if root is not None:
+            write_json(root / "allocation_failure.json", solver_report)
         raise PipelineError(f"CP-SAT selection infeasible or unresolved: {solver_report.get('status')}; "
                             "counts and tolerances were not relaxed")
     by_id = {r["row_id"]: r for r in priorities}
@@ -107,8 +110,14 @@ def cpsat_select(cfg, method, rows, priorities, target, root):
               "quota_deviations": {f"{s['source']}|{s['length_bin']}": 0 for s in solver_report["strata"]},
               "swaps": [], "method": "method-b-cpsat-v3", "coverage_relaxed": False,
               "stratum_tolerance": settings["stratum_tolerance"], "utility_scale": scale,
-              "utility_definition": "Method B seeded hash" if utilities is None else f"round(utility * {scale})",
+              "utility_definition": ("Method B seeded hash" if utilities is None
+                                     else "round(fit * scale) * (den + num * mistake)" if method in ("C1", "E")
+                                     else f"round(utility * {scale})"),
               "selector_origin_sha256": settings.get("b_select_origin_sha256"), "cpsat": solver_report}
+    if method in ("C1", "E"):
+        report.update({"generation_key": priorities[0]["generation_key"], "mistake_bonus": priorities[0]["mistake_bonus"],
+                       "mistakes_in_universe": sum(r["mistake"] for r in priorities),
+                       "mistakes_selected": sum(r["mistake"] for r in selected)})
     if method == "B" and settings.get("b_selected_manifest"):
         # The proof that the vendored selector is Method B's: his recorded rows must reproduce exactly.
         verified(settings["b_selected_manifest"], settings.get("b_selected_sha256"))
@@ -143,18 +152,27 @@ def seed_agnostic_fingerprint(cfg):
     return stage_fingerprint(stripped, "train")
 
 
+METHODS = ("B", "C0", "C1", "E")  # fresh selectors sharing one universe, selector, budget and recipe
+
+
 def select(cfg, method):
     gate(cfg, "select")
-    if method not in ("B", "C0"):
-        raise PipelineError("This phase implements only B and C0")
+    if method not in METHODS:
+        raise PipelineError(f"Unknown selection method {method!r}; expected one of {METHODS}")
     rows, preparation = load_prepared(cfg)
     seed = cfg["allocation"]["seed"]
     coverage = None
     if method == "C0":
         scores, coverage = load_scores(cfg)
         priorities = fit_priorities(rows, scores, seed)
-    else:
+    elif method == "B":
         priorities = random_priorities(rows, seed)
+    else:
+        # Phase 1: priorities come from ingested question-only generation outcomes
+        # (capstone_person4_approachC1/generation_scoring.py); the whitelist is fixed now so adding that stage
+        # later does not move the train fingerprint of the Phase 0 C0 runs.
+        from capstone_person4_approachC1 import generation_scoring
+        priorities = generation_scoring.priorities(cfg, method, rows, seed)
     target, proportions, origin = budget_and_coverage(cfg, rows)
     settings = cfg["allocation"]
     root = artifact_root(cfg, "select") / "selection" / method
@@ -170,13 +188,16 @@ def select(cfg, method):
     by_id = {row["row_id"]: row for row in rows}
     manifest = [by_id[r["row_id"]] for r in selected]
     write_rows(root / "manifest.jsonl", manifest)
-    table = [{k: r.get(k) for k in ("row_id", "problem_group_id", "stratum", "utility", "fit", "mean_nll", "tie_key", "priority_rank", "supervised_tokens")} for r in selected]
+    table = [{k: r.get(k) for k in ("row_id", "problem_group_id", "stratum", "utility", "utility_integer", "fit", "mean_nll", "mistake", "tie_key", "priority_rank", "supervised_tokens")} for r in selected]
     buffer = io.StringIO(newline="")
     writer = csv.DictWriter(buffer, fieldnames=list(table[0]))
     writer.writeheader()
     writer.writerows(table)
     write_bytes(root / "selection_table.csv", buffer.getvalue().encode("utf-8"))
-    version = "reference-fit-v2-cpsat" if report.get("method") == "method-b-cpsat-v3" else "reference-fit-v1"
+    cpsat = report.get("method") == "method-b-cpsat-v3"
+    version = {"C1": "mistake-fit-v1-cpsat", "E": "mistake-only-v1-cpsat"}.get(method, "reference-fit-v2-cpsat" if cpsat else "reference-fit-v1")
+    if method in ("C1", "E"):
+        coverage = {"measurement_key": priorities[0]["score_fingerprint"]}
     report.update({"synthetic": False, "method": method, "version": version, "budget_origin": origin,
                    "stratum_proportions": proportions, "manifest_sha256": sha(root / "manifest.jsonl"),
                    "selected_data_hash": digest(manifest), "config_fingerprint": cfg["config_fingerprint"],
@@ -204,8 +225,8 @@ def select(cfg, method):
 
 
 def load_selection(cfg, method):
-    if method not in ("B", "C0"):
-        raise PipelineError("Expected B or C0 selection")
+    if method not in METHODS:
+        raise PipelineError(f"Expected a selection method in {METHODS}")
     root = artifact_root(cfg, "select") / "selection" / method
     report = read_json(root / "allocation_report.json")
     rows = read_rows(root / "manifest.jsonl")
@@ -225,6 +246,10 @@ def load_selection(cfg, method):
         raise PipelineError("Selected token totals fail budget reconciliation")
     if dict(Counter(stratum(r) for r in rows)) != {k: v for k, v in report["quotas"].items() if v}:
         raise PipelineError("Selected coverage differs from allocation quotas")
+    if method in ("C1", "E"):
+        from capstone_person4_approachC1.generation_scoring import load_generation
+        if report.get("generation_key") != load_generation(cfg)[1]["generation_key"]:
+            raise PipelineError(f"{method} selection was made from other generation outcomes than the current ones")
     return rows, report
 
 
@@ -246,7 +271,7 @@ def train(cfg, method, attempt, resume=None, smoke=False):
                 proofs.append(proof)
         if not proofs:
             raise PipelineError("Run a matching train --smoke before full continuation; no complete disposable smoke evidence found")
-    if method == "C0":
+    if method in ("C0", "C1"):
         _, coverage = load_scores(cfg)
         if selection["score_fingerprint"] != coverage["measurement_key"]:
             raise PipelineError("Selection reference cache changed")

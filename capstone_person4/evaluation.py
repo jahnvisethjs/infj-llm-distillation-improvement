@@ -45,8 +45,8 @@ def validate_predictions(predictions, questions):
 
 def evaluate(cfg, method, attempt, run=None, split="development"):
     gate(cfg, "evaluate")
-    if method not in ("parent", "B", "C0") or split not in ("development", "final"):
-        raise PipelineError("Expected parent/B/C0 and development/final")
+    if method not in ("parent", "B", "C0", "C1", "E") or split not in ("development", "final"):
+        raise PipelineError("Expected parent/B/C0/C1/E and development/final")
     if not attempt or Path(attempt).name != attempt or attempt in (".", ".."):
         raise PipelineError("Use a simple new evaluation attempt name")
     if split == "final":
@@ -145,7 +145,7 @@ def compare(cfg, report_paths, attempt):
                 or any(report.get(k) != reports[0].get(k) for k in common)):
             raise PipelineError("Comparison mixes synthetic outputs, parents, profiles, questions, protocols or methods")
         checked_file(report["predictions"], report["predictions_sha256"], "comparison predictions")
-        if report["method"] in ("B", "C0"):
+        if report["method"] in ("B", "C0", "C1"):
             rec = report.get("training_reconciliation") or {}
             if (rec.get("valid_controlled_run") is not True or rec.get("training_smoke_only") is not False
                     or rec.get("method") != report["method"]
@@ -160,23 +160,26 @@ def compare(cfg, report_paths, attempt):
         questions = read_rows(cfg["evaluation"][report["split"] + "_manifest"])
         validate_predictions(predictions, questions)
         by_method[report["method"]].append((report, predictions))
-    if set(by_method) != {"parent", "B", "C0"} or len(by_method["parent"]) != 1:
-        raise PipelineError("Supply one untouched parent report and matched B/C0 reports")
-    for method in ("B", "C0"):
+    arms = [m for m in ("B", "C0", "C1") if m in by_method]
+    if "parent" not in by_method or len(by_method["parent"]) != 1 or "C0" not in by_method or len(arms) < 2:
+        raise PipelineError("Supply one untouched parent report, C0 and at least one other matched arm (B and/or C1)")
+    runs = {}
+    for method in arms:
         seeds = [report["training_seed"] for report, _ in by_method[method]]
         if len(set(seeds)) != len(seeds):
             raise PipelineError("Duplicate training seeds; manifest-draw variability must be analyzed separately")
+        runs[method] = {r["training_seed"]: p for r, p in by_method[method]}
+    if any(set(runs[m]) != set(runs["C0"]) for m in arms):
+        raise PipelineError("Match continuation seeds across every arm")
     parent = by_method["parent"][0][1]
-    results = []
-    b_runs = {r["training_seed"]: p for r, p in by_method["B"]}
-    c_runs = {r["training_seed"]: p for r, p in by_method["C0"]}
-    if set(b_runs) != set(c_runs):
-        raise PipelineError("Match B and C0 continuation seeds")
-    controls = [r["training_reconciliation"] for r in reports if r["method"] in ("B", "C0")]
+    controls = [r["training_reconciliation"] for r in reports if r["method"] in arms]
     if any(any(r.get(k) != controls[0].get(k) for k in ("candidate_sha256", "target_tokens", "budget_tolerance")) for r in controls):
         raise PipelineError("Continuation arms do not share the candidate universe and token-budget policy")
+    primary = ("C1", "C0") if "C1" in arms else ("C0", "B")
+    contrasts = [(a, b) for i, a in enumerate(arms) for b in arms[:i]]  # later arm minus earlier: C0-B, C1-B, C1-C0
     benchmarks = sorted({p["benchmark"] for p in parent})
-    for seed in sorted(b_runs):
+    results = []
+    for seed in sorted(runs["C0"]):
         for benchmark in benchmarks:
             def outcomes(predictions):
                 return {p["problem_id"]: p["correct"] for p in predictions if p["benchmark"] == benchmark}
@@ -186,16 +189,21 @@ def compare(cfg, report_paths, attempt):
                         "truncation_rate": sum(p["status"] == "truncated" or "truncated" in p["flags"] for p in part) / len(part),
                         "unresolved_equivalence_rate": sum(p["status"] == "unresolved_equivalence" for p in part) / len(part),
                         "mean_generated_tokens": statistics.mean(p["generated_tokens"] for p in part)}
-            p, b, c = outcomes(parent), outcomes(b_runs[seed]), outcomes(c_runs[seed])
-            results.append({"benchmark": benchmark, "training_seed": seed,
-                            "parent_accuracy": sum(p.values()) / len(p), "B_accuracy": sum(b.values()) / len(b),
-                            "C0_accuracy": sum(c.values()) / len(c), "C0_minus_B": paired_difference(c, b),
-                            "C0_minus_parent": paired_difference(c, p), "B_minus_parent": paired_difference(b, p),
-                            "diagnostics": {"parent": diagnostics(parent), "B": diagnostics(b_runs[seed]), "C0": diagnostics(c_runs[seed])}})
+            scored = {"parent": outcomes(parent), **{m: outcomes(runs[m][seed]) for m in arms}}
+            row = {"benchmark": benchmark, "training_seed": seed, "arms": arms, "primary_contrast": f"{primary[0]}_minus_{primary[1]}",
+                   "parent_accuracy": sum(scored["parent"].values()) / len(scored["parent"]),
+                   "diagnostics": {"parent": diagnostics(parent), **{m: diagnostics(runs[m][seed]) for m in arms}}}
+            for m in arms:
+                row[f"{m}_accuracy"] = sum(scored[m].values()) / len(scored[m])
+                row[f"{m}_minus_parent"] = paired_difference(scored[m], scored["parent"])
+            for a, b in contrasts:
+                row[f"{a}_minus_{b}"] = paired_difference(scored[a], scored[b])
+            results.append(row)
+    key = f"{primary[0]}_minus_{primary[1]}"
     variability = {}
     for benchmark in benchmarks:
-        differences = [r["C0_minus_B"]["difference_pp"] for r in results if r["benchmark"] == benchmark]
-        variability[benchmark] = {"matched_seed_count": len(differences), "mean_C0_minus_B_pp": statistics.mean(differences),
+        differences = [r[key]["difference_pp"] for r in results if r["benchmark"] == benchmark]
+        variability[benchmark] = {"matched_seed_count": len(differences), f"mean_{key}_pp": statistics.mean(differences),
                                   "training_seed_sd_pp": statistics.stdev(differences) if len(differences) > 1 else None,
                                   "scope": "variation across matched continuation seeds, separate from paired question intervals"}
     scoring_costs = {}
@@ -203,20 +211,21 @@ def compare(cfg, report_paths, attempt):
         for entry in report.get("reference_runtime_reports", []):
             checked_file(entry["path"], entry["sha256"], "scoring runtime report")
             scoring_costs[entry["path"]] = read_json(entry["path"])
-    result = {"synthetic": False, "results": results, "training_seed_variability": variability,
+    result = {"synthetic": False, "arms": arms, "primary_contrast": key, "results": results, "training_seed_variability": variability,
               "source_reports": [str(Path(p).resolve()) for p in report_paths],
               "evaluation_costs": [{"method": r["method"], "seed": r["training_seed"], "runtime": r.get("runtime")} for r in reports],
               "training_costs": [{"method": r["method"], "seed": r["training_seed"], "reconciliation": r["training_reconciliation"]}
-                                 for r in reports if r["method"] in ("B", "C0")],
+                                 for r in reports if r["method"] in arms],
               "scoring_costs": scoring_costs,
-              "training_seed_count": len(b_runs), "interpretation": "A single training seed is pilot evidence; no accuracy improvement is assumed"}
+              "training_seed_count": len(runs["C0"]), "interpretation": "A single training seed is pilot evidence; no accuracy improvement is assumed"}
     root = artifact_root(cfg, "evaluate") / "comparison" / attempt
     write_json(root / "comparison.json", result)
-    lines = ["# C0 comparison", "", "| Benchmark | Seed | Parent % | B % | C0 % | C0 - B pp (paired 95% interval) |",
-             "| --- | --- | --- | --- | --- | --- |"]
+    header = ["Benchmark", "Seed", "Parent %"] + [f"{m} %" for m in arms] + [f"{key.replace('_', ' ')} pp (paired 95% interval)"]
+    lines = [f"# {primary[0]} versus {primary[1]} comparison", "", "| " + " | ".join(header) + " |", "|" + " --- |" * len(header)]
     for r in results:
-        d = r["C0_minus_B"]
-        lines.append(f"| {r['benchmark']} | {r['training_seed']} | {100*r['parent_accuracy']:.2f} | {100*r['B_accuracy']:.2f} | {100*r['C0_accuracy']:.2f} | {d['difference_pp']:.2f} {d['ci95_pp']} |")
+        d = r[key]
+        cells = [r["benchmark"], str(r["training_seed"]), f"{100*r['parent_accuracy']:.2f}"] + [f"{100*r[m + '_accuracy']:.2f}" for m in arms] + [f"{d['difference_pp']:.2f} {d['ci95_pp']}"]
+        lines.append("| " + " | ".join(cells) + " |")
     lines += ["", result["interpretation"], "", "Intervals describe evaluation-item uncertainty, not training-run uncertainty."]
     from .provenance import write_bytes
     write_bytes(root / "comparison.md", ("\n".join(lines) + "\n").encode())

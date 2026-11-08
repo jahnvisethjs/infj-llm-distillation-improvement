@@ -33,17 +33,22 @@ def main(argv=None):
     commands = parser.add_subparsers(dest="command", required=True)
     dry = commands.add_parser("dry-run", help="model-independent, visibly synthetic allocator demonstration")
     dry.add_argument("--output", required=True)
-    for name in ("audit", "protect", "prepare", "score-reference", "diagnose", "select", "train", "finalize", "evaluate", "compare"):
+    for name in ("audit", "protect", "prepare", "score-reference", "export-generation-request", "ingest-generation",
+                 "diagnose", "select", "train", "finalize", "evaluate", "compare"):
         command = commands.add_parser(name)
         command.add_argument("--config", required=True)
         command.add_argument("--profile", choices=("0.5B", "1.5B"))
         if name == "audit":
             command.add_argument("--target", choices=("inputs", "approach", "evaluation", "all"), default="approach")
+        if name == "ingest-generation":
+            command.add_argument("--predictions", required=True, help="Person 3 evaluate.py output rows for the exported request")
+            command.add_argument("--report", required=True, help="the run's config.json from Person 3's evaluator")
         if name == "finalize":
             command.add_argument("--b-run", help="optional: omit when B is trained outside this pipeline")
             command.add_argument("--c0-run", required=True)
+            command.add_argument("--c1-run", help="optional: the C1 arm trained from the same parent and continuation seed")
         if name in ("select", "train", "evaluate"):
-            command.add_argument("--method", required=True, choices=("parent", "B", "C0") if name == "evaluate" else ("B", "C0"))
+            command.add_argument("--method", required=True, choices=("parent", "B", "C0", "C1", "E") if name == "evaluate" else ("B", "C0", "C1", "E"))
         if name in ("score-reference", "train"):
             command.add_argument("--smoke", action="store_true")
         if name in ("train", "evaluate", "compare"):
@@ -75,7 +80,13 @@ def main(argv=None):
                 result = protect(cfg)
             elif args.command == "finalize":
                 from .handoff import finalize
-                result = finalize(cfg, args.b_run, args.c0_run)
+                result = finalize(cfg, args.b_run, args.c0_run, args.c1_run)
+            elif args.command == "export-generation-request":
+                from capstone_person4_approachC1.generation_scoring import export_request
+                result = export_request(cfg)
+            elif args.command == "ingest-generation":
+                from capstone_person4_approachC1.generation_scoring import ingest
+                result = ingest(cfg, args.predictions, args.report)
             elif args.command == "prepare":
                 from .data import prepare
                 result = prepare(cfg)

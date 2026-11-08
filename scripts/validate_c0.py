@@ -16,9 +16,12 @@ from capstone_person4.provenance import environment, source_hashes, write_bytes,
 
 
 def main():
-    for path in (REPO / "capstone_person4").glob("*.py"):
-        ast.parse(path.read_text(encoding="utf-8"))
+    for package in ("capstone_person4", "capstone_person4_approachC1"):
+        for path in (REPO / package).glob("*.py"):
+            ast.parse(path.read_text(encoding="utf-8"))
     suite = unittest.defaultTestLoader.discover(str(REPO / "tests/person4"))
+    # Approach C1 keeps its tests beside its code; both suites run together.
+    suite.addTests(unittest.defaultTestLoader.discover(str(REPO / "capstone_person4_approachC1/tests"), top_level_dir=str(REPO)))
     captured = io.StringIO()
     started = time.perf_counter()
     with redirect_stdout(captured), redirect_stderr(captured):

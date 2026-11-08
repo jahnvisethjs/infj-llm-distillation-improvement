@@ -191,17 +191,20 @@ class FinalizeAttemptTests(unittest.TestCase):
         cfg = {"fixture": "bound-configuration"}
         root = REPO / ".test_artifacts" / ("finalize-stage-" + uuid.uuid4().hex)
         (root / "runs/C0/pilot01").mkdir(parents=True)
-        for b_exists in (False, True):
+        for b_exists, c1_exists in ((False, False), (True, False), (True, True)):  # directories accumulate
             if b_exists:
-                (root / "runs/B/pilot01").mkdir(parents=True)
+                (root / "runs/B/pilot01").mkdir(parents=True, exist_ok=True)
+            if c1_exists:
+                (root / "runs/C1/pilot01").mkdir(parents=True, exist_ok=True)
             with patch.object(module, "load_config", return_value=cfg), \
                     patch.object(module, "artifact_root", return_value=root), \
                     patch.object(module, "finalize", return_value={"evaluation_status": "pending"}) as finalize, \
                     patch("sys.argv", ["finalize_attempt.py", "--config", "fixture.json", "--attempt", "pilot01"]), \
                     redirect_stdout(io.StringIO()):
                 self.assertEqual(module.main(), 0)
-                # B is passed only when a same-named B run was trained here; otherwise C0-only.
-                finalize.assert_called_once_with(cfg, root / "runs/B/pilot01" if b_exists else None, root / "runs/C0/pilot01")
+                # B and C1 are passed only when same-named runs were trained here; otherwise C0-only.
+                finalize.assert_called_once_with(cfg, root / "runs/B/pilot01" if b_exists else None, root / "runs/C0/pilot01",
+                                                 root / "runs/C1/pilot01" if c1_exists else None)
         with patch.object(module, "load_config") as load, \
                 patch("sys.argv", ["finalize_attempt.py", "--config", "fixture.json", "--attempt", "../other-arm"]), \
                 redirect_stderr(io.StringIO()):

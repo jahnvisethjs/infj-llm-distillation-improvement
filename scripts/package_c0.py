@@ -23,8 +23,9 @@ def bundle(cfg, output):
     if any(output == root or root in output.parents for root in immutable):
         raise PipelineError("Source bundle must be outside immutable packages")
     files = {}
-    patterns = ("capstone_person4/*.py", "scripts/*.py", "scripts/sol/*.sh", "scripts/sol/*.sbatch",
-                "scripts/sol/*.py", "tests/person4/*.py", "docs/C0*.md")
+    patterns = ("capstone_person4/*.py", "capstone_person4_approachC1/*.py", "capstone_person4_approachC1/tests/*.py",
+                "capstone_person4_approachC1/docs/*.md", "scripts/*.py", "scripts/sol/*.sh", "scripts/sol/*.sbatch",
+                "scripts/sol/*.py", "tests/person4/*.py", "docs/C0*.md", "requirements-person4.txt")
     for pattern in patterns:
         for path in sorted(REPO.glob(pattern)):
             files["source/" + path.relative_to(REPO).as_posix()] = path.read_bytes()

@@ -12,7 +12,7 @@ PATH_FIELDS = {
     "evaluator_script", "predictions", "training_summary", "method_freeze",
     "inherited_release", "inherited_encoder", "parent_package", "parent_index",
     "reserved_manifest", "manifest", "matcher_source", "checker_source", "reviews",
-    "tokenizer_assets", "universe_manifest", "length_bins", "b_selected_manifest",
+    "tokenizer_assets", "universe_manifest", "length_bins", "b_selected_manifest", "generation_contract",
 }
 
 

@@ -11,12 +11,12 @@ from .provenance import PipelineError, digest, read_json, sha, write_json
 from .reference_scoring import load_scores
 
 
-def finalize(cfg, b_run, c0_run):
+def finalize(cfg, b_run, c0_run, c1_run=None):
     gate(cfg, "select")
     _, preparation = load_prepared(cfg)
     _, coverage = load_scores(cfg)
     arms = {}
-    for method, run in (("B", b_run), ("C0", c0_run)):
+    for method, run in (("B", b_run), ("C0", c0_run), ("C1", c1_run)):
         if run is None:
             continue
         root = Path(run).resolve()
@@ -45,8 +45,14 @@ def finalize(cfg, b_run, c0_run):
         arms[method] = {"run_directory": str(root), "reconciliation_sha256": sha(root / "token_reconciliation.json"),
                         "checkpoint": str(checkpoint.parent), "checkpoint_sha256": report["checkpoint_sha256"],
                         "actual_tokens": expected_tokens, "selection_sha256": selection["manifest_sha256"]}
-    if "B" in arms and arms["B"]["run_directory"] == arms["C0"]["run_directory"]:
-        raise PipelineError("B and C0 must be independent training jobs")
+    directories = [a["run_directory"] for a in arms.values()]
+    if len(set(directories)) != len(directories):
+        raise PipelineError("Every arm must be an independent training job")
+    if "C1" in arms:
+        _, c1_selection = load_selection(cfg, "C1")
+        arms["C1"].update({"generation_key": c1_selection.get("generation_key"), "mistake_bonus": c1_selection.get("mistake_bonus"),
+                           "mistakes_selected": c1_selection.get("mistakes_selected"),
+                           "pairwise_token_difference_vs_C0": abs(arms["C1"]["actual_tokens"] - arms["C0"]["actual_tokens"])})
     _, c0_selection = load_selection(cfg, "C0")
     b_rows, b_selection = load_selection(cfg, "B")
     external_b = None if "B" in arms else {

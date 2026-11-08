@@ -48,6 +48,25 @@
     "method_freeze_sha256": null,
     "script_sha256": null
   },
+  "generation": {
+    "adapter_mode": "merged",
+    "add_special_tokens": false,
+    "batch_size": 16,
+    "checker": "math-verify 0.9.0",
+    "contract_schema": "person3-eval-contract-v1",
+    "contract_sha256": "33f9c008ee835e8efd5bbd8922fc76a89545e9b79a2cc5965b004fcdd9c953f9",
+    "decoding": "greedy",
+    "eos_token_id": 151643,
+    "executor": "person3-external",
+    "generation_contract": "../../data/inputs/evaluation/handoff/eval_contract.json",
+    "max_new_tokens": 1024,
+    "mistake_policy": "status incorrect only: parse_status ok and correct false; no_answer/unparseable/ambiguous/truncated are not mistakes",
+    "parser_version": "p3-parser-v6",
+    "precision": "fp32",
+    "prompt_sha256": "22e10ad6ce4d2f2a959577326b6eca275528821da148bae57a9a4ad2bf6e64db",
+    "prompt_template": "Question: {problem}\nSolve the problem step by step. End with: Final answer: <answer>.\nSolution:\n",
+    "question_text": "p1_clean"
+  },
   "inputs": {
     "parent_checksums_sha256": "4445e4763e8572c005eaed7ca2da9c34958bd7d5eed1497596a3be755cfb40b9",
     "parent_index": "../../R1000_parents_seeds17_123_20261101T023416637853Z/parent_index.json",
@@ -135,6 +154,10 @@
     "dtype": "bfloat16",
     "rtol": 0.05,
     "smoke_rows": 8
+  },
+  "selection": {
+    "mistake_bonus": "1",
+    "note": "lambda as an exact fraction string; C1 utility = round(fit*scale) * (den + num*w)"
   },
   "sol": {
     "account": null,

@@ -73,6 +73,28 @@ def configuration(release, inherited, parents, output, seed, notebook, tokenizer
                   "note": "Resolve on SOL; measure GPU smoke throughput before full requests"}
     if b_root:
         bind_b_bank(cfg, b_root)
+    bind_generation_contract(cfg, release / "inputs/evaluation/handoff/eval_contract.json")
+    return cfg
+
+
+def bind_generation_contract(cfg, contract_path):
+    """Question-only generation for C1/E follows Person 3's frozen contract, executed by Person 3."""
+    contract_path = Path(contract_path).resolve()
+    if not contract_path.is_file():
+        raise PipelineError(f"Evaluation contract missing: {contract_path}")
+    contract = read_json(contract_path)
+    settings = contract["frozen_generation_settings"]
+    cfg["generation"] = {
+        "generation_contract": str(contract_path), "contract_sha256": sha(contract_path),
+        "contract_schema": contract["schema_version"], "prompt_template": contract["prompt_template"],
+        "prompt_sha256": contract["prompt_template_sha256"], "precision": settings["precision"],
+        "decoding": settings["decoding"], "max_new_tokens": settings["max_new_tokens"], "batch_size": settings["batch_size"],
+        "eos_token_id": settings["eos_token_id"], "add_special_tokens": settings["add_special_tokens"],
+        "question_text": settings["question_text"], "adapter_mode": "merged",
+        "parser_version": contract["parser_version"], "checker": "math-verify " + contract["software_versions"]["math-verify"],
+        "executor": "person3-external",
+        "mistake_policy": "status incorrect only: parse_status ok and correct false; no_answer/unparseable/ambiguous/truncated are not mistakes"}
+    cfg["selection"] = {"mistake_bonus": "1", "note": "lambda as an exact fraction string; C1 utility = round(fit*scale) * (den + num*w)"}
     return cfg
 
 

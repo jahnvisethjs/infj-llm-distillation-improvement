@@ -144,6 +144,30 @@ class RealBankTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "cover the whole common bank"):
             b_select.solve(parent, bank, 1, utilities={bank[0]["row_id"]: 1})
 
+    @unittest.skipUnless(HAS_SOLVER, "OR-Tools 9.14.6206 not installed in this interpreter")
+    def test_c1_identities_hold_through_the_real_solver(self):
+        """lambda = 0, all-false and all-true mistakes select exactly C0's rows on the real bank."""
+        from capstone_person4_approachC1.generation_scoring import c1_utilities
+        parent = read_rows(B_ROOT / "shared/parent_rebinned_reference.jsonl")
+        bank = read_rows(B_ROOT / "shared/mixed_candidate_bank.jsonl")
+        # A synthetic but deterministic fit: rank by supervised tokens within source, as a stand-in for reference loss.
+        fit_rows = [{"row_id": r["row_id"], "fit": 1 - (i % 97) / 97} for i, r in enumerate(bank)]
+        ids = [r["row_id"] for r in fit_rows]
+        def select(utilities):
+            with contextlib.redirect_stdout(io.StringIO()):
+                chosen, report = b_select.solve(parent, bank, 1, utilities=utilities)
+            self.assertEqual(report["status"], "OPTIMAL")
+            return {r["row_id"] for r in chosen}
+        c0 = select(c1_utilities(fit_rows, dict.fromkeys(ids, False), 1_000_000, Fraction(0)))
+        self.assertEqual(len(c0), 1000)
+        mixed = {i: (k % 3 == 0) for k, i in enumerate(ids)}
+        self.assertEqual(select(c1_utilities(fit_rows, mixed, 1_000_000, Fraction(0))), c0)
+        self.assertEqual(select(c1_utilities(fit_rows, dict.fromkeys(ids, False), 1_000_000, Fraction(1))), c0)
+        self.assertEqual(select(c1_utilities(fit_rows, dict.fromkeys(ids, True), 1_000_000, Fraction(1))), c0)
+        c1 = select(c1_utilities(fit_rows, mixed, 1_000_000, Fraction(1)))
+        self.assertNotEqual(c1, c0)
+        self.assertGreater(sum(mixed[i] for i in c1), sum(mixed[i] for i in c0))
+
 
 if __name__ == "__main__":
     unittest.main()

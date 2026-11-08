@@ -1,8 +1,12 @@
 # C1 implementation plan: independent correctness added to reference-fit selection
 
-Date: 6 November 2026 (America/Phoenix)
+Date: 6 November 2026 (America/Phoenix); updated 8 November 2026
 Branch: `person4/c0-reference-fit`
-Status: plan only. Nothing in this document has been implemented or executed.
+Status: **Phase 0 and the Phase 1 code (Tasks 1.1 to 1.4, 1.6, and the diagnose extension) are implemented and tested on this machine, uncommitted.** Nothing has been executed on Sol or by Person 3; no generation outcome, C1 selection or C1 adapter exists.
+
+Layout: approach C1 lives in its own package `capstone_person4_approachC1/` (module `generation_scoring.py`, tests under `tests/`, this plan under `docs/`). The core pipeline `capstone_person4/` carries only the method names `C1`/`E` in its whitelists and one-line seams in `continuation.select`, `continuation.load_selection`, `reference_scoring.diagnose` and `__main__`, all of which are already in the Phase 0 fingerprints, so further C1 work never invalidates C0 artifacts. Commands: `export-generation-request`, `ingest-generation --predictions FILE --report FILE`, `diagnose`, `select --method C1`, `train --method C1 --training-seed S`, `finalize --c0-run DIR --c1-run DIR`, `compare`. Tests: `python -m unittest discover -s capstone_person4_approachC1/tests -t .` (7 tests) plus the solver-backed identity test in `tests/person4/test_b_bank.py`, which runs the real CP-SAT selector on B's bank with λ = 0 and constant mistake vectors and confirms C0's rows come back.
+
+What ingest accepts: Person 3's `evaluate.py` output rows (`problem_id`, `parse_status`, `correct`, `finish_reason`, `parsed_answer`, `generated_tokens`, `parser_version`, optional `model_revision`/`checkpoint_sha256`) and the run's `config.json`. Status mapping, frozen: `correct` → correct; `parse_status ok` and not correct → **incorrect, the only mistake**; `no_answer`/`unparseable_*` → no_answer, or truncated when `finish_reason` is `length`; `ambiguous` → unresolved_equivalence; `error` → execution_error, which blocks ingest until retried. `hit_length_limit` is kept as a flag on every status.
 
 ## 1. Task and intended result
 
@@ -66,7 +70,7 @@ Nothing further is needed from Suraj. B's dev evaluations used his own evaluator
 
 ## 4. Code changes that touch fingerprinted files
 
-`stage_fingerprint` hashes `selection.py`, `allocation.py`, `continuation.py`, `data.py` and others. Phase 0 changes `data.py` (explicit universe) and `selection.py` (`stratum`), so every existing artifact root is invalidated by design. That is acceptable because Phase 0 regenerates all of them. No pinning is needed.
+`stage_fingerprint` hashes `selection.py`, `allocation.py`, `b_select.py`, `continuation.py`, `data.py` and others. Phase 0 changed `data.py`, `continuation.py`, `config.py` and added `b_select.py`, so every pre-existing artifact root is invalidated by design; Phase 0 regenerates all of them. `selection.py` was not touched: B's bins arrive as the bank's own `length_bin`, so `stratum()` is unchanged. Phase 1 will touch `continuation.py` (whitelists) and `selection.py` is still untouched unless `combined_priorities` needs a change; either way the C0 artifacts produced by Phase 0 are bound to the Phase 0 code hashes, so **Phase 1 code must land before the Sol C0 chains run, or the Phase 0 C0 runs will need the same fingerprint pin the earlier draft dropped.** Decision: land Phase 1's whitelist edits and `b_select` call path before submitting the C0 chains, and keep `generation_scoring.py` as a new module so later Phase 1 work does not move the train fingerprint.
 
 ## 5. Configuration additions
 
@@ -83,10 +87,11 @@ Added to all four explicit configs. New keys inside `data` and `allocation` ente
   "candidate_count": 6409
 },
 "allocation": {
-  "...": "existing keys",
-  "b_allocator_sha256": "<sha of the vendored allocator.py>",
-  "quota_seed": 1729, "swap_window": 24, "max_priority_swaps": 8,
-  "stratum_tolerance": 0.05,
+  "...": "existing keys (seed 42, tolerance 0.005, expected_replay_tokens 318845)",
+  "selector": "method-b-cpsat-v3",
+  "b_select_origin_sha256": "5c9241231efc449fccbe464ce3198b87af20de8041aa699149f9c702f83bf7de",
+  "deterministic_limit": 120, "tie_limit": 10, "stratum_tolerance": "0.05",
+  "utility_scale": 1000000,
   "b_selected_manifest": "../../b_inputs/.../mixed/budget_1x/1x/train_B.jsonl",
   "b_selected_sha256": "378316a7e9485ba0f0e089f674aadf00efa3c2b3dc8c174911f089a6d0fb5579"
 },
@@ -104,6 +109,8 @@ Continuation seed: `training.seed` is overridden per run with a new `--training-
 
 ## 6. Phase 0 tasks: rerun C0 on B's bank
 
+Status 8 November 2026: Tasks 0.1, 0.2, 0.2b, 0.4 (the B cross-check inside `select`), 0.5 (seed override, seed-agnostic smoke, Sol chain) and 0.6 (trainer constants, handoff fields) are implemented and tested on this machine; see [C0_B_BANK_RERUN.md](C0_B_BANK_RERUN.md) for the evidence. Tasks 0.3 (scoring) and the training runs need Sol.
+
 ### Task 0.1 Explicit universe in `prepare`
 
 - When `data.universe_manifest` is set, `prepare` reads B's bank JSONL, verifies its SHA256, and freezes exactly those rows in row-ID order. No sampling. `candidate_count` must equal the row count.
@@ -118,12 +125,12 @@ Continuation seed: `training.seed` is overridden per run with a new `--training-
 - `prepare` recomputes each row's bin from `data.length_bins` (B's `parent_length_bins.json`, SHA pinned) with `bisect_left` on `supervised_tokens` against the source's cut points, and requires it to equal the stored `length_bin` on every bank row and every parent row. The parent rows are re-binned the same way for the replay anchor and the per-stratum counts; the plan expects exactly 50 per stratum and stops on anything else.
 - Tests: cut-point values land in the right-closed interval; a fixture with one wrong stored bin raises; parent counts of 50 per stratum are reproduced from a fixture.
 
-### Task 0.2b Vendor B's allocator
+### Task 0.2b Vendor B's selector (done 8 November 2026)
 
-- Copy `allocator.py` from the bundle to `capstone_person4/b_allocator.py` unchanged except for the module docstring, record its SHA256 in the config as `allocation.b_allocator_sha256`, and add it to `STAGE_SOURCES["select"]`. A hash mismatch at import is a hard stop.
-- `continuation.select` calls `b_allocator.allocate(rows, priorities, parent_counts, target, tolerance, quota_seed, swap_window, max_priority_swaps)` with B's recorded settings (`quota_seed` 1729, `swap_window` 24, `max_priority_swaps` 8, tolerance 0.005, per-stratum 0.05). Priorities are ascending, so C0 passes `1 - fit` and C1 passes `1 / utility`, each with our tie key appended as the deterministic secondary key; B's own random priority is reproduced by its `random_priorities` with seed 42 for the pair report.
-- Our `allocation.allocate` stays in the package for the dry run and the identity tests, and is no longer used for real selection.
-- Tests: calling the vendored allocator with B's random priorities on the real bank reproduces B's 1,000 selected IDs and 317,506 tokens exactly (this is the one real-data test in the suite and the proof the vendoring is faithful); bonus 0 reproduces C0 through the same function; a changed allocator file fails the hash check.
+- `select_b.py` is vendored as `capstone_person4/b_select.py`, unchanged except the docstring and an optional `utilities` argument (`None` keeps B's seeded hash utility). It is in `STAGE_SOURCES["select"]`; the origin hash is recorded in `allocation.b_select_origin_sha256`.
+- `continuation.cpsat_select` calls `b_select.solve(parent_rebinned, bank, 1, seed=42, deterministic_limit=120, tie_limit=10, global_tolerance="0.005", stratum_tolerance="0.05", utilities=...)`. CP-SAT maximises the sum of integer utilities subject to exactly the parent's count per stratum (50), per-stratum tokens within ± 5% of the parent's, global tokens within ± 0.5%; a second solve holds the objective and minimises the sum of per-row tie hashes. C0 passes `round(fit × 1,000,000)`; B passes `None`. Selecting B must reproduce Suraj's 1,000 IDs and 317,506 tokens or `select` stops.
+- `allocation.allocate` stays for the dry run only.
+- Tests (in `tests/person4/test_b_bank.py`): the vendored module with `utilities=None` and with an explicit copy of B's utility both reproduce B's IDs, tokens and objective 912,175,166 on the real bank (needs OR-Tools; visibly skipped otherwise); utilities that do not cover the bank are refused.
 
 ### Task 0.3 Reference scoring on the new bank
 
@@ -171,11 +178,20 @@ Adds a `correctness` section when outcomes exist: status counts by stratum; mist
 
 ### Task 1.4 C1 selection (`select --method C1`)
 
-`load_scores`, `load_generation`, `fit_priorities`, `combined_priorities(bonus=cfg["selection"]["mistake_bonus"])`, `allocate` with B's quotas. Report records `version: "mistake-fit-v1"`, `generation_key`, bonus, mistakes selected, C0 overlap. Tests: bonus 0 reproduces C0's exact ordered IDs; all-false and all-true vectors reproduce C0; repeated runs are byte-identical; a mixed vector changes the selection and the report counts its mistakes.
+`load_scores`, `load_generation`, `fit_priorities`, then integer utilities for the CP-SAT selector. With `λ = num/den` as an exact fraction (λ = 1 is `1/1`):
+
+```
+u_C0(i) = round(fit_i × 1,000,000)
+u_C1(i) = u_C0(i) × (den + num × w_i)
+```
+
+so the C1 objective is `Σ u_C0 × (den + num·w)`. The identities the brief requires then hold exactly, not approximately: with λ = 0 every utility equals `u_C0`; with all `w = 0` every utility is `den × u_C0`, and with all `w = 1` every utility is `(den + num) × u_C0`, both a uniform positive scaling, which leaves the CP-SAT argmax and the tie-break solve unchanged. Because CP-SAT returns a set rather than an ordered prefix, "same selection and order" means the same 1,000 rows; training order is the trainer's seeded shuffle for every arm.
+
+Report records `version: "mistake-fit-v1-cpsat"`, `generation_key`, λ, mistakes selected, C0 overlap, and the solver report. Tests: λ = 0 reproduces C0's rows; all-false and all-true vectors reproduce C0's rows; repeated runs are byte-identical; a mixed vector changes the selection and the report counts its mistakes.
 
 ### Task 1.5 C1 training
 
-`train --method C1` at seeds 42, 137, 2026 per parent. Twelve runs. SOL: `C1` added to the arm handling in `submit_pipeline.sh`, `select.sbatch` and `train.sbatch`. GPU authorization required.
+`train --method C1 --training-seed S` for S in 42, 137, 2026 per parent; the seed override, seed-agnostic smoke and the per-seed Sol chain already exist from Phase 0. Twelve runs. Submit C1 as its own chain per config with `C0_ARMS=C1` and a new `SMOKE_ATTEMPT` name (training outputs are create-only, so a reused smoke attempt name stops the chain); prepare, scoring and selection reuse their existing artifacts, since those stages are idempotent on an unchanged fingerprint. Both arms in one chain would be twelve jobs and is refused. GPU authorization required.
 
 ### Task 1.6 Handoff and comparison
 
@@ -187,7 +203,9 @@ Adds a `correctness` section when outcomes exist: status counts by stratum; mist
 | Step | Who | Needs | Output |
 | --- | --- | --- | --- |
 | Receive and verify B's bundle | Person 4 | | Done 8 November 2026; see section 2 |
-| Tasks 0.1, 0.2, 0.2b, 0.4 (check), 1.1 to 1.4, 1.6 implemented; existing and new tests pass | Person 4 | CPU | Code on the branch |
+| Phase 0 code (Tasks 0.1 to 0.6) implemented and tested | Person 4 | CPU | Done 8 November 2026, uncommitted |
+| Method whitelists carry C1 and E before any Sol C0 run, so Phase 1 does not move the train fingerprint | Person 4 | CPU | Done 8 November 2026 |
+| Tasks 1.1 to 1.4, 1.6 implemented in `generation_scoring.py` plus the diagnose extension; tests pass | Person 4 | CPU | Code on the branch |
 | Prepare the universe, export four requests | Person 4 | CPU | Frozen bank, request folders |
 | Generate and grade, four runs of 6,409 rows | Person 3 | A100, see cost table | Predictions and report per parent |
 | Score reference on the bank, four jobs | Person 4 | SOL GPU, authorization | Scores per parent |

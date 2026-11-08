@@ -25,7 +25,9 @@ def main():
         cfg = load_config(args.config, args.profile, args.training_seed)
         root = artifact_root(cfg) / "runs"
         b_run = root / "B" / args.attempt
-        print(canonical(finalize(cfg, b_run if b_run.is_dir() else None, root / "C0" / args.attempt)))
+        c1_run = root / "C1" / args.attempt
+        print(canonical(finalize(cfg, b_run if b_run.is_dir() else None, root / "C0" / args.attempt,
+                                 c1_run if c1_run.is_dir() else None)))
         return 0
     except (OSError, ValueError, KeyError, TypeError, ImportError) as exc:
         print(f"STOP: {exc}", file=sys.stderr)

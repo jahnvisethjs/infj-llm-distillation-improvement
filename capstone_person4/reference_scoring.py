@@ -311,4 +311,12 @@ def diagnose(cfg):
         k: {"rows": len(v), "min_nll": min(v), "mean_nll": math.fsum(v) / len(v), "max_nll": max(v)}
         for k, v in sorted(groups.items())}, "interpretation": "Reference fit only; independent correctness is unmeasured"}
     write_json(artifact_root(cfg, "score-reference") / "diagnostics/reference_fit.json", report)
+    # Phase 1 gate: once Person 3's question-only outcomes are ingested, add the correctness
+    # diagnostics and degeneracy flags that decide whether C1 training is worth running.
+    from capstone_person4_approachC1.generation_scoring import correctness_diagnostics, generation_root
+    if (generation_root(cfg) / "coverage.json").exists():
+        correctness = correctness_diagnostics(cfg, rows, scores)
+        write_json(artifact_root(cfg, "select") / "diagnostics" / (correctness["generation_key"][:16] + "_correctness.json"), correctness)
+        report = {**report, "correctness": correctness,
+                  "interpretation": "Reference fit and independent correctness measured; see degeneracy_flags before training C1"}
     return report
