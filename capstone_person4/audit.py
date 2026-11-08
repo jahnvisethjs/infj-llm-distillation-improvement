@@ -12,9 +12,9 @@ from .config import artifact_root, require
 from .provenance import PipelineError, digest, environment, read_json, read_rows, sha, source_hashes, unique_rows, write_bytes, write_json
 
 STAGES = {
-    "prepare": ("release", "parent_exposure", "overlap", "interfaces"),
+    "prepare": ("release", "parent_exposure", "overlap", "interfaces", "universe"),
     "score-reference": ("release", "parent_exposure", "overlap", "parent_weights", "interfaces", "runtime"),
-    "select": ("release", "parent_exposure", "overlap", "interfaces"),
+    "select": ("release", "parent_exposure", "overlap", "interfaces", "universe"),
     "train": ("release", "parent_exposure", "overlap", "parent_weights", "interfaces", "runtime", "recipe"),
     "evaluate": ("evaluation", "parent_weights", "parent_exposure"),
     "compare": ("evaluation",),
@@ -280,9 +280,28 @@ def check_evaluation(cfg):
     return {"contract_sha256": sha(path), "script_sha256": sha(script)}
 
 
+def check_universe(cfg):
+    """Explicit common universe (Method B's bank) and its selector, when configured; otherwise no-op."""
+    data, allocation = cfg.get("data", {}), cfg.get("allocation", {})
+    if data.get("universe_mode") is None and allocation.get("selector") is None:
+        return {"mode": "frozen-sample", "note": "no explicit universe declared"}
+    if data.get("universe_mode") != "explicit" or allocation.get("selector") != "method-b-cpsat-v3":
+        raise PipelineError("universe_mode=explicit and allocation.selector=method-b-cpsat-v3 must be declared together")
+    bank = checked_file(require(cfg, "data.universe_manifest"), require(cfg, "data.universe_sha256"), "explicit universe bank")
+    bins = checked_file(require(cfg, "data.length_bins"), require(cfg, "data.length_bins_sha256"), "parent length bins")
+    recorded = checked_file(require(cfg, "allocation.b_selected_manifest"), require(cfg, "allocation.b_selected_sha256"), "Method B selected manifest")
+    for key in ("deterministic_limit", "tie_limit", "stratum_tolerance", "utility_scale", "b_select_origin_sha256"):
+        require(cfg, "allocation." + key)
+    vendored = Path(__file__).with_name("b_select.py")
+    if not vendored.is_file():
+        raise FileNotFoundError("Vendored Method B selector b_select.py is missing")
+    return {"universe_sha256": sha(bank), "length_bins_sha256": sha(bins), "b_selected_sha256": sha(recorded),
+            "b_select_sha256": sha(vendored), "b_select_origin_sha256": allocation["b_select_origin_sha256"]}
+
+
 CHECKS = {"release": check_release, "parent_exposure": lambda cfg: parent_exposure(cfg)[1],
           "parent_weights": check_weights, "overlap": check_overlap, "interfaces": check_interfaces,
-          "runtime": check_runtime, "recipe": check_recipe, "evaluation": check_evaluation}
+          "runtime": check_runtime, "recipe": check_recipe, "evaluation": check_evaluation, "universe": check_universe}
 
 
 def discover_inputs(cfg):

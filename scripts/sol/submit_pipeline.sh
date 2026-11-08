@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 # Submit the complete chain for ONE configuration with afterok dependencies:
-#   prepare -> score-smoke -> score -> select -> train-smoke -> C0 [and B] -> finalize
+#   prepare -> score-smoke -> score -> select -> train-smoke -> C0 per seed [and B] -> finalize
 # C0 is Person 4's arm; B (random baseline) is trained here only when C0_ARMS="B C0",
-# otherwise the selection job still writes the matched-budget B manifest for whoever
-# trains B. Seven or eight jobs stay within the class QoS limit of ten active
+# otherwise the selection job still writes (and reproduces) Method B's manifest.
+# C0_SEEDS (default "42 137 2026") gives one training job per continuation seed after
+# a single seed-agnostic smoke; finalize covers every seed in one job. With the default
+# arms and seeds the chain is nine jobs, within the class QoS limit of ten active
 # submissions; at most two run at once. Calling this script is the explicit submission
 # step; a failed job stops its dependents (afterok).
 #   bash scripts/sol/submit_pipeline.sh CONFIG TAG [FULL_ATTEMPT] [SMOKE_ATTEMPT]
@@ -26,16 +28,30 @@ submit() {  # submit NAME DEPENDENCY SCRIPT ARGS...
     if [[ -n "$dependency" ]]; then args+=(--dependency "afterok:$dependency"); fi
     sbatch "${args[@]}" "scripts/sol/$script" "$config" "$@"
 }
+seeds="${C0_SEEDS:-42 137 2026}"
+export C0_SEEDS="$seeds"
+arms="${C0_ARMS:-C0}"
+for arm in $arms; do
+    case "$arm" in B|C0) ;; *) printf '%s\n' "C0_ARMS entries must be B or C0: $arm" >&2; exit 2 ;; esac
+done
+for seed in $seeds; do
+    [[ "$seed" =~ ^[0-9]+$ ]] || { printf '%s\n' "C0_SEEDS entries must be integers: $seed" >&2; exit 2; }
+done
+read -r -a arm_list <<< "$arms"; read -r -a seed_list <<< "$seeds"
+if (( 5 + ${#arm_list[@]} * ${#seed_list[@]} + 1 > 10 )); then
+    printf '%s\n' "Chain would exceed the class QoS limit of ten active jobs; reduce C0_ARMS or C0_SEEDS" >&2; exit 2
+fi
 prep=$(submit prep "" prepare.sbatch)
 score_smoke=$(submit score-smoke "$prep" score_smoke.sbatch)
 score=$(submit score "$score_smoke" score_reference.sbatch)
 select_job=$(submit select "$score" select.sbatch)
 train_smoke=$(submit train-smoke "$select_job" train_smoke.sbatch "$smoke")
 arm_jobs=()
-for arm in ${C0_ARMS:-C0}; do
-    case "$arm" in B|C0) ;; *) printf '%s\n' "C0_ARMS entries must be B or C0: $arm" >&2; exit 2 ;; esac
-    job=$(submit "$arm" "$train_smoke" train.sbatch "$arm" "$attempt")
-    arm_jobs+=("$job"); printf '%s\n' "$arm=$job"
+for arm in $arms; do
+    for seed in $seeds; do
+        job=$(submit "$arm-s$seed" "$train_smoke" train.sbatch "$arm" "$attempt" "" "" "$seed")
+        arm_jobs+=("$job"); printf '%s\n' "$arm-s$seed=$job"
+    done
 done
 final=$(submit finalize "$(IFS=:; printf '%s' "${arm_jobs[*]}")" finalize.sbatch "$attempt")
 printf '%s\n' "prepare=$prep" "score_smoke=$score_smoke" "score=$score" "select=$select_job" \

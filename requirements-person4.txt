@@ -18,3 +18,5 @@ safetensors>=0.4,<1
 numpy>=1.26,<3
 pandas>=2.2,<3
 pyarrow>=17,<23
+# Method B's CP-SAT selector (vendored as capstone_person4/b_select.py) refuses any other version.
+ortools==9.14.6206

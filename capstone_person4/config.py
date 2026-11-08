@@ -12,11 +12,11 @@ PATH_FIELDS = {
     "evaluator_script", "predictions", "training_summary", "method_freeze",
     "inherited_release", "inherited_encoder", "parent_package", "parent_index",
     "reserved_manifest", "manifest", "matcher_source", "checker_source", "reviews",
-    "tokenizer_assets",
+    "tokenizer_assets", "universe_manifest", "length_bins", "b_selected_manifest",
 }
 
 
-def load_config(path, profile=None):
+def load_config(path, profile=None, training_seed=None):
     path = Path(path).resolve()
     raw = read_json(path)
     if raw.get("schema_version") != 1:
@@ -27,6 +27,12 @@ def load_config(path, profile=None):
     cfg = deepcopy(raw)
     cfg["parent"] = cfg.pop("profiles")[selected]
     cfg["active_profile"] = selected
+    if training_seed is not None:
+        # Continuation-seed replication: the training section is in the train fingerprint,
+        # so each seed gets its own artifact root; preparation/scoring/selection are shared.
+        if type(training_seed) is not int or training_seed < 0:
+            raise PipelineError("training_seed must be a nonnegative integer")
+        cfg.setdefault("training", {})["seed"] = training_seed
 
     def resolve(obj):
         if isinstance(obj, dict):
@@ -75,7 +81,7 @@ def require(cfg, dotted):
 STAGE_SOURCES = {
     "prepare": ("config.py", "audit.py", "bindings.py", "protection.py", "data.py", "person2_adapter.py", "provenance.py"),
     "score-reference": ("reference_scoring.py", "person2_adapter.py", "provenance.py"),
-    "select": ("selection.py", "allocation.py", "continuation.py", "provenance.py"),
+    "select": ("selection.py", "allocation.py", "b_select.py", "continuation.py", "provenance.py"),
     "train": ("continuation.py", "person2_adapter.py", "provenance.py"),
     "evaluate": ("evaluation.py", "provenance.py"),
 }

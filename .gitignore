@@ -5,5 +5,4 @@ __pycache__/
 *.pyc
 *.partial
 configs/c0.local*.json
-docs/
 capstone_person1/

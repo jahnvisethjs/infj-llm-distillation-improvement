@@ -48,6 +48,8 @@ def main(argv=None):
             command.add_argument("--smoke", action="store_true")
         if name in ("train", "evaluate", "compare"):
             command.add_argument("--attempt", required=True)
+        if name in ("train", "finalize", "evaluate", "compare"):
+            command.add_argument("--training-seed", type=int, help="continuation seed replication (42, 137, 2026); selection stays fixed")
         if name == "train":
             command.add_argument("--resume", help="this arm's own periodic or paused checkpoint, never the parent optimizer")
         if name == "evaluate":
@@ -61,7 +63,7 @@ def main(argv=None):
             result = dry_run(args.output)
         else:
             from .config import load_config
-            cfg = load_config(args.config, args.profile)
+            cfg = load_config(args.config, args.profile, getattr(args, "training_seed", None))
             if args.command == "audit":
                 from .audit import audit
                 result = audit(cfg, write=True, target=args.target)

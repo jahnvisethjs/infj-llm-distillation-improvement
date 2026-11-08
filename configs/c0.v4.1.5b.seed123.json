@@ -1,26 +1,40 @@
 {
   "active_profile": "1.5B",
   "allocation": {
+    "b_select_origin_sha256": "5c9241231efc449fccbe464ce3198b87af20de8041aa699149f9c702f83bf7de",
+    "b_selected_manifest": "../../b_inputs/b_inputs_20261108T063441Z/files/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/mixed/budget_1x/1x/train_B.jsonl",
+    "b_selected_sha256": "378316a7e9485ba0f0e089f674aadf00efa3c2b3dc8c174911f089a6d0fb5579",
     "boundary_window": 16,
     "budget_kind": "replay",
+    "deterministic_limit": 120,
     "expected_replay_tokens": 318845,
     "max_row_counts": 128,
     "max_swaps": 32,
     "seed": 42,
+    "selector": "method-b-cpsat-v3",
     "stratum_proportions": null,
+    "stratum_tolerance": "0.05",
     "target_tokens": null,
-    "tolerance": 0.005
+    "tie_limit": 10,
+    "tolerance": 0.005,
+    "utility_scale": 1000000
   },
   "data": {
-    "candidate_count": 5000,
+    "candidate_count": 6409,
     "candidate_manifest": "../../data/manifests/selection_bank.jsonl",
     "checksums_sha256": "16c59962598af51f74899cc83a4de89f223602adbd80aeb7439e0d260dcdabf5",
     "inherited_encoder": "../../capstone_person1/releases/person1_v3_20261012_ready/code",
     "inherited_release": "../../capstone_person1/releases/person1_v3_20261012_ready",
+    "length_bins": "../../b_inputs/b_inputs_20261108T063441Z/files/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/shared/parent_length_bins.json",
+    "length_bins_sha256": "024b651bc18084c715b0b77a1db78c82e9e20040dc5ec671e7597a2604dd51e6",
     "max_total_tokens": 2048,
     "release": "../../data",
     "release_sha256": "f62f632992ac71500c87edb8a25d4a97860560ed368fc6a5d6e017f33286ceec",
-    "seed": 42
+    "seed": 42,
+    "universe_manifest": "../../b_inputs/b_inputs_20261108T063441Z/files/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/shared/mixed_candidate_bank.jsonl",
+    "universe_mode": "explicit",
+    "universe_origin": "Method B main mixed bank (Suraj Shinde, method-b-document-alignment-v3): 6,409 rows after reserving 1,000 development and 2,500 transfer rows",
+    "universe_sha256": "806dd78f38b37774391efc37d98318f0610e95dbeb9d53f810b54a03baf435ae"
   },
   "evaluation": {
     "contract_sha256": null,

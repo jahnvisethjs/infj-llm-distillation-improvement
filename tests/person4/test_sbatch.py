@@ -147,24 +147,35 @@ class BatchRoutingTests(unittest.TestCase):
                                 cwd=self.root, env=env, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
         calls = log.read_text(encoding="utf-8").splitlines()
-        # C0 only by default: B is trained by another team member.
-        self.assertEqual(len(calls), 7)
+        # C0 only by default, one training job per continuation seed (42, 137, 2026)
+        # after a single smoke, one finalize for all seeds: nine jobs, under the QoS limit of ten.
+        self.assertEqual(len(calls), 9)
         self.assertIn("prepare.sbatch", calls[0])
         self.assertNotIn("--dependency", calls[0])
         self.assertIn("--dependency afterok:101", calls[1])
-        self.assertEqual(len([c for c in calls if "train.sbatch" in c and " C0 " in c]), 1)
+        c0_jobs = [c for c in calls if "train.sbatch" in c and " C0 " in c]
+        self.assertEqual(len(c0_jobs), 3)
+        self.assertEqual([c.split()[-1] for c in c0_jobs], ["42", "137", "2026"])
+        self.assertTrue(all("afterok:105" in c for c in c0_jobs))
         self.assertFalse(any("train.sbatch" in c and " B " in c for c in calls))
-        self.assertIn("afterok:106 ", calls[6])
+        self.assertIn("afterok:106:107:108", calls[8])
         self.assertTrue(all("--mail-user=fixture@example.edu" in c and self.cfg in c for c in calls))
-        self.assertIn("finalize=107", result.stdout)
+        self.assertIn("finalize=109", result.stdout)
         log.write_text("", encoding="utf-8")
         result = subprocess.run([BASH, (SOL / "submit_pipeline.sh").as_posix(), self.cfg, "q15-s123"],
-                                cwd=self.root, env={**env, "C0_ARMS": "B C0"}, capture_output=True, text=True)
+                                cwd=self.root, env={**env, "C0_ARMS": "B C0", "C0_SEEDS": "42"}, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
         calls = log.read_text(encoding="utf-8").splitlines()
         self.assertEqual(len(calls), 8)
         self.assertEqual(sum("train.sbatch" in c for c in calls), 2)
         self.assertIn("afterok:106:107", calls[7])
+        # Both arms at three seeds would be twelve jobs: refused before any submission.
+        log.write_text("", encoding="utf-8")
+        result = subprocess.run([BASH, (SOL / "submit_pipeline.sh").as_posix(), self.cfg, "q15-s123"],
+                                cwd=self.root, env={**env, "C0_ARMS": "B C0"}, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("ten active jobs", result.stderr)
+        self.assertEqual(log.read_text(encoding="utf-8"), "")
 
     def test_invalid_method_fails_before_python_runs(self):
         result = self.invoke("train.sbatch", "parent", "pilot01", "1.5B")

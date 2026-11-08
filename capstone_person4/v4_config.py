@@ -8,7 +8,29 @@ from .config import PATH_FIELDS
 from .provenance import PipelineError, read_json, sha, write_json
 
 
-def configuration(release, inherited, parents, output, seed, notebook, tokenizer_assets=None, profile="0.5B"):
+B_SELECT_ORIGIN_SHA256 = "5c9241231efc449fccbe464ce3198b87af20de8041aa699149f9c702f83bf7de"
+
+
+def bind_b_bank(cfg, b_root):
+    """Freeze Method B's bank, bins and selected manifest as the explicit common universe."""
+    b_root = Path(b_root).resolve()
+    bank = b_root / "shared/mixed_candidate_bank.jsonl"
+    bins = b_root / "shared/parent_length_bins.json"
+    selected = b_root / "mixed/budget_1x/1x/train_B.jsonl"
+    for path in (bank, bins, selected):
+        if not path.is_file():
+            raise PipelineError(f"Method B artifact missing: {path}")
+    cfg["data"].update(universe_mode="explicit", universe_manifest=str(bank), universe_sha256=sha(bank),
+                       universe_origin="Method B main mixed bank (Suraj Shinde, method-b-document-alignment-v3): "
+                                       "6,409 rows after reserving 1,000 development and 2,500 transfer rows",
+                       length_bins=str(bins), length_bins_sha256=sha(bins), candidate_count=6409)
+    cfg["allocation"].update(selector="method-b-cpsat-v3", b_select_origin_sha256=B_SELECT_ORIGIN_SHA256,
+                             deterministic_limit=120, tie_limit=10, stratum_tolerance="0.05", utility_scale=1000000,
+                             b_selected_manifest=str(selected), b_selected_sha256=sha(selected))
+    return cfg
+
+
+def configuration(release, inherited, parents, output, seed, notebook, tokenizer_assets=None, profile="0.5B", b_root=None):
     release, inherited, parents = map(lambda p: Path(p).resolve(), (release, inherited, parents))
     repo = Path(__file__).resolve().parent.parent
     cfg = read_json(repo / "configs/c0.example.json")
@@ -49,6 +71,8 @@ def configuration(release, inherited, parents, output, seed, notebook, tokenizer
     cfg["training"].update(learning_rate=1e-4, warmup_updates=10)
     cfg["sol"] = {"python": None, "account": None, "partition": None, "qos": None, "walltime": None,
                   "note": "Resolve on SOL; measure GPU smoke throughput before full requests"}
+    if b_root:
+        bind_b_bank(cfg, b_root)
     return cfg
 
 
@@ -71,9 +95,10 @@ def main():
     parser.add_argument("--profile", choices=("0.5B", "1.5B"), default="0.5B")
     parser.add_argument("--notebook", default=str(Path(__file__).resolve().parent.parent / "Person2_SOL_Seeds17_123_UpTo4000.ipynb"))
     parser.add_argument("--tokenizer-assets")
+    parser.add_argument("--b-bank-root", help="Method B's B_method_B_document_v3 folder: binds its bank, bins and selection as the explicit universe")
     args = parser.parse_args()
     cfg = configuration(args.release, args.inherited_release, args.parent_package, args.output_root,
-                        args.parent_seed, args.notebook, args.tokenizer_assets, args.profile)
+                        args.parent_seed, args.notebook, args.tokenizer_assets, args.profile, args.b_bank_root)
     cfg = relative_paths(cfg, Path(args.config_output).resolve().parent)
     write_json(args.config_output, cfg)
     print(str(Path(args.config_output).resolve()))

@@ -33,12 +33,20 @@ case "$stage" in
     c0_set_profile "${3:-}"
     resume_args=()
     if [[ -n "${4:-}" ]]; then resume_args=(--resume "$4"); fi
+    seed_args=()
+    if [[ -n "${5:-}" ]]; then seed_args=(--training-seed "$5"); fi
     exec "$C0_PYTHON" -B -m capstone_person4 train --config "$config" --method "$method" --attempt "$attempt" \
-      "${c0_profile_args[@]}" "${resume_args[@]}" ;;
+      "${c0_profile_args[@]}" "${resume_args[@]}" "${seed_args[@]}" ;;
   finalize)
     attempt="${1:?Supply the full-arm attempt name used for both B and C0}"
     # Resolve fingerprinted run locations using the package, without guessed paths.
+    # One finalize job covers every continuation seed in C0_SEEDS (default: the config's seed).
     c0_set_profile "${2:-}"
-    exec "$C0_PYTHON" -B scripts/sol/finalize_attempt.py --config "$config" --attempt "$attempt" "${c0_profile_args[@]}" ;;
+    if [[ -z "${C0_SEEDS:-}" ]]; then
+        exec "$C0_PYTHON" -B scripts/sol/finalize_attempt.py --config "$config" --attempt "$attempt" "${c0_profile_args[@]}"
+    fi
+    for seed in $C0_SEEDS; do
+        "$C0_PYTHON" -B scripts/sol/finalize_attempt.py --config "$config" --attempt "$attempt" --training-seed "$seed" "${c0_profile_args[@]}"
+    done ;;
   *) printf '%s\n' "Unknown batch stage: $stage" >&2; exit 2 ;;
 esac

@@ -203,7 +203,8 @@ class HandoffTests(unittest.TestCase):
             checkpoint = adapter / "adapter_model.safetensors"
             checkpoint.write_bytes(("fixture-continued-" + method).encode())
             selected = [{**row(method), "supervised_tokens": 10}]
-            selection = {"manifest_sha256": "selection-" + method, "target_tokens": 10, "tolerance": 0.005}
+            selection = {"manifest_sha256": "selection-" + method, "target_tokens": 10, "tolerance": 0.005,
+                         "actual_tokens": 10, "method": "fixture-selector"}
             selections[method] = selected, selection
             write_json(run / "run_config.json", {"seed": cfg["training"]["seed"], "arm": method, "mode": "continuation",
                        "optimizer_initialization": "fresh_from_verified_parent_weights", "parent_adapter_sha256": cfg["parent"]["adapter_sha256"]})
@@ -231,6 +232,9 @@ class HandoffTests(unittest.TestCase):
             self.assertEqual(set(solo["arms"]), {"C0"})
             self.assertIsNone(solo["pairwise_token_difference"])
             self.assertIn("manifest.jsonl", solo["external_B"]["matched_budget_B_manifest"])
+            self.assertEqual(solo["external_B"]["pairwise_token_difference"], 0)
+            self.assertEqual(solo["external_B"]["continuation_seed"], cfg["training"]["seed"])
+            self.assertEqual(solo["continuation_seed"], cfg["training"]["seed"])
             # A copied smoke record cannot be relabeled as a complete experimental arm.
             path = runs["C0"] / "token_reconciliation.json"
             altered = read_json(path)

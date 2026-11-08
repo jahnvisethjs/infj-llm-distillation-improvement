@@ -6,10 +6,13 @@ import io
 from pathlib import Path
 from types import SimpleNamespace
 
+from copy import deepcopy
+import re
+
 from .allocation import AllocationError, allocate
 from .audit import gate, parent_exposure
 from .config import artifact_root, stage_fingerprint
-from .data import load_prepared
+from .data import coverage_parent_rows, load_prepared
 from .person2_adapter import Person2Adapter, continuation_source, notebook_sources
 from .provenance import PipelineError, digest, read_json, read_rows, sha, source_hashes, unique_rows, write_bytes, write_json, write_rows
 from .reference_scoring import load_scores
@@ -38,7 +41,7 @@ def verify_adapter_update(parent_path, continued_path):
 
 
 def budget_and_coverage(cfg, candidate_rows):
-    parent_rows, _ = parent_exposure(cfg)
+    parent_rows = coverage_parent_rows(cfg)
     allocator = cfg["allocation"]
     if allocator.get("budget_kind") == "replay":
         adapter = Person2Adapter(cfg)
@@ -60,6 +63,86 @@ def budget_and_coverage(cfg, candidate_rows):
     return target, proportions, origin
 
 
+def cpsat_select(cfg, method, rows, priorities, target, root):
+    """Method B's CP-SAT selector for every arm: exact parent counts per stratum,
+    per-stratum and global token bounds, maximal integer utility, hash tie-break."""
+    from . import b_select
+    from .bindings import verified
+    settings = cfg["allocation"]
+    parent_rows = coverage_parent_rows(cfg)
+    anchor = sum(r["supervised_tokens"] for r in parent_rows)
+    if anchor != target:
+        raise PipelineError(f"CP-SAT budget anchor {anchor} differs from the verified replay target {target}")
+    scale = settings["utility_scale"]
+    if type(scale) is not int or scale <= 0:
+        raise PipelineError("allocation.utility_scale must be a positive integer")
+    if method == "B":
+        utilities = None  # Method B's own seeded hash utility, reproduced exactly
+    else:
+        utilities = {r["row_id"]: int(round(r["utility"] * scale)) for r in priorities}
+    bank = [{k: v for k, v in r.items() if k not in ("canonical_text_hash", "split")} for r in rows]
+    try:
+        chosen, solver_report = b_select.solve(
+            parent_rows, bank, 1, seed=settings["seed"], deterministic_limit=settings["deterministic_limit"],
+            tie_limit=settings["tie_limit"], global_tolerance=str(settings["tolerance"]),
+            stratum_tolerance=str(settings["stratum_tolerance"]), utilities=utilities)
+    except (ValueError, AssertionError) as exc:
+        raise PipelineError(f"CP-SAT selection failed: {exc}") from exc
+    if chosen is None:
+        write_json(root / "allocation_failure.json", solver_report)
+        raise PipelineError(f"CP-SAT selection infeasible or unresolved: {solver_report.get('status')}; "
+                            "counts and tolerances were not relaxed")
+    by_id = {r["row_id"]: r for r in priorities}
+    ranked = {}
+    for key in sorted({r["stratum"] for r in priorities}):
+        group = sorted((r for r in priorities if r["stratum"] == key), key=lambda r: (-r["utility"], r["tie_key"]))
+        ranked.update({r["row_id"]: i + 1 for i, r in enumerate(group)})
+    chosen_ids = {r["row_id"] for r in chosen}
+    selected = sorted((dict(by_id[i], priority_rank=ranked[i]) for i in chosen_ids),
+                      key=lambda r: (r["stratum"], r["priority_rank"]))
+    actual = solver_report["actual_tokens"]
+    report = {"target_tokens": target, "actual_tokens": actual, "relative_error": abs(actual - target) / target,
+              "tolerance": settings["tolerance"], "rows": len(selected),
+              "quotas": {f"{s['source']}|{s['length_bin']}": s["required_rows"] for s in solver_report["strata"]},
+              "quota_deviations": {f"{s['source']}|{s['length_bin']}": 0 for s in solver_report["strata"]},
+              "swaps": [], "method": "method-b-cpsat-v3", "coverage_relaxed": False,
+              "stratum_tolerance": settings["stratum_tolerance"], "utility_scale": scale,
+              "utility_definition": "Method B seeded hash" if utilities is None else f"round(utility * {scale})",
+              "selector_origin_sha256": settings.get("b_select_origin_sha256"), "cpsat": solver_report}
+    if method == "B" and settings.get("b_selected_manifest"):
+        # The proof that the vendored selector is Method B's: his recorded rows must reproduce exactly.
+        verified(settings["b_selected_manifest"], settings.get("b_selected_sha256"))
+        recorded = read_rows(settings["b_selected_manifest"])
+        recorded_ids = {r["row_id"] for r in recorded}
+        recorded_tokens = sum(r["supervised_tokens"] for r in recorded)
+        if recorded_ids != chosen_ids or recorded_tokens != actual:
+            raise PipelineError(f"Vendored selector does not reproduce Method B's recorded selection: "
+                                f"{len(recorded_ids & chosen_ids)} of {len(recorded_ids)} rows, tokens {actual} vs {recorded_tokens}")
+        report["b_reproduction"] = {"identical_rows": True, "tokens": recorded_tokens,
+                                    "recorded_manifest_sha256": settings["b_selected_sha256"]}
+    return selected, report
+
+
+def trainer_constants(source):
+    """Recipe constants fixed inside Person 2's trainer, recorded so the match with Method B is checkable."""
+    found = {}
+    for key, pattern in (("quantization", r"bnb_4bit_quant_type\s*=\s*['\"](\w+)['\"]"),
+                         ("double_quantization", r"bnb_4bit_use_double_quant\s*=\s*(\w+)"),
+                         ("load_in_4bit", r"load_in_4bit\s*=\s*(\w+)"),
+                         ("weight_decay", r"weight_decay\s*=\s*([0-9.]+)"),
+                         ("gradient_clip", r"clip_grad_norm_\([^,]+,\s*([0-9.]+)")):
+        match = re.search(pattern, source)
+        found[key] = match.group(1) if match else None
+    return found
+
+
+def seed_agnostic_fingerprint(cfg):
+    """Training smoke proves trainer wiring for a parent, not a seed: one smoke covers all seeds."""
+    stripped = deepcopy(cfg)
+    stripped["training"].pop("seed", None)
+    return stage_fingerprint(stripped, "train")
+
+
 def select(cfg, method):
     gate(cfg, "select")
     if method not in ("B", "C0"):
@@ -75,12 +158,15 @@ def select(cfg, method):
     target, proportions, origin = budget_and_coverage(cfg, rows)
     settings = cfg["allocation"]
     root = artifact_root(cfg, "select") / "selection" / method
-    try:
-        selected, report = allocate(priorities, target, proportions, settings["tolerance"],
-                                    settings["boundary_window"], settings["max_swaps"], settings["max_row_counts"])
-    except AllocationError as exc:
-        write_json(root / "allocation_failure.json", exc.report)
-        raise
+    if settings.get("selector") == "method-b-cpsat-v3":
+        selected, report = cpsat_select(cfg, method, rows, priorities, target, root)
+    else:
+        try:
+            selected, report = allocate(priorities, target, proportions, settings["tolerance"],
+                                        settings["boundary_window"], settings["max_swaps"], settings["max_row_counts"])
+        except AllocationError as exc:
+            write_json(root / "allocation_failure.json", exc.report)
+            raise
     by_id = {row["row_id"]: row for row in rows}
     manifest = [by_id[r["row_id"]] for r in selected]
     write_rows(root / "manifest.jsonl", manifest)
@@ -90,7 +176,8 @@ def select(cfg, method):
     writer.writeheader()
     writer.writerows(table)
     write_bytes(root / "selection_table.csv", buffer.getvalue().encode("utf-8"))
-    report.update({"synthetic": False, "method": method, "version": "reference-fit-v1", "budget_origin": origin,
+    version = "reference-fit-v2-cpsat" if report.get("method") == "method-b-cpsat-v3" else "reference-fit-v1"
+    report.update({"synthetic": False, "method": method, "version": version, "budget_origin": origin,
                    "stratum_proportions": proportions, "manifest_sha256": sha(root / "manifest.jsonl"),
                    "selected_data_hash": digest(manifest), "config_fingerprint": cfg["config_fingerprint"],
                    "stage_fingerprint": stage_fingerprint(cfg, "select"),
@@ -146,11 +233,14 @@ def train(cfg, method, attempt, resume=None, smoke=False):
     if not attempt or Path(attempt).name != attempt or attempt in (".", ".."):
         raise PipelineError("Use a simple new attempt name, not a path")
     rows, selection = load_selection(cfg, method)
+    smoke_key = seed_agnostic_fingerprint(cfg)
     if not smoke:
         proofs = []
-        for path in (artifact_root(cfg) / "training_smoke").glob("*/*/token_reconciliation.json"):
+        # Smokes live under their own seed's artifact root; any seed's smoke of the same
+        # parent, data, scores, selection and recipe is accepted (seed-agnostic key).
+        for path in (Path(cfg["output_root"]) / cfg["active_profile"]).glob("*/training_smoke/*/*/token_reconciliation.json"):
             proof = read_json(path)
-            if (proof.get("training_smoke_only") is True and proof.get("stage_fingerprint") == stage_fingerprint(cfg, "train")
+            if (proof.get("training_smoke_only") is True and proof.get("smoke_fingerprint") == smoke_key
                     and proof.get("parent_fingerprint") == cfg["parent"]["adapter_sha256"]
                     and proof.get("run_config_sha256") == sha(path.parent / "run_config.json")):
                 proofs.append(proof)
@@ -181,7 +271,8 @@ def train(cfg, method, attempt, resume=None, smoke=False):
     write_json(inputs / "policy.json", {"confirmed_with_person1": True, "add_special_tokens": False,
                "append_eos": True, "max_total_tokens": cfg["data"]["max_total_tokens"],
                "provenance": {"format_sha256": load_prepared(cfg)[1]["evidence"]["release"]["format_sha256"]}})
-    write_bytes(inputs / "reused_continuation_engine.py", continuation_source(notebook_sources(cfg["integration"]["notebook"])["trainer_core.py"]).encode())
+    engine_source = continuation_source(notebook_sources(cfg["integration"]["notebook"])["trainer_core.py"])
+    write_bytes(inputs / "reused_continuation_engine.py", engine_source.encode())
     recipe = cfg["training"]
     args = SimpleNamespace(data=inputs / "manifest.jsonl", template=inputs / "template.json", policy=inputs / "policy.json",
                            mode="continuation", arm=method, epochs=1, seed=recipe["seed"], accumulation=recipe["accumulation"],
@@ -227,7 +318,9 @@ def train(cfg, method, attempt, resume=None, smoke=False):
               "budget_tolerance": selection["tolerance"], "candidate_sha256": selection["candidate_sha256"],
               "training_seconds": summary.get("training_seconds"), "peak_allocated_GB": summary.get("peak_allocated_GB"),
               "parent_unchanged": True, "parent_fingerprint": parent_before, "config_fingerprint": cfg["config_fingerprint"],
-              "stage_fingerprint": stage_fingerprint(cfg, "train"), "evaluation_status": "pending",
+              "stage_fingerprint": stage_fingerprint(cfg, "train"), "smoke_fingerprint": smoke_key,
+              "continuation_seed": recipe["seed"], "evaluation_status": "pending",
+              "trainer_constants": trainer_constants(engine_source),
               "changed_adapter_tensors": changed_tensors,
               "code": source_hashes(),
               "selection_sha256": digest(selection), "run_config_sha256": sha(args.out / "run_config.json"),

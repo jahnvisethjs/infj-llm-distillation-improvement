@@ -17,11 +17,12 @@ def main():
     parser.add_argument("--config", required=True)
     parser.add_argument("--attempt", required=True)
     parser.add_argument("--profile", choices=("0.5B", "1.5B"))
+    parser.add_argument("--training-seed", type=int)
     args = parser.parse_args()
     try:
         if not args.attempt or Path(args.attempt).name != args.attempt or args.attempt in (".", ".."):
             raise PipelineError("Use a simple training attempt name")
-        cfg = load_config(args.config, args.profile)
+        cfg = load_config(args.config, args.profile, args.training_seed)
         root = artifact_root(cfg) / "runs"
         b_run = root / "B" / args.attempt
         print(canonical(finalize(cfg, b_run if b_run.is_dir() else None, root / "C0" / args.attempt)))

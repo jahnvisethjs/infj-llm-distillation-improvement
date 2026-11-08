@@ -140,7 +140,7 @@ class GateAndArtifactTests(unittest.TestCase):
     def test_model_independent_gate_does_not_check_gpu(self):
         def missing(unused):
             raise FileNotFoundError("missing actual adapter")
-        checks = {name: (lambda unused: {"verified": True}) for name in ("release", "parent_exposure", "overlap", "interfaces")}
+        checks = {name: (lambda unused: {"verified": True}) for name in ("release", "parent_exposure", "overlap", "interfaces", "universe")}
         checks["parent_weights"] = missing
         checks["runtime"] = lambda unused: self.fail("Pure data stage imported GPU runtime")
         with patch("capstone_person4.audit.CHECKS", checks):

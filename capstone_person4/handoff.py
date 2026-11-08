@@ -48,16 +48,23 @@ def finalize(cfg, b_run, c0_run):
     if "B" in arms and arms["B"]["run_directory"] == arms["C0"]["run_directory"]:
         raise PipelineError("B and C0 must be independent training jobs")
     _, c0_selection = load_selection(cfg, "C0")
+    b_rows, b_selection = load_selection(cfg, "B")
     external_b = None if "B" in arms else {
-        "status": "trained outside this pipeline",
-        "requirement": "same parent, same frozen candidate universe, same recipe, supervised tokens within tolerance of the target",
+        "status": "trained outside this pipeline (Method B, Suraj Shinde)",
+        "requirement": "same parent, same frozen candidate universe, same selector, same recipe, same continuation seed",
         "target_tokens": c0_selection["target_tokens"], "tolerance": c0_selection["tolerance"],
-        "matched_budget_B_manifest": str(artifact_root(cfg, "select") / "selection" / "B" / "manifest.jsonl")}
+        "continuation_seed": cfg["training"]["seed"],
+        "matched_budget_B_manifest": str(artifact_root(cfg, "select") / "selection" / "B" / "manifest.jsonl"),
+        "B_tokens": b_selection["actual_tokens"], "B_rows": len(b_rows),
+        "B_reproduction": b_selection.get("b_reproduction"),
+        "pairwise_token_difference": abs(b_selection["actual_tokens"] - arms["C0"]["actual_tokens"]),
+        "expected_B_run_name": f"B_{cfg['active_profile']}_p{cfg['parent'].get('training_seed')}_t{cfg['training']['seed']}_1x"}
     verified(Path(cfg["parent"]["adapter"]) / "adapter_model.safetensors", cfg["parent"]["adapter_sha256"])
     report = {"approach_complete": True, "synthetic": False, "evaluation_status": "pending",
               "stage_fingerprint": stage_fingerprint(cfg, "train"), "parent": cfg["parent"],
               "candidate_sha256": preparation["candidate_sha256"], "measurement_key": coverage["measurement_key"],
-              "recipe": cfg["training"], "arms": arms,
+              "recipe": cfg["training"], "continuation_seed": cfg["training"]["seed"],
+              "universe": preparation.get("universe"), "selector": c0_selection.get("method"), "arms": arms,
               "pairwise_token_difference": abs(arms["B"]["actual_tokens"] - arms["C0"]["actual_tokens"]) if "B" in arms else None,
               "external_B": external_b,
               "interpretation": "Completed continuation checkpoints; accuracy and independent correctness unmeasured"}
