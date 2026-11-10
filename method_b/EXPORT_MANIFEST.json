@@ -1,0 +1,954 @@
+{
+  "source": "/scratch/sshind38/capstone_approach_b",
+  "branch": "Method_B-Fresh_stratified_random",
+  "per_file_limit_bytes": 5242880,
+  "total_limit_bytes": 52428800,
+  "exported": [
+    {
+      "path": "Method_B_Complete_Jupyter.ipynb",
+      "source": "/scratch/sshind38/capstone_approach_b/Method_B_Complete_Jupyter.ipynb",
+      "bytes": 84877,
+      "source_sha256": "708d4d1c3f6f4ab5a6fd8c489de36d4a617dbb91db1cea8537ae5ddd507f5e6c",
+      "export_sha256": "708d4d1c3f6f4ab5a6fd8c489de36d4a617dbb91db1cea8537ae5ddd507f5e6c",
+      "transformation": "notebook outputs, execution counts, attachments and widget state stripped in copy"
+    },
+    {
+      "path": "Method_B_Essential_Seed42.ipynb",
+      "source": "/scratch/sshind38/capstone_approach_b/Method_B_Essential_Seed42.ipynb",
+      "bytes": 32746,
+      "source_sha256": "585eaa791e8a155d4bb1fa86a22a16a2295ecbd352324e896e894b333a960316",
+      "export_sha256": "585eaa791e8a155d4bb1fa86a22a16a2295ecbd352324e896e894b333a960316",
+      "transformation": "notebook outputs, execution counts, attachments and widget state stripped in copy"
+    },
+    {
+      "path": "Method_B_Evaluation_Recovery.ipynb",
+      "source": "/scratch/sshind38/capstone_approach_b/Method_B_Evaluation_Recovery.ipynb",
+      "bytes": 18736,
+      "source_sha256": "d8a62e4d169ef55872c6e3b336216fcf7fa5d4409d5dca9da4ff4544c7e86078",
+      "export_sha256": "d8a62e4d169ef55872c6e3b336216fcf7fa5d4409d5dca9da4ff4544c7e86078",
+      "transformation": "notebook outputs, execution counts, attachments and widget state stripped in copy"
+    },
+    {
+      "path": "Method_B_Finish_1p5B_Seed2026.ipynb",
+      "source": "/scratch/sshind38/capstone_approach_b/Method_B_Finish_1p5B_Seed2026.ipynb",
+      "bytes": 24750,
+      "source_sha256": "e916c622a7f8a666393750322fcfbe1f67f025a79a4e20314835030d66b6b492",
+      "export_sha256": "e916c622a7f8a666393750322fcfbe1f67f025a79a4e20314835030d66b6b492",
+      "transformation": "notebook outputs, execution counts, attachments and widget state stripped in copy"
+    },
+    {
+      "path": "Method_B_Finish_1p5B_Seed2026_v2.ipynb",
+      "source": "/scratch/sshind38/capstone_approach_b/Method_B_Finish_1p5B_Seed2026_v2.ipynb",
+      "bytes": 28564,
+      "source_sha256": "225d1bb2a2cbb2b2b69ebf53358abe94e5c4decc7c7279b6bc6546b59dbdf794",
+      "export_sha256": "225d1bb2a2cbb2b2b69ebf53358abe94e5c4decc7c7279b6bc6546b59dbdf794",
+      "transformation": "notebook outputs, execution counts, attachments and widget state stripped in copy"
+    },
+    {
+      "path": "Method_B_Overnight.py",
+      "source": "/scratch/sshind38/capstone_approach_b/Method_B_Overnight.py",
+      "bytes": 106256,
+      "source_sha256": "d8101467d2037095bffdfb851959c2a2e2405daeb2de377b703ba2bac5d335a4",
+      "export_sha256": "d8101467d2037095bffdfb851959c2a2e2405daeb2de377b703ba2bac5d335a4",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/Approach_B_Prepare.ipynb",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/Approach_B_Prepare.ipynb",
+      "bytes": 3267,
+      "source_sha256": "5dfe8190eac01aec1e24b3207e3aa5a0afea972713cdd60cc8c90cffeed55637",
+      "export_sha256": "49cc62397624fa16f58e3f89ca61f3c7790a621db40026bcafbbd5d8cd7c7500",
+      "transformation": "notebook outputs, execution counts, attachments and widget state stripped in copy"
+    },
+    {
+      "path": "b_workbench/README.txt",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/README.txt",
+      "bytes": 10003,
+      "source_sha256": "8235029ccad900a4608048e959c030e624cb125d412cadf7ab11bc87428d46dc",
+      "export_sha256": "8235029ccad900a4608048e959c030e624cb125d412cadf7ab11bc87428d46dc",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/allocator.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/allocator.py",
+      "bytes": 24210,
+      "source_sha256": "c7c45cd6b586e1f689d18516889a7dd6fe72bad756d3f5825438cb7393b98170",
+      "export_sha256": "c7c45cd6b586e1f689d18516889a7dd6fe72bad756d3f5825438cb7393b98170",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/approach_b_selector.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/approach_b_selector.py",
+      "bytes": 24,
+      "source_sha256": "52586c38d88484f34178510132b98fef5b94004905aaed4d4ce4a6e0ac6eb970",
+      "export_sha256": "52586c38d88484f34178510132b98fef5b94004905aaed4d4ce4a6e0ac6eb970",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/bootstrap_env.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/bootstrap_env.py",
+      "bytes": 4016,
+      "source_sha256": "676abeb780650787dd64f7a1f30dfd8ca88aa8e2b2841eba0cfed5f30c1ae022",
+      "export_sha256": "676abeb780650787dd64f7a1f30dfd8ca88aa8e2b2841eba0cfed5f30c1ae022",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/common.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/common.py",
+      "bytes": 3174,
+      "source_sha256": "25067d7b1c25f223531c4586dd365114f9205063bc24e506477b4258ae6b526f",
+      "export_sha256": "25067d7b1c25f223531c4586dd365114f9205063bc24e506477b4258ae6b526f",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/compare.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/compare.py",
+      "bytes": 3239,
+      "source_sha256": "31fb9db20ddd6661145a4bc1f4c5fff857c25b23e2c1fe61443b57b0cbc6609c",
+      "export_sha256": "31fb9db20ddd6661145a4bc1f4c5fff857c25b23e2c1fe61443b57b0cbc6609c",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/continuation.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/continuation.py",
+      "bytes": 17390,
+      "source_sha256": "93cacb31c2c901634ad4ff62a90ebd0bcf96c5d55e9d5a1aecb07c782a36152d",
+      "export_sha256": "93cacb31c2c901634ad4ff62a90ebd0bcf96c5d55e9d5a1aecb07c782a36152d",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/parent_registry.json",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/parent_registry.json",
+      "bytes": 2627,
+      "source_sha256": "7327837a0596ed1cdfeab8fe5590cde310ea50fd3197421ce755b11cc0a3c259",
+      "export_sha256": "7327837a0596ed1cdfeab8fe5590cde310ea50fd3197421ce755b11cc0a3c259",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/requirements-training.txt",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/requirements-training.txt",
+      "bytes": 415,
+      "source_sha256": "1a1b457eebcddddd8d352a639539973b79862bc75261edd254753f16cc9586a4",
+      "export_sha256": "1a1b457eebcddddd8d352a639539973b79862bc75261edd254753f16cc9586a4",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/run_weights_free.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/run_weights_free.py",
+      "bytes": 3551,
+      "source_sha256": "c83ed9b6704f77d7a564684d868b36892705188d64b94e947ce52e2e11258c61",
+      "export_sha256": "c83ed9b6704f77d7a564684d868b36892705188d64b94e947ce52e2e11258c61",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/source_provenance.json",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/source_provenance.json",
+      "bytes": 4962,
+      "source_sha256": "14105c5e744279d6358e603adc31a1bb7a27e3e39edf636f7a3f12096689c3c8",
+      "export_sha256": "14105c5e744279d6358e603adc31a1bb7a27e3e39edf636f7a3f12096689c3c8",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/test_original_allocator.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/test_original_allocator.py",
+      "bytes": 3955,
+      "source_sha256": "1d35c3aa9c2c96af28f3c3ffd543f6fdb25854ff06432f24dea161b29948131a",
+      "export_sha256": "1d35c3aa9c2c96af28f3c3ffd543f6fdb25854ff06432f24dea161b29948131a",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/test_tensor_loss.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/test_tensor_loss.py",
+      "bytes": 2336,
+      "source_sha256": "7602330a9eaebf0e9e50b58608dbd13c8e8a5bb4202d73517e231bf8a2b0fde7",
+      "export_sha256": "7602330a9eaebf0e9e50b58608dbd13c8e8a5bb4202d73517e231bf8a2b0fde7",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/test_workbench.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/test_workbench.py",
+      "bytes": 14710,
+      "source_sha256": "3e10aaf6dc028fbdfb277f3bd4d090e1220fe56c8dc5f0d988552ad655c6abaf",
+      "export_sha256": "3e10aaf6dc028fbdfb277f3bd4d090e1220fe56c8dc5f0d988552ad655c6abaf",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/capstone_person1/__init__.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/capstone_person1/__init__.py",
+      "bytes": 41,
+      "source_sha256": "9ac08e955c88a4fe03b83cb7d779b9f90644e508f59babf0bb90d6562de0b630",
+      "export_sha256": "9ac08e955c88a4fe03b83cb7d779b9f90644e508f59babf0bb90d6562de0b630",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/capstone_person1/instance_matching.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/capstone_person1/instance_matching.py",
+      "bytes": 9067,
+      "source_sha256": "2707c3a98f96143c5f54c4ae6c3ddec5b4bf5173e0bb8ccc4217ab295f852628",
+      "export_sha256": "2707c3a98f96143c5f54c4ae6c3ddec5b4bf5173e0bb8ccc4217ab295f852628",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/capstone_person1/person1_data_contract.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/capstone_person1/person1_data_contract.py",
+      "bytes": 11605,
+      "source_sha256": "4f9a956dcea92f856612bfeb3666db499f6f81a69066509bdb71640847f1ae9d",
+      "export_sha256": "4f9a956dcea92f856612bfeb3666db499f6f81a69066509bdb71640847f1ae9d",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/capstone_person1/pipeline_controls.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/capstone_person1/pipeline_controls.py",
+      "bytes": 30627,
+      "source_sha256": "dd39786b1999f2a267aca2931fa9ea24af08ec59f49b8b2720e72f2f91bf9f05",
+      "export_sha256": "dd39786b1999f2a267aca2931fa9ea24af08ec59f49b8b2720e72f2f91bf9f05",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/evaluation/answer_parser.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/evaluation/answer_parser.py",
+      "bytes": 8223,
+      "source_sha256": "3361e3c81864072961026fca4d7459a17c7544ed5ffec144575ab20eeac93d5d",
+      "export_sha256": "3361e3c81864072961026fca4d7459a17c7544ed5ffec144575ab20eeac93d5d",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/evaluation/check_eval_data.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/evaluation/check_eval_data.py",
+      "bytes": 3443,
+      "source_sha256": "c232895e17b22f8dd96069065d4a1b130bdcaee3b0ef4e51a82f58a6e3c680cf",
+      "export_sha256": "c232895e17b22f8dd96069065d4a1b130bdcaee3b0ef4e51a82f58a6e3c680cf",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/evaluation/evaluate.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/evaluation/evaluate.py",
+      "bytes": 17306,
+      "source_sha256": "8f2bc66ddfe3a0000bfc1e08ee325a0f520263f057a0e2fc7576d1467776d3d1",
+      "export_sha256": "8f2bc66ddfe3a0000bfc1e08ee325a0f520263f057a0e2fc7576d1467776d3d1",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/evaluation/metrics.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/evaluation/metrics.py",
+      "bytes": 8539,
+      "source_sha256": "cdeeb9c7237259286e0511601f7d4618e99376925838b6a7e47411545cbd42a7",
+      "export_sha256": "cdeeb9c7237259286e0511601f7d4618e99376925838b6a7e47411545cbd42a7",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/evaluation/requirements.txt",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/evaluation/requirements.txt",
+      "bytes": 553,
+      "source_sha256": "c04a2c855e2ba7b70b48ee97f11d75ed8a831e8f54494d3ac9b6d517a1704829",
+      "export_sha256": "c04a2c855e2ba7b70b48ee97f11d75ed8a831e8f54494d3ac9b6d517a1704829",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/evaluation/test_answer_parser.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/evaluation/test_answer_parser.py",
+      "bytes": 7447,
+      "source_sha256": "7fb562b4744a795b8b7e08a5c9bf737435c1dbf5f5fb613ff1faf2554e4b9a89",
+      "export_sha256": "7fb562b4744a795b8b7e08a5c9bf737435c1dbf5f5fb613ff1faf2554e4b9a89",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/person2/person2.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/person2/person2.py",
+      "bytes": 14547,
+      "source_sha256": "510a9cff736a04c9c9bbdcadce854a0334ce1c4fa0d2160fe0f29293573cdf20",
+      "export_sha256": "510a9cff736a04c9c9bbdcadce854a0334ce1c4fa0d2160fe0f29293573cdf20",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/vendor/person2/trainer_core.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/vendor/person2/trainer_core.py",
+      "bytes": 33834,
+      "source_sha256": "638b4befeab797f032f533b7ec605d3336f97142dec51782bfeb2d030a5ba498",
+      "export_sha256": "638b4befeab797f032f533b7ec605d3336f97142dec51782bfeb2d030a5ba498",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench/workbench.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench/workbench.py",
+      "bytes": 25640,
+      "source_sha256": "05fb6e06adea11c4d29b0609eda8694bff671a02ef1c00e4765f48aab5160d85",
+      "export_sha256": "05fb6e06adea11c4d29b0609eda8694bff671a02ef1c00e4765f48aab5160d85",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/Approach_B_500_Prepare.ipynb",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/Approach_B_500_Prepare.ipynb",
+      "bytes": 1598,
+      "source_sha256": "41ab0edcb817dc22ba40616a6d1359956f2d93e2c59e1991231fcd61bbc30f94",
+      "export_sha256": "6db517f4dc0661582d3422225526658a2fd910f8ac404da6a4f6de2d8122fd5c",
+      "transformation": "notebook outputs, execution counts, attachments and widget state stripped in copy"
+    },
+    {
+      "path": "b_workbench_500/README.txt",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/README.txt",
+      "bytes": 4987,
+      "source_sha256": "c45382d1fcb6c5900b927bed46ee681f459895001d451209cbbbb0999640d404",
+      "export_sha256": "c45382d1fcb6c5900b927bed46ee681f459895001d451209cbbbb0999640d404",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/allocator.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/allocator.py",
+      "bytes": 24469,
+      "source_sha256": "683ad70be2a66134673d5f5746ff9c42de5bc202f9edf4a215a3a99d2e0cc9b2",
+      "export_sha256": "683ad70be2a66134673d5f5746ff9c42de5bc202f9edf4a215a3a99d2e0cc9b2",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/approach_b_selector.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/approach_b_selector.py",
+      "bytes": 24,
+      "source_sha256": "52586c38d88484f34178510132b98fef5b94004905aaed4d4ce4a6e0ac6eb970",
+      "export_sha256": "52586c38d88484f34178510132b98fef5b94004905aaed4d4ce4a6e0ac6eb970",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/bootstrap_env.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/bootstrap_env.py",
+      "bytes": 4016,
+      "source_sha256": "676abeb780650787dd64f7a1f30dfd8ca88aa8e2b2841eba0cfed5f30c1ae022",
+      "export_sha256": "676abeb780650787dd64f7a1f30dfd8ca88aa8e2b2841eba0cfed5f30c1ae022",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/common.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/common.py",
+      "bytes": 3694,
+      "source_sha256": "c7b3be80ad94eec2a489850986b915ca4379e338e0b607bec3eb0bcd877eef82",
+      "export_sha256": "c7b3be80ad94eec2a489850986b915ca4379e338e0b607bec3eb0bcd877eef82",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/compare.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/compare.py",
+      "bytes": 3239,
+      "source_sha256": "31fb9db20ddd6661145a4bc1f4c5fff857c25b23e2c1fe61443b57b0cbc6609c",
+      "export_sha256": "31fb9db20ddd6661145a4bc1f4c5fff857c25b23e2c1fe61443b57b0cbc6609c",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/continuation.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/continuation.py",
+      "bytes": 17556,
+      "source_sha256": "ab447b748dcb826f9dbfa1da5fcc515c295cf98bb3530c0f0e1a11b215a00437",
+      "export_sha256": "ab447b748dcb826f9dbfa1da5fcc515c295cf98bb3530c0f0e1a11b215a00437",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/parent_registry.json",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/parent_registry.json",
+      "bytes": 2627,
+      "source_sha256": "7327837a0596ed1cdfeab8fe5590cde310ea50fd3197421ce755b11cc0a3c259",
+      "export_sha256": "7327837a0596ed1cdfeab8fe5590cde310ea50fd3197421ce755b11cc0a3c259",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/requirements-training.txt",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/requirements-training.txt",
+      "bytes": 415,
+      "source_sha256": "1a1b457eebcddddd8d352a639539973b79862bc75261edd254753f16cc9586a4",
+      "export_sha256": "1a1b457eebcddddd8d352a639539973b79862bc75261edd254753f16cc9586a4",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/run_500_preparation.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/run_500_preparation.py",
+      "bytes": 2785,
+      "source_sha256": "ff5ca3984cbec91cbd89c4737ad1dac50f94eec8f0ec021ea3091ee4fae82221",
+      "export_sha256": "ff5ca3984cbec91cbd89c4737ad1dac50f94eec8f0ec021ea3091ee4fae82221",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/run_weights_free.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/run_weights_free.py",
+      "bytes": 3573,
+      "source_sha256": "cb0b52c7487d0d4090388b947195cbf31cd9e93ac45ebb804f24b41f8be852cf",
+      "export_sha256": "cb0b52c7487d0d4090388b947195cbf31cd9e93ac45ebb804f24b41f8be852cf",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/source_provenance.json",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/source_provenance.json",
+      "bytes": 4962,
+      "source_sha256": "14105c5e744279d6358e603adc31a1bb7a27e3e39edf636f7a3f12096689c3c8",
+      "export_sha256": "14105c5e744279d6358e603adc31a1bb7a27e3e39edf636f7a3f12096689c3c8",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/test_half_extension.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/test_half_extension.py",
+      "bytes": 5472,
+      "source_sha256": "66dce87b3075f73516e223dd43cfc2b1514a10ebe51f51dbfa6842ce3f103513",
+      "export_sha256": "66dce87b3075f73516e223dd43cfc2b1514a10ebe51f51dbfa6842ce3f103513",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/test_original_allocator.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/test_original_allocator.py",
+      "bytes": 3955,
+      "source_sha256": "1d35c3aa9c2c96af28f3c3ffd543f6fdb25854ff06432f24dea161b29948131a",
+      "export_sha256": "1d35c3aa9c2c96af28f3c3ffd543f6fdb25854ff06432f24dea161b29948131a",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/test_tensor_loss.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/test_tensor_loss.py",
+      "bytes": 2336,
+      "source_sha256": "7602330a9eaebf0e9e50b58608dbd13c8e8a5bb4202d73517e231bf8a2b0fde7",
+      "export_sha256": "7602330a9eaebf0e9e50b58608dbd13c8e8a5bb4202d73517e231bf8a2b0fde7",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/test_workbench.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/test_workbench.py",
+      "bytes": 14710,
+      "source_sha256": "3e10aaf6dc028fbdfb277f3bd4d090e1220fe56c8dc5f0d988552ad655c6abaf",
+      "export_sha256": "3e10aaf6dc028fbdfb277f3bd4d090e1220fe56c8dc5f0d988552ad655c6abaf",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/capstone_person1/__init__.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/capstone_person1/__init__.py",
+      "bytes": 41,
+      "source_sha256": "9ac08e955c88a4fe03b83cb7d779b9f90644e508f59babf0bb90d6562de0b630",
+      "export_sha256": "9ac08e955c88a4fe03b83cb7d779b9f90644e508f59babf0bb90d6562de0b630",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/capstone_person1/instance_matching.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/capstone_person1/instance_matching.py",
+      "bytes": 9067,
+      "source_sha256": "2707c3a98f96143c5f54c4ae6c3ddec5b4bf5173e0bb8ccc4217ab295f852628",
+      "export_sha256": "2707c3a98f96143c5f54c4ae6c3ddec5b4bf5173e0bb8ccc4217ab295f852628",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/capstone_person1/person1_data_contract.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/capstone_person1/person1_data_contract.py",
+      "bytes": 11605,
+      "source_sha256": "4f9a956dcea92f856612bfeb3666db499f6f81a69066509bdb71640847f1ae9d",
+      "export_sha256": "4f9a956dcea92f856612bfeb3666db499f6f81a69066509bdb71640847f1ae9d",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/capstone_person1/pipeline_controls.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/capstone_person1/pipeline_controls.py",
+      "bytes": 30627,
+      "source_sha256": "dd39786b1999f2a267aca2931fa9ea24af08ec59f49b8b2720e72f2f91bf9f05",
+      "export_sha256": "dd39786b1999f2a267aca2931fa9ea24af08ec59f49b8b2720e72f2f91bf9f05",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/evaluation/answer_parser.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/evaluation/answer_parser.py",
+      "bytes": 8223,
+      "source_sha256": "3361e3c81864072961026fca4d7459a17c7544ed5ffec144575ab20eeac93d5d",
+      "export_sha256": "3361e3c81864072961026fca4d7459a17c7544ed5ffec144575ab20eeac93d5d",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/evaluation/check_eval_data.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/evaluation/check_eval_data.py",
+      "bytes": 3443,
+      "source_sha256": "c232895e17b22f8dd96069065d4a1b130bdcaee3b0ef4e51a82f58a6e3c680cf",
+      "export_sha256": "c232895e17b22f8dd96069065d4a1b130bdcaee3b0ef4e51a82f58a6e3c680cf",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/evaluation/evaluate.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/evaluation/evaluate.py",
+      "bytes": 17306,
+      "source_sha256": "8f2bc66ddfe3a0000bfc1e08ee325a0f520263f057a0e2fc7576d1467776d3d1",
+      "export_sha256": "8f2bc66ddfe3a0000bfc1e08ee325a0f520263f057a0e2fc7576d1467776d3d1",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/evaluation/metrics.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/evaluation/metrics.py",
+      "bytes": 8539,
+      "source_sha256": "cdeeb9c7237259286e0511601f7d4618e99376925838b6a7e47411545cbd42a7",
+      "export_sha256": "cdeeb9c7237259286e0511601f7d4618e99376925838b6a7e47411545cbd42a7",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/evaluation/requirements.txt",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/evaluation/requirements.txt",
+      "bytes": 553,
+      "source_sha256": "c04a2c855e2ba7b70b48ee97f11d75ed8a831e8f54494d3ac9b6d517a1704829",
+      "export_sha256": "c04a2c855e2ba7b70b48ee97f11d75ed8a831e8f54494d3ac9b6d517a1704829",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/evaluation/test_answer_parser.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/evaluation/test_answer_parser.py",
+      "bytes": 7447,
+      "source_sha256": "7fb562b4744a795b8b7e08a5c9bf737435c1dbf5f5fb613ff1faf2554e4b9a89",
+      "export_sha256": "7fb562b4744a795b8b7e08a5c9bf737435c1dbf5f5fb613ff1faf2554e4b9a89",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/person2/person2.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/person2/person2.py",
+      "bytes": 14547,
+      "source_sha256": "510a9cff736a04c9c9bbdcadce854a0334ce1c4fa0d2160fe0f29293573cdf20",
+      "export_sha256": "510a9cff736a04c9c9bbdcadce854a0334ce1c4fa0d2160fe0f29293573cdf20",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/vendor/person2/trainer_core.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/vendor/person2/trainer_core.py",
+      "bytes": 33834,
+      "source_sha256": "638b4befeab797f032f533b7ec605d3336f97142dec51782bfeb2d030a5ba498",
+      "export_sha256": "638b4befeab797f032f533b7ec605d3336f97142dec51782bfeb2d030a5ba498",
+      "transformation": null
+    },
+    {
+      "path": "b_workbench_500/workbench.py",
+      "source": "/scratch/sshind38/capstone_approach_b/b_workbench_500/workbench.py",
+      "bytes": 25936,
+      "source_sha256": "3502356f6e46e44c8b9ab8cc4c52ddd434abe3870112a517e983a7f774e2bf0f",
+      "export_sha256": "3502356f6e46e44c8b9ab8cc4c52ddd434abe3870112a517e983a7f774e2bf0f",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/evaluation_recovery.py",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/evaluation_recovery.py",
+      "bytes": 6488,
+      "source_sha256": "795ee2a665b6930f076837c279aefe3611a410c9c151e33462c0ba9196cc2db1",
+      "export_sha256": "795ee2a665b6930f076837c279aefe3611a410c9c151e33462c0ba9196cc2db1",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/finish_1p5B_seed2026_6e1cdcadb9b0.py",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/finish_1p5B_seed2026_6e1cdcadb9b0.py",
+      "bytes": 14753,
+      "source_sha256": "6e1cdcadb9b012e226dda99beca758457be296063846ba102411fff7f2e5f2d2",
+      "export_sha256": "6e1cdcadb9b012e226dda99beca758457be296063846ba102411fff7f2e5f2d2",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/finish_1p5B_seed2026_74a0fb34deff.py",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/finish_1p5B_seed2026_74a0fb34deff.py",
+      "bytes": 11839,
+      "source_sha256": "74a0fb34deffa8b6a814982b7bb55cc825df6056c63fb407f042903d692016e3",
+      "export_sha256": "74a0fb34deffa8b6a814982b7bb55cc825df6056c63fb407f042903d692016e3",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/overnight_source_d8101467d203.py",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/overnight_source_d8101467d203.py",
+      "bytes": 106256,
+      "source_sha256": "d8101467d2037095bffdfb851959c2a2e2405daeb2de377b703ba2bac5d335a4",
+      "export_sha256": "d8101467d2037095bffdfb851959c2a2e2405daeb2de377b703ba2bac5d335a4",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/patch_runner.py",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/patch_runner.py",
+      "bytes": 2755,
+      "source_sha256": "c0c2efce53cecb148d5f60bc1a9da214e6fdb4433e4da78e554a3ce67a46335d",
+      "export_sha256": "c0c2efce53cecb148d5f60bc1a9da214e6fdb4433e4da78e554a3ce67a46335d",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/run_method_b.py",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/run_method_b.py",
+      "bytes": 40415,
+      "source_sha256": "dc743c10ca08f1df00cfb89d5b80a6ce8d1571a6693e2ad0a4762bb587869b06",
+      "export_sha256": "dc743c10ca08f1df00cfb89d5b80a6ce8d1571a6693e2ad0a4762bb587869b06",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/run_method_b_eval_recovery.py",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/run_method_b_eval_recovery.py",
+      "bytes": 40934,
+      "source_sha256": "f2eaa7750a2f1baf70d0305781f340c89f8ad9fbb791eaf2a2d023ddf3a82c46",
+      "export_sha256": "f2eaa7750a2f1baf70d0305781f340c89f8ad9fbb791eaf2a2d023ddf3a82c46",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/run_method_b_eval_unattended.py",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/run_method_b_eval_unattended.py",
+      "bytes": 40934,
+      "source_sha256": "f2eaa7750a2f1baf70d0305781f340c89f8ad9fbb791eaf2a2d023ddf3a82c46",
+      "export_sha256": "f2eaa7750a2f1baf70d0305781f340c89f8ad9fbb791eaf2a2d023ddf3a82c46",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/run_method_b_train_unattended.py",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/run_method_b_train_unattended.py",
+      "bytes": 40531,
+      "source_sha256": "3b806938fcdfab3cfb03880fc743d7bf6e3d0f8b6e782e6f2bffab65f5322a08",
+      "export_sha256": "3b806938fcdfab3cfb03880fc743d7bf6e3d0f8b6e782e6f2bffab65f5322a08",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/select_b.py",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/select_b.py",
+      "bytes": 11959,
+      "source_sha256": "5c9241231efc449fccbe464ce3198b87af20de8041aa699149f9c702f83bf7de",
+      "export_sha256": "5c9241231efc449fccbe464ce3198b87af20de8041aa699149f9c702f83bf7de",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/source_hashes.json",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/source_hashes.json",
+      "bytes": 706,
+      "source_sha256": "aa43da6cdf3f094d5a900b6548055dc891c6f07afc434eb8aeaf7ea14403f4f4",
+      "export_sha256": "aa43da6cdf3f094d5a900b6548055dc891c6f07afc434eb8aeaf7ea14403f4f4",
+      "transformation": null
+    },
+    {
+      "path": "method_b_document_v3_code/test_method_b.py",
+      "source": "/scratch/sshind38/capstone_approach_b/method_b_document_v3_code/test_method_b.py",
+      "bytes": 6467,
+      "source_sha256": "cc43a63f822ff87e2c933ce7301dacc2918af8ff476e33fc44beac30e47491a3",
+      "export_sha256": "cc43a63f822ff87e2c933ce7301dacc2918af8ff476e33fc44beac30e47491a3",
+      "transformation": null
+    },
+    {
+      "path": "results/development_results.csv",
+      "source": "/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/development_results.csv",
+      "bytes": 6956,
+      "source_sha256": "81c0b719f0b126fc2f3515a48549ce3644ec8ca8f0cd74b6c4cf61d624e22406",
+      "export_sha256": "81c0b719f0b126fc2f3515a48549ce3644ec8ca8f0cd74b6c4cf61d624e22406",
+      "transformation": null
+    },
+    {
+      "path": "results/development_results.json",
+      "source": "/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/development_results.json",
+      "bytes": 18769,
+      "source_sha256": "87911bcc90896b815e992aa1363e75753fe61022bcb04b0d4bf4d55f5f8d32fc",
+      "export_sha256": "87911bcc90896b815e992aa1363e75753fe61022bcb04b0d4bf4d55f5f8d32fc",
+      "transformation": null
+    },
+    {
+      "path": "results/progress_summary.json",
+      "source": "/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/progress_summary.json",
+      "bytes": 27299,
+      "source_sha256": "d2217dd7400071698dd67053f13a658a65218b129b24177b2200148a350ba96d",
+      "export_sha256": "d2217dd7400071698dd67053f13a658a65218b129b24177b2200148a350ba96d",
+      "transformation": null
+    }
+  ],
+  "skipped": [
+    {
+      "path": "approach_b_code_review.tar.gz",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/PACKAGE_SHA256.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/PROGRESS.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/STARTUP_FIX.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/START_ON_SOL.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/authoring_validation.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/config.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/1x/allocation_log.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/1x/budget_report.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/1x/coverage_report.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/1x/selected_ids.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/1x/selection_manifest.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/1x/train_B.jsonl",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/2x/allocation_log.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/2x/budget_report.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/2x/coverage_report.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/2x/selected_ids.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/2x/selection_manifest.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/2x/train_B.jsonl",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/4x/allocation_log.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/4x/budget_report.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/4x/coverage_report.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/4x/selected_ids.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/4x/selection_manifest.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/4x/train_B.jsonl",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/common_candidate_universe.jsonl",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/prepared_results/selection_summary.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/protocol_receipt_TEMPLATE.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/renderer_validation.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench/vendor/evaluation/handoff/eval_contract.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/ORIGINAL_WORKBENCH_README.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/PACKAGE_SHA256.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/PROGRESS.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/START_ON_SOL.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/authoring_validation.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/config.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/0.5x/allocation_log.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/0.5x/budget_report.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/0.5x/coverage_report.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/0.5x/selected_ids.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/0.5x/selection_manifest.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/0.5x/train_B.jsonl",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/1x/allocation_log.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/1x/budget_report.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/1x/coverage_report.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/1x/selected_ids.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/1x/selection_manifest.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/1x/train_B.jsonl",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/2x/allocation_log.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/2x/budget_report.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/2x/coverage_report.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/2x/selected_ids.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/2x/selection_manifest.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/2x/train_B.jsonl",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/4x/allocation_log.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/4x/budget_report.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/4x/coverage_report.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/4x/selected_ids.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/4x/selection_manifest.csv",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/4x/train_B.jsonl",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/common_candidate_universe.jsonl",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prepared_results/selection_summary.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/prior_SOL_preparation.log",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/protocol_receipt_TEMPLATE.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/renderer_validation.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/selection_validation.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "b_workbench_500/vendor/evaluation/handoff/eval_contract.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "method_b_diagnostics.zip",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "method_b_document_v3_code/source_hashes_meta.json",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "method_b_essential_20261103T183938Z_02a346.tar.gz",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "method_b_slurm_status.txt",
+      "reason": "not an allowed small code/summary file"
+    },
+    {
+      "path": "r1000_handoff.tar.gz",
+      "reason": "not an allowed small code/summary file"
+    }
+  ],
+  "external_directories_not_walked": [
+    ".cache",
+    ".git",
+    ".ipynb_checkpoints",
+    ".venv",
+    "__pycache__",
+    "checkpoints",
+    "data",
+    "datasets",
+    "hf_cache",
+    "huggingface",
+    "inputs_snapshot",
+    "logs",
+    "node_modules",
+    "outputs",
+    "parents",
+    "reference_records",
+    "runs",
+    "smokes",
+    "venv"
+  ],
+  "original_source_modified": false,
+  "training_or_evaluation_performed": false,
+  "git_add_commit_push_performed": false
+}
