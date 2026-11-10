@@ -25,4 +25,9 @@ bash scripts/sol/submit_pipeline.sh configs/c0.local.sol.0.5b.seed17.json q05-s1
 
 ## Results
 
+C1 batch scripts for the same Method B candidate bank are documented in
+[the C1 SOL guide](docs/C1_SOL_SBATCH_GUIDE.md). They require matching completed
+C0 runs and Person 3 candidate predictions, then submit gated selection,
+smoke checks, three C1 continuation seeds per parent, and paired handoffs.
+
 `results/c0/` contains the provenance of the four completed C0 runs (one per base model and parent seed): handoffs, token reconciliation, run configuration and training logs, selection reports and ordered row IDs, reference-loss diagnostics and scoring runtime reports. The adapters themselves are shared separately; `results/c0/README.md` lists their checksums and the evaluation instructions. Accuracy evaluation is pending.

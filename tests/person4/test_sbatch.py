@@ -25,7 +25,9 @@ def directives(path):
 class ResourceRequestTests(unittest.TestCase):
     def test_class_account_resources_and_parallel_gpu_budget(self):
         files = list(SOL.glob("*.sbatch"))
-        self.assertEqual(len(files), 7)
+        self.assertEqual({p.stem for p in files}, {
+            "prepare", "score_smoke", "score_reference", "select", "train_smoke", "train", "finalize",
+            "c1_export", "c1_ingest", "c1_select", "c1_train_smoke", "c1_train", "c1_finalize"})
         for path in files:
             with self.subTest(script=path.name):
                 fields = directives(path)

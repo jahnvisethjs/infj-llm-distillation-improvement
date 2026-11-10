@@ -1,5 +1,9 @@
 # ASU SOL batch commands for C0/B
 
+For C1 on the same 6,409-row bank, use the separate
+[C1 sbatch guide](C1_SOL_SBATCH_GUIDE.md) after completing matching C0 runs.
+Set `C0_B_BANK` before generating configs to keep Method B's common universe.
+
 Updated 5 November 2026. The scripts target the class allocation supplied for this capstone:
 
 ```bash

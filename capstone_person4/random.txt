@@ -1,0 +1,30 @@
+I need a read-only audit of which training data each approach (B, C0, C1) actually used in our capstone project on ASU Sol. A teammate reviewing a copy of the files believes the C0/C1 runs and the B runs we would compare them against used different candidate pools. I believe C0/C1 use the same data as B. Settle this with evidence from the files, not from memory or from what the code was intended to do. Do not modify, move or delete any files, and do not submit jobs.
+
+Roots:
+- B: /scratch/sshind38/capstone_approach_b
+- C0/C1: /scratch/sshind38/capstone_c0_c1_work
+
+What the teammate found (verify or refute each point):
+1. Suraj's B bank is outputs/B_method_B_document_v3/shared/mixed_candidate_bank.jsonl, with 6,409 rows (4,412 Orca + 1,997 Numina). The B selection is outputs/B_method_B_document_v3/mixed/budget_1x/1x/train_B.jsonl (1,000 rows, 317,506 supervised tokens). All 12 B runs (0.5B/1.5B x parent seeds 17/123 x training seeds 42/137/2026) were trained on that selection and scored on 500 dev GSM + 500 dev MATH questions (mixed/budget_1x/evaluation/*/B_vs_parent.json).
+2. The original C0 bridge (c0_c1_sol_bridge_v1/sol_bridge.py) loaded that same 6,409 bank.
+3. The independent screen (C0_C1_Independent_Screen_Proposal_20261110, outputs/C0_C1_independent_screen_preview_v1/0.5B_seed17/35f8a5ecbf57cd37/) removed 1,454 rows, leaving 4,955 (3,313 Orca + 1,642 Numina). The removed rows include 195 of B's original 1,000 picks and 306 of C0's original picks.
+4. The overnight runner (C0_C1_Overnight_Training_20261110/nightly.py, protocol "screened-c0-c1-training-only-v1") loads the 4,955-row bank from that preview folder for all C0 and C1 runs. Its STATUS.json says B_training_performed: false, benchmark_evaluation_performed: false, and that matching screened B controls beyond the existing pilot remain separate.
+5. The only B trained on the 4,955 pool is the screened pilot (outputs/C0_screened_pilot_v1/0.5B_seed17/be46c67690fb33ba/): 0.5B, parent seed 17, training seed 42. B and C0 were trained and scored together there.
+6. The screen's README says the new pool "requires new matched B/C0/C1 runs" and that the new C0/C1 models should not be mixed with old B "as if they arose from the same eligible pool."
+
+Checks to run:
+- Count rows and compute the SHA-256 of the 6,409 bank, the 4,955 screened bank, train_B.jsonl, the screened pilot's B train.jsonl, and the train.jsonl / selection manifest of every C0 and C1 run in outputs/C0_C1_overnight_training_v1/.
+- For every C0 and C1 run, report which bank file and which SHA-256 the run's own receipts or config record. Check whether every selected row_id is in the 6,409 bank, the 4,955 bank, or both.
+- Count how many rows of the original train_B.jsonl are absent from the 4,955 bank. The teammate expects 195.
+- For each of the 12 B evaluations, confirm which selection file the trained checkpoint actually used.
+- Confirm whether B, C0 and C1 use the same parent adapters, the same 318,845-token budget, the same 20 source/length strata (50 rows each), and the same dev evaluation sets.
+
+Report back with:
+1. A table with one row per approach (old B, screened-pilot B, C0 per run, C1 per run): bank file, bank row count, bank SHA-256, selection rows and tokens, how many runs were trained, how many were evaluated, and the evidence file paths.
+2. A clear verdict: are the B results we would compare against C0 and C1 drawn from the same candidate pool? Answer separately for the original bridge C0, the overnight C0, and the overnight C1.
+3. Where the teammate's findings are wrong, quote the file and line that shows it.
+4. A recommendation for the fairest comparison. Options:
+   (a) train screened B for the 11 remaining setups, then score B, C0 and C1 on the same 500 GSM + 500 MATH dev questions;
+   (b) rerun C0/C1 on the original 6,409 bank to match the existing 12 B runs;
+   (c) report the results separately, with the pool difference disclosed.
+   Note the cost of each (GPU runs needed) and what each lets us claim. Also mention any blocker, such as the C1 diagnostic gate or the unresolved original 25-exclusion/572-quarantine audit.
