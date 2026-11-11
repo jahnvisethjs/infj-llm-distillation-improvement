@@ -1,5 +1,9 @@
 # C1 on SOL: shared-bank continuation after C0
 
+For the required Person 3 inputs/outputs, evaluator compatibility checks and
+running candidate generation on Jahnvi's SOL account, see
+[C1 generation requirements](C1_PERSON3_REQUIREMENTS.md).
+
 The C1 scripts use the current repository's explicit **6,409-row Method B bank**.
 They do not use the overnight notebook's 4,955-row screened bank. Each invocation
 covers one model/parent and trains continuation seeds **42, 137, 2026** by default.
