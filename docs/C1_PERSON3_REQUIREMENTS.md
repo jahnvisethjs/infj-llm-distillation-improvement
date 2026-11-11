@@ -1,5 +1,9 @@
 # C1 generation: requirements for Person 3 or execution on Jahnvi's SOL account
 
+For Jahnvi's actual completed run IDs, shared-package status, file mappings and
+Megha's separate C0-evaluation/C1-generation tasks, start with
+[Megha's evaluation handoff](MEGHA_EVALUATION_HANDOFF.md).
+
 Prepared: 10 November 2026. Scope: the current **6,409-row shared Method B bank**.
 
 ## Decision
