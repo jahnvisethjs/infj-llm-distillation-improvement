@@ -120,7 +120,10 @@ def paired_bootstrap(a_rows, b_rows, n_boot=2000, seed=0):
 # baseline and a fine-tuned run always have different eval_config_hash values.
 COMPARE_KEYS = ("model", "revision", "precision", "max_new_tokens", "batch_size", "stop_at_question",
                 "question_text", "prompt_sha256", "add_special_tokens", "decoding", "eos_token_id",
-                "transformers", "peft", "torch", "gpu", "cuda", "math_verify", "eval_file_sha256")
+                "transformers", "peft", "gpu", "math_verify", "eval_file_sha256")
+# torch and cuda are left out on purpose (2026-11-10): the same 4 R1000 parents evaluated under
+# torch 2.6.0+cu124/CUDA 12.4 (Suraj) and torch 2.14.1/CUDA 13.0 (Person 3) gave identical generated
+# text on 3,999/4,000 questions and identical correctness on 4,000/4,000 (see EVAL_NOTES).
 
 
 def comparison_problems(a_path, a_rows, b_path, b_rows):

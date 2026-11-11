@@ -9,7 +9,7 @@ Measures every model the same way on GSM8K and MATH. Decisions and pilot results
 | `prepare_eval_data.py` | Downloads GSM8K + MATH, builds the dev and test question files (`data/`) |
 | `make_dev_fast.py` | Builds the 200-problem quick-check set (`dev_fast`) |
 | `check_eval_data.py` | Checks the question files (sizes, sources, no overlap, gold answers) |
-| `answer_parser.py` | The grader: finds the model's final answer and checks it (version `p3-parser-v5`) |
+| `answer_parser.py` | The grader: finds the model's final answer and checks it (version `p3-parser-v6`) |
 | `test_answer_parser.py` | 59 grader tests: `pytest -q test_answer_parser.py` |
 | `evaluate.py` | Runs a model on a question file and saves one result row per problem |
 | `metrics.py` | Accuracy and other metrics; `--compare` = paired bootstrap between two models |
@@ -28,7 +28,7 @@ Measures every model the same way on GSM8K and MATH. Decisions and pilot results
 | Batch size | 16 |
 | Adapters | merged into the model before generating (default) |
 | GPU | Colab L4 for every evaluation |
-| Grader | `p3-parser-v5` (strict: no "last number" guessing; line-start `Final answer:` first) |
+| Grader | `p3-parser-v6` (strict: no "last number" guessing; line-start `Final answer:` first) |
 
 All of these are the defaults, so the commands below need no extra flags.
 
