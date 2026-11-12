@@ -1,0 +1,58 @@
+{
+  "version": "independent-conservative-screen-preview-v1",
+  "identity": "35f8a5ecbf57cd37aa6518d1cc65e0de8b72b5dfb9d549547b799ffda3996321",
+  "status": "new_screening_protocol_proposal_not_adopted_for_training",
+  "screening_proposal_sha256": "8273bd171ec6b4bdc57250d429fcf3f166ce69be8a30ba45b4973ad14018de44",
+  "original_matcher_flags_resolved": false,
+  "original_bridge_identity": "053cf70a0bb7f987308adfecfaeb5d05b5f25b7ca5542d285110d6bab4a08aea",
+  "old_bank_sha256": "806dd78f38b37774391efc37d98318f0610e95dbeb9d53f810b54a03baf435ae",
+  "new_bank_sha256": "ef7f149cfc20df6421bac6f3dca67af7eabf14a08ddfcb322d1feb518b22300f",
+  "original_rows": 6409,
+  "new_rows": 4955,
+  "removed_rows": 1454,
+  "source_rows": {
+    "orca": 3313,
+    "numina": 1642
+  },
+  "minimum_stratum_capacity": 148,
+  "selections": {
+    "B": {
+      "method": "B",
+      "rows": 1000,
+      "actual_tokens": 317486,
+      "target_tokens": 318845,
+      "manifest_sha256": "04112f96b282ba8a58fcd8900f6ca91b656dbac9abbd17a4cdef2b02a9bb00e0",
+      "same_ids_as_original": false,
+      "same_content_and_order_as_original": false,
+      "training_started": false,
+      "main_training_cleared": false,
+      "removed_count": 195,
+      "added_count": 195,
+      "screen_quarantined_original_count": 195
+    },
+    "C0": {
+      "method": "C0",
+      "rows": 1000,
+      "actual_tokens": 320273,
+      "target_tokens": 318845,
+      "manifest_sha256": "71e4863eba97c84e8f084ebfc58f6fae4ecde3e0678e6b1e927bf887cf312478",
+      "same_ids_as_original": false,
+      "same_content_and_order_as_original": false,
+      "training_started": false,
+      "main_training_cleared": false,
+      "removed_count": 307,
+      "added_count": 307,
+      "screen_quarantined_original_count": 306
+    }
+  },
+  "score_import": {
+    "source_sha256": "f5bb0fc05a00aba655417cad3401871439e07b5b776c8738926757aafbd7305d",
+    "source_measurement_key": "6a5e4a367f4e22c5b5928078f59b42ad3b8b0d27202f2c36b42886ca594e80a3",
+    "retained_rows": 4955,
+    "new_GPU_scoring_performed": false,
+    "row_content_hashes_checked": true,
+    "ranks_recomputed": true
+  },
+  "training_started": false,
+  "main_training_cleared": false
+}

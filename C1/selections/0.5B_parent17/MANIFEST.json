@@ -1,0 +1,16 @@
+{
+  "rows": 1000,
+  "bank_rows": 4955,
+  "bank_sha256": "ef7f149cfc20df6421bac6f3dca67af7eabf14a08ddfcb322d1feb518b22300f",
+  "native_train_jsonl_sha256": "fb2403b678e06fa019e3c27aa357a7098a0a3224a9017ae83d76227963965256",
+  "actual_supervised_tokens": 319981,
+  "target_supervised_tokens": 318845,
+  "strata": 20,
+  "rows_per_stratum": 50,
+  "continuation_seeds": [
+    42,
+    137,
+    2026
+  ],
+  "raw_training_text_published": false
+}

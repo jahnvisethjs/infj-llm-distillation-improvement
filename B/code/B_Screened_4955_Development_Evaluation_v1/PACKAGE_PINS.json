@@ -1,0 +1,6 @@
+{
+  "evaluate_b.py": "8dd52b8eb7ceb50b7e5c323aa5eab431a8f645eed4d9e8152f7b49c21049c10b",
+  "expected_evaluation.json": "a256b3c9a0e0bd74aae7f68fbb21b5d766cf7d474696596fe1e490b4c9c4d5cf",
+  "gpu_worker.sbatch": "3df0ab667ca4982b357f651f90ab0ff2c47d09d40b1699a93fed6e4bc4dcd6f0",
+  "protocol.json": "a6fc8a61905921ef7d9d620fd151e007342df0f2b3919e6a065adba276881aa3"
+}

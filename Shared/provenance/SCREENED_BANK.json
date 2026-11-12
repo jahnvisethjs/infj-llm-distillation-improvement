@@ -1,0 +1,11 @@
+{
+  "rows": 4955,
+  "source_rows": {
+    "orca": 3313,
+    "numina": 1642
+  },
+  "sha256": "ef7f149cfc20df6421bac6f3dca67af7eabf14a08ddfcb322d1feb518b22300f",
+  "native_path": "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_C1_independent_screen_preview_v1/0.5B_seed17/35f8a5ecbf57cd37/candidate_bank.jsonl",
+  "raw_data_in_git": false,
+  "scope": "Same eligible bank for B, C0 and C1; training selections contain 1000 rows each."
+}

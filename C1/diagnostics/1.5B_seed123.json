@@ -1,0 +1,9 @@
+{
+  "C0_C1_jaccard": 0.3986013986013986,
+  "degeneracy_flags": {
+    "C1_almost_same_as_C0": false,
+    "mistakes_near_universal": false,
+    "mistakes_rare": false
+  },
+  "mistake_share": 0.39455095862764883
+}

@@ -1,0 +1,21 @@
+{
+  "vendor": {
+    "person2/trainer_core.py": "638b4befeab797f032f533b7ec605d3336f97142dec51782bfeb2d030a5ba498",
+    "person2/person2.py": "510a9cff736a04c9c9bbdcadce854a0334ce1c4fa0d2160fe0f29293573cdf20",
+    "capstone_person1/__init__.py": "9ac08e955c88a4fe03b83cb7d779b9f90644e508f59babf0bb90d6562de0b630",
+    "capstone_person1/person1_data_contract.py": "4f9a956dcea92f856612bfeb3666db499f6f81a69066509bdb71640847f1ae9d",
+    "capstone_person1/pipeline_controls.py": "dd39786b1999f2a267aca2931fa9ea24af08ec59f49b8b2720e72f2f91bf9f05",
+    "capstone_person1/instance_matching.py": "2707c3a98f96143c5f54c4ae6c3ddec5b4bf5173e0bb8ccc4217ab295f852628",
+    "evaluation/evaluate.py": "8f2bc66ddfe3a0000bfc1e08ee325a0f520263f057a0e2fc7576d1467776d3d1",
+    "evaluation/answer_parser.py": "3361e3c81864072961026fca4d7459a17c7544ed5ffec144575ab20eeac93d5d"
+  },
+  "repo": {
+    "capstone_person4/selection.py": "262ba3ba5d0e43fdcda0337755ab4d4b6d1f4156c862b6723d19192914d08ff6",
+    "capstone_person4/b_select.py": "6b8e0df84eee3dbd1e5eb22ff206e5f4e2614942c6e876f02af05145fa1d9105",
+    "capstone_person4/reference_scoring.py": "410f1061a0f202d00cacccff713019f1416227df79eaef3b9acf87334d928a78",
+    "capstone_person4_approachC1/generation_scoring.py": "b35641bd6d11e449038e41e98c7e97108cbbe07b6291183ac763a967bc2fdd48"
+  },
+  "parent_registry_sha256": "7327837a0596ed1cdfeab8fe5590cde310ea50fd3197421ce755b11cc0a3c259",
+  "training_ast_sha256": "180edf1c45f4a6654cb9fca6d7c198ea5dc2c7559cda68a48254fa73c02350c2",
+  "uploaded_archive_sha256": "8d785b718956df44d78b8b47caacdae356f2b02da6a9b032fd1f24369e7fdd0b"
+}

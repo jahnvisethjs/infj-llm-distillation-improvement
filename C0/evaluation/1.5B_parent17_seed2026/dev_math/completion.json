@@ -1,0 +1,20 @@
+{
+  "benchmark": "dev_math",
+  "checker_retry_rows": 0,
+  "checkpoint_sha256": "8069ff8954e2e5fe0ce6cb19da42b6652c6f3e99b70d6e23365708afabb89ac8",
+  "complete": true,
+  "config_sha256": "78646d6b3bcc51de6d30bf39a9eb374e52cdd3badb652d44a3d5d19e8a37a81b",
+  "eval_file_sha256": "641460fdc55beff591daad0cc7530a3f933eb263c3dfdf8a0534fcfaf8196416",
+  "metrics_sha256": "4075b82e0114cae80ca73f3eadbf07831a942e2383e0e413d99b8eb98852aa37",
+  "origin": "new_GPU_evaluation",
+  "predictions_sha256": "5b89595289d3d24d69eb51f57bba7bf9210458ec5cacd3638daf7d4f7dfaef95",
+  "reserved_final_tests_performed": false,
+  "scope": "Exposure-limited development evaluation; no reserved final tests",
+  "source_config_sha256": "78646d6b3bcc51de6d30bf39a9eb374e52cdd3badb652d44a3d5d19e8a37a81b",
+  "source_predictions": "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_C1_development_evaluation_v1/931e8fb821c7d70f/results/C0_1.5B_p17_t2026/dev_math/attempt01/raw.jsonl",
+  "source_predictions_sha256": "5b89595289d3d24d69eb51f57bba7bf9210458ec5cacd3638daf7d4f7dfaef95",
+  "target_key": "C0_1.5B_p17_t2026",
+  "target_sha256": "6dff917cdf08da63a00f51a24a6222c07537fa4a1194aa3513cf3306569ded88",
+  "training_performed": false,
+  "version": "c0-c1-frozen-development-evaluation-v1"
+}

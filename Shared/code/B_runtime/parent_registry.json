@@ -1,0 +1,50 @@
+{
+  "0.5B_seed17": {
+    "model_size": "0.5B",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "parent_training_seed": 17,
+    "rows": 1000,
+    "parent_manifest_sha256": "efa258c9c4a8bffa85bb3be2026c187e9035f3918fe044967c4dafadcfa7f303",
+    "expected_adapter_sha256": "11a9de70df8b102e57676fb1c4b8ed61f9f0d1e7f524c6c0f0169368ea17b1cb",
+    "adapter_relative_path": "parents/0.5B_seed17/final/adapter",
+    "records_relative_path": "reference_records/0.5B_seed17",
+    "provenance": "Weight SHA-256 from supplied Person 3 evaluation config; matching training records from supplied Person 2 archive."
+  },
+  "0.5B_seed123": {
+    "model_size": "0.5B",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "parent_training_seed": 123,
+    "rows": 1000,
+    "parent_manifest_sha256": "efa258c9c4a8bffa85bb3be2026c187e9035f3918fe044967c4dafadcfa7f303",
+    "expected_adapter_sha256": "aa11429355543bcfe35e47856a3c6ada4e5e0eb7f4647318c1c68aee5bf1c3a2",
+    "adapter_relative_path": "parents/0.5B_seed123/final/adapter",
+    "records_relative_path": "reference_records/0.5B_seed123",
+    "provenance": "Weight SHA-256 from supplied Person 3 evaluation config; matching training records from supplied Person 2 archive."
+  },
+  "1.5B_seed17": {
+    "model_size": "1.5B",
+    "model": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "parent_training_seed": 17,
+    "rows": 1000,
+    "parent_manifest_sha256": "efa258c9c4a8bffa85bb3be2026c187e9035f3918fe044967c4dafadcfa7f303",
+    "expected_adapter_sha256": "e0e419f2963dae8a6ae8f03637fdf5c255c8634ddf882360164b6f6843c30a75",
+    "adapter_relative_path": "parents/1.5B_seed17/final/adapter",
+    "records_relative_path": "reference_records/1.5B_seed17",
+    "provenance": "Weight SHA-256 from supplied Person 3 evaluation config; matching training records from supplied Person 2 archive."
+  },
+  "1.5B_seed123": {
+    "model_size": "1.5B",
+    "model": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "parent_training_seed": 123,
+    "rows": 1000,
+    "parent_manifest_sha256": "efa258c9c4a8bffa85bb3be2026c187e9035f3918fe044967c4dafadcfa7f303",
+    "expected_adapter_sha256": "849ca63fb2ebffc489144c68f00ac8513f1b9cae0c827c9fe4586cf6b38d370d",
+    "adapter_relative_path": "parents/1.5B_seed123/final/adapter",
+    "records_relative_path": "reference_records/1.5B_seed123",
+    "provenance": "Weight SHA-256 from supplied Person 3 evaluation config; matching training records from supplied Person 2 archive."
+  }
+}

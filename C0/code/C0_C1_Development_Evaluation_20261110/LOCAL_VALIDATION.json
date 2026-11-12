@@ -1,0 +1,21 @@
+{
+  "local_CPU_tests_passed": 24,
+  "real_completed_pilot_prediction_files_compatibility_checked": 6,
+  "real_pilot_rows_checked": 3000,
+  "new_GPU_evaluation_performed_here": false,
+  "live_Sol_submission_performed_here": false,
+  "test_command": "python -m unittest discover -s C0_C1_Development_Evaluation_20261110 -p test_evaluation.py -v",
+  "test_scope": [
+    "checkpoint/seed/manifest/gold/settings/500-question identity",
+    "historical parent label and LoRA scaling guards",
+    "frozen checker retry and unresolved-error blocking",
+    "native partial resume, corrupted preservation, complete-native recovery",
+    "atomic published results and hash tamper checks",
+    "paired effects and different-bank exclusion",
+    "all required evaluation units and report production with simulated compute",
+    "forced disconnect and successor continuation",
+    "blocked-result cannot create complete marker",
+    "held-job recovery, duplicate prevention and scheduler-accounting recovery"
+  ],
+  "production_requirement": "Actual adapter/cache/source/evaluator/runtime identities verified on Sol before generation"
+}

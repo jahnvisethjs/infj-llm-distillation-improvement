@@ -1,0 +1,22 @@
+{
+  "actual_supervised_tokens": 317486,
+  "adapter": "/scratch/sshind38/capstone_c0_c1_work/outputs/B_screened_4955_controls_v1/00d5c71ab844b586/profiles/1.5B_seed17/4f5e29548732b5e4/runs/B/seed42_attempt01/final/adapter",
+  "adapter_config_sha256": "80f07a55224523a6672c9d4b0150a112c5d194c36a4946c601dea3b9f2b8c519",
+  "bank_sha256": "ef7f149cfc20df6421bac6f3dca67af7eabf14a08ddfcb322d1feb518b22300f",
+  "checkpoint_record_sha256": "2cd441000b69e7cefcd14df7588a90ea99cf870ca52fe11c964e927ce3332779",
+  "checkpoint_sha256": "03cceeacc9248517296799f005131369d346878b206d816ed27502e85af91b9e",
+  "continuation_seed": 42,
+  "key": "B_screened_1.5B_p17_t42",
+  "manifest_sha256": "04112f96b282ba8a58fcd8900f6ca91b656dbac9abbd17a4cdef2b02a9bb00e0",
+  "method": "B_screened",
+  "model": "Qwen/Qwen2.5-1.5B",
+  "model_size": "1.5B",
+  "parent_adapter": "/scratch/sshind38/capstone_approach_b/parents/1.5B_seed17/final/adapter",
+  "parent_seed": 17,
+  "parent_sha256": "e0e419f2963dae8a6ae8f03637fdf5c255c8634ddf882360164b6f6843c30a75",
+  "profile": "1.5B_seed17",
+  "reused_original_pilot": false,
+  "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "training_receipt": "/scratch/sshind38/capstone_c0_c1_work/outputs/B_screened_4955_controls_v1/00d5c71ab844b586/profiles/1.5B_seed17/4f5e29548732b5e4/runs/B/seed42_attempt01/completion.json",
+  "training_receipt_sha256": "4fd0cc8bc18bfc56634a2bcaa6f4a3d40b38aa893d43555f9c13c7391a9a8784"
+}

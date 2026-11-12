@@ -1,0 +1,11 @@
+{
+  "LOCAL_VALIDATION.json": "ad7c07986c63a27b71d5ad750e38b7d91791bc012c5da4073ab243b3a17b60cf",
+  "README.md": "13797a447a9d2c89b422aa25821d952f6d8eb37917ce80d009185c4a008317e9",
+  "evaluate_remaining.py": "d14435a8fb1cfa98edcdd8b53c3fe414ac2a6ea04a0206deb52b1005060ec81f",
+  "expected_training.json": "78c13820ea47d9d99facadfad5ccb0170b7183bfa2ae994a5d7c12e3f546c189",
+  "gpu_worker.sbatch": "f182d4791a8428558d3e64d9a9793d406ca1f4bd056b8c8bf02c8f08664a234a",
+  "protocol.json": "1747a8921b9dd0ef0227067be3cd2b81ee311fe7caeb84f673a002420c5e3e24",
+  "test_evaluation.py": "1f3fa0fc2dfc150bd91a94fe4cf53b9ed87915becbb6e3aa4a466c98498f80f5",
+  "test_sources/answer_parser.py": "3361e3c81864072961026fca4d7459a17c7544ed5ffec144575ab20eeac93d5d",
+  "test_sources/evaluate.py": "8f2bc66ddfe3a0000bfc1e08ee325a0f520263f057a0e2fc7576d1467776d3d1"
+}

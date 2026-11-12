@@ -1,0 +1,13 @@
+key,method,model_size,parent_seed,continuation_seed,gsm,math,mean,gsm_correct,math_correct
+B_screened_0.5B_p17_t42,B_screened,0.5B,17,42,53.2,25.8,39.5,266,129
+B_screened_0.5B_p17_t137,B_screened,0.5B,17,137,51.4,28.4,39.9,257,142
+B_screened_0.5B_p17_t2026,B_screened,0.5B,17,2026,52.6,24.6,38.6,263,123
+B_screened_0.5B_p123_t42,B_screened,0.5B,123,42,52.800000000000004,27.0,39.900000000000006,264,135
+B_screened_0.5B_p123_t137,B_screened,0.5B,123,137,54.800000000000004,28.599999999999998,41.7,274,143
+B_screened_0.5B_p123_t2026,B_screened,0.5B,123,2026,52.6,27.0,39.8,263,135
+B_screened_1.5B_p17_t42,B_screened,1.5B,17,42,81.0,50.0,65.5,405,250
+B_screened_1.5B_p17_t137,B_screened,1.5B,17,137,80.60000000000001,51.2,65.9,403,256
+B_screened_1.5B_p17_t2026,B_screened,1.5B,17,2026,81.0,50.8,65.9,405,254
+B_screened_1.5B_p123_t42,B_screened,1.5B,123,42,83.6,53.0,68.3,418,265
+B_screened_1.5B_p123_t137,B_screened,1.5B,123,137,81.0,51.4,66.2,405,257
+B_screened_1.5B_p123_t2026,B_screened,1.5B,123,2026,81.39999999999999,48.8,65.1,407,244

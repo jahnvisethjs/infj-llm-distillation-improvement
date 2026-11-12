@@ -1,0 +1,16 @@
+{
+  "accuracy": 0.282,
+  "correct": 141,
+  "generation_tokens_mean": 476.21,
+  "generation_tokens_median": 389.5,
+  "generation_tokens_p95": 1024,
+  "length_limit_rate": 0.12,
+  "parse_status_counts": {
+    "no_answer": 57,
+    "ok": 443
+  },
+  "repetition_rate_full_output_threshold_0p20": 0.732,
+  "summed_per_question_latency_seconds": 676.4,
+  "total": 500,
+  "valid_answer_rate": 0.886
+}

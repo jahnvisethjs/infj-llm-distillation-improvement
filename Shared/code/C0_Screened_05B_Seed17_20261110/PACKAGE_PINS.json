@@ -1,0 +1,18 @@
+{
+  "C0_05B_Seed17_Run.ipynb": "8d95bc4eaa4ea20a9f4d4836ea8f39efbfcf744a26735284758ffc8270e6290e",
+  "LAUNCH_CELL.py": "0d46559ef2af0cff15cbf5e36e57be333acb6e82bed0b25a91b6bc89ae0d4cbc",
+  "LOG_CELL.py": "73dbaf004821e6a226fa0d7e15fb7d9df670299db678b0ba8ed08093844d3bc2",
+  "README.md": "980edae0b11cd8be55cacffcea21e6c148ba0fb4ee2283a8b01f2fac172e789c",
+  "STATUS_CELL.py": "2051bb67067c9f3dadf20525b0eade060cd709a9ed853b9ebcc60f5fa005c080",
+  "expected_preview.json": "1c9861ad039f6c06384626767e64ab4292ffdbf2a9f092f3565d0a1ab46c568b",
+  "gpu_pipeline.sbatch": "01f525e9e0b909fcac92779e5d630c9d50b7f728e55229a6d55d66aaab5ead35",
+  "protocol_decision.json": "afa32622d726c16614711de9f9f5487718572d2fcef05ddb395456fd516c391b",
+  "screened_c0.py": "fc83b1b2395c1d6292751c41544f5736534cc5ec7143d8d32cc7b8e0acebb0e6",
+  "screening/README.md": "9317aca3bcfbb7b23de05052e6d8e23a589b35ee7b59926527e3aa39fdaae2e5",
+  "screening/independent_screen.py": "33b6cf7be999b3a92ff712a23cfd77445d56de94386df3f6a2fbad2eb0db8615",
+  "screening/known_exclusions.json": "fd6efdc649d6474c90129c14a086b2fce08392bc6645113e9ff95c58cb2dd348",
+  "screening/preview_independent.py": "a3da6cc85e26bcf467b7e3ffae7a14cd8fb32025106f149980542e101ecd51c7",
+  "screening/screening_flags.json": "20b17e882cea8e8dfccc1e751d74a3e6a0bc673b20cb922ab494efbb853912e3",
+  "screening/screening_proposal.json": "8273bd171ec6b4bdc57250d429fcf3f166ce69be8a30ba45b4973ad14018de44",
+  "test_screened_c0.py": "2bc48c4d813d3c48ab08c72444207382d06069b73576e5ec21316ad8264cc2a1"
+}

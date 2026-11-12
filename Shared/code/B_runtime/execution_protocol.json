@@ -1,0 +1,65 @@
+{
+  "common_universe_sha256": "806dd78f38b37774391efc37d98318f0610e95dbeb9d53f810b54a03baf435ae",
+  "parent_manifest_sha256": "efa258c9c4a8bffa85bb3be2026c187e9035f3918fe044967c4dafadcfa7f303",
+  "models": [
+    "0.5B",
+    "1.5B"
+  ],
+  "parent_training_seeds": [
+    17,
+    123
+  ],
+  "continuation_training_seeds": [
+    42,
+    137,
+    2026
+  ],
+  "budget_multipliers": [
+    1.0
+  ],
+  "selection_seed": 42,
+  "universe_seed": 1729,
+  "quota_seed": 1729,
+  "training_order_seed": 42,
+  "relative_token_tolerance": "0.005",
+  "training": {
+    "epochs": 1,
+    "microbatch_size": 1,
+    "gradient_accumulation": 8,
+    "learning_rate": 0.0001,
+    "warmup_updates": 10,
+    "weight_decay": 0.0,
+    "gradient_clip": 1.0,
+    "packing": false,
+    "optimizer": "AdamW",
+    "optimizer_policy": "fresh_from_parent_weights",
+    "scheduler_policy": "fresh_linear_warmup_10_updates_then_constant",
+    "precision": "bf16_if_available_else_fp16",
+    "lora_configuration": "inherit actual verified parent adapter",
+    "quantization": "4-bit NF4, double quantization",
+    "checkpoint_every_updates": 100
+  },
+  "evaluation": {
+    "source_commit": "7b9e496ee436a40b275771297a93085a8926cfeb",
+    "precision": "fp32",
+    "batch_size": 16,
+    "max_new_tokens": 1024,
+    "decoding": "greedy",
+    "question_text": "p1_clean",
+    "adapters": "merged",
+    "datasets": [
+      "dev_gsm",
+      "dev_math"
+    ],
+    "final_test_policy": "explicit --final-test plus frozen protocol and predeclared final model list",
+    "predeclared_final_runs": [],
+    "environment_policy": "Evaluate the parent and all compared arms using one common installed runtime/GPU; do not mix historical torch-2.14.1 predictions with a new runtime."
+  },
+  "status": "frozen",
+  "recorded_by": "Suraj Shinde — requested execution of the supplied Method B design",
+  "scope": "B execution settings only; cross-method compatibility must be checked against these artifacts",
+  "selection_audit_sha256": "9ca3874f53c0766af8f283494e6b45a5ae7ce96780da16a5f6e1ef192609f4b0",
+  "length_bins_sha256": "024b651bc18084c715b0b77a1db78c82e9e20040dc5ec671e7597a2604dd51e6",
+  "source_document_sha256": "8c23b94193f02d21f8e512329ab63a0b7ac98864237912e093d92a1dda365f69",
+  "evaluation_clearance": "not established by a protocol lock"
+}

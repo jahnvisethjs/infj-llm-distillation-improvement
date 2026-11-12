@@ -1,0 +1,51 @@
+{
+  "version": "screened-b-4955-development-evaluation-v1",
+  "training_package_unchanged": true,
+  "new_B_training_runs": 11,
+  "existing_B_pilot_reused": true,
+  "trained_B_configurations": 12,
+  "development_questions_per_checkpoint": {
+    "dev_gsm": 500,
+    "dev_math": 500
+  },
+  "candidate_bank_rows": 4955,
+  "training_selection_rows": 1000,
+  "actual_selected_supervised_tokens": 317486,
+  "required_evaluation_files": 24,
+  "reused_pilot_evaluation_files": 2,
+  "new_GPU_evaluation_files": 22,
+  "new_evaluation_questions": 11000,
+  "total_questions_including_pilot": 12000,
+  "reserved_final_tests_requested": false,
+  "generation_contract": {
+    "adapter_mode": "merged",
+    "add_special_tokens": false,
+    "batch_size": 16,
+    "cuda": "12.4",
+    "cut_at_next_question": true,
+    "decoding": "greedy",
+    "eos_token_id": 151643,
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "math_verify": "0.9.0",
+    "max_new_tokens": 1024,
+    "parser_version": "p3-parser-v6",
+    "peft": "0.17.1",
+    "precision": "fp32",
+    "prompt_sha256": "22e10ad6ce4d2f2a959577326b6eca275528821da148bae57a9a4ad2bf6e64db",
+    "question_text": "p1_clean",
+    "stop_at_question": false,
+    "torch": "2.6.0+cu124",
+    "transformers": "4.57.1"
+  },
+  "slurm": "Two existing serial four-hour training allocations followed by three serial four-hour evaluation allocations; depend on all active recorded training jobs and validate the training completion marker before evaluation.",
+  "recovery": "Reuse validated completed training and predictions. Resume compatible partial evaluation files by question ID. Preserve malformed/changed attempts; at most three attempts per result.",
+  "completion": "Require twelve real full trained B checkpoints and twenty-four complete, unique 500-question development prediction files with matching checkpoint, manifest, question and parser hashes.",
+  "limitations": [
+    "Original 25-exclusion/572-quarantine audit remains unresolved in reviewed copies.",
+    "Inherited parent/development exposure remains disclosed; screening is not a certification of contamination absence.",
+    "Legacy B remains a separate condition. Use screened B with screened C0/C1 for a pool-matched comparison.",
+    "C1 remains an exploratory frozen refinement; its existing diagnostic gate is unchanged.",
+    "Queue delays, time limits, node failures and scientific-input drift can prevent overnight completion.",
+    "Local CPU checks do not constitute a real Sol GPU execution or evaluation receipt."
+  ]
+}

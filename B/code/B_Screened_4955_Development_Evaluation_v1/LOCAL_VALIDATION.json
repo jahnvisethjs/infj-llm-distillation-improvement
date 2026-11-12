@@ -1,0 +1,14 @@
+{
+  "checked_utc": "2026-11-12T02:25:16.608385+00:00",
+  "evaluation_extension_CPU_tests_passed": 22,
+  "prior_training_CPU_tests_passed": 16,
+  "native_evaluation_functions_AST_unchanged": 17,
+  "real_archived_B_pilot_questions_and_predictions_verified": 1000,
+  "training_embedded_package_preserved_byte_for_byte": true,
+  "mocked_scheduler_dependency_checks": true,
+  "synthetic_worker_complete_and_blocked_checks": true,
+  "GPU_training_performed": false,
+  "GPU_evaluation_performed": false,
+  "live_Sol_submission_performed": false,
+  "limitations": "CPU checks and synthetic fixtures are not real training or evaluation receipts."
+}

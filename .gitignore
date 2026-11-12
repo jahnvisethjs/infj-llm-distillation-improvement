@@ -1,0 +1,26 @@
+# Keep publication limited to small source, metadata and verified results.
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv*/
+hf_cache/
+node_modules/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.parquet
+*.arrow
+*.npy
+*.npz
+*.jsonl
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+.env
+.env.*

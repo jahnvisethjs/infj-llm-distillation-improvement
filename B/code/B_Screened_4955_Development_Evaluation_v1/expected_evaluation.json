@@ -1,0 +1,119 @@
+{
+  "evaluation_sources": {
+    "answer_parser.py": "3361e3c81864072961026fca4d7459a17c7544ed5ffec144575ab20eeac93d5d",
+    "evaluate.py": "8f2bc66ddfe3a0000bfc1e08ee325a0f520263f057a0e2fc7576d1467776d3d1"
+  },
+  "generation_contract": {
+    "adapter_mode": "merged",
+    "add_special_tokens": false,
+    "batch_size": 16,
+    "cuda": "12.4",
+    "cut_at_next_question": true,
+    "decoding": "greedy",
+    "eos_token_id": 151643,
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "math_verify": "0.9.0",
+    "max_new_tokens": 1024,
+    "parser_version": "p3-parser-v6",
+    "peft": "0.17.1",
+    "precision": "fp32",
+    "prompt_sha256": "22e10ad6ce4d2f2a959577326b6eca275528821da148bae57a9a4ad2bf6e64db",
+    "question_text": "p1_clean",
+    "stop_at_question": false,
+    "torch": "2.6.0+cu124",
+    "transformers": "4.57.1"
+  },
+  "native_function_source_sha256": "d14435a8fb1cfa98edcdd8b53c3fe414ac2a6ea04a0206deb52b1005060ec81f",
+  "native_functions_copied_unchanged": [
+    "runtime_root",
+    "set_offline",
+    "load_parser",
+    "key_for",
+    "verify_checkpoint",
+    "question_file",
+    "expected_config",
+    "validate_config",
+    "normalized_gold",
+    "validate_predictions",
+    "result_root",
+    "metrics",
+    "repair_checker_errors",
+    "finalize_result",
+    "validate_result",
+    "native_runtime_check",
+    "run_evaluation"
+  ],
+  "parents": {
+    "0.5B_seed123": {
+      "adapter_relative_path": "parents/0.5B_seed123/final/adapter",
+      "expected_adapter_sha256": "aa11429355543bcfe35e47856a3c6ada4e5e0eb7f4647318c1c68aee5bf1c3a2",
+      "model": "Qwen/Qwen2.5-0.5B",
+      "model_size": "0.5B",
+      "parent_manifest_sha256": "efa258c9c4a8bffa85bb3be2026c187e9035f3918fe044967c4dafadcfa7f303",
+      "parent_training_seed": 123,
+      "provenance": "Weight SHA-256 from supplied Person 3 evaluation config; matching training records from supplied Person 2 archive.",
+      "records_relative_path": "reference_records/0.5B_seed123",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+      "rows": 1000
+    },
+    "0.5B_seed17": {
+      "adapter_relative_path": "parents/0.5B_seed17/final/adapter",
+      "expected_adapter_sha256": "11a9de70df8b102e57676fb1c4b8ed61f9f0d1e7f524c6c0f0169368ea17b1cb",
+      "model": "Qwen/Qwen2.5-0.5B",
+      "model_size": "0.5B",
+      "parent_manifest_sha256": "efa258c9c4a8bffa85bb3be2026c187e9035f3918fe044967c4dafadcfa7f303",
+      "parent_training_seed": 17,
+      "provenance": "Weight SHA-256 from supplied Person 3 evaluation config; matching training records from supplied Person 2 archive.",
+      "records_relative_path": "reference_records/0.5B_seed17",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+      "rows": 1000
+    },
+    "1.5B_seed123": {
+      "adapter_relative_path": "parents/1.5B_seed123/final/adapter",
+      "expected_adapter_sha256": "849ca63fb2ebffc489144c68f00ac8513f1b9cae0c827c9fe4586cf6b38d370d",
+      "model": "Qwen/Qwen2.5-1.5B",
+      "model_size": "1.5B",
+      "parent_manifest_sha256": "efa258c9c4a8bffa85bb3be2026c187e9035f3918fe044967c4dafadcfa7f303",
+      "parent_training_seed": 123,
+      "provenance": "Weight SHA-256 from supplied Person 3 evaluation config; matching training records from supplied Person 2 archive.",
+      "records_relative_path": "reference_records/1.5B_seed123",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "rows": 1000
+    },
+    "1.5B_seed17": {
+      "adapter_relative_path": "parents/1.5B_seed17/final/adapter",
+      "expected_adapter_sha256": "e0e419f2963dae8a6ae8f03637fdf5c255c8634ddf882360164b6f6843c30a75",
+      "model": "Qwen/Qwen2.5-1.5B",
+      "model_size": "1.5B",
+      "parent_manifest_sha256": "efa258c9c4a8bffa85bb3be2026c187e9035f3918fe044967c4dafadcfa7f303",
+      "parent_training_seed": 17,
+      "provenance": "Weight SHA-256 from supplied Person 3 evaluation config; matching training records from supplied Person 2 archive.",
+      "records_relative_path": "reference_records/1.5B_seed17",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "rows": 1000
+    }
+  },
+  "screened_B_pilot": {
+    "actual_supervised_tokens": 317486,
+    "adapter": "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_screened_pilot_v1/0.5B_seed17/be46c67690fb33ba/runs/B/seed42_pilot01/final/adapter",
+    "approved_files": {
+      "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_screened_pilot_v1/0.5B_seed17/be46c67690fb33ba/runs/B/seed42_pilot01/run_config.json": "e027726271d4c7a16daba73ad3672e6b67ead3de8d1a3f265080097216758284",
+      "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_screened_pilot_v1/0.5B_seed17/be46c67690fb33ba/runs/B/seed42_pilot01/training_summary.json": "27e5498c31b46a059bc845ea54fbd8044080f2b8c2d6c63336bd56edc2dd09ac"
+    },
+    "bank_sha256": "ef7f149cfc20df6421bac6f3dca67af7eabf14a08ddfcb322d1feb518b22300f",
+    "checkpoint_sha256": "54ca4286a02a9d94686190c599405edb1c979f724fbb261ef0617385717bbe1b",
+    "continuation_seed": 42,
+    "key": "B_screened_0.5B_p17_t42",
+    "manifest_sha256": "04112f96b282ba8a58fcd8900f6ca91b656dbac9abbd17a4cdef2b02a9bb00e0",
+    "method": "B_screened",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "model_size": "0.5B",
+    "parent_seed": 17,
+    "parent_sha256": "11a9de70df8b102e57676fb1c4b8ed61f9f0d1e7f524c6c0f0169368ea17b1cb",
+    "profile": "0.5B_seed17",
+    "recorded_training_loop_seconds": 359.43888815585524,
+    "required": true,
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "training_package_pins_sha256": "d6b2b52fa8877872a44d21d0fd765c3a2948df94347fa57a6ff4f33ac59c27f1"
+}

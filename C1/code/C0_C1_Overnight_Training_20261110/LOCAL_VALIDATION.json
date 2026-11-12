@@ -1,0 +1,20 @@
+{
+  "CPU_tests_passed": 22,
+  "test_command": "python -m unittest discover -s C0_C1_Overnight_Training_20261110 -p test_overnight.py -v",
+  "real_GPU_training_performed_here": false,
+  "real_Slurm_submission_performed_here": false,
+  "verification_on_Sol": "All parents/source/cache prerequisites checked before enqueue; every real training independently checks adapter updates, reload, exact one-pass token consumption and fresh optimizer",
+  "test_scope": [
+    "23-run matrix and dependencies",
+    "4955-candidate coverage per parent",
+    "confirmed mistake classification",
+    "one-pass token and 125-update reconciliation",
+    "parent123 / 1.5B / seed137 receipt and wrong-seed rejection",
+    "partial-attempt preservation",
+    "held chain recovery and duplicate submission protection",
+    "all 23 stages with simulated compute",
+    "forced allocation interruption followed by completion",
+    "integrity failure and other-profile continuation",
+    "completed artifact tamper rejection"
+  ]
+}

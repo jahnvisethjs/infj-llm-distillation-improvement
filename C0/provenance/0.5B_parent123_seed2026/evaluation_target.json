@@ -1,0 +1,26 @@
+{
+  "actual_supervised_tokens": 320371,
+  "adapter": "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_C1_overnight_training_v1/7376bbd91d80e726/profiles/0.5B_seed123/50234d324ee09a25/runs/C0/seed2026_attempt01/final/adapter",
+  "adapter_config_sha256": "4e1f2a33c447d3be93f13e52b6660f543fdc5a4305c7db4adb94638395974a8e",
+  "approved_files": {
+    "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_C1_overnight_training_v1/7376bbd91d80e726/profiles/0.5B_seed123/50234d324ee09a25/runs/C0/seed2026_attempt01/run_config.json": "b48bb8db4d6c939b819de40a17bc2bb46459a53ea0357b53b6bf295bd2b4bc74",
+    "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_C1_overnight_training_v1/7376bbd91d80e726/profiles/0.5B_seed123/50234d324ee09a25/runs/C0/seed2026_attempt01/training_summary.json": "56bb1d6ea458f6d4c2e0f18add0a49ad3353cfbbfc664de08a7926156e5144c7"
+  },
+  "bank_sha256": "ef7f149cfc20df6421bac6f3dca67af7eabf14a08ddfcb322d1feb518b22300f",
+  "checkpoint_record_sha256": "b48bb8db4d6c939b819de40a17bc2bb46459a53ea0357b53b6bf295bd2b4bc74",
+  "checkpoint_sha256": "41b33e4f2ca29e485d5f566a7672f69a0646ee8e870b435d497720c5cedaaa64",
+  "continuation_seed": 2026,
+  "key": "C0_0.5B_p123_t2026",
+  "manifest_sha256": "e9195ee78a5c6d7114f049b2b5ac7418032611c599fa9face48aae212ff88509",
+  "method": "C0",
+  "model": "Qwen/Qwen2.5-0.5B",
+  "model_size": "0.5B",
+  "parent_adapter": "/scratch/sshind38/capstone_approach_b/parents/0.5B_seed123/final/adapter",
+  "parent_seed": 123,
+  "parent_sha256": "aa11429355543bcfe35e47856a3c6ada4e5e0eb7f4647318c1c68aee5bf1c3a2",
+  "profile": "0.5B_seed123",
+  "recorded_training_loop_seconds": 385.96741153812036,
+  "required": true,
+  "reused_original_pilot": false,
+  "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+}

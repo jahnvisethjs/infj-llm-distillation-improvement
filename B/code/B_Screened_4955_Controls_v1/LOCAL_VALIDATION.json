@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-11-12T02:02:36.446345+00:00",
+  "local_CPU_unit_tests_passed": 16,
+  "failures": 0,
+  "real_archived_pilot_manifest_checked": true,
+  "actual_B_selection_rows": 1000,
+  "actual_B_selected_tokens": 317486,
+  "native_training_and_validation_functions_AST_unchanged": 7,
+  "Slurm_behavior_tested": "Mocked scheduler, not a live Sol submission",
+  "live_Sol_submission_performed": false,
+  "GPU_training_performed": false,
+  "scope": "Local checks cannot establish live account, queue, GPU, filesystem or model-cache readiness. Notebook preflight validates those available on Sol before submission."
+}

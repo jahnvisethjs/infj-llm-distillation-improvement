@@ -1,0 +1,14 @@
+{
+  "LOCAL_VALIDATION.json": "0f81723b0ec6adeb0c4bb1b8677022550661acd8bbabac51a008fd620f5e431f",
+  "README.md": "68bd9938b66fb2ac6ecdaf9b42bf59b448bb1adc6cb6cb0d697436ee2161555b",
+  "classifier_snapshot.py": "cd7acf7e36d38a3a91ac8bba0684ca2da513bd0cbb15ec7c0f453a6d24ca04e1",
+  "gpu_worker.sbatch": "ceb2d50a2f38c916de26f0d938f576247e19c9b5ff05f16d462cab6ae664e948",
+  "legacy/SOURCE_PINS.json": "4416403e97c1893c1317e5060898cbd4de1a3d5ed19c732ed3cef6970f7e9c9c",
+  "legacy/sol_bridge.py": "47dd44c53526ef10ca8056b65ef215988e028d2047a04b549966c849db32bc6d",
+  "nightly.py": "50809b9e374fcc05a9b637c381396b46223ab85abcda3ca07cd4b6a5a4af882f",
+  "pilot_checks.py": "5f8003aefa04f9b34f87d345168f7725ba6c407ec28aef36a996d480b3b8fd17",
+  "protocol.json": "d94e52b052fc70b6bb6144cfcb2060f1814701725a8300191773a44f47558fec",
+  "screening/known_exclusions.json": "fd6efdc649d6474c90129c14a086b2fce08392bc6645113e9ff95c58cb2dd348",
+  "screening/screening_proposal.json": "8273bd171ec6b4bdc57250d429fcf3f166ce69be8a30ba45b4973ad14018de44",
+  "test_overnight.py": "9cc8eb0ca76058a924e51456c3664355809fc25e8d7d987de8c18719357710b4"
+}

@@ -1,0 +1,98 @@
+{
+  "version": "method-b-document-alignment-v3",
+  "protocol_status": "frozen",
+  "protocol_evidence": "/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/mixed/budget_1x/runtime/execution_protocol.json",
+  "models": [
+    "0.5B",
+    "1.5B"
+  ],
+  "parent_training_seeds": [
+    17,
+    123
+  ],
+  "continuation_training_seeds": [
+    42,
+    137,
+    2026
+  ],
+  "budget_multipliers": [
+    1.0
+  ],
+  "selection_seed": 42,
+  "universe_seed": 1729,
+  "quota_seed": 1729,
+  "training_order_seed": 42,
+  "screened_pool_sha256": "a9e39a5a007e59034cd5c31e88d73869ba504469f1d678136da722098ad77efb",
+  "common_universe_sha256": "806dd78f38b37774391efc37d98318f0610e95dbeb9d53f810b54a03baf435ae",
+  "parent_manifest_sha256": "efa258c9c4a8bffa85bb3be2026c187e9035f3918fe044967c4dafadcfa7f303",
+  "formatting_contract_sha256": "803c6e63b192c2b59dbbe41a4bf611e76f3f008b0cdc355582679a782f60b361",
+  "relative_token_tolerance": "0.005",
+  "row_count_adjustment_fraction": "0.05",
+  "swap_window": 24,
+  "max_priority_swaps": 8,
+  "training": {
+    "epochs": 1,
+    "microbatch_size": 1,
+    "gradient_accumulation": 8,
+    "learning_rate": 0.0001,
+    "warmup_updates": 10,
+    "weight_decay": 0.0,
+    "gradient_clip": 1.0,
+    "packing": false,
+    "optimizer": "AdamW",
+    "optimizer_policy": "fresh_from_parent_weights",
+    "scheduler_policy": "fresh_linear_warmup_10_updates_then_constant",
+    "precision": "bf16_if_available_else_fp16",
+    "lora_configuration": "inherit actual verified parent adapter",
+    "quantization": "4-bit NF4, double quantization",
+    "checkpoint_every_updates": 100
+  },
+  "evaluation": {
+    "source_commit": "7b9e496ee436a40b275771297a93085a8926cfeb",
+    "precision": "fp32",
+    "batch_size": 16,
+    "max_new_tokens": 1024,
+    "decoding": "greedy",
+    "question_text": "p1_clean",
+    "adapters": "merged",
+    "datasets": [
+      "dev_gsm",
+      "dev_math"
+    ],
+    "final_test_policy": "explicit --final-test plus frozen protocol and predeclared final model list",
+    "predeclared_final_runs": [],
+    "environment_policy": "Evaluate the parent and all compared arms using one common installed runtime/GPU; do not mix historical torch-2.14.1 predictions with a new runtime."
+  },
+  "scientific_scope": {
+    "shared_methods": [
+      "B",
+      "C0",
+      "E",
+      "C1"
+    ],
+    "topic_quotas": null,
+    "reference_quality": "structural checks; mathematical correctness not established",
+    "parent_related_development_groups_to_disclose": 7,
+    "overlap_scope": "Known exact matches and the supplied near-match review queue; no claim of exhaustive decontamination"
+  },
+  "notes": [
+    "Execution settings locked for this B version from the supplied design and user instruction.",
+    "This is a reproducibility lock for B; it does not certify adoption by A/C or evaluator clearance.",
+    "0.5x and 2x are explicitly additional conditions. 0.5x uses largest-remainder stratum counts.",
+    "Every run starts independently from the original matching R1000 parent.",
+    "Training seeds 42/137/2026 are different from parent seeds 17/123.",
+    "All evaluation remains preliminary until the shared development/test protection is verified."
+  ],
+  "resolved_work_root": "/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/mixed/budget_1x",
+  "budget_reference_tokens": 318845,
+  "reference_scope": "full R1000 parent",
+  "selection_implementation": "document Appendix A CP-SAT",
+  "per_stratum_token_tolerance": "0.05",
+  "source_document_sha256": "8c23b94193f02d21f8e512329ab63a0b7ac98864237912e093d92a1dda365f69",
+  "resolved_data_paths": {
+    "parent": "/scratch/sshind38/capstone_approach_b/data/train_n1000.jsonl",
+    "universe": "/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/shared/mixed_candidate_bank.jsonl",
+    "contract": "/scratch/sshind38/capstone_approach_b/inputs/formatting_contract.json",
+    "protected": "/scratch/sshind38/capstone_approach_b/inputs/protected_questions.csv"
+  }
+}

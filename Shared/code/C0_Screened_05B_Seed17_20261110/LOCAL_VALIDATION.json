@@ -1,0 +1,31 @@
+{
+  "validated_utc": "2026-11-10T03:00:38.213062+00:00",
+  "status": "local_CPU_validation_passed_real_Sol_execution_pending",
+  "unit_tests": {
+    "returncode": 0,
+    "tests": 32,
+    "failures": 0,
+    "errors": 0,
+    "log": "local_validation.log"
+  },
+  "shell_syntax": {
+    "returncode": 0
+  },
+  "python_syntax_files": 5,
+  "notebook_code_cells_syntax_checked": 3,
+  "real_question_projection_rows_checked": 6409,
+  "retained_question_ids_checked": 4955,
+  "targeted_reference_content_hashes_checked": 7,
+  "full_Sol_bank_bytes_available_locally": false,
+  "original_trainer_AST_matches_reviewed_pin": true,
+  "original_bridge_unchanged": true,
+  "scheduler_spool_launch_regression_passed": true,
+  "actual_tokenizer_execution_performed": false,
+  "actual_GPU_training_performed": false,
+  "actual_model_evaluation_performed": false,
+  "live_Sol_submission_performed": false,
+  "scope": "Synthetic integrity tests plus supplied question projection/targeted references; not a real-model completion receipt",
+  "missing_live_runtime_stops_before_training": true,
+  "missing_runtime_check_returncode": 2,
+  "runner_sha256": "fc83b1b2395c1d6292751c41544f5736534cc5ec7143d8d32cc7b8e0acebb0e6"
+}

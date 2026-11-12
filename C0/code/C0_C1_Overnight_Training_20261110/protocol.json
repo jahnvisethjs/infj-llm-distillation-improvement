@@ -1,0 +1,79 @@
+{
+  "version": "screened-c0-c1-training-only-v1",
+  "status": "adopted_for_requested_training_matrix",
+  "authorization": "Suraj requested all remaining C0 training and all 12 C1 runs, automatic overnight, without benchmark evaluation.",
+  "model_sizes": [
+    "0.5B",
+    "1.5B"
+  ],
+  "parent_seeds": [
+    17,
+    123
+  ],
+  "continuation_seeds": [
+    42,
+    137,
+    2026
+  ],
+  "selection_seed": 42,
+  "training_order_seed": 42,
+  "methods": [
+    "C0",
+    "C1"
+  ],
+  "C0_existing_reused": {
+    "model": "0.5B",
+    "parent_seed": 17,
+    "continuation_seed": 42,
+    "identity": "be46c67690fb33ba680a5cd578bd418c6c06f4f2bcfadb39b329a10cb9fd5759"
+  },
+  "new_training_counts": {
+    "C0": 11,
+    "C1": 12
+  },
+  "rows_per_selection": 1000,
+  "target_tokens": 318845,
+  "global_tolerance": 0.005,
+  "stratum_tolerance": 0.05,
+  "stratum_rows": 50,
+  "strata": 20,
+  "screening_proposal_sha256": "8273bd171ec6b4bdc57250d429fcf3f166ce69be8a30ba45b4973ad14018de44",
+  "candidate_bank_sha256": "ef7f149cfc20df6421bac6f3dca67af7eabf14a08ddfcb322d1feb518b22300f",
+  "C1": {
+    "formula": "round(1000000 * F_i) * (1 + confirmed_mistake)",
+    "lambda": "1",
+    "mistake": "parse_status ok and correct false only",
+    "generation": "Each original parent; question only; mathematical checker for both sources; greedy fp32; merged adapter; 1024 new tokens; batch 16; p3-parser-v6",
+    "classification": "Exploratory frozen refinement, without benchmark-based selection of lambda",
+    "diagnostic_gate": {
+      "mistake_share_min": 0.05,
+      "mistake_share_max": 0.95,
+      "C0_C1_jaccard_strict_max": 0.95
+    },
+    "diagnostic_failure": "Preserve evidence; skip dependent C1 training; do not silently relax rules"
+  },
+  "training_recipe": {
+    "start": "Original matching R1000 parent for every run",
+    "optimizer": "Fresh; never restored from parent",
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "warmup_updates": 10,
+    "microbatch": 1,
+    "accumulation": 8,
+    "loss": "Existing Person2/B explicit next-token completion plus EOS, token-weighted accumulation"
+  },
+  "benchmark_evaluation_requested": false,
+  "B_training_requested": false,
+  "resume": "Reuse validated stages; native compatible candidate prediction resume; partial training restarts from original parent in a new attempt, preserving old artifacts; at most three attempts",
+  "slurm": "Serial afterany chain, one A100 per allocation, four-hour cap each, default six allocations; unused future jobs cancelled after terminal status",
+  "limitations": [
+    "The original unavailable 25-exclusion/572-quarantine audit remains unresolved; this adopts the separate disclosed conservative screen.",
+    "Conservative quarantine is not proof of contamination/invalidity and can miss other repetitions.",
+    "Inherited parent/development exposure is disclosed, not repaired.",
+    "Training-only completion does not establish benchmark accuracy, improvement, or a completed final study.",
+    "No new matched B controls are included. They and compatible evaluation remain separate before broader comparisons.",
+    "C1 may be blocked if confirmed mistakes are too rare/universal or the selection is too similar to C0.",
+    "GPU execution and scheduler availability must be verified on Sol; local CPU tests do not constitute a real training receipt.",
+    "Job/node failure, quota exhaustion or changed scientific inputs can prevent completion; final status reports actual results."
+  ]
+}

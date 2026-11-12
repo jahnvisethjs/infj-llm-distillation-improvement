@@ -1,0 +1,94 @@
+{
+  "version": "matched-B-C0-C1-evidence-audit-20261112",
+  "inventory": {
+    "main_methods": 3,
+    "models_per_method": 12,
+    "main_evaluation_files": 72,
+    "main_model_question_outcomes": 36000,
+    "all_checkpoints_including_parent_and_legacy": 52,
+    "all_evaluation_files": 104,
+    "all_outcomes": 52000,
+    "B_new_training": 11,
+    "B_reused_pilot": 1,
+    "B_new_evaluation_files": 22,
+    "B_reused_evaluation_files": 2
+  },
+  "main_bank_sha256": "ef7f149cfc20df6421bac6f3dca67af7eabf14a08ddfcb322d1feb518b22300f",
+  "question_sha256": {
+    "dev_gsm": "3cb2c71007d23e01cb70b6370c1ad82ad5bcea3527c7f3258b4814cf2e3d1cc6",
+    "dev_math": "641460fdc55beff591daad0cc7530a3f933eb263c3dfdf8a0534fcfaf8196416"
+  },
+  "source_files": {
+    "B": "B_Screened_4955_Training_and_Evaluation_Handoff_3338815c65ed8f68.zip",
+    "C": "C0_C1_Evaluation_Handoff_931e8fb821c7d70f.zip",
+    "Ctrain": "C0_C1_Training_Handoff_7376bbd91d80e726.zip",
+    "pilot": "C0_05B_parent17_cont42_pilot01_results.zip"
+  },
+  "source_sha256": {
+    "B": "c15e87a1015c8b3cb8d3dafc6d5111517b83912db3d0716164f8b41482215eff",
+    "C": "571e25f08a5adf0dbd81ecbc60745507d7da0629fc5e34d386b9afc38a103fd3",
+    "Ctrain": "c0888c920e9fab07d73ce50f56c9bf32f7955f4a7ff58ac75061f92fb73b87e5",
+    "pilot": "6d09a25d7d5a73b2d18f2581dfc36ba5b20d7064f3ed068177ea99b17cc15771"
+  },
+  "C1_diagnostics": [
+    {
+      "model_size": "0.5B",
+      "parent_seed": 123,
+      "C0_C1_jaccard": 0.3812154696132597,
+      "degeneracy_flags": {
+        "C1_almost_same_as_C0": false,
+        "mistakes_near_universal": false,
+        "mistakes_rare": false
+      },
+      "mistake_share": 0.5808274470232089
+    },
+    {
+      "model_size": "0.5B",
+      "parent_seed": 17,
+      "C0_C1_jaccard": 0.3793103448275862,
+      "degeneracy_flags": {
+        "C1_almost_same_as_C0": false,
+        "mistakes_near_universal": false,
+        "mistakes_rare": false
+      },
+      "mistake_share": 0.5979818365287588
+    },
+    {
+      "model_size": "1.5B",
+      "parent_seed": 123,
+      "C0_C1_jaccard": 0.3986013986013986,
+      "degeneracy_flags": {
+        "C1_almost_same_as_C0": false,
+        "mistakes_near_universal": false,
+        "mistakes_rare": false
+      },
+      "mistake_share": 0.39455095862764883
+    },
+    {
+      "model_size": "1.5B",
+      "parent_seed": 17,
+      "C0_C1_jaccard": 0.38792505204718947,
+      "degeneracy_flags": {
+        "C1_almost_same_as_C0": false,
+        "mistakes_near_universal": false,
+        "mistakes_rare": false
+      },
+      "mistake_share": 0.39091826437941474
+    }
+  ],
+  "configuration_best_counts": {
+    "C0": 4,
+    "C1": 7,
+    "B_screened": 1
+  },
+  "verification_limits": [
+    "Model adapter weight bytes are not included and cannot be rehashed locally; archived Sol validation receipts bind checkpoint digests to predictions.",
+    "Metrics and intervals are recomputed from saved correctness flags. Generations and mathematical checker decisions are not rerun.",
+    "Full logs are bundled for all twelve B runs and the original C0 pilot; other C0/C1 training consumption is verified through hashed configs, summaries and completion receipts.",
+    "Bank eligibility is checked against question metadata and declared quarantined IDs; the full 4,955-row bank is not in this lightweight handoff.",
+    "Legacy B training configs and weight files are absent; its evaluation sidecars record the original manifest and bank. Legacy B is excluded from the main matched comparison."
+  ],
+  "audit_scope": "The complete source audit includes parent and historical context. This export includes only the 36 screened B/C0/C1 continuations and 72 result files.",
+  "complete_source_audit_checks": 55361,
+  "complete_source_audit_failures": 0
+}

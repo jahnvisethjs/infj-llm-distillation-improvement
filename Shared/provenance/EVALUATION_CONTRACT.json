@@ -1,0 +1,20 @@
+{
+  "adapter_mode": "merged",
+  "add_special_tokens": false,
+  "batch_size": 16,
+  "cuda": "12.4",
+  "cut_at_next_question": true,
+  "decoding": "greedy",
+  "eos_token_id": 151643,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "math_verify": "0.9.0",
+  "max_new_tokens": 1024,
+  "parser_version": "p3-parser-v6",
+  "peft": "0.17.1",
+  "precision": "fp32",
+  "prompt_sha256": "22e10ad6ce4d2f2a959577326b6eca275528821da148bae57a9a4ad2bf6e64db",
+  "question_text": "p1_clean",
+  "stop_at_question": false,
+  "torch": "2.6.0+cu124",
+  "transformers": "4.57.1"
+}

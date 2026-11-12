@@ -1,0 +1,83 @@
+{
+  "version": "screened-b-4955-controls-training-v1",
+  "authorization": "Suraj requested durable unattended training of B on the same screened candidate pool as completed C0/C1 runs.",
+  "methods": [
+    "B_screened"
+  ],
+  "model_sizes": [
+    "0.5B",
+    "1.5B"
+  ],
+  "parent_seeds": [
+    17,
+    123
+  ],
+  "continuation_seeds": [
+    42,
+    137,
+    2026
+  ],
+  "existing_pilot_reused": {
+    "model_size": "0.5B",
+    "parent_seed": 17,
+    "continuation_seed": 42
+  },
+  "new_B_training_runs": 11,
+  "total_B_configurations_after_training": 12,
+  "candidate_rows": 4955,
+  "candidate_bank_sha256": "ef7f149cfc20df6421bac6f3dca67af7eabf14a08ddfcb322d1feb518b22300f",
+  "selection_rows": 1000,
+  "actual_supervised_tokens": 317486,
+  "target_supervised_tokens": 318845,
+  "selection_manifest_sha256": "04112f96b282ba8a58fcd8900f6ca91b656dbac9abbd17a4cdef2b02a9bb00e0",
+  "selection": "Exact completed screened B pilot manifest, reused across model sizes and continuation seeds.",
+  "selection_seed": 42,
+  "training_order_seed": 42,
+  "strata": 20,
+  "rows_per_stratum": 50,
+  "source_rows_per_selection": {
+    "orca": 500,
+    "numina": 500
+  },
+  "global_tolerance": 0.005,
+  "stratum_tolerance": 0.05,
+  "training_recipe": {
+    "start": "Original matching R1000 parent adapter",
+    "optimizer": "Fresh optimizer and scheduler for every full run",
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "warmup_updates": 10,
+    "microbatch_size": 1,
+    "accumulation": 8,
+    "packing": false,
+    "full_optimizer_updates": 125,
+    "smoke_rows": 32,
+    "smoke_updates": 4,
+    "loss": "Unchanged B/Person2 completion-plus-EOS token-weighted accumulation",
+    "quantization": "Existing B QLoRA 4-bit NF4 recipe",
+    "training_source": "Unchanged validated C0/C1 training functions reusing B runtime"
+  },
+  "benchmark_evaluation_requested": false,
+  "reserved_final_tests_requested": false,
+  "candidate_scoring_or_generation_requested": false,
+  "original_matcher_flags_resolved": false,
+  "slurm": {
+    "default_allocations": 2,
+    "hours_per_allocation": 4,
+    "gpu": "a100:1",
+    "serial_dependency": "afterany",
+    "worker_seconds": 12600,
+    "unused_queued_allocations": "Cancel only this submission’s unused future jobs once all work is complete or blocked"
+  },
+  "recovery": "Reuse validated complete runs. Preserve partial attempts and restart from original parent with fresh optimizer; at most three attempts per full run.",
+  "limitations": [
+    "The original 25-exclusion/572-quarantine audit was unresolved in the reviewed copies; this package does not resolve or certify it.",
+    "The independent conservative screen is an eligibility policy; flags are not proof of contamination or invalidity.",
+    "Inherited parent/development exposure is disclosed and unchanged.",
+    "Training completion alone does not establish accuracy or improvement. Evaluate the eleven new B checkpoints on the frozen common development sets next.",
+    "Use screened B, C0 and C1 for the matched-pool comparison; retain legacy B as a separate historical condition.",
+    "No C1 selection or diagnostic gate is changed. Preserve the exploratory C1 interpretation and its recorded diagnostics.",
+    "GPU execution and scheduler behavior require verification on Sol. Local CPU tests are not a training receipt.",
+    "Queue delays, GPU failures, quota exhaustion or changed scientific inputs can prevent overnight completion."
+  ]
+}

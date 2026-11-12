@@ -1,0 +1,72 @@
+{
+  "version": "c0-c1-frozen-development-evaluation-v1",
+  "authorization": "Suraj requested remaining C0/C1 evaluation, an unattended Slurm notebook with progress, and correct comparisons with B.",
+  "scope": "Frozen development evaluation; no training; no reserved final tests",
+  "model_sizes": [
+    "0.5B",
+    "1.5B"
+  ],
+  "parent_seeds": [
+    17,
+    123
+  ],
+  "continuation_seeds": [
+    42,
+    137,
+    2026
+  ],
+  "C0_C1_models": 24,
+  "questions_per_benchmark": 500,
+  "benchmarks": [
+    "dev_gsm",
+    "dev_math"
+  ],
+  "C0_C1_files": 48,
+  "helper_parent_files": 8,
+  "helper_screened_B_pilot_files": 2,
+  "total_required_files": 58,
+  "existing_compatible_prediction_reuse": true,
+  "generation_contract": {
+    "precision": "fp32",
+    "max_new_tokens": 1024,
+    "batch_size": 16,
+    "stop_at_question": false,
+    "question_text": "p1_clean",
+    "prompt_sha256": "22e10ad6ce4d2f2a959577326b6eca275528821da148bae57a9a4ad2bf6e64db",
+    "add_special_tokens": false,
+    "decoding": "greedy",
+    "eos_token_id": 151643,
+    "adapter_mode": "merged",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "torch": "2.6.0+cu124",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "cuda": "12.4",
+    "parser_version": "p3-parser-v6",
+    "math_verify": "0.9.0",
+    "cut_at_next_question": true
+  },
+  "parser_error_policy": "Retry exact frozen checker on saved text at most three times; preserve retry evidence. Unresolved execution errors block completion, not counted as wrong.",
+  "statistics": {
+    "paired_bootstrap_resamples": 2000,
+    "seed": 0,
+    "scope": "fixed-checkpoint question uncertainty",
+    "aggregate": "equal-weight mean of GSM and MATH; three training-seed mean and sample SD descriptive",
+    "formal_significance_claims": false
+  },
+  "Slurm": {
+    "gpu": "a100:1",
+    "per_job_time_cap": "04:00:00",
+    "default_serial_allocations": 6,
+    "afterany_continuation": true
+  },
+  "missing_matched_B_controls": 11,
+  "limitations": [
+    "Development evaluation retains the disclosed inherited parent exposure; protected final tests stay reserved.",
+    "Conservative screening does not certify contamination-free generalization or resolve the unavailable original audit.",
+    "Only one screened B control exists. Eleven matched B training/evaluation controls remain before a full three-method matched comparison.",
+    "Original B results use a different training bank; they are historical context and excluded from matched C-minus-B effects.",
+    "Fixed-checkpoint item-bootstrap intervals do not measure uncertainty of the three-seed mean.",
+    "New GPU evaluation and scheduler behavior are verified on Sol; local tests use simulated compute."
+  ]
+}
