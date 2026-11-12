@@ -1,6 +1,6 @@
 """C1 dependency wiring and fail-closed scientific gates; no scheduler or GPU execution."""
 
-from contextlib import redirect_stderr, redirect_stdout
+from contextlib import ExitStack, redirect_stderr, redirect_stdout
 import importlib.util
 import io
 import os
@@ -10,8 +10,10 @@ import subprocess
 import unittest
 from unittest.mock import patch
 import uuid
+from copy import deepcopy
 
 from capstone_person4.provenance import PipelineError, digest, write_json
+from capstone_person4 import continuation
 
 REPO = Path(__file__).resolve().parents[2]
 SOL = REPO / "scripts/sol"
@@ -103,6 +105,155 @@ class C1BatchTests(unittest.TestCase):
                 self.assertEqual("--smoke" in lines, name == "c1_train_smoke")
                 for arg in args:
                     self.assertIn(arg, lines)
+
+
+class C1SelectionReportTests(unittest.TestCase):
+    """Exercise real selection persistence after B/C0, without a solver or GPU."""
+
+    def setUp(self):
+        self.root = REPO / ".test_artifacts" / ("c1-selection-reports-" + uuid.uuid4().hex)
+        self.cfg = {"allocation": {"seed": 42, "selector": "method-b-cpsat-v3"},
+                    "parent": {"adapter_sha256": "parent"}, "config_fingerprint": "config"}
+        self.rows = [{"row_id": method, "problem_group_id": method, "dataset_id": "orca",
+                      "length_bin": 0, "supervised_tokens": tokens, "prompt_tokens": 10,
+                      "total_tokens": tokens + 10}
+                     for method, tokens in (("B", 1003), ("C0", 1000), ("C1", 1002))]
+        self.priorities = [dict(row, stratum="orca|0", utility=1, fit=1, tie_key=row["row_id"],
+                                score_fingerprint="scores") for row in self.rows]
+        self.stack = ExitStack()
+        self.addCleanup(self.stack.close)
+        for module, name, value in (
+            (continuation, "gate", None),
+            (continuation, "load_prepared", (self.rows, {"candidate_sha256": "candidates"})),
+            (continuation, "load_scores", ([], {"measurement_key": "scores"})),
+            (continuation, "fit_priorities", self.priorities),
+            (continuation, "budget_and_coverage", (1000, {"orca|0": 1}, "verified replay")),
+            (continuation, "artifact_root", self.root),
+            (continuation, "stage_fingerprint", "stage"),
+            (continuation, "source_hashes", {"fixture.py": "source"}),
+            (helper, "load_prepared", (self.rows, {})),
+            (helper, "load_scores", ([], {})),
+            (helper, "gate_bindings", {"generation_key": "generation"}),
+            (helper, "artifact_root", self.root),
+            (helper.gs, "priorities", self.priorities),
+            (helper.gs, "load_generation", ([], {"generation_key": "generation"})),
+            (helper.gs, "correctness_diagnostics",
+             {"proceed_to_training": True, "degeneracy_flags": {"mistakes_rare": False}}),
+        ):
+            self.stack.enter_context(patch.object(module, name, return_value=value))
+        self.stack.enter_context(patch.object(continuation, "cpsat_select", side_effect=self.solve))
+        continuation.select(self.cfg, "B")
+        continuation.select(self.cfg, "C0")
+
+    def solve(self, cfg, method, rows, priorities, target, root):
+        chosen = dict(next(row for row in priorities if row["row_id"] == method), priority_rank=1)
+        return [chosen], {"method": "method-b-cpsat-v3", "actual_tokens": chosen["supervised_tokens"],
+                          "target_tokens": target, "tolerance": 0.005, "quotas": {"orca|0": 1},
+                          "generation_key": "generation"}
+
+    def test_c1_after_c0_preserves_legacy_pair_report_and_supports_retry(self):
+        legacy = self.root / "selection/pair_budget_report.json"
+        before = legacy.read_bytes()
+        original_writer = continuation.write_json
+        first = helper.select_c1(self.cfg)
+        self.assertEqual(legacy.read_bytes(), before)
+        self.assertIs(continuation.write_json, original_writer)
+        pair_path = self.root / "selection/C1/pair_budget_report.json"
+        pair = helper.read_json(pair_path)
+        self.assertEqual(pair["comparison"], ["C0", "C1"])
+        self.assertEqual(pair["target_tokens"], 1000)
+        self.assertEqual(pair["C0_tokens"], 1000)
+        self.assertEqual(pair["C1_tokens"], 1002)
+        self.assertEqual(pair["absolute_pairwise_difference"], 2)
+        self.assertNotIn("B_tokens", pair)
+        self.assertEqual(pair["C1_selection_sha256"], digest(first))
+        self.assertTrue(helper.gate_path(self.cfg).is_file())
+        second = helper.select_c1(self.cfg)
+        self.assertEqual(first, second)
+        self.assertEqual(legacy.read_bytes(), before)
+
+    def test_recovers_selection_files_left_by_the_legacy_pair_conflict(self):
+        legacy = self.root / "selection/pair_budget_report.json"
+        before = legacy.read_bytes()
+        with self.assertRaisesRegex(PipelineError, "Output already exists with different content"):
+            continuation.select(self.cfg, "C1")
+        c1_report = self.root / "selection/C1/allocation_report.json"
+        partial_report = c1_report.read_bytes()
+        self.assertFalse(helper.gate_path(self.cfg).exists())
+        helper.select_c1(self.cfg)
+        self.assertEqual(legacy.read_bytes(), before)
+        self.assertEqual(c1_report.read_bytes(), partial_report)
+        self.assertTrue(helper.gate_path(self.cfg).is_file())
+
+    def test_recovers_partial_selection_when_only_solver_wall_times_change(self):
+        solver_calls = []
+
+        def timed_solve(*args):
+            chosen, report = self.solve(*args)
+            solver_calls.append(args[1])
+            report["cpsat"] = {"status": "OPTIMAL", "objective": 100,
+                               "wall_seconds": len(solver_calls) * 1.5,
+                               "tie_break": {"status": "OPTIMAL", "wall_seconds": len(solver_calls) * 0.5}}
+            return chosen, report
+
+        with patch.object(continuation, "cpsat_select", side_effect=timed_solve):
+            with self.assertRaisesRegex(PipelineError, "Output already exists with different content"):
+                continuation.select(self.cfg, "C1")
+            c1_path = self.root / "selection/C1/allocation_report.json"
+            before = c1_path.read_bytes()
+            original = helper.read_json(c1_path)
+            recovered = helper.select_c1(self.cfg)
+            self.assertEqual(c1_path.read_bytes(), before)
+            self.assertEqual(recovered, original)
+            self.assertEqual(helper.read_json(helper.gate_path(self.cfg))["selection_sha256"], digest(original))
+            self.assertEqual(helper.read_json(self.root / "selection/C1/pair_budget_report.json")
+                             ["C1_selection_sha256"], digest(original))
+            self.assertEqual(helper.select_c1(self.cfg), original)
+            self.assertEqual(c1_path.read_bytes(), before)
+
+    def test_other_conflicting_outputs_still_fail_and_restore_the_writer(self):
+        legacy = self.root / "selection/pair_budget_report.json"
+        before = legacy.read_bytes()
+        conflict = self.root / "selection/C1/allocation_report.json"
+        write_json(conflict, {"different": "existing result"})
+        original_writer = continuation.write_json
+        with self.assertRaisesRegex(PipelineError, "Output already exists with different content"):
+            helper.select_c1(self.cfg)
+        self.assertIs(continuation.write_json, original_writer)
+        self.assertEqual(legacy.read_bytes(), before)
+        self.assertEqual(helper.read_json(conflict), {"different": "existing result"})
+        self.assertFalse(helper.gate_path(self.cfg).exists())
+
+    def test_changed_solver_evidence_is_not_treated_as_a_timing_only_retry(self):
+        changed = {}
+        baseline = {"status": "OPTIMAL", "objective": 100, "best_bound": 100,
+                    "deterministic_time": 0.25, "ortools_version": "9.14.6206",
+                    "wall_seconds": 1.5, "tie_break": {"status": "OPTIMAL", "wall_seconds": 0.5}}
+
+        def solve(*args):
+            chosen, report = self.solve(*args)
+            solver = deepcopy(baseline)
+            solver.update(changed)
+            report["cpsat"] = solver
+            return chosen, report
+
+        with patch.object(continuation, "cpsat_select", side_effect=solve):
+            with self.assertRaisesRegex(PipelineError, "Output already exists with different content"):
+                continuation.select(self.cfg, "C1")
+            path = self.root / "selection/C1/allocation_report.json"
+            before = path.read_bytes()
+            original_writer = continuation.write_json
+            for field, value in (("status", "FEASIBLE"), ("objective", 99), ("best_bound", 101),
+                                 ("deterministic_time", 0.5), ("ortools_version", "other"),
+                                 ("tie_break", {"status": "UNKNOWN", "wall_seconds": 2.0})):
+                with self.subTest(field=field):
+                    changed.clear()
+                    changed.update({field: value, "wall_seconds": 10.0})
+                    with self.assertRaisesRegex(PipelineError, "Output already exists with different content"):
+                        helper.select_c1(self.cfg)
+                    self.assertEqual(path.read_bytes(), before)
+                    self.assertIs(continuation.write_json, original_writer)
+                    self.assertFalse(helper.gate_path(self.cfg).exists())
 
 
 class C1GateTests(unittest.TestCase):

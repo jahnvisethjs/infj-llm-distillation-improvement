@@ -1,6 +1,7 @@
 """C1 batch gates and handoffs; reuse the scientific pipeline without changing C0 identities."""
 
 import argparse
+from copy import deepcopy
 from pathlib import Path
 import sys
 
@@ -8,6 +9,7 @@ REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
 
 from capstone_person4.bindings import verified
+from capstone_person4 import continuation
 from capstone_person4.config import artifact_root, load_config, stage_fingerprint
 from capstone_person4.continuation import load_selection, select, train
 from capstone_person4.data import load_prepared
@@ -74,6 +76,64 @@ def require_gate(cfg):
     return record
 
 
+def selection_report_identity(report):
+    """Ignore only CP-SAT's two wall-clock measurements, never solver outcomes."""
+    identity = deepcopy(report)
+    solver = identity.get("cpsat")
+    if isinstance(solver, dict):
+        solver.pop("wall_seconds", None)
+        tie = solver.get("tie_break")
+        if isinstance(tie, dict):
+            tie.pop("wall_seconds", None)
+    return canonical(identity)
+
+
+def select_c1_manifest(cfg):
+    """Adapt the frozen selector's B/C0-only summary for this single-process CLI.
+
+    Preserve an existing C1 allocation report when only solver wall times differ,
+    and route the legacy pair summary to a validated C0/C1 summary. Keep the
+    fingerprinted selector unchanged and never overwrite existing artifacts.
+    """
+    root = artifact_root(cfg, "select") / "selection"
+    legacy_pair = (root / "pair_budget_report.json").resolve()
+    allocation_path = (root / "C1/allocation_report.json").resolve()
+    original_write = continuation.write_json
+    retained_report = None
+
+    def write_report(path, value):
+        nonlocal retained_report
+        if Path(path).resolve() == allocation_path and allocation_path.is_file():
+            previous = read_json(allocation_path)
+            if selection_report_identity(previous) == selection_report_identity(value):
+                # Reconcile the saved manifest, parent, outcomes, quotas and tokens.
+                # Keep its original timings and hash for all downstream evidence.
+                _, retained_report = load_selection(cfg, "C1")
+                return
+        if Path(path).resolve() != legacy_pair:
+            return original_write(path, value)
+        _, c0 = load_selection(cfg, "C0")
+        _, c1 = load_selection(cfg, "C1")
+        if (c0["stage_fingerprint"] != c1["stage_fingerprint"]
+                or c0["target_tokens"] != c1["target_tokens"]):
+            raise PipelineError("C0/C1 budget comparison requires the same dependencies and target")
+        return original_write(root / "C1/pair_budget_report.json", {
+            "comparison": ["C0", "C1"], "target_tokens": c0["target_tokens"],
+            "C0_tokens": c0["actual_tokens"], "C1_tokens": c1["actual_tokens"],
+            "absolute_pairwise_difference": abs(c1["actual_tokens"] - c0["actual_tokens"]),
+            "stage_fingerprint": c1["stage_fingerprint"],
+            "C0_selection_sha256": digest(c0), "C1_selection_sha256": digest(c1)})
+
+    # Scoped compatibility adapter: each batch stage runs in its own process.
+    # Restore the writer even if selection or any immutable-file check fails.
+    continuation.write_json = write_report
+    try:
+        result = select(cfg, "C1")
+        return retained_report if retained_report is not None else result
+    finally:
+        continuation.write_json = original_write
+
+
 def select_c1(cfg):
     rows, _ = load_prepared(cfg)
     scores, _ = load_scores(cfg)
@@ -83,7 +143,7 @@ def select_c1(cfg):
     write_json(diagnostic_path, {"bindings": bindings, "diagnostics": diagnostics})
     if diagnostics["proceed_to_training"] is not True or any(diagnostics["degeneracy_flags"].values()):
         raise PipelineError(f"C1 diagnostic gate failed; evidence preserved at {diagnostic_path}")
-    result = select(cfg, "C1")
+    result = select_c1_manifest(cfg)
     write_json(gate_path(cfg), {"bindings": bindings, "diagnostics": diagnostics,
                               "selection_sha256": digest(result)})
     return result

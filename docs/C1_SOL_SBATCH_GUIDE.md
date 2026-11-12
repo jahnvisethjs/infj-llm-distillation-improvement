@@ -157,6 +157,39 @@ wrappers preserve failed/partial attempts and do not automatically resume them.
 Request export and ingest may reuse identical immutable outputs. Any different
 existing output requires resolving the changed inputs or a new output root.
 
+### Recovery from a shared pair-budget report conflict
+
+An older C1 batch wrapper could stop selection with:
+
+```text
+Output already exists with different content: .../selection/pair_budget_report.json
+```
+
+The frozen shared selector writes that legacy file as a B/C0 comparison even
+when selecting C1. The updated `scripts/sol/c1_stage.py` routes only that summary
+write to `selection/C1/pair_budget_report.json`, using validated C0/C1 selections
+and correctly labeled token totals and selection hashes. The B/C0 report stays
+unchanged. It also reuses the saved C1 allocation report when a rerun differs
+only in `cpsat.wall_seconds` and `cpsat.tie_break.wall_seconds`. It validates the
+saved selection and retains its original report bytes, timings and hash for the
+comparison, diagnostic gate and training. Differences in any other report field
+still fail, including solver status, objective, bounds, deterministic time,
+selection, budget and provenance. The adapter restores the shared writer on
+success or failure; it runs inside one batch-stage process.
+
+Update the batch helper on SOL without modifying fingerprinted core modules or
+regenerating the existing SOL config. No new grading, reference scoring or C0
+training is needed. The failed attempt may already have written the C1 manifest
+and allocation report; an identical retry reuses them and completes the C1
+comparison and diagnostic gate. Do not delete or overwrite those artifacts.
+
+Inspect `squeue` and cancel only the blocked downstream jobs from the failed
+submission before submitting a replacement chain. Reuse the same prediction
+paths, SOL config, C0 attempt and C1 attempt names if no training started. The
+submission script validates existing prerequisites and resubmits ingest,
+selection, smoke, the requested training seeds and finalization with fresh
+dependencies. Confirm every replacement job's final state with `sacct`.
+
 ## Local verification
 
 ```bash

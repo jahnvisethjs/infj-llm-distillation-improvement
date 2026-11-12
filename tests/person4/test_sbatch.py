@@ -27,7 +27,8 @@ class ResourceRequestTests(unittest.TestCase):
         files = list(SOL.glob("*.sbatch"))
         self.assertEqual({p.stem for p in files}, {
             "prepare", "score_smoke", "score_reference", "select", "train_smoke", "train", "finalize",
-            "c1_export", "c1_ingest", "c1_select", "c1_train_smoke", "c1_train", "c1_finalize"})
+            "c1_export", "c1_ingest", "c1_select", "c1_train_smoke", "c1_train", "c1_finalize",
+            "e_select", "e_train_smoke", "e_train", "e_finalize"})
         for path in files:
             with self.subTest(script=path.name):
                 fields = directives(path)

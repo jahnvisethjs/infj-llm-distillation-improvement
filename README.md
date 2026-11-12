@@ -2,6 +2,15 @@
 
 Capstone project investigating improvements in data-efficient mathematical reasoning for small language models.
 
+## Approach E: mistake-only continuation
+
+`capstone_person4_approachE/` reuses the completed C1 parent grading, common bank,
+Method B allocator and Person 2 trainer through an isolated E entry point. Start
+with [the E run guide](docs/E_RUN_GUIDE.md), including the required existing SOL
+outputs, preflight, twelve-run submission procedure and additive Megha handoff.
+Run `python -m capstone_person4_approachE --help` for commands. No new candidate
+grading or reference scoring is required.
+
 ## Person 4: C0 reference-fit continuation
 
 `capstone_person4/` implements the C0 approach: score 5,000 fresh candidate question–solution pairs by teacher-forced reference loss under an already fine-tuned R1000 parent, select the lowest-loss rows within fixed source/length strata up to the parent's one-pass token budget (318,845 supervised tokens ± 0.5%), continue the parent on them with a fresh optimizer, and hand the checkpoint off for evaluation. It reuses Person 2's notebook trainer through thin interfaces; importing it does not run historical training.
