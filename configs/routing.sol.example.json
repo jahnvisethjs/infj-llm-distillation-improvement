@@ -1,0 +1,49 @@
+{
+  "version": "routing-v1",
+  "synthetic": false,
+  "pool_size": 3000,
+  "label_chunk_size": 250,
+  "roots": {
+    "a": "/scratch/msures15/eval_results",
+    "b": "/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/mixed/budget_1x/evaluation",
+    "c1": "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_C1_development_evaluation_v1/931e8fb821c7d70f/results"
+  },
+  "questions": {
+    "gsm": {
+      "path": "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_C1_development_evaluation_v1/931e8fb821c7d70f/questions/dev_gsm.jsonl",
+      "sha256": "3cb2c71007d23e01cb70b6370c1ad82ad5bcea3527c7f3258b4814cf2e3d1cc6"
+    },
+    "math": {
+      "path": "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_C1_development_evaluation_v1/931e8fb821c7d70f/questions/dev_math.jsonl",
+      "sha256": "641460fdc55beff591daad0cc7530a3f933eb263c3dfdf8a0534fcfaf8196416"
+    }
+  },
+  "evaluator": {
+    "path": "/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/mixed/budget_1x/runtime/vendor/evaluation/evaluate.py",
+    "parser_path": "/scratch/sshind38/capstone_approach_b/outputs/B_method_B_document_v3/mixed/budget_1x/runtime/vendor/evaluation/answer_parser.py"
+  },
+  "checkpoints": [],
+  "predictions": [],
+  "training_sources": {},
+  "exposure_inventory_complete": false,
+  "exposures": [],
+  "matcher": {
+    "path": "../../data/inputs/overlap_evidence/overlap_check.py",
+    "sha256": null
+  },
+  "sources": [
+    {
+      "benchmark": "gsm",
+      "dataset": "openai/gsm8k",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "configuration": "main",
+      "split": "train"
+    },
+    {
+      "benchmark": "math",
+      "dataset": "EleutherAI/hendrycks_math",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "split": "train"
+    }
+  ]
+}

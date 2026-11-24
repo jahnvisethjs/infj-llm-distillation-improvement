@@ -1,0 +1,10 @@
+# Install in a separate router CPU environment. Keep the native GPU evaluator
+# in its existing pinned environment; use a separate label import if necessary.
+# Freeze the resolved environment with pip freeze alongside real experiment evidence.
+numpy==2.3.5
+scipy==1.16.3
+scikit-learn==1.7.2
+sentence-transformers==3.4.1
+transformers==4.57.1
+huggingface-hub>=0.34.0,<1.0
+datasets==3.6.0

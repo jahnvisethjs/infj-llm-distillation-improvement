@@ -2,6 +2,13 @@
 
 Capstone project investigating improvements in data-efficient mathematical reasoning for small language models.
 
+## Question-only adapter routing
+
+`capstone_routing/` provides matched-block correctness/oracle analysis, a held-out
+router experiment, A-only seed-diversity controls, and verified live answering.
+Start with the [routing run guide](docs/ROUTING_RUN_GUIDE.md); expensive stages are
+explicit, and the first deliverable uses saved development predictions only.
+
 ## Approach E: mistake-only continuation
 
 `capstone_person4_approachE/` reuses the completed C1 parent grading, common bank,

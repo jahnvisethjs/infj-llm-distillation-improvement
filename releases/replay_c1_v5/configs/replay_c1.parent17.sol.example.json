@@ -1,0 +1,26 @@
+{
+  "version": "replay-c1-screened-4955-v2",
+  "model": "0.5B",
+  "parent_seed": 17,
+  "selection_seed": 42,
+  "continuation_seeds": [
+    42,
+    137,
+    2026
+  ],
+  "work": "/scratch/sshind38/capstone_c0_c1_work",
+  "b_root": "/scratch/sshind38/capstone_approach_b",
+  "native_runner": "/scratch/sshind38/capstone_c0_c1_work/C0_C1_Overnight_Training_20261110/nightly.py",
+  "c1_profile": "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_C1_overnight_training_v1/7376bbd91d80e726/profiles/0.5B_seed17/6078ed82118a83fc",
+  "training_python": "/scratch/sshind38/capstone_approach_b/venv_b_training_py312/bin/python",
+  "solver_python": "/scratch/sshind38/capstone_approach_b/venv_b_solver_v3/bin/python",
+  "a_eval_root": "/scratch/msures15/eval_results",
+  "a_policy": null,
+  "c1_eval_root": "/scratch/sshind38/capstone_c0_c1_work/outputs/C0_C1_development_evaluation_v1/931e8fb821c7d70f",
+  "output_root": "/scratch/jseth2/replay_c1_4955_pilot",
+  "slurm": {
+    "account": "class_fse57081354fall2026",
+    "partition": "public",
+    "qos": "class"
+  }
+}
